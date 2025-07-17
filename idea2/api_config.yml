@@ -1,0 +1,17 @@
+gemini:
+  key: <your gemini key>
+
+openai:
+  key: <your openai key>
+
+notionkey:
+  key: <your notion integration key>
+
+notionpage:
+  key: <your notion page key>
+
+notiondb:
+  key: <your notion CQ Pool database key>
+
+notionllmdb:
+  key: <your notion LLM config database key>
