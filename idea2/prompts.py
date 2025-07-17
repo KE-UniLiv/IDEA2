@@ -1,5 +1,5 @@
 """
-A collection of modular components for generating prompts for the AnIML2CQ.
+A collection of modular components for generating prompts for schema2cq.
 """
 
 OENG_ROLE = """

@@ -1,7 +1,6 @@
 """
 
-This is a script which facilitates the extraction of competency questions (CQs) from AnIML schemas using a large language model (LLM).
-It allows for a more streamlined approach compared to the step-by-step execution in a jupyter notebook.
+This is a script which facilitates the extraction of competency questions (CQs) from schemas using a large language model (LLM).
 
 """
 

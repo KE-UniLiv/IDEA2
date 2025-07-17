@@ -1,6 +1,6 @@
 """
 This provides generalised prompt building functionalities to automatically
-extract competency questions from AnIML schema definitions and examples.
+extract competency questions from schema definitions and examples.
 """
 
 import prompts as p
