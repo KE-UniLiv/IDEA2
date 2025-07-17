@@ -1,7 +1,7 @@
 # IDEA2
 Expert-in-the-loop requirement elicitation and analysis for ontology engineering
 
-IDEA2 is a framework which defines workflows for enriching ontology engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini` and `OpenAI`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which users can utilise LLMs to inform the creation and refinement of Ontologies through Competency Questions (CQs). With this framework, the user can select a model, hyperparameters and prompt configurations to extract competency questions for schemas, and populate a notion page with the results alongisde the associated provenance.
+IDEA2 is a framework which defines workflows for enriching ontology engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini` and `GPT`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which users can utilise LLMs to inform the creation and refinement of Ontologies through Competency Questions (CQs). With this framework, the user can select a model, hyperparameters and prompt configurations to extract competency questions for schemas, and populate a notion page with the results alongisde the associated provenance.
 
 # Overview
 
@@ -10,23 +10,33 @@ IDEA2 is a framework which defines workflows for enriching ontology engineering 
 To start using IDEA2, the following must be provided in the appropriate area in [`api_config.yml`](idea2/api_config.yml):
 
 - Gemini API key
-- OpenAI API
+- OpenAI API key
 - Notion Integration Key
 - Notion Page Key
 - Notion Database key (CQ Pool)
 - Notion LLM Database Key (LLM configurations and provenance)
 
-Furthermore, schemas should be defined in [`assets/schema`](assets/schema).
+Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source document. These can also be defined with commands in runner.py, see [usage](#usage) for more details.
 
-## Schemas 📜
+Persona and user story definitions ....
 
-Schemas are used to inform the creation of the ontology due to the fact that the ontology should be able to answer the (verified) CQs. An example of schemas is the [AnIML Schemas](https://www.animl.org/) which contains both a technique schema and a core schema. Given these two schemas as part of a prompt, the LLM will extract CQs relevant to the schema which can be used to inform the creation of an ontology or to see if a former ontology can answer certain CQs. The schema is used in tandem with the prompt to attain powerful results for Ontology Engineering.
+Ontology sources ...
+
+## Personas and User Stories 🤵
+TODO
+
+## Schemas and XML Definitions 📜
+
+Schemas are used to inform the creation of the ontology due to the fact that the ontology should be able to answer the (verified) CQs. An example of schemas is the [AnIML Schema (Core & Technique)](https://www.animl.org/) which contains both a technique schema and a core schema. Given these two schemas as part of a prompt, the LLM will extract CQs relevant to the schema which can be used to inform the creation of an ontology or to see if a former ontology can answer certain CQs. The schema is used in tandem with the prompt to attain powerful results for Ontology Engineering.
+
+## Ontology Prompts 🔬
+TODO
 
 ## LLMs and Hyperparameters 🤖
 
-Both `Gemini` and TODO `OpenAI` are supported for the extraction of competency questions. the Temperature hyperparameter can be given to the model which expresses how creative the LLM is allowed to be in its response. Please ensure that you have access to the model you require through your API key, or you may recieve errors.
+Both `Gemini` and TODO `GPT` models are supported for the extraction of competency questions from [schemas and XML definitions](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response.
 
-TODO: List caveats and errors if any
+Please ensure that you have access to the model you require through your API key, or you may recieve errors.
 
 ## Prompts 🗣️
 
@@ -34,21 +44,23 @@ Prompt engineering is at the core of this workflow and [`prompts.py`](idea2/prom
 
 - A role for the LLM to take (Requirements engineer, Ontology creator, Ontology tester)
 
-- Examples of CQs for other domains (Music meta etc)
+- Examples of CQs for other domains ([`Music Meta`](https://github.com/polifonia-project/music-meta-ontology) etc)
 
-- Instructions for the LLM (Extract all / assume ontology exists / reformulate CQs)
+- Instructions for the LLM (Extract all / assume ontology exists / reformulate rejected CQs)
 
-Reformulation of a CQ takes place when any given CQ has a score of <0 on the notion database. If this occurs, --find_rejected will pull these and store them in [`rejected_cqs.json`](assets/cqs/rejected_cqs.json) and --reformulate will allow the reformulation of those rejected CQs.
+Reformulation of a CQ takes place when any given CQ has a score of $< 0$ on the Notion database. If this occurs, --find_rejected will pull these and store them in [`rejected_cqs.json`](assets/cqs/rejected_cqs.json) and --reformulate will allow the reformulation of those rejected CQs. If a comment is given to a rejected CQ (ie, a reason as to why it was rejected), this will be passed to the LLM as well.
 
 ## Notion 💾
 
-The framework contains notion intgeration which allows for domain experts to reject generated CQs. These rejected CQs are then fed back into the LLM, reformulated, and sent back to the notion database. 
+The workflow contains Notion intgeration which allows for domain experts to reject generated CQs and provide reasons for doing so. These rejected CQs are then fed back into the LLM, reformulated, and sent back to the Notion database. 
 
-All in all, the notion integration allows for:
+All in all, the Notion integration allows for:
 
 - Saving of LLM instances (provenance) for a set of CQs
 - Saving of extracted or reformulated CQs
 - Reformulation of CQs
+
+The Notion page is where the databases (CQ Pools and LLM configurations) are stored. To use the workflow, the Notion key in [`api_config.yml`](idea2/api_config.yml) must be the key of an integration in the workspace you are using. If you do not have such an integration in your workspace and page, please create one and add it to the appropriate page. Ensure this integration also has the appropriate permissions.
 
 ## Usage
 
