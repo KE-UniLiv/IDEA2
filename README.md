@@ -1,7 +1,7 @@
 # IDEA2
-Expert-in-the-loop requirement elicitation and analysis for ontology engineering
+Expert-in-the-loop requirement elicitation and analysis for ontology engineering.
 
-IDEA2 is a framework which defines workflows for enriching ontology engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini` and `GPT`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which users can utilise LLMs to inform the creation and refinement of Ontologies through Competency Questions (CQs). With this framework, the user can select a model, hyperparameters and prompt configurations to extract competency questions for schemas, and populate a notion page with the results alongisde the associated provenance.
+IDEA2 is a framework which defines workflows for enriching Ontology Engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini` and `GPT`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which users can utilise LLMs to inform the creation and refinement of Ontologies through Competency Questions (CQs). With this framework, the user can select a model, hyperparameters and prompt configurations to extract competency questions from a range of source documents, and in turn populate a Notion page with the results alongisde the associated provenance to allow for domain experts to validate these CQs, which fine-tunes the LLM's generations as iterations progress.
 
 # Overview
 
@@ -18,9 +18,9 @@ To start using IDEA2, the following must be provided in the appropriate area in 
 
 Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source document. These can also be defined with commands in runner.py, see [usage](#usage) for more details.
 
-Persona and user story definitions ....
+Persona and user story definitions TODO
 
-Ontology sources ...
+Ontology sources TODO
 
 ## Personas and User Stories 🤵
 TODO
@@ -34,9 +34,9 @@ TODO
 
 ## LLMs and Hyperparameters 🤖
 
-Both `Gemini` and TODO `GPT` models are supported for the extraction of competency questions from [schemas and XML definitions](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response.
+Both `Gemini` and TODO `GPT` models are supported for the extraction of competency questions from [schemas and XML definitions](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure.
 
-Please ensure that you have access to the model you require through your API key, or you may recieve errors.
+Please ensure that you have access to the model you require through your API key(s), or you may recieve errors.
 
 ## Prompts 🗣️
 
@@ -48,7 +48,7 @@ Prompt engineering is at the core of this workflow and [`prompts.py`](idea2/prom
 
 - Instructions for the LLM (Extract all / assume ontology exists / reformulate rejected CQs)
 
-Reformulation of a CQ takes place when any given CQ has a score of $< 0$ on the Notion database. If this occurs, --find_rejected will pull these and store them in [`rejected_cqs.json`](assets/cqs/rejected_cqs.json) and --reformulate will allow the reformulation of those rejected CQs. If a comment is given to a rejected CQ (ie, a reason as to why it was rejected), this will be passed to the LLM as well.
+Reformulation of a CQ takes place when any given CQ has a score of $< 0$ on the Notion database. If this occurs, **--find_rejected** will pull these and store them in [`rejected_cqs.json`](assets/cqs/rejected_cqs.json) and **--reformulate** will allow the reformulation of those rejected CQs. Should a comment be given to a rejected CQ (ie, a reason as to why it was rejected), this will be passed to the LLM as well. Through iterations of CQ generations and feedback, the LLM should become fine-tuned to the task as the **message history** is given to the LLM as context from `.json` chat history files.
 
 ## Notion 💾
 
@@ -58,13 +58,21 @@ All in all, the Notion integration allows for:
 
 - Saving of LLM instances (provenance) for a set of CQs
 - Saving of extracted or reformulated CQs
-- Reformulation of CQs
+- Acceptance or rejection of CQs 
+- Priority labelling of CQs
+- Commenting of CQs
 
-The Notion page is where the databases (CQ Pools and LLM configurations) are stored. To use the workflow, the Notion key in [`api_config.yml`](idea2/api_config.yml) must be the key of an integration in the workspace you are using. If you do not have such an integration in your workspace and page, please create one and add it to the appropriate page. Ensure this integration also has the appropriate permissions.
+The **Notion page** is where the databases (CQ Pools and LLM configurations) are stored. To use the workflow, the Notion key in [`api_config.yml`](idea2/api_config.yml) must be the **key of an integration** in the workspace you are using. If you do not have such an integration in your workspace and page, please create one and add it to the appropriate page. Ensure this integration also has the appropriate permissions.
 
-## Usage
+To get a database's key or ID, ...
 
-When all the data is in place:
+## Requirements ✅
+
+Please find the requirements in [`requirements.txt`](requirements.txt). To easily install all of these requirements, TODO
+
+## Usage ⚒️
+
+When all the data is in place and the dependencies are installed:
 
 - Open a terminal and cd to your local instance of the source (e.g `C:/GitHub/IDEA2`)
 - Run `python idea2/runner.py <arg1> <arg2> ... <arg n>`
