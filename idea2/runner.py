@@ -167,8 +167,8 @@ def main():
 
     generated_cq_embeddings = cq_measures.calculate_embeddings(cleaned_cqs)
 
-    reference_questions = [line.strip() for line in open("assets/cqs/reference_cqs_1.txt", encoding="utf-8") if line.strip()]
-    reference_cq_embeddings = cq_measures.calculate_embeddings(reference_questions)
+    #reference_questions = [line.strip() for line in open("assets/cqs/reference_cqs_1.txt", encoding="utf-8") if line.strip()]
+    #reference_cq_embeddings = cq_measures.calculate_embeddings(reference_questions)
 
     similarity_matrix = cq_measures.calculate_similarity_matrix(generated_cq_embeddings, generated_cq_embeddings)
     print(f"\nCohesion of generated CQs: {cq_measures.calculate_cohesion(similarity_matrix)}")

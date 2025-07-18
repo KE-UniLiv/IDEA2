@@ -1,0 +1,34 @@
+What is the unstructured text comment associated with a sample?
+What is the unstructured text comment associated with an experiment step?
+What infrastructure details are defined within a template?
+Which samples were inherited from a parent experiment step rather than being directly referenced?
+What is the prefix used for a bulk reference to a set of experiment steps?
+Should a data series be displayed to a user by default?
+What are the individually listed values for a data series?
+What is the base64 encoded representation of a numeric series' values?
+What is the multiplicative factor applied to an SI unit component in a unit definition?
+What is the exponent applied to an SI unit component in a unit definition?
+What is the additive offset applied to an SI unit component in a unit definition?
+What is the scope, such as element or attributes, of a change described in a diff entry?
+Which specific signable item was modified, as identified by a diff entry's ID reference?
+What is the free-text comment explaining an audit trail entry?
+Does every referenced sample in an experiment step have a corresponding definition in the SampleSet?
+Does every referenced experiment step data have a corresponding definition in the ExperimentStepSet?
+What is the version number of the technique definition schema used in a technique file?
+Is a technique definition document a base technique or an extension to another technique?
+What is the URI of a technique definition that a specific extension can be applied to?
+What is the SHA256 checksum of a technique definition that a specific extension can be applied to?
+What is the URI of another extension that a specific extension can enhance?
+What is the SHA256 checksum of another extension that a specific extension can enhance?
+According to a technique blueprint, is experiment data in a specific role consumed or produced?
+Is a specific SeriesSet required or optional within its parent element's blueprint in a technique definition?
+What are the alternative series blueprints that can be chosen for a given series set blueprint?
+Is the selection from a set of alternative series blueprints mandatory or optional?
+What is the unit of measurement for a defined allowed value range in a technique definition?
+What categories of parameters are defined for a specific sample?
+What is the start index for a specific set of encoded values in a series?
+What is the end index for a specific set of encoded values in a series?
+What method details are specified in a template?
+What result structures are defined in a template?
+What is the name of another extension that a specific extension can enhance?
+What is the name of a technique definition that a specific extension can be applied to?

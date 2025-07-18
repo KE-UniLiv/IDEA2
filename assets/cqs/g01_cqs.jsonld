@@ -1,0 +1,410 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the unstructured text comment associated with a sample?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the unstructured text comment associated with an experiment step?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What infrastructure details are defined within a template?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Which samples were inherited from a parent experiment step rather than being directly referenced?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the prefix used for a bulk reference to a set of experiment steps?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Should a data series be displayed to a user by default?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What are the individually listed values for a data series?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the base64 encoded representation of a numeric series' values?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the multiplicative factor applied to an SI unit component in a unit definition?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the exponent applied to an SI unit component in a unit definition?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the additive offset applied to an SI unit component in a unit definition?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the scope, such as element or attributes, of a change described in a diff entry?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Which specific signable item was modified, as identified by a diff entry's ID reference?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the free-text comment explaining an audit trail entry?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Does every referenced sample in an experiment step have a corresponding definition in the SampleSet?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Does every referenced experiment step data have a corresponding definition in the ExperimentStepSet?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the version number of the technique definition schema used in a technique file?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Is a technique definition document a base technique or an extension to another technique?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the URI of a technique definition that a specific extension can be applied to?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the SHA256 checksum of a technique definition that a specific extension can be applied to?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the URI of another extension that a specific extension can enhance?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the SHA256 checksum of another extension that a specific extension can enhance?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "According to a technique blueprint, is experiment data in a specific role consumed or produced?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Is a specific SeriesSet required or optional within its parent element's blueprint in a technique definition?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What are the alternative series blueprints that can be chosen for a given series set blueprint?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "Is the selection from a set of alternative series blueprints mandatory or optional?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the unit of measurement for a defined allowed value range in a technique definition?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What categories of parameters are defined for a specific sample?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the start index for a specific set of encoded values in a series?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the end index for a specific set of encoded values in a series?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What method details are specified in a template?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What result structures are defined in a template?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the name of another extension that a specific extension can enhance?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "text": "What is the name of a technique definition that a specific extension can be applied to?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.5,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  }
+]

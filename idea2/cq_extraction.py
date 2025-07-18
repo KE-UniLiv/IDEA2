@@ -16,7 +16,7 @@ import ast
 
 from utils import get_key
 from interfaces import GeminiLLM, OpenAILLM
-from idea2.schema2cq import PromptBuilder
+from schema2cq import PromptBuilder
 from notion_client import Client
 from tqdm import tqdm
 
