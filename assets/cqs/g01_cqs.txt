@@ -1,34 +1,101 @@
-What is the unstructured text comment associated with a sample?
-What is the unstructured text comment associated with an experiment step?
-What infrastructure details are defined within a template?
-Which samples were inherited from a parent experiment step rather than being directly referenced?
-What is the prefix used for a bulk reference to a set of experiment steps?
-Should a data series be displayed to a user by default?
-What are the individually listed values for a data series?
-What is the base64 encoded representation of a numeric series' values?
-What is the multiplicative factor applied to an SI unit component in a unit definition?
-What is the exponent applied to an SI unit component in a unit definition?
-What is the additive offset applied to an SI unit component in a unit definition?
-What is the scope, such as element or attributes, of a change described in a diff entry?
-Which specific signable item was modified, as identified by a diff entry's ID reference?
-What is the free-text comment explaining an audit trail entry?
-Does every referenced sample in an experiment step have a corresponding definition in the SampleSet?
-Does every referenced experiment step data have a corresponding definition in the ExperimentStepSet?
-What is the version number of the technique definition schema used in a technique file?
-Is a technique definition document a base technique or an extension to another technique?
-What is the URI of a technique definition that a specific extension can be applied to?
-What is the SHA256 checksum of a technique definition that a specific extension can be applied to?
-What is the URI of another extension that a specific extension can enhance?
-What is the SHA256 checksum of another extension that a specific extension can enhance?
-According to a technique blueprint, is experiment data in a specific role consumed or produced?
-Is a specific SeriesSet required or optional within its parent element's blueprint in a technique definition?
-What are the alternative series blueprints that can be chosen for a given series set blueprint?
-Is the selection from a set of alternative series blueprints mandatory or optional?
-What is the unit of measurement for a defined allowed value range in a technique definition?
-What categories of parameters are defined for a specific sample?
-What is the start index for a specific set of encoded values in a series?
-What is the end index for a specific set of encoded values in a series?
-What method details are specified in a template?
-What result structures are defined in a template?
-What is the name of another extension that a specific extension can enhance?
-What is the name of a technique definition that a specific extension can be applied to?
+What is the version of the AnIML core schema for a document?
+Which samples are defined in the document's SampleSet?
+What is the unique ID assigned to a sample?
+What is the barcode value of a sample?
+Is a specific sample marked as being 'derived'?
+What type of container holds a sample?
+What is the identifier of the container in which a sample is located?
+What are the coordinates of a sample within its container?
+What is the original source location of a sample's data?
+What is the plain-text name of a sample?
+What categories of information are associated with a sample?
+What tags are used to classify a sample?
+What is the value of a specific tag associated with a sample?
+Which experiment steps are listed in the ExperimentStepSet?
+What is the unique identifier for a given experiment step?
+Which template was used to create an experiment step?
+What comments are associated with an experiment step?
+What is the name of a specific experiment step?
+What is the URI of the technique definition for an experiment step?
+What is the SHA256 checksum for the technique definition file?
+Were any extensions applied to the technique in an experiment step?
+What is the name of the method as defined in the instrument?
+Who is the author of a method?
+What device was used for a method?
+What software was used for a method?
+What are the results of a particular experiment step?
+What is the name of a result?
+What samples were referenced in an experiment step?
+What role did a sample play in an experiment step?
+Was a sample consumed or produced during an experiment step?
+Was a sample inherited from a parent experiment step?
+What is the timestamp recorded for an experiment step?
+What other experiment data was consumed by an experiment step?
+What was the role of the consumed experiment data?
+Was the referenced experiment data for production or consumption?
+Does an experiment step reference parent data points from another result?
+What is the ID of the data series in a parent result being referenced?
+What is the start value of a referenced parent data point range?
+What is the end value of a referenced parent data point range?
+What data series are contained within a result's SeriesSet?
+How many data points are in the series of a given SeriesSet?
+What is the identifier for a specific data series?
+Is a data series dependent or independent?
+What is the data type for a series?
+What is the recommended plot scale for a data series?
+Is a data series intended to be visible by default?
+What is the scientific unit associated with a data series?
+What is the label of a scientific unit?
+What physical quantity is measured by a unit?
+How is a unit composed of SI base units?
+What factor is applied to an SI unit component?
+What exponent is applied to an SI unit component?
+What offset is applied to an SI unit component?
+Are the values in a series provided individually?
+Is a series represented by a base64 encoded value set?
+Is a series represented by an auto-incremented value set?
+What is the start value of an auto-incremented series?
+What is the increment value of an auto-incremented series?
+What parameters are defined within a specific category?
+What is the name of a parameter?
+What is the value of a specific parameter?
+What is the data type of a parameter?
+What is the unit of a parameter's value?
+What are the sub-categories within a given category?
+Which audit trail entries are recorded for a document?
+When was a specific change made in the audit trail?
+Who was the author of a change in the audit trail?
+What type of user was the author of a change (human, device, software)?
+What is the affiliation of an author of a change?
+What was the action performed in an audit trail entry (e.g., created, modified)?
+What was the stated reason for a change?
+What were the old and new values for a modified item?
+Which item was affected by an audit trail entry?
+What digital signatures are attached to the document?
+What is the name of the manufacturer of a device?
+What is the firmware version of a device?
+What is the serial number of a device?
+What is the name of the software used?
+What is the version of the software used?
+On which operating system was the software running?
+What is the name of a technique definition?
+Is a technique definition abstract?
+What is the purpose of a sample role defined in a technique (produced or consumed)?
+Is a sample in a specific role required or optional according to the technique?
+What is the maximum number of samples allowed for a specific role?
+Can a sample role be inherited in a nested experiment step?
+What parameter categories are defined for a sample role in a technique?
+What experiment data roles are defined by a technique?
+Is experiment data in a specific role required or optional?
+What result structures are defined by a technique's blueprint?
+Is a particular result required or optional for a technique?
+What is the blueprint for a SeriesSet within a result?
+Are there choices between different series blueprints in a technique?
+What is the required data type for a series according to its blueprint?
+What physical quantities are expected for a parameter or series?
+What are the allowed discrete values for a parameter as defined by the technique?
+What is the allowed value range for a quantity in a technique?
+Is the minimum allowed value for a quantity inclusive or exclusive?
+Is the maximum allowed value for a quantity inclusive or exclusive?
+What literature is cited in a technique definition's bibliography?
+What is the URI for a literature reference in a technique?

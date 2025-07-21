@@ -28,7 +28,7 @@ class PromptBuilder:
                  out_definition: str = None,
                  out_examples: str = None,
                  out_instruction: str = p.CQ_INSTRUCTION_A,
-                 limit: str = "Do not generate more than 150 Competency Questions."
+                 limit: str = "Generate around 100 competency questions."  # Default limit for the number of competency questions
                  ):
         """
         Initialise the prompt builder with the main components of the template.

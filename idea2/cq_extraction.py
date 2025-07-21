@@ -40,7 +40,7 @@ config = {
     "out_definition": p.CQ_DEFINITION_A,
     "out_examples": p.CQ_EXAMPLE_A,
     "out_instruction": p.CQ_INSTRUCTION_C,
-    "limit": "Do not generate more than 150 Competency Questions." # Default limit for the number of competency questions
+    "limit": "Generate around 100 competency questions." # Default limit for the number of competency questions
 }
 
 ## -- Get both the AnIML core schema and the AnIML technique schema 
