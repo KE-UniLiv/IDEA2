@@ -1,7 +1,7 @@
-# IDEA2
+# IDEA2 💭
 Expert-in-the-loop requirement elicitation and analysis for ontology engineering.
 
-IDEA2 is a framework which defines workflows for enriching Ontology Engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini` and `GPT`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which users can utilise LLMs to inform the creation and refinement of Ontologies through Competency Questions (CQs). With this framework, the user can select a model, hyperparameters and prompt configurations to extract CQs from a range of source documents, and in turn populate a Notion page with the results alongisde the associated provenance to allow for domain experts to validate these CQs, which fine-tunes the LLM's generations as iterations progress.
+IDEA2 is a framework which defines workflows for enriching Ontology Engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini` and `GPT`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which users can utilise LLMs to inform the creation and refinement of Ontologies through Competency Questions (CQs). With this framework, the user can select a model, hyperparameters and prompt configurations to extract CQs from a range of source documents, and in turn populate a Notion page with the results alongisde the associated provenance to allow for domain experts to validate these CQs, which fine-tunes the LLM's generations as iterations progress, in turn making the whole process more and more streamlined.
 
 # Overview
 
@@ -16,7 +16,7 @@ To start using IDEA2, the following must be provided in the appropriate area in 
 - Notion Database key (CQ Pool)
 - Notion LLM Database Key (LLM configurations and provenance)
 
-Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source document. These can also be defined with commands in runner.py, see [usage](#usage) for more details.
+Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source documents. These can also be defined with commands in runner.py, see [usage](#usage) for more details.
 
 Persona and user story definitions TODO
 
@@ -27,7 +27,7 @@ TODO
 
 ## Schemas and XML Definitions 📜
 
-Schemas are used to inform the creation of the ontology due to the fact that the ontology should be able to answer the (verified) CQs. An example of schemas is the [AnIML Schema (Core & Technique)](https://www.animl.org/) which contains both a technique schema and a core schema. Given these two schemas as part of a prompt, the LLM will extract CQs relevant to the schema which can be used to inform the creation of an ontology or to see if a former ontology can answer certain CQs. The schema is used in tandem with the prompt to attain powerful results for Ontology Engineering.
+Schemas are used to inform the creation of the ontology due to the fact that the ontology should be able to answer the (verified) CQs generated from them. An example of schemas is the [`AnIML Schema (Core & Technique)`](https://www.animl.org/) which contains both a [`technique schema`](assets/schema/animl-technique.xsd) and a [`core schema`](assets/schema/animl-core.xsd). Given these two schemas as part of a prompt, the LLM will extract CQs relevant to the schema which can be used to inform the creation of an ontology or to see if a former ontology can answer certain CQs. The schema is used in tandem with the prompt to attain powerful results for Ontology Engineering.
 
 ## Ontology Prompts 🔬
 TODO
