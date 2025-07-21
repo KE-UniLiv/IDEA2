@@ -96,10 +96,10 @@ def pull_rejected() -> dict:
             title = page["properties"]["CQ"]["title"][0]["text"]["content"]
             people = page["properties"]["Downvoted By"]["people"]
 
-            person = get_name_from_id(people[0]["id"]) if people else "Unknown user"
+            person = ", ".join(get_name_from_id(person["id"]) for person in people) if people else "Unknown user"
 
             comments = get_discussion_comments(page['id'])
-            comment = comments[0] if comments else "No comment given. Check this CQ with the schema and generalise to the requirement."
+            comment = ", ".join(comments) if comments else "No comment given. Check this CQ with the schema and generalise to the requirement."
             
             readabledate = datetime.datetime.strptime(page["properties"]["Creation date"]["created_time"], "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%d/%m/%Y")
 
