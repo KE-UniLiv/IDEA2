@@ -12,10 +12,13 @@ import os
 import json
 import datetime
 import prompts as p
+import cq_measures
+import sys
 
 from notion_client import Client
 from utils import get_key
 from tqdm import tqdm 
+from generation_utils import get_generation_number
 
 geminikey = get_key("gemini")
 openai_key = get_key("openai")
@@ -36,7 +39,6 @@ def pull_accepted() -> dict:
     Returns:
         dict: A dict of accepted competency questions.
     """
-    logging.info("Pulling accepted competency questions from Notion database.")
     
     ## -- Query the Notion database for accepted CQs
     results = notion.databases.query(
@@ -60,7 +62,7 @@ def pull_accepted() -> dict:
             people = page["properties"]["Upvoted By"]["people"]
             person = get_name_from_id(people[0]["id"]) if people else "Unknown"
 
-            accepted_cqs.append({"title": title, "person": person})
+            accepted_cqs.append({"title": title})
 
     return accepted_cqs
 
@@ -73,6 +75,7 @@ def pull_rejected() -> dict:
     """
 
     logging.info("Pulling rejected competency questions from Notion database.")
+    _, curriteration = get_generation_number()
     
     ## -- Query the Notion database for rejected CQs
     results = notion.databases.query(
@@ -87,32 +90,70 @@ def pull_rejected() -> dict:
         }
     )
     
-    ## -- Extract titles of rejected CQs
+    
     rejected_cqs = []
+    count = 0
 
     for page in results['results']:
-
         if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
+            idx = page["properties"]["ID"]["unique_id"]["number"]
+
             title = page["properties"]["CQ"]["title"][0]["text"]["content"]
             people = page["properties"]["Downvoted By"]["people"]
+            score = page["properties"]["Score"]["formula"]["number"]
+            votes = page["properties"]["Votes"]["formula"]["number"]
+            iteration = page["properties"]["Iteration"]["number"]
 
             person = ", ".join(get_name_from_id(person["id"]) for person in people) if people else "Unknown user"
-
             comments = get_discussion_comments(page['id'])
-            comment = ", ".join(comments) if comments else "No comment given. Check this CQ with the schema and generalise to the requirement."
+
+            if comments:
+                comment = "".join(f"<comment> {c} </comment>" for c in comments)
+            else:
+                comment = "<comment>No comment given. Check this CQ with the schema and generalise to the requirement.</comment>"
             
             readabledate = datetime.datetime.strptime(page["properties"]["Creation date"]["created_time"], "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%d/%m/%Y")
-
             rejected_cqs.append({
                 "title": title,
+                "id": idx,
                 "person": person,
                 "creation date": readabledate,
-                "score": page["properties"]["Score"],
+                "score": score,
+                "votes": votes,
                 "comment": comment,
-                "date_pulled": datetime.datetime.now().strftime("%d/%m/%y") ## -- Add the date of rejection
+                "from iteration": iteration,
+                "date_pulled": datetime.datetime.now().strftime("%d/%m/%y")
             })
 
-    return rejected_cqs
+    if curriteration == 1:
+        filtered_cqs = rejected_cqs
+        print("No previous iterations to filter. Using all rejected CQs.")
+    else:
+        prev_iteration = curriteration - 1
+        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == prev_iteration]
+
+        count = len(rejected_cqs) - len(filtered_cqs)
+        print(f"Removed {count} CQs that were not from the previous iteration.")
+
+        if len(filtered_cqs) == 0:
+            print("No new rejected CQs found, exiting to avoid overwriting!")
+            sys.exit(0)
+
+    return filtered_cqs
+
+def get_ids_from_rejected(rejected_cqs: list) -> list:
+    """
+    Extracts the IDs of rejected competency questions.
+
+    Args:
+        rejected_cqs (list): A list of rejected competency questions.
+
+    Returns:
+        list: A list of IDs of the rejected competency questions.
+    
+    """
+    
+    return [cq["id"] for cq in rejected_cqs if "id" in cq]
 
 def get_name_from_id(user_id: str) -> str:
     """
@@ -141,11 +182,54 @@ def store_pulled(pulled_cqs, typeof="none") -> None:
         pulled_cqs (list): A list of pulled competency questions.
         typeof (str): The type of competency questions being stored (e.g., "accepted", "rejected").
 
+    Returns:
+        None: The function saves the pulled competency questions to the specified file.
+
     """
 
     filepath = os.path.join(os.getcwd(), "assets", "cqs", f"{typeof}_cqs.json")
     with open(filepath, 'w') as f:
         json.dump(pulled_cqs, f, indent=2, ensure_ascii=False)
+
+def store_handled(handled_path: str, rejected_path: str) -> None:
+    """
+    Stores handled competency questions in a JSON file.
+
+    Args:
+        handled_path (str): The path to the handled CQs JSON file.
+        rejected_path (str): The path to the rejected CQs JSON file.
+
+    Returns:
+        None: The function saves the handled competency questions to the specified file.
+
+    """
+
+    # Load existing handled CQs if file exists
+    if os.path.exists(handled_path):
+        with open(handled_path, 'r', encoding='utf-8') as f:
+            try:
+                handled_cqs = json.load(f)
+            except Exception:
+                handled_cqs = []
+    else:
+        handled_cqs = []
+
+    # Load new handled CQs
+    with open(rejected_path, 'r', encoding='utf-8') as f:
+        try:
+            new_cqs = json.load(f)
+        except Exception:
+            new_cqs = []
+
+    ## -- Only append CQs whose IDs are not already in handled_cqs
+    existing_ids = set(cq.get("id") for cq in handled_cqs if isinstance(cq, dict) and cq.get("id") is not None)
+    to_add = [cq for cq in new_cqs if isinstance(cq, dict) and cq.get("id") not in existing_ids]
+    all_handled = handled_cqs + to_add
+
+    print(f"to_add: {to_add}")
+
+    with open(handled_path, 'w', encoding='utf-8') as f:
+        json.dump(all_handled, f, indent=2, ensure_ascii=False)
     
 def get_discussion_comments(page_id: str) -> list:
     """
@@ -180,16 +264,54 @@ def get_rejected_cqs_from_file() -> list:
     """
 
     filepath = os.path.join(os.getcwd(), "assets", "cqs", "rejected_cqs.json")
+    _, iteration = get_generation_number()
 
-    with open(filepath, 'r', encoding='utf-8') as f:
+
+    with open(filepath, 'r', encoding='latin-1') as f:
+        try:
+            data = json.load(f)
+        except Exception as e:
+            return []
+            
+
+    cqs = [{
+        "cq": item["title"],
+        "id": item.get("id", ""),
+        "comment": item.get("comment", "No comment provided"),
+        "score": item.get("score", {}).get("formula", {}).get("number", 0) if isinstance(item.get("score"), dict) else item.get("score", 0),
+        "votes": item.get("votes", {}).get("formula", {}).get("number", 0) if isinstance(item.get("votes"), dict) else item.get("votes", 0),
+        "from iteration": iteration,
+
+    } for item in data if 'title' in item and 'id' in item and 'comment' in item and 'score' in item and 'votes' in item]
+
+    return cqs
+
+def get_cqs_from_file_as_strings(filepath) -> list:
+    """
+    Reads rejected competency questions from a file and returns them as a list of formatted strings.
+
+    Args:
+        filepath (str): The path to the file containing rejected competency questions.
+
+    Returns:
+        list: A list of rejected competency questions as formatted strings.
+
+    Note:
+        The CQs should already be cleaned and stored in 'assets/cqs/rejected_cqs.json'.
+    """
+
+    with open(filepath, 'r', encoding='latin-1') as f:
         data = json.load(f)
 
     cqs = []
     for item in data:
-        if 'title' in item and 'comment' in item:
-            cqs.append(f"{item['title']} was rejected because {item['comment']}")
-        else:
-            cqs.append(item['title'])
+        if not isinstance(item, dict):
+            continue
+        title = item.get("title", "")
+        comment = item.get("comment", "")
+        score = item.get("score", {}).get("formula", {}).get("number", "") if isinstance(item.get("score"), dict) else item.get("score", "")
+        votes = item.get("votes", {}).get("formula", {}).get("number", "") if isinstance(item.get("votes"), dict) else item.get("votes", "")
+        cqs.append(f"{title} was rejected with {comment}, {votes} votes and {score} score")
 
     return cqs
 
@@ -207,19 +329,16 @@ def reformulate_cqs(model: object, prompt: str, cqs: list) -> list:
     
     """
 
-    ## -- Iterate over the list of CQs and append each one to the end of the prompt
-
-    prompt = prompt + "\nHere are the rejected competency questions:\n\n"
+    ## -- Serialize the list of CQs as JSON and append to the prompt for structured input
+    prompt = prompt + "\nHere are the rejected competency questions as structured data (JSON):\n\n"
 
     try:
-        for cq in cqs:
-            cq = cq.strip()
-            prompt = prompt + cq + "\n"
-    except Exception as e:
-        logging.error(f"Error while appending CQs to prompt: {e}")
-        return []
-    print(f"Prompt for reformulation:\n{prompt}\n")
+        cqs_json = json.dumps(cqs, indent=2, ensure_ascii=False)
+        prompt = prompt + cqs_json + "\n"
 
+    except Exception as e:
+        logging.error(f"Error while serializing CQs to JSON: {e}")
+        return []
     
     return model.generate(prompt=prompt)
 
@@ -238,30 +357,3 @@ def validate_reformulated(cqs: list, count: int = 0) -> list:
 
     cqs = [cq for cq in cqs if "N/A" not in cq]
     return cqs if cqs else ["No competency questions were needed to be validated."]
-
-
-   
-if __name__ == "__main__":
-
-    os.system("CLS")
-    accepted_cqs = pull_accepted()
-    
-    for cq in accepted_cqs:
-        print(f"Accepted CQ {cq['title']} accepted by {cq['person']}")
-
-    time.sleep(5)
-    print("----------------------------------------------------------------------------------")
-
-    rejected_cqs = pull_rejected()
-    if rejected_cqs:
-
-        logging.info(f"Found {len(rejected_cqs)} rejected competency questions.")
-        for cq in rejected_cqs:
-            print(f"Rejected CQ {cq['title']} rejected by {cq['person']} with comment: {cq['comment']}")
-
-    else:
-        logging.info("No rejected competency questions found.")
-
-    time.sleep(5)
-    print("----------------------------------------------------------------------------------")
-

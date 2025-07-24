@@ -6,11 +6,8 @@ This is a script which facilitates the extraction of competency questions (CQs) 
 
 import prompts as p
 import os
-import re
 import utils
 import logging
-import time
-import notion_utils
 import json
 import ast
 
@@ -20,11 +17,11 @@ from schema2cq import PromptBuilder
 from notion_client import Client
 from tqdm import tqdm
 
-geminikey = get_key("gemini")
-openai_key = get_key("openai")
+geminikey = get_key("gemini") # This should be your Gemini API key
+openai_key = get_key("openai") # This should be your OpenAI API key
 
-LLMDB = get_key("notionllmdb")
-NOTION_TOKEN = get_key("notionkey")
+LLMDB = get_key("notionllmdb") 
+NOTION_TOKEN = get_key("notionkey") # This should be your Notion integration token
 NOTION_PAGE_ID = get_key("notionpage")  # This should be your Notion page ID
 NOTION_DATABASE_ID = get_key("notiondb")  # This should be your Notion database ID
 
@@ -32,7 +29,7 @@ notion = Client(auth=NOTION_TOKEN)
 logging.basicConfig(level=logging.INFO)
 logging.getLogger("httpx").setLevel(logging.WARNING)  # Suppress httpx warnings
 
-## -- Use a config dictionary to store the configuration parameters -- ##
+## -- Use a global config dictionary to store the configuration parameters -- ##
 config = {
     "temperature": 0.2,
     "role": p.SYSTEM_ROLE_A,
@@ -42,12 +39,6 @@ config = {
     "out_instruction": p.CQ_INSTRUCTION_C,
     "limit": "Generate around 100 competency questions." # Default limit for the number of competency questions
 }
-
-## -- Get both the AnIML core schema and the AnIML technique schema 
-# --  and hence the combined schemas 
-animl_core_schema, animl_technique_schema = utils.getSchemas()
-combined_schemas = animl_core_schema + "\n" + animl_technique_schema
-
 
 
 def configure_prompt(role: str = config["role"],
@@ -66,9 +57,10 @@ def configure_prompt(role: str = config["role"],
         out_examples (str): The output examples for competency questions.
         out_instruction (str): The output instruction for competency questions.
         limit (int): The maximum number of competency questions to extract.
+        ignore_schemas (bool): Whether to ignore the schemas in the prompt (if its already in the chat history).
 
     Returns:
-        str: The configured prompt for competency question extraction.
+        str: The configured prompt for competency question extraction to pass to the LLM.
     """
 
     prompt_builder = PromptBuilder(
@@ -79,13 +71,17 @@ def configure_prompt(role: str = config["role"],
         limit=limit
     )
 
+    ## -- Get both the AnIML core schema and the AnIML technique schema 
+    # --  and hence the combined schemas 
+    animl_core_schema, animl_technique_schema = utils.getSchemas()
+    combined_schemas = animl_core_schema + "\n" + animl_technique_schema
+
     prompt = prompt_builder.get_prompt(
         raw_data=combined_schemas if not ignore_schemas else "",
         include_role=False,
     )
 
-    return prompt
-    
+    return prompt, combined_schemas
 
 
 def run_cq_extraction(model: object, prompt) -> list:
@@ -103,8 +99,8 @@ def run_cq_extraction(model: object, prompt) -> list:
     """
 
     response = model.generate(prompt)
-
     return response
+
 
 def cq_to_txt(cqs: list, newfilepath: str) -> None:
     """
@@ -122,9 +118,6 @@ def cq_to_txt(cqs: list, newfilepath: str) -> None:
         newfilepath should be a valid file path where you want to save the competency questions (ie in the file).
     
     """
-
-
-    #path = os.path.join(os.getcwd(), "..", "assets", "cqs", "g02_cqs.txt")
 
     with open(newfilepath, "w") as f:
         for q in cqs:
@@ -145,7 +138,7 @@ def get_llm_instance(model_name: str, api_key: str,
         temperature (float): The temperature to use for the model.
 
     Returns:
-        GeminiLLM or OpenAILLM: An instance of the appropriate LLM class.
+        A GeminiLLM or OpenAILLM object: An instance of the appropriate LLM class.
     """
 
     return GeminiLLM(model=model_name, api_key=api_key, role=role, temperature=temperature) \
@@ -154,16 +147,18 @@ def get_llm_instance(model_name: str, api_key: str,
 def save_llm_insatance(cqset: str, instance=[], isReformulated=False) -> None:
     """
     
-    Save the LLM instance to a file.
+    Save the LLM instance to a file for debugging purposes.
 
     Args:
         cqset (str): The name of the competency question set.
         instance (list): A list to store the LLM instance details.
+        isReformulated (bool): Whether the instance is a reformulated set of competency questions.
 
     Returns:
         None: The function saves the LLM instance to the specified file.
     
-    Note: This is a placeholder function, as saving an LLM instance directly is not typically supported.
+    Note: This is mainly for debugging purposes, it saves the LLM instance details to a JSON file to
+          cross reference to the Notion LLM database.
     
     """
     filepath = os.path.join(os.getcwd(), "assets", "cqs", "llm_instances.json")
@@ -193,6 +188,7 @@ def clean_llm_output(cqs) -> list:
         list: A list of cleaned competency questions (plain text, one per line).
     """
 
+    ## -- Instance handling for type
     if isinstance(cqs, str):
         try:
             parsed = ast.literal_eval(cqs)
@@ -211,7 +207,7 @@ def clean_llm_output(cqs) -> list:
     else:
         return []
 
-def getconfigurations():
+def getconfigurations() -> dict:
     """
     
     Get the current configuration dictionary.
@@ -229,8 +225,10 @@ def update_config(**kwargs) -> None:
     Update the global config dictionary with new values. Resolves the keys to their correct types and values.
 
     Args:
-        **kwargs: Key-value pairs to update the config dictionary.
+        **kwargs: Key-value pairs to update the config dictionary (multi-unpacking).
     
+    Returns:
+        None: The function updates the global config dictionary in place.
     """
 
     for k, v in kwargs.items():
@@ -246,69 +244,3 @@ def update_config(**kwargs) -> None:
                 config[k] = getattr(p, v)
         else:
             config[k] = v
-
-def get_generation_number() -> str:
-    """
-    
-    Get a string for the last generation and increment for a new one using a regex pattern to match the generation files in the assets/cqs directory.
-
-    Returns:
-        str: A string representing the next generation number, formatted as "gXX_cqs", where XX is the generation number.
-
-    """
-
-    max_gen = 0
-    pattern = re.compile(r"g(\d+)_(cqs|reformulated)\.txt$")
-
-    for fname in os.listdir(os.path.join(os.getcwd(), "assets", "cqs")):
-        matchname = pattern.search(fname)
-        if matchname:
-            gen_number = int(matchname.group(1))
-            if gen_number > max_gen:
-                max_gen = gen_number
-
-    ## -- Return the next generation string
-    return f"g{max_gen + 1:02d}_cqs"
-
-
-if __name__ == "__main__":
-
-    os.system("CLS")
-
-    decided = False
-    while not decided:
-        args = input("\nUpdate config? (e.g temperature = ..., role = ...)\npress <enter> to skip\nType help for help on options: ").strip()
-
-        if args.lower() == "help":
-            utils.help_config()
-            time.sleep(2)
-
-        elif args and args.lower() != "none":
-            update_config(**{k.strip(): v.strip() for k, v in (item.split("=", 1) for item in args.split(",") if "=" in item)})
-            decided = True
-
-        elif args.lower() == "none" or not args:
-            decided = True
-
-    ## -- Get the LLM instance
-    model = get_llm_instance(config["gemini_model"], api_key=geminikey, role=config["role"], temperature=config["temperature"])
-    
-    ## -- Run the competency question extraction
-    cqs = run_cq_extraction(model, configure_prompt())
-    
-    ## -- Clean the output
-    cleaned_cqs = clean_llm_output(cqs)
-
-    print("There are {} competency questions extracted.".format(len(cleaned_cqs)))
-    
-    ## -- Write the cleaned CQs to a file
-    cq_to_txt(cleaned_cqs, os.path.join(os.getcwd(), "assets", "cqs", "g02_cqs.txt")) \
-        if (choice := input("Do you want to write the CQs to a file? (yes/no): ").strip().lower()) == "yes" else None
-    
-    competency_questions = notion_utils.get_cqs_from_file(os.path.join(os.getcwd(), "assets", "cqs", "trial_cqs.txt"))
-    
-    # Write each competency question to the Notion database
-    for cq in tqdm(competency_questions):
-        notion_utils.write_row(notion, NOTION_DATABASE_ID, "CQ", cq)
-    
-    print("Competency questions written to Notion database.")

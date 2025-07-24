@@ -14,6 +14,13 @@ from tqdm import tqdm
 _model = None
 
 def get_model():
+    """Lazy-loads the SentenceTransformer model. It is not needed only on import, but only
+    when embeddings are needed which is not during the first iteration of the script.
+    
+    Returns
+        SentenceTransformer: An instance of the SentenceTransformer model.
+
+    """
     global _model
     if _model is None:
         _model = SentenceTransformer('all-mpnet-base-v2')
@@ -95,9 +102,19 @@ def find_best_matches(similarity_matrix, generated_questions, reference_question
     best_matches.append((generated_question, reference_questions[best_match_index]))
   return best_matches
 
-def remove_similar_generated(similarity_matrix, generated_questions, threshold):
+def remove_similar_generated(similarity_matrix, generated_questions, threshold) -> list:
     """
-    Removes generated questions that are too similar to each other based on a threshold."""
+    Removes generated questions that are too similar to each other based on a threshold.
+
+    Args:
+        similarity_matrix (numpy.ndarray): The cosine similarity matrix of generated questions.
+        generated_questions (List[str]): The list of generated questions.
+        threshold (float): The similarity threshold above which questions will be removed.
+
+    Returns:
+        list: A list of generated questions that are not too similar to each other.
+
+    """
 
     to_remove = set()
     for i in range(similarity_matrix.shape[0]):
@@ -107,6 +124,37 @@ def remove_similar_generated(similarity_matrix, generated_questions, threshold):
 
     print(f"Removing {len(to_remove)} questions that are too similar to each other (threshold: {threshold})")
     return [q for idx, q in tqdm(enumerate(generated_questions)) if idx not in to_remove]
+
+def run_simple_similarty_analysis(cqs, selfcheck=True):
+   """Runs a simple similarity analysis on the generated competency questions.
+
+   This function calculates embeddings for the generated questions, computes a similarity matrix,
+   and then analyzes the cohesion and similarity of the questions.
+
+   Parameters
+   ----------
+   cqs : list of str
+       The list of generated competency questions.
+
+   selfcheck : bool
+       Whether to perform the embeddings against themselves (see if two cqs in a set are too similar)
+
+    Returns
+    -------
+    list of str
+        A list of filtered generated questions.
+
+   """
+   
+   generated_embeddings = calculate_embeddings(cqs)
+   similarity_matrix = calculate_similarity_matrix(generated_embeddings, generated_embeddings)
+
+   print(f"\nCohesion of generated CQs: {calculate_cohesion(similarity_matrix)}")
+
+   filter_similar = remove_similar_generated(similarity_matrix, cqs, threshold=0.95)
+
+   return filter_similar
+
 
 
 def visualize_cohesion(similarity_matrix, generated_questions, reference_questions):

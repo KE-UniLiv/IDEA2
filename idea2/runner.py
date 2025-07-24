@@ -7,11 +7,14 @@ import prompts as p
 import utils
 import sys
 import time
+import json
+import shutil
 
 from tqdm import tqdm
 from cq_json_ld import cq_to_json_ld
-from reformulate_cq import reformulate_cqs, get_rejected_cqs_from_file, store_pulled, validate_reformulated, pull_accepted, pull_rejected
-from cq_extraction import get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt, clean_llm_output, configure_prompt, get_generation_number, update_config
+from reformulate_cq import store_handled, get_cqs_from_file_as_strings, reformulate_cqs, get_rejected_cqs_from_file, store_pulled, validate_reformulated, pull_accepted, pull_rejected
+from cq_extraction import get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt, clean_llm_output, configure_prompt, update_config
+from generation_utils import get_generation_number
 
 #from output_constraints import validate_competency_questions
 
@@ -39,8 +42,15 @@ Usage:
 
 def main():
     parser = argparse.ArgumentParser(description="Extract and store CQs using LLMs and Notion.")
- 
-    ## -- Arguments which elicit user input
+
+
+    # -- TODO: 
+    # (1) Use a source type to resolve new schemas ie --update_schema_to [path/to/schema1, path/to/schema2] then saves as current schema(s)
+    # -  Then use --use_source [schema / ontology / user stories]
+    # -
+    # (2) Make it faster
+
+
     parser.add_argument('--model', type=str, default="models/gemini-2.5-flash", help='Model name\n (Options: models/gemini-2.5-flash, models/gemini-2.5-pro, models/gemini-1.5-flash-latest, models/openai-gpt-4)')
     parser.add_argument('--temperature', type=float, default=0.2, help='LLM temperature\n (Options: 0.0 to 1.0) (Default: 0.2)')
     parser.add_argument('--role', type=str, default="SYSTEM_ROLE_A", help='Role for the LLM\n (Options: SYSTEM_ROLE_A, SYSTEM_ROLE_B, SYSTEM_ROLE_C)')
@@ -48,6 +58,7 @@ def main():
     'CQ_INSTRUCTION_C')
     parser.add_argument('--example', type=str, default="CQ_EXAMPLE_A", help='Give examples of CQs for the LLM\n (Options: CQ_EXAMPLE_A, CQ_EXAMPLE_B, CQ_EXAMPLE_C, CQ_ACCEPTED_CQS)')
     parser.add_argument('--generation', type=str, default=None, help='Generation label (auto if not set manually)')
+    parser.add_argument('--update_key', type=str, default=None, help='Update the API key in api_config.yml (input: <service>,<new key value>)')
 
     ## -- Boolean arguments 
     parser.add_argument('--save', action='store_true', help='Save CQs to file (jsonld format)')
@@ -58,11 +69,35 @@ def main():
     #parser.add_argument('--constrain', action='store_true', help='Use output constraints to validate the LLM output (default: False)')
     parser.add_argument('--usage_help', action='store_true', help='Show a more comprehensive help message with usage instructions')
     parser.add_argument('--show_prompt', action='store_true', help='Show the prompts used for CQ extraction and reformulation')
+    parser.add_argument('--show_services', action='store_true', help='Show the available services in api_config.yml')
     args = parser.parse_args()
 
-    ## TODO: no default args
-    history = utils.load_history_from_file()
-    schema_in_history = any(cq_extraction.combined_schemas in h["content"] for h in history)
+    if args.show_services:
+        utils.show_services()
+        sys.exit(0)
+
+    if len(sys.argv) == 1:
+        print("No arguments provided. Use --help or --usage_help for usage information.")
+        sys.exit(0)
+
+    if args.update_key:
+        service, newkey = utils.parse_two(args.update_key)
+        utils.update_key(service, newkey)
+        sys.exit(0)
+
+    cqs = ""
+    reformulated = False
+
+    ## -- Default to a gemini model if none are specified through the arguments
+    modelname = args.model if args.model else cq_extraction.config["gemini_model"]
+    print(f"Using model: {modelname}")
+
+    core, technique = utils.getSchemas()
+    combined = core + "\n" + technique
+
+    ## -- Check if the schema has already been given in the chat history, and avoid redefining it again if so
+    history = utils.load_history_from_file(modelname)
+    schema_in_history = any(combined in h["content"] for h in history)
 
     if args.usage_help:
         utils.show_customhelp()
@@ -80,10 +115,6 @@ def main():
         sys.exit(0) if not args.reformulate else print("Please run with --reformulate and --save to reformulate the rejected CQs and thus save to notion.")
 
 
-    cqs = ""
-    reformulated = False
-
-
     ## -- Update config (retain original values if new ones are not provided)
     update_config(
         gemini_model=args.model if args.model else cq_extraction.config["gemini_model"],
@@ -94,7 +125,8 @@ def main():
     )
 
     ## -- Generation label
-    generation = args.generation if args.generation else get_generation_number()
+    generation, currgeneration = get_generation_number()
+    currgeneration += 1
 
     ## -- Get LLM instance
     model = get_llm_instance(
@@ -107,7 +139,7 @@ def main():
     if not args.reformulate and not args.find_rejected:
 
         ## -- Configure and retrieve the prompt for CQ extraction
-        prompt = configure_prompt(
+        prompt, combined_schemas = configure_prompt(
             role=cq_extraction.config["role"],
             out_definition=cq_extraction.config["out_definition"],
             out_examples=cq_extraction.config["out_examples"],
@@ -122,7 +154,7 @@ def main():
             cq_extraction.config['out_examples'],
             cq_extraction.config['out_instruction'],
             cq_extraction.config['limit'],
-            cq_extraction.combined_schemas if not schema_in_history else ''
+            combined_schemas if not schema_in_history else ''
         ])
         
         ## -- Do not redefine
@@ -142,12 +174,19 @@ def main():
         for q in cleaned_cqs:
             history.append({"role": "assistant", "content": q})
 
-        utils.save_history_to_file(history)
+        utils.save_history_to_file(history, modelname)
 
     if args.reformulate:
-        update_config(out_instruction="CQ_INSTRUCTION_REFORMULATE")
+
+        update_config(out_instruction="CQ_INSTRUCTION_REFORMULATE", 
+                      out_definition="CQ_EVALUATION_DEFINITION", 
+                      out_examples="CQ_ACCEPTED")
 
         reformulated = True
+
+        accepted_cqs = pull_accepted()
+        rejectcqs = pull_rejected()
+
 
         ## -- Reconfigure the prompt for reformulation with explicit arguments to override default
         cq_extraction.prompt = configure_prompt(
@@ -155,26 +194,44 @@ def main():
             out_definition=cq_extraction.config["out_definition"],
             out_examples=cq_extraction.config["out_examples"],
             out_instruction=cq_extraction.config["out_instruction"],
-            limit=cq_extraction.config["limit"]
+            ignore_schemas=True if schema_in_history else False
         )
 
-        rejectcqs = get_rejected_cqs_from_file()
-        cqs = reformulate_cqs(model, cq_extraction.prompt, rejectcqs)
+        formattedprompt ="\n".join([
+            cq_extraction.config['out_definition'],
+            cq_extraction.config['out_examples'],
+            cq_extraction.config['out_instruction'],
+        ])
 
+        print(f"Formatted prompt for reformulation:\n{formattedprompt}\n") if args.show_prompt else None
+        
+        ## -- Do not redefine
+        history.append({"role": "user", "content": (
+            formattedprompt + 
+                         json.dumps(rejectcqs, indent=2, ensure_ascii=False)
+        )
+        }) 
+
+
+        if history:
+
+            ## -- Convert history to a single prompt string
+            prompt_str = "\n".join([h["content"] for h in history])
+            cqs = reformulate_cqs(model, prompt=prompt_str, cqs=rejectcqs)
+
+        else:
+            raise ValueError("No history found. There must be evidence of history to reformulate from.")
+        
     cleaned_cqs = clean_llm_output(cqs) if cqs else None
+    for q in cleaned_cqs:
+        history.append({"role": "assistant", "content": q})
+        
+    utils.save_history_to_file(history, modelname)
 
-    # -- Similarity and cohesion measures
-
-    generated_cq_embeddings = cq_measures.calculate_embeddings(cleaned_cqs)
-
-    #reference_questions = [line.strip() for line in open("assets/cqs/reference_cqs_1.txt", encoding="utf-8") if line.strip()]
-    #reference_cq_embeddings = cq_measures.calculate_embeddings(reference_questions)
-
-    similarity_matrix = cq_measures.calculate_similarity_matrix(generated_cq_embeddings, generated_cq_embeddings)
-    print(f"\nCohesion of generated CQs: {cq_measures.calculate_cohesion(similarity_matrix)}")
-    print(f"Best matches for generated CQs: {cq_measures.find_best_matches(similarity_matrix, cleaned_cqs, cleaned_cqs)}\n")
-
-    cleaned_cqs = cq_measures.remove_similar_generated(similarity_matrix, cleaned_cqs, threshold=0.95) 
+    if not args.reformulate:
+        
+        cleaned_cqs = cq_measures.run_simple_similarty_analysis(
+            cleaned_cqs)
 
     ## -- Save to file if requested
     if args.save:
@@ -191,7 +248,7 @@ def main():
         else:
 
             reform_file = os.path.join(outdir, f"{generation}_reformulated.txt")
-            originalcqs = get_rejected_cqs_from_file()
+            originalcqs = get_cqs_from_file_as_strings(os.path.join(os.getcwd(), "assets", "cqs", "rejected_cqs.json"))
             with open(reform_file, "w", encoding="utf-8") as f:
                 f.write("\n---\nOriginal rejected:\n")
 
@@ -233,17 +290,17 @@ def main():
                         cq_extraction.NOTION_DATABASE_ID,
                         "CQ",
                         cq,
+                        iteration = currgeneration,
                         generation_config=generation_config_UUID
                     )
                     time.sleep(0.2)
                     break
                 except Exception as e:
                     print(f"Timeout at attempt {att}, continuing...")
+                    time.sleep(1)
     
 
         print("Competency questions written to Notion database. Please refresh the page to see the changes.")
-
-    print(prompt) if args.show_prompt else None
 
     ## -- Optionally save LLM instance
     save_llm_insatance(cqset=f"{generation}", isReformulated=reformulated) if args.save else print("LLM instance not saved, as --save argument was not provided.")

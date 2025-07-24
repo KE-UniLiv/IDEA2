@@ -10,10 +10,13 @@ import os
 import logging
 import time
 import cq_extraction
+import utils
+from generation_utils import get_generation_number
 from pyld import jsonld ## -- Useful in case we need to do any JSON-LD processing / operations later, but not intrinsically needed for the conversion
 
 
-def convert_cq_to_json_ld(cq: str, identifier=None, modelname=None, temperature="", roleset="") -> dict:
+def convert_cq_to_json_ld(cq: str, 
+                          identifier=None, modelname=None, temperature="", roleset="", id=None, hash=None) -> dict:
     """
     Convert a competency question (CQ) to JSON-LD format.
 
@@ -29,10 +32,13 @@ def convert_cq_to_json_ld(cq: str, identifier=None, modelname=None, temperature=
     json_ld = {
         "@context": "https://www.animl.org/",
         "@type": "CompetencyQuestion",
+        "@ID": id if id else "",
+        "@URI": hash if hash else "",
         "text": cq
     }
 
     json_ld["identifier"] = identifier if identifier else "undefined"
+
     json_ld["belongsToModel"] = {"@type": "System", "name": modelname, "temperature": temperature, "roleset": roleset}  \
     if modelname else {"@type": "Collection", "name": "undefined"}
 
@@ -66,12 +72,13 @@ def cq_to_json_ld(cqs: list, filepath=None) -> None:
         None: The function saves the JSON-LD representation to the specified file.
     """
 
-    identifier = cq_extraction.get_generation_number()
+    identifier, _ = get_generation_number()
     modelname = cq_extraction.config["gemini_model"]
     temperature = cq_extraction.config["temperature"]
     roleset = cq_extraction.config["role"]
+    
 
-    json_ld_list = [convert_cq_to_json_ld(cq, identifier, modelname, temperature, roleset) for cq in cqs]
+    json_ld_list = [convert_cq_to_json_ld(cq, identifier, modelname, temperature, roleset, hash=utils.hash_from_string(cq)) for cq in cqs]
     save_json_ld_to_file(json_ld_list, filepath)
 
     logging.info(f"Competency questions written to {filepath}")

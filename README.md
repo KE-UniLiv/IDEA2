@@ -16,7 +16,7 @@ To start using IDEA2, the following must be provided in the appropriate area in 
 - Notion Database key (CQ Pool)
 - Notion LLM Database Key (LLM configurations and provenance)
 
-Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source documents. These can also be defined with commands in runner.py, see [usage](#usage) for more details.
+Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source documents. These can also be defined with commands in runner.py, see [`usage`](#usage) for more details.
 
 Persona and user story definitions TODO
 
@@ -34,9 +34,9 @@ TODO
 
 ## LLMs and Hyperparameters 🤖
 
-Both `Gemini` and TODO `GPT` models are supported for the extraction of CQs from [schemas and XML definitions](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure.
+Both `Gemini` and TODO `GPT` models are supported for the extraction of CQs from [`schemas and XML definitions`](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure with **hash** fields.
 
-Please ensure that you have access to the model you require through your API key(s), or you may recieve errors.
+*Please ensure that you have access to the model you require through your API key(s), or you may recieve errors.*
 
 ## Prompts 🗣️
 
@@ -64,7 +64,17 @@ All in all, the Notion integration allows for:
 
 The **Notion page** is where the databases (CQ Pools and LLM configurations) are stored. To use the workflow, the Notion key in [`api_config.yml`](idea2/api_config.yml) must be the **key of an integration** in the workspace you are using. If you do not have such an integration in your workspace and page, please create one and add it to the appropriate page. Ensure this integration also has the appropriate permissions.
 
-To get a database's key or ID, ...
+### Getting a Notion Database's ID
+To get a database's key, hover around the title of the database in bold text, and click the 3 dots to reveal the drop down menu with the *View database* option:
+
+![alt text](image.png)
+
+From this, a new view of the database will be shown; again, click the three dots at the **top right** and click *copy link*:
+
+![alt text](image-1.png)
+
+From this a large URL will be copied, everything between the last / and the ? of the url is the database ID, it should be 32 characters long.
+
 
 ## Requirements ✅
 
@@ -72,12 +82,17 @@ Please find the requirements in [`requirements.txt`](requirements.txt). To easil
 
 ## Usage ⚒️
 
-When all the data is in place and the dependencies are installed:
+When all the data is in place and the dependencies are installed, below is an example of how to utilise the workflow:
 
-- Open a terminal and cd to your local instance of the source (e.g `C:/GitHub/IDEA2`)
-- Run `python idea2/runner.py <arg1> <arg2> ... <arg n>`
+1.  Open a terminal and cd to your local instance of the source (e.g `C:/GitHub/IDEA2`)
+2. Run `python idea2/runner.py` and set your API keys and source documents
+3. Run a first iteration of CQ extractions
+4.  Once evaluation is undertaken, run `python idea2/runner.py --pull_rejected`
+5.  Then, `--reformulate` with the desired arguments (model, temperature etc)
+6. Repeat steps 4 and 5 until no further CQs are needing reformulation.
 
-Below are the supported arguments, please run `python idea2/runner.py --usage_help` if the default help given is not useful for you.
+
+Below are the supported arguments, please run `python idea2/runner.py --usage_help` if the default help given is not useful for you, or if things are still unclear.
 
 ```
 usage: runner.py [-h] [--model MODEL] [--temperature TEMPERATURE] [--role ROLE] [--instruction INSTRUCTION]

@@ -1,3 +1,4 @@
+import notion_utils
 """
 A collection of modular components for generating prompts for schema2cq.
 """
@@ -30,6 +31,20 @@ natural language and are used to test the ontology's ability to provide answers
 to specific queries. Competency questions are an important part of the ontology
 development process as they help to ensure that the ontology is fit for purpose
 and meets the needs of its users.
+"""
+
+N = notion_utils.getn()
+
+CQ_EVALUATION_DEFINITION = f"""
+The CQs you generated in iteration 1 were passed to N={N} domain experts for evaluation. 
+The score of a CQ is based on a simple majority vote, with any CQ that has a score of less than 0 needing reformulation. 
+For example, if a CQ has a score of -3 and has been voted by 3 experts (out of N=4), then all the active participants downvoted that CQ.
+"""
+
+CQ_ACCEPTED = f"""
+You can assume that all the CQs from the previous iteration that are not included below successfully passed the validation stage 
+(they were accepted by majority). 
+Consider these as good CQs.
 """
 
 CQ_EXAMPLE_A = """
@@ -194,9 +209,8 @@ Do not repeat any competency questions that have already been generated in previ
 """
 
 CQ_INSTRUCTION_REFORMULATE = """
-Given the set of rejected competency questions and both the technique and core schema definition below,
-reformulate the competency questions to be applicable to the schema, and check their validity in relation to the schema.
-If a competency question is not valid, replace it with "N/A", and provide a reason for its rejection.
-Do not mark a reformulated competency question as "Reformulated" or "Reformulated CQ", only provide the reformulated competency question
-or a reason for rejected CQs that cannot be reformulated. 
+You will now receive the set of rejected CQs with their votes, (negative) score, and any commented feedback, when available. 
+Your task is to reformulate these CQs by using the feedback from the validators and the schema definitions you were originally given. 
+Do not mark a reformulated competency question as "Reformulated" or "Reformulated CQ", only provide the reformulated competency question. 
+Only reformulate the rejected competency questions, do not extract new competency questions.
 """
