@@ -9,12 +9,25 @@ IDEA2 is a framework which defines workflows for enriching Ontology Engineering 
 
 To start using IDEA2, the following must be provided in the appropriate area in [`api_config.yml`](idea2/api_config.yml):
 
-- Gemini API key
-- OpenAI API key
-- Notion Integration Key
-- Notion Page Key
-- Notion Database key (CQ Pool)
-- Notion LLM Database Key (LLM configurations and provenance)
+```
+gemini:
+  key: <your gemini api key>
+
+openai:
+  key: <your openai key>
+
+notionkey:
+  key: <your notion integration key>
+
+notionpage:
+  key: <your Notion page's key>
+
+notiondb:
+  key: <your notion CQ Pool database key>
+
+notionllmdb:
+  key: <your notion LLM config database key>
+```
 
 Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source documents. These can also be defined with commands in runner.py, see [`usage`](#usage) for more details.
 
@@ -34,7 +47,28 @@ TODO
 
 ## LLMs and Hyperparameters 🤖
 
-Both `Gemini` and TODO `GPT` models are supported for the extraction of CQs from [`schemas and XML definitions`](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure with **hash** fields.
+Both `Gemini` and TODO `GPT` models are supported for the extraction of CQs from [`schemas and XML definitions`](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure with **hash** fields:
+
+```
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f81398ec50b16b3466782119094fa4e51161f2b0b1060415551961f1084a8f94",
+    "text": "What is the unique identifier for a given sample?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.6,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+    }
+  }
+]
+```
+
+
 
 *Please ensure that you have access to the model you require through your API key(s), or you may recieve errors.*
 
@@ -54,15 +88,19 @@ Reformulation of a CQ takes place when any given CQ has a score of $< 0$ on the 
 
 The workflow contains Notion intgeration which allows for domain experts to reject generated CQs and provide reasons for doing so. These rejected CQs are then fed back into the LLM, reformulated, and sent back to the Notion database. 
 
+The **Notion page** is where the databases (CQ Pools and LLM configurations) are stored. To use the workflow, the Notion key in [`api_config.yml`](idea2/api_config.yml) must be the **key of an integration** in the workspace you are using. If you do not have such an integration in your workspace and page, please create one and add it to the appropriate page. Ensure this integration also has the appropriate permissions.
+
 All in all, the Notion integration allows for:
 
-- Saving of LLM instances (provenance) for a set of CQs
-- Saving of extracted or reformulated CQs
-- Acceptance or rejection of CQs 
-- Priority labelling of CQs
-- Commenting of CQs
+| Notion Feature                          | Description                                                                                                                                          | Supported? |
+| :--------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| **Saving of LLM Configurations**            | **LLM Generation Configs are saved to a database, showing the prompt used to attain a set of CQs, the temperature and model type for a given iteration** | X          |
+| **Saving of extracted or reformulated CQs** | **CQs are saved to the CQ Pool database**                                                                                                                | X          |
+| **Acceptance or rejection of CQs**          | **All CQs in CQ Pool are able to be downvoted or upvoted to contribute to the majority vote**                                                            | X          |
+| **Priority labelling**                      | **All CQs can be given a label of priority from low, medium or high**                                                                                    | X          |
+| **Commenting of CQs**                      | **Comments on rejected CQs will be given as feedback to the LLM**                                                                                        | X          |
+| **Reformulates relation**                   | **Links the reformulated CQ to the Original CQ**                                                                                                         | TODO       |
 
-The **Notion page** is where the databases (CQ Pools and LLM configurations) are stored. To use the workflow, the Notion key in [`api_config.yml`](idea2/api_config.yml) must be the **key of an integration** in the workspace you are using. If you do not have such an integration in your workspace and page, please create one and add it to the appropriate page. Ensure this integration also has the appropriate permissions.
 
 ### Getting a Notion Database's ID
 To get a database's key, hover around the title of the database in bold text, and click the 3 dots to reveal the drop down menu with the *View database* option:
@@ -78,7 +116,13 @@ From this a large URL will be copied, everything between the last / and the ? of
 
 ## Requirements ✅
 
-Please find the requirements in [`requirements.txt`](requirements.txt). To easily install all of these requirements, TODO
+Please find the requirements in [`requirements.txt`](requirements.txt). To easily install all of these requirements, run 
+
+``` 
+pip install -r requirements.txt
+```
+
+TODO, VIRTUAL ENV INSTRUCTIONS
 
 ## Usage ⚒️
 
