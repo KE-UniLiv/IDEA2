@@ -7,6 +7,8 @@ already cleaned and stored in a text file. It uses the Notion API to create new 
 
 import os
 import json
+import logging
+import time
 from utils import get_key
 from notion_client import Client
 from tqdm import tqdm
@@ -19,26 +21,31 @@ notion = Client(auth=notiontoken)
 
 # BIG TODO: GET THE UUID OR ID OR WHATEVER IT IS FROM THE TEST CQ AND SEE IF LINKING IS FEASIBLE
 
-def test_relation(client, database_id):
+def check_all_voted():
+    """
+    
+    Ensures that all competency questions (CQs) have at least 1 vote.
+    
+    """
 
     results = notion.databases.query(
         **{
             "database_id": notiondb,
             "filter": { 
-                "property": "ID", 
+                "property": "Votes", 
                 "number": {
-                    "equals": 1618
+                    "equals": 0
                 }
             }
         }
     )
 
-    for page in results["results"]:
-        reformulates = page["properties"].get("Reformulates")
-        print(reformulates)
+    if results["results"]:
+        logging.warning("There are results with 0 votes. Waiting for 5 seconds before proceeding.")
+        time.sleep(5)
     
  
-def write_row(client, database_id, string, cq, iteration, generation_config) -> None:
+def write_row(client, database_id, string, cq, iteration, generation_config, reformulates=None) -> None:
     """
     Write a row to the Notion database with the given user_id and competency question (cq).
 
@@ -54,20 +61,18 @@ def write_row(client, database_id, string, cq, iteration, generation_config) -> 
     
     """
 
+    properties = {
+        'CQ': {'title': [{'text': {'content': cq}}]},
+        'Source': {'multi_select': [{'name': 'AnIML (Core and Technique)'}]},
+        'Generation Config': {'relation': [{'id': generation_config}]},
+        'Iteration': {'number': int(iteration)}
+    }
+
+    if reformulates:
+        properties['Reformulates'] = {'relation': [{'id': reformulates}]}
     client.pages.create(
-        **{
-            "parent": {
-                "database_id": database_id
-            },
-            'properties': {
-                'CQ': {'title': [{'text': {'content': cq}}]},
-                'Source': {'multi_select': [{'name': 'AnIML (Core and Technique)'}]},
-                'Generation Config': {'relation': [{'id': generation_config}]},
-                'Iteration': {'number': int(iteration)},
-                # 'CQ': {'select': {'name': event}},
-                # 'Date': {'date': {'start': date}}
-            }
-        }
+        parent={'database_id': database_id},
+        properties=properties
     )
 
 def llm_setup_to_notion(generation, modelname, temperature, usage, prompt, llmrole, database_id=llmdb) -> None:
@@ -106,8 +111,44 @@ def llm_setup_to_notion(generation, modelname, temperature, usage, prompt, llmro
     )
     return page["id"]
 
-def link_reformulations():
-    pass
+def get_ids():
+
+    results = notion.databases.query(
+        **{
+            "database_id": notiondb,
+            "filter": {
+                "property": "ID",
+                "unique_id": {
+                    "is_not_empty": True
+                }
+            }
+        }
+    )
+
+    # Return list of dicts: {"id": page id, "title": CQ title}
+    return [
+        {
+            "id": page["id"],
+            "title": page["properties"]["CQ"]["title"][0]["text"]["content"] if "CQ" in page["properties"] and page["properties"]["CQ"]["title"] else None
+        }
+        for page in results["results"]
+    ]
+
+def get_notion_id_for_cq(cq: str, entries=get_ids()) -> str:
+    """
+    Get the Notion page ID for a specific competency question (CQ).
+
+    Args:
+        cq (str): The competency question to search for.
+        entries (list): A list of entries containing CQ titles and their corresponding Notion page IDs.
+
+    Returns:
+        str: The Notion page ID associated with the given CQ, or None if not found.
+    """
+    for entry in entries:
+        if entry["title"] == cq:
+            return entry["id"]
+    return None
 
 def get_cqs_from_file(filepath, filetype=None) -> list:
     """
@@ -170,6 +211,7 @@ def getn(database_id=notiondb) -> int:
             query_kwargs["start_cursor"] = next_cursor
 
         results = notion.databases.query(**query_kwargs)
+        
         for page in results["results"]:
             for prop in ["Upvoted By", "Downvoted By"]:
                 if prop in page["properties"]:
@@ -180,3 +222,8 @@ def getn(database_id=notiondb) -> int:
         next_cursor = results.get("next_cursor", None)
 
     return len(unique_voters)
+
+if __name__ == "__main__":
+    # Get the database properties for debugging
+    db = notion.databases.retrieve(database_id=notiondb)
+    print(db['properties'].keys())

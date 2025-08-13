@@ -1,0 +1,1817 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "bcd0808470d12d62f8928008c500e23267e096be38ffd4ea46ffcd619b8efe52",
+    "question": "What experiment steps are included in a result?",
+    "Class(es)": [
+      "Result",
+      "ExperimentStepSet",
+      "ExperimentStep"
+    ],
+    "Relationship(s)": [
+      "hasAssociatedStepSet",
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1ee400e4e2c97b362e743bc5d19fd5c5c7a49a63c9dda54137cc95cb5f80c5b7",
+    "question": "what series did datapoints in infrastructure originate from?",
+    "Class(es)": [
+      "Infrastructure",
+      "ParentDataPointReferenceSet",
+      "ParentDataPointReference",
+      "Series"
+    ],
+    "Relationship(s)": [
+      "hasparentdatapointreferenceset",
+      "hasMember",
+      "hasSeriesId"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3ecbee76b1f6e3e06696fa19b760e01b97dc5e0604298b4ed0c73782891bdd5e",
+    "question": "for a parameter blueprint, what is the blueprint for the category within which the corresponding parameter resides?",
+    "Class(es)": [
+      "Parameter",
+      "Category"
+    ],
+    "Relationship(s)": [
+      "hasparameter"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "213fffa0431aa465abe3051985a583e871949102d32c0dbe0f7bc789d8f7e737",
+    "question": "for a series, what type of datapoints does it contain?",
+    "Class(es)": [
+      "Series",
+      "seriesType"
+    ],
+    "Relationship(s)": [
+      "hasseriestype"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d47b751645318763b0c1fd854f43da33a44b786fec7a3e401d1c2d980d99aa8c",
+    "question": "for a technique, what techniques extend it?",
+    "Class(es)": [
+      "Technique",
+      "Extension"
+    ],
+    "Relationship(s)": [
+      "hasextension"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "63343de016fc74980b8fea2eebb065030cee007cde7529834cc6a50f1bca5e89",
+    "question": "for a sample, which step produced it and which step consumes it?",
+    "Class(es)": [
+      "Sample",
+      "ExperimentStep",
+      "SampleReference",
+      "samplePurpose"
+    ],
+    "Relationship(s)": [
+      "utilizesInfrastructure",
+      "hassamplereferenceset",
+      "hasMember",
+      "hassamplepurpose"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f8ebd59c490e65d8653fa410286ff78506308623827d536d49633c30054025bf",
+    "question": "when a sample is referenced in infrastructure, is that sample derived in a previous step?",
+    "Class(es)": [
+      "Sample",
+      "derived",
+      "Infrastructure",
+      "SampleReference"
+    ],
+    "Relationship(s)": [
+      "isDerivedFrom",
+      "hassamplereferenceset"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "79de6a3aed1dc3e84ae86db1c872f2e8561d3f581d349e71f9816de247d180d4",
+    "question": "which items can have signatures attached to them?",
+    "Class(es)": [
+      "AnIML",
+      "SignatureSet",
+      "Signature",
+      "AuditTrailEntry",
+      "Sample",
+      "Series"
+    ],
+    "Relationship(s)": [
+      "hassignatureset",
+      "contains",
+      "hasId",
+      "hasid"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "01179e3e03d10f1a549c04ff84f7687e40c1c39976f1709e55b57c6dcd7790ae",
+    "question": "what are the different data types present in a series?",
+    "Class(es)": [
+      "Series",
+      "seriesType"
+    ],
+    "Relationship(s)": [
+      "hasseriestype"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b0c527a52d5586f882b9fd0f2e8ebe7d3442023a95e87ced0c0d64288ed4c84c",
+    "question": "what is the first value in a series?",
+    "Class(es)": [
+      "Series",
+      "AutoIncrementedValueSet",
+      "StartValue"
+    ],
+    "Relationship(s)": [
+      "hasautoincrementedvalueset",
+      "hasStartvalue"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "341985022f1ee1bc2d4cb0a2dc8c13b4bf8387212783ef640a2f3290b0a84514",
+    "question": "what actions has an author performed?",
+    "Class(es)": [
+      "Author",
+      "AuditTrailEntry",
+      "Action"
+    ],
+    "Relationship(s)": [
+      "hasAuthor",
+      "hasAction"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "35f539c5213f07670e853ec5818a60246d6f37b10cc4cad6c6ebab6f89caf26e",
+    "question": "what software has been run on a device?",
+    "Class(es)": [
+      "Software",
+      "Device",
+      "Method"
+    ],
+    "Relationship(s)": [
+      "hassoftware",
+      "hasdevice"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5b09899e7f944747e4042ac74cbb562dfd1ca6fff6a7d7d3dca029e26cd5c9ba",
+    "question": "which parameters in a category are optional?",
+    "Class(es)": [
+      "Parameter",
+      "Category"
+    ],
+    "Relationship(s)": [
+      "hasparameter"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e039f1e9f0e2b71929d7b74327dd4cd7bd713967fc01d6f9fce30c6efde3b4ea",
+    "question": "which parameters are common between allowed series blueprints in a series set blueprint?",
+    "Class(es)": [
+      "Parameter",
+      "Series",
+      "SeriesSet"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a379694e08158ffaccb5f33b7ce3b5d3af27c7d526f209ce4d1d0b1510744897",
+    "question": "which categories are sub categories",
+    "Class(es)": [
+      "Category"
+    ],
+    "Relationship(s)": [
+      "hasSubcategory"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "24865f850c6fb4c7229df8d67c95244062c904e56d338afbf35d12ad8cf4359b",
+    "question": "is a samples (A) container (B) produced in the same experiment step as sample (A) is consumed?",
+    "Class(es)": [
+      "Sample",
+      "ExperimentStep",
+      "containerID",
+      "SampleReference",
+      "samplePurpose"
+    ],
+    "Relationship(s)": [
+      "hasContainerId",
+      "hassamplepurpose"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "69fa0d0c1ce75cc415941bb03e341a0e53c1612a5e14d811c02e7bc794eeb64c",
+    "question": "do any human authors have versions?",
+    "Class(es)": [
+      "Author",
+      "Version"
+    ],
+    "Relationship(s)": [
+      "hasusertype"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9bc4ac6c95d504c43048256292ff8202276c693604be608fd1188f398bb0705e",
+    "question": "does a series relate to a result, method, or sample?",
+    "Class(es)": [
+      "Series",
+      "Result",
+      "SeriesSet"
+    ],
+    "Relationship(s)": [
+      "hasSeriesSet",
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "47c9ef2f134f291a7219f726234bdc72d53f20a8cda3e20b2588b935807a0e32",
+    "question": "is a series contained in a sub category?",
+    "Class(es)": [
+      "Series",
+      "Category",
+      "SeriesSet"
+    ],
+    "Relationship(s)": [
+      "hasseriesset",
+      "hasSubcategory",
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "acd8287770e22fb2481265a38ddbf23e6f58ec124e8fd0a5093f065d7dbd2d44",
+    "question": "what is the container of an item pointed to by a reference?",
+    "Class(es)": [
+      "Reference",
+      "Sample",
+      "containerID"
+    ],
+    "Relationship(s)": [
+      "hasreference",
+      "hasContainerId"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "436277daab8a1c26d456202d7f9710e1d49e0579dd3e8df755fd4b2237e9a9d2",
+    "question": "which experiment steps where present in the previous version of a document?",
+    "Class(es)": [
+      "ExperimentStep",
+      "AuditTrailEntry",
+      "Diff"
+    ],
+    "Relationship(s)": [
+      "hasEntry",
+      "hasdiff"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a366adc49356695bf6db592401af41a591af990130a31517bea296d596d9f249",
+    "question": "what is the timestamp at which a sample is referenced?",
+    "Class(es)": [
+      "Timestamp",
+      "SampleReference",
+      "Infrastructure"
+    ],
+    "Relationship(s)": [
+      "hasTimestamp",
+      "hassamplereferenceset"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "039cf630c1f31b09effd9e138620cd60e44c799a63d971330567eeee8a70f5e0",
+    "question": "which experiment steps is a technique used in?",
+    "Class(es)": [
+      "ExperimentStep",
+      "Technique"
+    ],
+    "Relationship(s)": [
+      "hasTechnique"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ecef76d04962c88a0b5d941c708738c0352b95d68fff89e1365db1574bc8ee1e",
+    "question": "how many samples can be in the parentdatareferenceset for an experiment before the constraints of its technique are violated?",
+    "Class(es)": [
+      "Sample",
+      "ParentDataPointReferenceSet",
+      "Technique"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e66dccc08c55feaf70a6849152044e988d922106035eee6941ced8da715bea39",
+    "question": "for a datappoint in a series, what is the value at the equivalent position in the other series in the same serieset?",
+    "Class(es)": [
+      "Series",
+      "SeriesSet"
+    ],
+    "Relationship(s)": [
+      "hasMember",
+      "hasindividualvalueset",
+      "hasencodedvalueset",
+      "hasautoincrementedvalueset"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "414f7aedbc2135b488e3638042d3334e4619d024291acc5558abc0879bd545a4",
+    "question": "can a result share series with an experimentstep it references?",
+    "Class(es)": [
+      "Result",
+      "Series",
+      "ExperimentStep",
+      "ExperimentDataReference"
+    ],
+    "Relationship(s)": [
+      "hasSeriesSet",
+      "hasDataReference"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "48d6b7d9e2d3cd46d7f86aa59ce871cd9e789525a6887014c920f73afbc16e04",
+    "question": "are any samples derived from derived experiment steps?",
+    "Class(es)": [
+      "Sample",
+      "derived",
+      "ExperimentStep"
+    ],
+    "Relationship(s)": [
+      "isDerivedFrom"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "95bed88293f60d52b8d3dfd4552850b573b32d44631275fd6456185fdcc594c0",
+    "question": "which positions in a container are occupied?",
+    "Class(es)": [
+      "Sample",
+      "containerID",
+      "locationInContainer"
+    ],
+    "Relationship(s)": [
+      "hasContainerId",
+      "hasLocationInContainer"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5ad493ac1050edb78013c8bcfb07c79ac64fac3dde2a477fd14db64a6497cfe8",
+    "question": "which parameters are tied to experiment steps and which are tied to samples?",
+    "Class(es)": [
+      "Parameter",
+      "ExperimentStep",
+      "Sample",
+      "Category"
+    ],
+    "Relationship(s)": [
+      "hasparameter",
+      "belongsToCategory",
+      "hascategory"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "718a8bbc5cb28954267050178781fc5c8bb5eed65a4596315ec844f49413772c",
+    "question": "which changes has software been involved in",
+    "Class(es)": [
+      "Software",
+      "AuditTrailEntry",
+      "Diff"
+    ],
+    "Relationship(s)": [
+      "hassoftware",
+      "hasdiff"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8cb8cc3d0e36d300aec60e438a142d20b084fbfbf49054c39545d0d9fb101d60",
+    "question": "what is the version two versions before a current version?",
+    "Class(es)": [
+      "AuditTrailEntry",
+      "Timestamp"
+    ],
+    "Relationship(s)": [
+      "hasEntry",
+      "hasTimestamp"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "00d5e9fbba62d3dc89fa160f7b244c16c30ca9673182eab2c75557ac1ff8b80a",
+    "question": "do an changes effect versions?",
+    "Class(es)": [
+      "Diff",
+      "AuditTrailEntry",
+      "Software",
+      "Version"
+    ],
+    "Relationship(s)": [
+      "hasdiff",
+      "hassoftware",
+      "hasVersion"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "87d7c6ac746ade297fd239785ba0a84c5a2a16a31be93b3b7fccf82bed913536",
+    "question": "would any part of a template violate any part of the technique for any of the experiment steps using it?",
+    "Class(es)": [
+      "Template",
+      "Technique",
+      "ExperimentStep"
+    ],
+    "Relationship(s)": [
+      "usesTemplate",
+      "hasTechnique"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0db5ee28bb95d5fdb01d2512f7c017b9d10a725fd8376346da292686bea4cd77",
+    "question": "is the any tag shared by at least two instances of different classes?",
+    "Class(es)": [
+      "Tag",
+      "Sample",
+      "Template",
+      "ExperimentStep"
+    ],
+    "Relationship(s)": [
+      "hasTagSet",
+      "hastagset",
+      "contains"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7e7897c09549bb3b8f1987662f0ca4eb0db7461b4ec991140e481430c1ce6521",
+    "question": "which series sets contain empty series?",
+    "Class(es)": [
+      "SeriesSet",
+      "Series"
+    ],
+    "Relationship(s)": [
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f005d310c51f13cfdf855cbcca4899bb8d2a8b2364865444e1d298fdc0b69820",
+    "question": "what is the data type (required by the technique) for a series?",
+    "Class(es)": [
+      "Series",
+      "seriesType",
+      "Technique"
+    ],
+    "Relationship(s)": [
+      "hasseriestype",
+      "hasTechnique"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "cb792e339e2abe1a6f05c70132cbee6badbc778c9b359cff626b4e9120fb7e6b",
+    "question": "does a document have at least one of every relation type it can have?",
+    "Class(es)": [
+      "AnIML"
+    ],
+    "Relationship(s)": [
+      "hasExperimentStepSet",
+      "hasSampleSet",
+      "hasaudittrailentryset",
+      "hassignatureset"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e628ffad12527077c4ac997acb4838083a49d0a4cba04db3006c1a5dbe32268b",
+    "question": "is a technique both extended and an extension?",
+    "Class(es)": [
+      "Technique",
+      "Extension"
+    ],
+    "Relationship(s)": [
+      "hasextension"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "82fa14f62588d4fde1eb80b19d0688e4e59583fcca04e371e07db08b36b020e6",
+    "question": "who is the author of a revision during which a series was created that violated a technique?",
+    "Class(es)": [
+      "Author",
+      "AuditTrailEntry",
+      "Series",
+      "Technique"
+    ],
+    "Relationship(s)": [
+      "hasAuthor",
+      "hasEntry",
+      "hasdiff"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2b37c25f78c2f9521b7585804d65292c477dee693207985dd155fd73db0a0b93",
+    "question": "which pieces of infrastructure query data from their own experiment steps results?",
+    "Class(es)": [
+      "Infrastructure",
+      "ExperimentStep",
+      "ExperimentDataReference"
+    ],
+    "Relationship(s)": [
+      "utilizesInfrastructure",
+      "hasExperimentDataReferenceSet",
+      "hasDataReference",
+      "hasStepId"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "068de9b74e7a57f1b2f6224ae83dbe50544c284bb30eff1b6ca539be7fa8f379",
+    "question": "What is the ID of the container that a sample is in?",
+    "Class(es)": [
+      "Sample",
+      "containerID"
+    ],
+    "Relationship(s)": [
+      "hasContainerId"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "34e51af669028c0b844b59208b76037d2b1f36037b1759938475b7527604d46b",
+    "question": "What is the comment for an object?",
+    "Class(es)": [
+      "Sample",
+      "ExperimentStep",
+      "AuditTrailEntry",
+      "comment",
+      "Comment"
+    ],
+    "Relationship(s)": [
+      "hasComment",
+      "hascomment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7ee61b45d2fea513d7a68165cffc994e9da867df2582284e0d885db3604483fb",
+    "question": "What is the name and value of a tag associated with an object?",
+    "Class(es)": [
+      "Tag"
+    ],
+    "Relationship(s)": [
+      "hasname",
+      "hasvalue"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7f0d0e4758c917b969eb1d18f2a05b8f646e4875da08dec1c13ab36648e1816b",
+    "question": "Which samples are does a container contain?",
+    "Class(es)": [
+      "Sample",
+      "containerID"
+    ],
+    "Relationship(s)": [
+      "hasContainerId"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1201c7ad3feeab42f8087b7dff01264b76edf9c1f354ecf06d73e2e0f339e0dd",
+    "question": "Which samples are derived?",
+    "Class(es)": [
+      "Sample",
+      "derived"
+    ],
+    "Relationship(s)": [
+      "isDerivedFrom"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "708c78217c97ba514209df766f20021f8ce5259dc5ed85b94a483e5a1acf21c2",
+    "question": "what is the role of a reference?",
+    "Class(es)": [
+      "SampleReference",
+      "ExperimentDataReference",
+      "role"
+    ],
+    "Relationship(s)": [
+      "hasRole"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "483cc4ec3e5369ad5caeaac9ac316f93b6380fdeb52a855770e207a5c0374ac9",
+    "question": "what result data points are included in an infrastructure?",
+    "Class(es)": [
+      "Infrastructure",
+      "ParentDataPointReferenceSet",
+      "ParentDataPointReference"
+    ],
+    "Relationship(s)": [
+      "hasparentdatapointreferenceset",
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d01e078331ca6b69fa4fb462fd05c57d5ff0e1fce1f1cfd0e1c514c4afe1c1fc",
+    "question": "What is the id for referenced data?",
+    "Class(es)": [
+      "ExperimentDataReference",
+      "ParentDataPointReference"
+    ],
+    "Relationship(s)": [
+      "hasStepId",
+      "hasSeriesId"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3a8f36ffa166ad4be0660041121e94f002c089ae04f2a604b377044f622d10c0",
+    "question": "which experiment steps are included in a result?",
+    "Class(es)": [
+      "Result",
+      "ExperimentStepSet",
+      "ExperimentStep"
+    ],
+    "Relationship(s)": [
+      "hasAssociatedStepSet",
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "105fb825bbb97ff53f655631974a066692dd52fd0d55d430ab6ee4148677dd63",
+    "question": "are experiment steps included in a result to be produced or consumed?",
+    "Class(es)": [
+      "ExperimentStep",
+      "Result",
+      "ExperimentDataReference",
+      "dataPurpose"
+    ],
+    "Relationship(s)": [
+      "produces",
+      "hasPurpose"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5ac75c573458622410f3fa8c6fd3e12f8110ff0cdd61690a962c8717fe258918",
+    "question": "What is the URI of a technique?",
+    "Class(es)": [
+      "Technique",
+      "uri"
+    ],
+    "Relationship(s)": [
+      "hasUri"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "efa0edf22172def36cd8b75c566bdbde3bcea63961f18bdc70940155000c01cb",
+    "question": "What is the SHA256 checksum of a technique?",
+    "Class(es)": [
+      "Technique",
+      "sha256"
+    ],
+    "Relationship(s)": [
+      "hasSha256",
+      "hassha256"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9f2f54124891d782c01de0403b9da3463e8751add67f758a2c61495cb8f201ce",
+    "question": "What is the phone number of an author?",
+    "Class(es)": [
+      "Author",
+      "Phone"
+    ],
+    "Relationship(s)": [
+      "hasphone"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "94241b3f6e3e9d5ced88af5f970c9d886039e4d1e0fd27583a141b5432a61a95",
+    "question": "What is the address of an author?",
+    "Class(es)": [
+      "Author",
+      "Location"
+    ],
+    "Relationship(s)": [
+      "haslocation"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2199ed86df2941a686664efe184cdf54a8a111e73456c8835d516a3a331cd417",
+    "question": "What is the id of a device?",
+    "Class(es)": [
+      "Device",
+      "DeviceIdentifier"
+    ],
+    "Relationship(s)": [
+      "hasIdentifier"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0302e0fdb7301392df7fdc63165cbc60453c85b8f05d18ae2dc9a17645b223c6",
+    "question": "Who is the manufacturer of a piece of software?",
+    "Class(es)": [
+      "Software",
+      "Manufacturer"
+    ],
+    "Relationship(s)": [
+      "hasManufacturer"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a20f750d0429adba4fcdaefe7c267406ae7ff721f2e19c497de502b963c0fa1e",
+    "question": "What is the length of a series?",
+    "Class(es)": [
+      "SeriesSet",
+      "length"
+    ],
+    "Relationship(s)": [
+      "hasLength"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b890ff7d2c017f2c965446ea529efc6ba743c4a767fbef69cf12d629ec5f38a8",
+    "question": "For a series with auto-incremented values, what is the starting value?",
+    "Class(es)": [
+      "Series",
+      "AutoIncrementedValueSet",
+      "StartValue"
+    ],
+    "Relationship(s)": [
+      "hasautoincrementedvalueset",
+      "hasStartvalue"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "71720a70cd0e622829b8ad1633fcb4aac1322d70b42095229b66ec555613802d",
+    "question": "For a series with auto-incremented values, what is the increment between values?",
+    "Class(es)": [
+      "Series",
+      "AutoIncrementedValueSet",
+      "Increment"
+    ],
+    "Relationship(s)": [
+      "hasautoincrementedvalueset",
+      "hasIncrement"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "70aa35e3900cfafa1f1e87c205dc9db98f42772d4f1cf89a658f8dd1a24d48a8",
+    "question": "what is the numeric value of an encoded data point?",
+    "Class(es)": [
+      "Series",
+      "EncodedValueSet"
+    ],
+    "Relationship(s)": [
+      "hasencodedvalueset"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "58812189e511b97d237764639c9053e458e1e1f566c3b32d9fa0ba5ffbe06a7c",
+    "question": "What is the offset value for a derived SI unit's definition?",
+    "Class(es)": [
+      "SIUnit",
+      "offset"
+    ],
+    "Relationship(s)": [
+      "hasOffset"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ea3633a26dd1cf3bf885088fa97b4cda4b54e17c34a555a85df5b62cb4ff2bfd",
+    "question": "What software was used to create a diff in the version history?",
+    "Class(es)": [
+      "Software",
+      "Diff",
+      "AuditTrailEntry"
+    ],
+    "Relationship(s)": [
+      "hassoftware",
+      "hasdiff"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "102cdc6fa6e60bfd3364a389169c3d692c3ab82446372fad43628624db349e4b",
+    "question": "What was the scope of a change recorded in a diff entry (element or attributes)?",
+    "Class(es)": [
+      "Diff",
+      "scope"
+    ],
+    "Relationship(s)": [
+      "hasscope"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e373a6c7af459fcb7dc364a20f43d991d55af48cb015d96b939732bcc09fe65d",
+    "question": "Which experiment steps is a sample used in?",
+    "Class(es)": [
+      "ExperimentStep",
+      "Sample",
+      "SampleReference"
+    ],
+    "Relationship(s)": [
+      "hassamplereferenceset",
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d18b7da898f6f5e3aff53ded8bd2f4b916943cfa4747d57483312eb3db1f6a53",
+    "question": "which results reference a given experiment step?",
+    "Class(es)": [
+      "Result",
+      "ExperimentStep",
+      "ExperimentDataReference"
+    ],
+    "Relationship(s)": [
+      "hasDataReference",
+      "produces"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e2576f845f242e5891de98f0fe104d5f2a2a40daf77dc42d9fbbc3c5ba88aa00",
+    "question": "which results reference a given series?",
+    "Class(es)": [
+      "Result",
+      "Series",
+      "SeriesSet"
+    ],
+    "Relationship(s)": [
+      "hasSeriesSet",
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f6203d9641137fde6d7e26b05da3f852391ea587a6d14ef90ae35cb1a0b52be0",
+    "question": "Which experiment steps make use of a specific template ID?",
+    "Class(es)": [
+      "ExperimentStep",
+      "Template"
+    ],
+    "Relationship(s)": [
+      "usesTemplate",
+      "hastemplateid"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c4f27b0f7750586159ad69cc058a4a044d810366476caefb16974cd34953e803",
+    "question": "which techniques can an extension extend?",
+    "Class(es)": [
+      "Technique",
+      "Extension"
+    ],
+    "Relationship(s)": [
+      "hasextension"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d5923022217532c09311dd7218082681c1b8920e9d60af5b9f1070126c266e40",
+    "question": "which extensions can an extension extend?",
+    "Class(es)": [
+      "Extension"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7bb9b0be0f2b1993bed640a62af48033b003fd8d03a8e5905c7009964e2ed005",
+    "question": "What are the category blueprints defined within a specific sample role blueprint?",
+    "Class(es)": [
+      "Category",
+      "Sample"
+    ],
+    "Relationship(s)": [
+      "belongsToCategory"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "fc3a4873c5f5a5167b57dfcf16dad5e9279a0ed62fb73c50be8c5abee5755f28",
+    "question": "how many experiment steps can be in an infrastructure according to a technique?",
+    "Class(es)": [
+      "ExperimentStep",
+      "Infrastructure",
+      "Technique"
+    ],
+    "Relationship(s)": [
+      "utilizesInfrastructure"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1eb3b54ab363a991fc92baa29df5a7dd64f823ef7b5292470c28394060217196",
+    "question": "how many results can one experiment step have?",
+    "Class(es)": [
+      "Result",
+      "ExperimentStep"
+    ],
+    "Relationship(s)": [
+      "produces"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7f2bb2dfde26b5934e604e63fa89fe9ec0c724ea895add8dd6803e4d613ad1be",
+    "question": "what is the documentation for an object?",
+    "Class(es)": [
+      "Sample",
+      "ExperimentStep",
+      "comment",
+      "Comment"
+    ],
+    "Relationship(s)": [
+      "hasComment",
+      "hascomment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3d2436c981671bacd50c024b57a32b2d3f40a560d0cd1ab4e52b7f0495a469cb",
+    "question": "how many series of a certain blueprint can occur in a set?",
+    "Class(es)": [
+      "Series",
+      "SeriesSet",
+      "Technique"
+    ],
+    "Relationship(s)": [
+      "hasMember"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "db7afa2312dcf9d6b4005604a9a685f30dd0455a26bbbf1af0b126dc8d6d6f35",
+    "question": "what are the units for a parameter?",
+    "Class(es)": [
+      "Parameter",
+      "Unit"
+    ],
+    "Relationship(s)": [
+      "hasUnit"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b9f558ce25c8a12dce9e7254010f05abf77af6b0dc97478664d7db6f02c8c69c",
+    "question": "what are the literature references for a technique?",
+    "Class(es)": [
+      "Technique",
+      "uri"
+    ],
+    "Relationship(s)": [
+      "hasUri"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "38a8620decfda6dbb8ac9721686d73bb2d6f23d9200277857f818e60ec5524ba",
+    "question": "what is the infrastructure for a template / experiment step?",
+    "Class(es)": [
+      "Template",
+      "ExperimentStep",
+      "Infrastructure"
+    ],
+    "Relationship(s)": [
+      "hasinfrastructure",
+      "utilizesInfrastructure"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f24f413945d2cd21c445a031016ea9b64efeba0da3d323a8afd3a784d140da53",
+    "question": "what is the method for a template / experiment step?",
+    "Class(es)": [
+      "Template",
+      "ExperimentStep",
+      "Method"
+    ],
+    "Relationship(s)": [
+      "hasmethod",
+      "usesMethod"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "abaf0309a3ca0889e2a5b73b09650e28f0339f90caeb72d9bcd581cc105eab61",
+    "question": "what is the result for a template / experiment step?",
+    "Class(es)": [
+      "Template",
+      "ExperimentStep",
+      "Result"
+    ],
+    "Relationship(s)": [
+      "hasresult",
+      "produces"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "388cd938cfbd2c49a996fa96064215d2380024303b83cfa9f56d522ef75828fb",
+    "question": "what is technique for a template / experiment step?",
+    "Class(es)": [
+      "Template",
+      "ExperimentStep",
+      "Technique"
+    ],
+    "Relationship(s)": [
+      "hastechnique",
+      "hasTechnique"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b26afb706741068446f06e26eb5c21dc2fbe52653263a199a00f9c09ef7d3a96",
+    "question": "what data types are present in a series?",
+    "Class(es)": [
+      "Series",
+      "seriesType"
+    ],
+    "Relationship(s)": [
+      "hasseriestype"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  }
+]

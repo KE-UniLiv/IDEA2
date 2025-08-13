@@ -99,8 +99,10 @@ def check_model(model):
     """
 
 
-    if model in ["models/gemini-2.5-flash", "models/gemini-2.5-pro", "models/gemini-1.5-flash-latest"]:
+    if model in ["models/gemini-2.5-flash", "models/gemini-2.5-pro", 
+                 "models/gemini-1.5-flash-latest", "models/gemini-1.5-pro", "models/gemini-1.5-pro-latest"]:
         filepath = "gemini_history.json"
+        
     elif model in ["models/openai-gpt-4", "models/openai-gpt-3.5-turbo"]:
         filepath = "gpt_history.json"
     else:

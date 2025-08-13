@@ -15,6 +15,8 @@ SYSTEM_ROLE_B = OENG_ROLE + "You will focus on ontology creation."
 
 SYSTEM_ROLE_C = OENG_ROLE + "You will focus on ontology testing."
 
+SYSTEM_ROLE_D = OENG_ROLE + "You will focus on ontology enrichment."
+
 # *****************************************************************************
 # COMPETENCY QUESTIONS DEFINITION AND EXAMPLES
 #  - CQ_EXAMPLE_A: CQ examples from the Music Meta ontology
@@ -210,7 +212,22 @@ Do not repeat any competency questions that have already been generated in previ
 
 CQ_INSTRUCTION_REFORMULATE = """
 You will now receive the set of rejected CQs with their votes, (negative) score, and any commented feedback, when available. 
-Your task is to reformulate these CQs by using the feedback from the validators and the schema definitions you were originally given. 
+Your task is to reformulate all of these CQs by using the feedback from the validators and the schema definitions you were originally given. 
 Do not mark a reformulated competency question as "Reformulated" or "Reformulated CQ", only provide the reformulated competency question. 
 Only reformulate the rejected competency questions, do not extract new competency questions.
+"""
+
+CQ_ENRICHMENT_PROMPT = """
+Given the following Ontology, generate competency questions that this ontology should be able to answer.
+
+
+INSTRUCTIONS:
+1. ONLY generate competency questions based on the classes and properties in the PROVIDED ONTOLOGY above
+2. DO NOT use examples from other domains (like music, artists, etc.)
+3. Focus on the actual classes and relationships present in the ontology
+4. Each competency question should involve specific classes and properties from the ontology
+5. Generate questions that test different aspects of the ontology structure
+
+
+Generate around 100 competency questions for the provided ontology.
 """

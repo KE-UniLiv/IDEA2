@@ -15,6 +15,7 @@ from cq_json_ld import cq_to_json_ld
 from reformulate_cq import store_handled, get_cqs_from_file_as_strings, reformulate_cqs, get_rejected_cqs_from_file, store_pulled, validate_reformulated, pull_accepted, pull_rejected
 from cq_extraction import get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt, clean_llm_output, configure_prompt, update_config
 from generation_utils import get_generation_number
+from ontology_enrichment import get_triples_from_enrichment_json, combine_ontology_with_cqs
 
 #from output_constraints import validate_competency_questions
 
@@ -59,6 +60,8 @@ def main():
     parser.add_argument('--example', type=str, default="CQ_EXAMPLE_A", help='Give examples of CQs for the LLM\n (Options: CQ_EXAMPLE_A, CQ_EXAMPLE_B, CQ_EXAMPLE_C, CQ_ACCEPTED_CQS)')
     parser.add_argument('--generation', type=str, default=None, help='Generation label (auto if not set manually)')
     parser.add_argument('--update_key', type=str, default=None, help='Update the API key in api_config.yml (input: <service>,<new key value>)')
+    parser.add_argument('--ontology', type=str, default=None, help='Path to the ontology file to load for enrichment (Must have --enrich)')
+    parser.add_argument('--extend_ontology', type=str, default=None, help='Extend the ontology with the enriched CQs')
 
     ## -- Boolean arguments 
     parser.add_argument('--save', action='store_true', help='Save CQs to file (jsonld format)')
@@ -66,11 +69,15 @@ def main():
     parser.add_argument('--reformulate', action='store_true', help='Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected CQs first, then run with --reformulate to reformulate them)')
     parser.add_argument('--find_rejected', action='store_true', help='Find rejected CQs in Notion and store (Note: run as the only argument ie python runner.py --find_rejected)')
     parser.add_argument('--find_accepted', action='store_true', help='Find accepted CQs in Notion and store/refresh (Note: Ideally run as the only argument ie python runner.py --find_accepted)')
+    parser.add_argument('--enrich', action='store_true', help='Enrich the ontology with CQs')
+
     #parser.add_argument('--constrain', action='store_true', help='Use output constraints to validate the LLM output (default: False)')
     parser.add_argument('--usage_help', action='store_true', help='Show a more comprehensive help message with usage instructions')
     parser.add_argument('--show_prompt', action='store_true', help='Show the prompts used for CQ extraction and reformulation')
     parser.add_argument('--show_services', action='store_true', help='Show the available services in api_config.yml')
     args = parser.parse_args()
+
+    notion_utils.check_all_voted()
 
     if args.show_services:
         utils.show_services()
@@ -84,6 +91,11 @@ def main():
         service, newkey = utils.parse_two(args.update_key)
         utils.update_key(service, newkey)
         sys.exit(0)
+
+    if args.enrich and not args.ontology:
+        print("Please provide an ontology file path with --ontology <path/to/ontology> when using --enrich.")
+        sys.exit(1)
+
 
     cqs = ""
     reformulated = False
@@ -114,6 +126,13 @@ def main():
         store_pulled(rejected_cqs, typeof="rejected")
         sys.exit(0) if not args.reformulate else print("Please run with --reformulate and --save to reformulate the rejected CQs and thus save to notion.")
 
+    if args.extend_ontology is not None:
+        jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"mouse-human_t_enriched_cqs.jsonld")
+        outdirs = os.path.join(os.getcwd(), "assets", "ontologies", "enriched", f"mouse-human_t_enriched.xml")
+        combine_ontology_with_cqs(args.extend_ontology, jsonld_path, outdirs)
+        sys.exit(0)
+
+
 
     ## -- Update config (retain original values if new ones are not provided)
     update_config(
@@ -136,7 +155,35 @@ def main():
         temperature=cq_extraction.config["temperature"]
     )
 
-    if not args.reformulate and not args.find_rejected:
+    if args.enrich and args.ontology:
+        update_config(out_instruction="CQ_ENRICHMENT_PROMPT", role="SYSTEM_ROLE_D", limit="") ## -- Set the instruction to enrichment
+
+        prompt, _ = configure_prompt(
+            role=cq_extraction.config["role"],
+            out_definition=cq_extraction.config["out_definition"],
+            out_examples=cq_extraction.config["out_examples"],
+            out_instruction=cq_extraction.config["out_instruction"],
+            limit=cq_extraction.config["limit"],
+            ignore_schemas=True,
+            useOntology=True,
+            ontology_path=args.ontology,
+        )
+
+        # TODO, parameterise ontology
+        jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"mouse-human_t_enriched_cqs.jsonld")
+        outdirs = os.path.join(os.getcwd(), "assets", "ontologies", "enriched", f"mouse-human_t_extension.xml")
+
+        enriched_with_cqs_raw = run_cq_extraction(model, prompt, enrichment=True)
+        if args.save:
+            cq_to_json_ld(enriched_with_cqs_raw, jsonld_path)
+            print(f"\n\nEnriched CQs saved to {jsonld_path}\n\n")
+
+        get_triples_from_enrichment_json(jsonld_path, outdirs, "mouse-human", ontology_path=args.ontology)
+
+
+        sys.exit(0)
+
+    elif not args.reformulate and not args.find_rejected and not (args.enrich or args.ontology):
 
         ## -- Configure and retrieve the prompt for CQ extraction
         prompt, combined_schemas = configure_prompt(
@@ -225,16 +272,15 @@ def main():
     cleaned_cqs = clean_llm_output(cqs) if cqs else None
     for q in cleaned_cqs:
         history.append({"role": "assistant", "content": q})
-        
-    utils.save_history_to_file(history, modelname)
+
+    utils.save_history_to_file(history, modelname) if not args.enrich else None
 
     if not args.reformulate:
-        
         cleaned_cqs = cq_measures.run_simple_similarty_analysis(
             cleaned_cqs)
 
     ## -- Save to file if requested
-    if args.save:
+    if args.save and not args.enrich:
         outdir = os.path.join(os.getcwd(), "assets", "cqs")
         jsonld_path = os.path.join(outdir, f"{generation}.jsonld") if not args.reformulate else os.path.join(outdir, f"{generation}_reformulated.jsonld")
         naincludedcqs = cleaned_cqs.copy()
@@ -280,6 +326,8 @@ def main():
             llmrole=cq_extraction.config["role"],
             prompt=notionprompt,
         )
+
+        print(f"Generation config UUID: {generation_config_UUID}")
     
         ## -- Avoid API timeouts
         for cq in tqdm(competency_questions):
@@ -296,7 +344,7 @@ def main():
                     time.sleep(0.2)
                     break
                 except Exception as e:
-                    print(f"Timeout at attempt {att}, continuing...")
+                    print(f"Timeout at attempt {att} {e}, continuing...")
                     time.sleep(1)
     
 

@@ -7,6 +7,8 @@ import logging
 
 from typing import List
 from openai import OpenAI
+from output_constraints import CompetencyQuestion
+from google.genai import Client
 import google.generativeai as genai
 
 logger = logging.getLogger(__name__)
@@ -99,6 +101,7 @@ class GeminiLLM(LLM):
                 top_p=kwargs.get("top_p", None),
         )
         # Get the model basic info
+        self.model_name=model.split("/")[-1]
         model_info = genai.get_model(model)
         print(f"{model} - input limit: {model_info.input_token_limit},"\
               f" output limit: {model_info.output_token_limit}")
@@ -110,6 +113,8 @@ class GeminiLLM(LLM):
         )
         logger.info(f"Model {model} loaded successfully.")
         self.llm_params = kwargs
+
+        self.client = Client(api_key=api_key)
 
     @staticmethod
     def get_models(detailed=False):
@@ -139,7 +144,7 @@ class GeminiLLM(LLM):
         new_config = genai.GenerationConfig(**new_config)
         return new_config
 
-    def generate(self, prompt, max_tokens=None, temperature=None, top_p=None):
+    def generate(self, prompt, max_tokens=None, temperature=None, top_p=None, enriched=False):
         """
         Generate text given a prompt using the Gemini language model.
 
@@ -155,6 +160,8 @@ class GeminiLLM(LLM):
             The top p value of the generation.
         """
         print(f"Tokens for prompt: {self.model.count_tokens(prompt)}")
+
+        schema = list[CompetencyQuestion] if enriched else list[str]
         # Build the generation config from the input parameters
         generation_config = self._build_generation_config(
             max_output_tokens=max_tokens,
@@ -163,13 +170,23 @@ class GeminiLLM(LLM):
 
             # For structured output
             response_mime_type="application/json",
-            response_schema=list[str]
+            response_schema=schema
         )
         # chat = model.start_chat(history=[])
+        
+        client_config = {
+            "max_output_tokens": max_tokens,
+            "temperature": temperature,
+            "top_p": top_p,
+            "response_mime_type": "application/json",
+            "response_schema": schema
+        }
         raw_response = self.model.generate_content(
-            prompt, generation_config=generation_config)
-        # response = json.loads(raw_response.text)
-        return raw_response.text
+            prompt, generation_config=generation_config) if not enriched \
+        else self.client.models.generate_content(model=self.model_name,
+            contents=prompt, config=client_config)
+
+        return raw_response.parsed if enriched else raw_response.text
 
 
 class OpenAILLM(LLM):

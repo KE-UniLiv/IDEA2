@@ -1,40 +1,22 @@
-"""
-
-Use pydantic to define the output constraints for the competency question extraction process.
-
-"""
+"""This module constrains the output of the LLM, especially for the enrichment of Ontologies with Competency Questions (CQs)."""
 
 
-from pydantic import BaseModel, Field, RootModel
-from typing import List, Optional
+from pydantic import BaseModel, Field
 
-import json
-
-class CompetencyQuestion(RootModel[List[str]]):
+class CompetencyQuestion(BaseModel):
     """
-    Represents a competency question with its text 
-    """
-    pass
-
-
-def validate_competency_questions(llm_output) -> List[str]:
-    """
-    Validates the output from the LLM to ensure it conforms to the expected format of a list of competency questions.
-
-    Args:
-        llm_output (str): The output from the LLM, expected to be a JSON string representing a list of competency questions.
-    Returns:
-        List[str]: A list of competency questions if the output is valid.
-
-    Raises:
-        ValueError: If the output is not a valid JSON string or does not conform to the expected format.
-    """
-
-    try:
-        validated = CompetencyQuestion.model_validate(llm_output)
-        return validated.__root__
-    except json.JSONDecodeError as e:
-        raise ValueError(f"Invalid JSON format: {e}")
     
+    Defines a simple pydantic model for structuring output for CQs, especially for enrichment of CQs
 
-    
+    Attributes:
+        question (str): The competency question text.
+        classes (list[str]): The classes associated with the competency question from the ontology.
+        relationships (list[str]): The relationships associated with the competency question from the ontology.
+
+    """
+    question: str 
+    classes: list[str] 
+    relationships: list[str] 
+
+
+

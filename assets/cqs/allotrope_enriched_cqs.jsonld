@@ -1,0 +1,1154 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a052ed391e90e991c036ba36da40cad308ad6742b8d703ff3bdfabac5cea6966",
+    "question": "What material entities are considered artifacts?",
+    "Class(es)": [
+      "artifact"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d34abad42882672fd049405c449e9610199a314c264c59f91cbf087787aa125e",
+    "question": "What processed materials are also artifacts?",
+    "Class(es)": [
+      "artifact",
+      "processed material"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9018ddfd821433fca205cbeb7f1268923c067f44af7eb44d029c16657d718d50",
+    "question": "What equipment is used in chromatography?",
+    "Class(es)": [
+      "chromatograph"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "26901d2971d754e55b662838fc5466fcb084d961ae1ab60396f79150e26a3db8",
+    "question": "What are the inputs and outputs of a planned process?",
+    "Class(es)": [
+      "planned process"
+    ],
+    "Relationship(s)": [
+      "has input",
+      "has output"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f4c5d3f34cc60778a399accf49e8f5f5ad0d715924a96ef15faa2157b336253b",
+    "question": "What conditions must be met for a planned process to be considered valid?",
+    "Class(es)": [
+      "planned process",
+      "condition"
+    ],
+    "Relationship(s)": [
+      "has condition"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "58926abec6eef0dd2e329c40751c557ecd1eeeb2c8f5fd3f1a11af870e46d989",
+    "question": "What is the duration of a planned process?",
+    "Class(es)": [
+      "planned process"
+    ],
+    "Relationship(s)": [
+      "has duration"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "79acfffd740a4845c8fa3cf23e32aa135591061c658c50c4a0c91d17b0b3cdf3",
+    "question": "What materials are used as inputs in a material process?",
+    "Class(es)": [
+      "material process",
+      "material"
+    ],
+    "Relationship(s)": [
+      "has material input"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d7acc8bd13de6f2efbb15220c708a6de953a37093084bfd57bf73f97f25bf8be",
+    "question": "What materials are produced as outputs in a material process?",
+    "Class(es)": [
+      "material process",
+      "material"
+    ],
+    "Relationship(s)": [
+      "has material output"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "21bfd88a9cc3f0f9645af53852dd2047a20e3442f27f92d202c8a0158bdbffe7",
+    "question": "What is the role of a material entity in a planned process?",
+    "Class(es)": [
+      "material entity",
+      "planned process",
+      "role"
+    ],
+    "Relationship(s)": [
+      "has role",
+      "participates in"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e0af62ff8606ecfc67e8ec3ab27dc2710098cb012674526e5871a9ebb30ff535",
+    "question": "What is the difference between a role and a contextual role?",
+    "Class(es)": [
+      "role",
+      "contextual role"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "6cdbfca2cdf16290263d68a1115be427b640b00f378d8d3ba44a6f18a5e6138d",
+    "question": "What is the difference between a disposition and a function?",
+    "Class(es)": [
+      "disposition",
+      "function"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1d1bd96b0de0f3d56e1150df5dceb75841679ac5c9c38fb209fabadd033a7d25",
+    "question": "How are information content entities used in planned processes?",
+    "Class(es)": [
+      "information content entity",
+      "planned process"
+    ],
+    "Relationship(s)": [
+      "has data input",
+      "has data output"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "cde99da3e730617a8d0b3443bfa69008036bb038ede4c76b03e708a9ec7a886e",
+    "question": "What are the facets of an information content entity?",
+    "Class(es)": [
+      "information content entity",
+      "facet"
+    ],
+    "Relationship(s)": [
+      "has facet"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a5f725649b19ea8fda21b04e1e1ff98189c45ae2f9628e65d7d23cba128bb37c",
+    "question": "How are facets implemented?",
+    "Class(es)": [
+      "facet"
+    ],
+    "Relationship(s)": [
+      "facet implemented as"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "819556417a339c5ec13dd7e08ffe75fa6eaa7c2c42f4ccbd7af17d1a158df441",
+    "question": "How are qualities quantified?",
+    "Class(es)": [
+      "quality"
+    ],
+    "Relationship(s)": [
+      "quality quantified by"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0ac29cf61b9dbaad77b3a5979a72d7ea5d4893ca003c78e5723b5a028b404533",
+    "question": "What are the different types of ranges?",
+    "Class(es)": [
+      "range"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0f09476e30d2aff32c8b867b91cc5031954455d67da256003804e79e47616149",
+    "question": "How are ranges used in specifications?",
+    "Class(es)": [
+      "range",
+      "specification"
+    ],
+    "Relationship(s)": [
+      "has specification",
+      "has range"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8e9d11d2adb4b96685d704dc133d47ccf3ea189ece7ba7b05167313ea8215f15",
+    "question": "How are collections used to represent sets of data?",
+    "Class(es)": [
+      "collection"
+    ],
+    "Relationship(s)": [
+      "has item"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "00fa982944e6e4e193f07cc2ccebe54345d2538873592b49c6cab4648dd5fa33",
+    "question": "What are the relationships between items in a list?",
+    "Class(es)": [
+      "list item"
+    ],
+    "Relationship(s)": [
+      "is followed by",
+      "immediately follows"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "210b8fedbe84a415aed0a150dbd83d3627ea0e28d0b77de4d6374cda91bd8e80",
+    "question": "What is the difference between a list and a series?",
+    "Class(es)": [
+      "list",
+      "series"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "861ca4342d76cbaf10d27e9a36b01bd8660f441f62cde7f7a59c3d784e8bf3b4",
+    "question": "How are series items quantified?",
+    "Class(es)": [
+      "series item",
+      "scalar datum"
+    ],
+    "Relationship(s)": [
+      "has value"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "dfe81237233e8c6299a57a68adb688474149e79393c4bf0cc202c715730f98d9",
+    "question": "How does the has property annotation relate classes and properties?",
+    "Class(es)": [],
+    "Relationship(s)": [
+      "has property"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1d148066391c735452243ecc1fa703100921327f3c9df0f3fd10487c2d2f9129",
+    "question": "What is the purpose of the has class annotation?",
+    "Class(es)": [],
+    "Relationship(s)": [
+      "has class"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "07cc73961ef43fd7c765c1ff4b6c90378388e0f6ebdf537827f5a05e7dafd92a",
+    "question": "How are different ontologies merged?",
+    "Class(es)": [
+      "ontology"
+    ],
+    "Relationship(s)": [
+      "was derived from"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8acfafe57c0f7afbc18595c75e7b6a5c33a658bade9fd7647398aa72bdd9c297",
+    "question": "How are close matches and exact matches used in ontology curation?",
+    "Class(es)": [],
+    "Relationship(s)": [
+      "has close match",
+      "has exact match"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f016ec766b27699529f6b2b4168d4831277bad5c3a87f2c734f04fbe56412b20",
+    "question": "What is the significance of defined classes and universal classes in an ontology?",
+    "Class(es)": [],
+    "Relationship(s)": [
+      "is defined class",
+      "is universal class"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1e74d4a758a1c889f2a745f34171c0f06d99c5e6bc18018fb8b7dc641f6153a0",
+    "question": "How are perspectives used in ontology development?",
+    "Class(es)": [],
+    "Relationship(s)": [
+      "has perspective"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "94b06f2dcba5237754253a8fa54c843d8982d5b89b5e3b438156be9c3fabcfd8",
+    "question": "What is the purpose of granularity in ontology development?",
+    "Class(es)": [],
+    "Relationship(s)": [
+      "has granularity"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9e3c2466aa0ab90c9bb21814d9cc0216cdc51d5cee99de3baecc7f9188cc49ff",
+    "question": "How are shapes used to constrain data in an ontology?",
+    "Class(es)": [
+      "shape"
+    ],
+    "Relationship(s)": [],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7d7c787ed790fe7024c0419c002213d5101f449aa001e947c2b19c17cbf04c3a",
+    "question": "Given a material, what is its mass?",
+    "Class(es)": [
+      "material"
+    ],
+    "Relationship(s)": [
+      "has quality",
+      "mass (quality)"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a131c5e77f4b7f4b8f5ae612f01d2795a8879e3ecc40b5e082584865e6943532",
+    "question": "What is the function of a specific device?",
+    "Class(es)": [
+      "device"
+    ],
+    "Relationship(s)": [
+      "has function"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "75e3647206837d524751ee1b776f0d85c6dc719b372a6f63ee88f15a5449351e",
+    "question": "What processes realize a given function?",
+    "Class(es)": [
+      "function",
+      "process"
+    ],
+    "Relationship(s)": [
+      "realized in"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9632df0687e85c65cf687b1b4adbdf1cc335a294af355c060205bd812c39803e",
+    "question": "What is the duration of a specific process?",
+    "Class(es)": [
+      "process"
+    ],
+    "Relationship(s)": [
+      "has duration"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "39783979722b1d7ccab79090a90636476dda2bab10365ec447d5bfe482fa1cc5",
+    "question": "What are the inputs of a given process?",
+    "Class(es)": [
+      "process"
+    ],
+    "Relationship(s)": [
+      "has input"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8775d53e3accaae704a06d553100786fb67cd5004a81bb06eb377f5496636729",
+    "question": "What are the outputs of a given process?",
+    "Class(es)": [
+      "process"
+    ],
+    "Relationship(s)": [
+      "has output"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a292254d1b82f39d374a5743886f0f3d3ea5c2143a5fe2a634a61477aee52a8b",
+    "question": "What is the temperature of a specific material at a given time?",
+    "Class(es)": [
+      "material"
+    ],
+    "Relationship(s)": [
+      "has quality",
+      "temperature (quality)",
+      "exists at"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "88ddfbd117d14f58854757f1142aa8087174f1a7dfe63e5208464d2a2e2f9d08",
+    "question": "What is the spatial location of a specific material at a given time?",
+    "Class(es)": [
+      "material"
+    ],
+    "Relationship(s)": [
+      "located at",
+      "exists at"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "14904ad9df723457d21c8fc70903246bbf61065a8c6763739b3a544a392a7656",
+    "question": "What processes does a specific material participate in?",
+    "Class(es)": [
+      "material",
+      "process"
+    ],
+    "Relationship(s)": [
+      "participates in"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "bbb6013c1ac04845acfb0ea330d7f8c2ad940608167907f6ff6360fa7e0c829b",
+    "question": "What is the role of a specific material in a given process?",
+    "Class(es)": [
+      "material",
+      "process",
+      "role"
+    ],
+    "Relationship(s)": [
+      "has role",
+      "participates in"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "14737529e974d54e67ba0ccc35fc373fe65f53298a5ae4c6396f91ddbeca4ed8",
+    "question": "What conditions are associated with a given process?",
+    "Class(es)": [
+      "process",
+      "condition"
+    ],
+    "Relationship(s)": [
+      "has condition"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e6749dd36d7a4854b7faf52ddb1a01241a62f528a9311cac8cff827a8021cf07",
+    "question": "What is the relationship between two given processes?",
+    "Class(es)": [
+      "process"
+    ],
+    "Relationship(s)": [
+      "precedes",
+      "follows",
+      "overlaps"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e114196209fbe556ba83d49909398087a1ba69c5ca213375cf8460056c58a9cd",
+    "question": "What qualities does a specific information content entity describe?",
+    "Class(es)": [
+      "information content entity",
+      "quality"
+    ],
+    "Relationship(s)": [
+      "describes"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "bb7b73489c1e37bf3bfc5ad3c0c463371252fb6e9be583b4fb37b03d186e9514",
+    "question": "What are the facets of a specific information content entity?",
+    "Class(es)": [
+      "information content entity",
+      "facet"
+    ],
+    "Relationship(s)": [
+      "has facet"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "46650a48840b334d6cd85feca122a1aef813cd0eed74bb36800184c4289d0340",
+    "question": "How is a specific facet implemented?",
+    "Class(es)": [
+      "facet"
+    ],
+    "Relationship(s)": [
+      "facet implemented as"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e510b2ecae9ffc5727c4d2ab58203cca9940366cb81b252b60d83051a42f5bdc",
+    "question": "What is the value of a specific datum?",
+    "Class(es)": [
+      "scalar datum"
+    ],
+    "Relationship(s)": [
+      "has value"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "4ff149ffc25f99bfb34a260f521c9ec101f5987ec4771da68c71036ce07b5aaf",
+    "question": "What is the unit of measure for a specific quantity value?",
+    "Class(es)": [
+      "quantity value",
+      "unit of measure"
+    ],
+    "Relationship(s)": [
+      "has unit"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "6f5a6f81b172207e85bbb7aad4a9e687769b46f1f73dcd024c4b711c539a5582",
+    "question": "What is the quantity kind of a specific quantity value?",
+    "Class(es)": [
+      "quantity value",
+      "quantity kind"
+    ],
+    "Relationship(s)": [
+      "has quantity kind"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "08e019e275f078042ff0e6ac99cad3770dd6f9f8f42596869b6fd2e7ad9d8e53",
+    "question": "What is the numerical value of a specific quantity value?",
+    "Class(es)": [
+      "quantity value"
+    ],
+    "Relationship(s)": [
+      "has numeric value"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c834b5e359b80e0aa2c3a13e363fb0618385ee92b90717df693330a70cd452f5",
+    "question": "What is the standard uncertainty of a specific quantity value?",
+    "Class(es)": [
+      "quantity value"
+    ],
+    "Relationship(s)": [
+      "has standard uncertainty"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1f14c9803f7a1d8cb471de08f1c2651095b46ef4367cf079cdfcf53debcfb5ee",
+    "question": "What is the relative standard uncertainty of a specific quantity value?",
+    "Class(es)": [
+      "quantity value"
+    ],
+    "Relationship(s)": [
+      "has relative standard uncertainty"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "15dac0326f7233ab25e21c322efe61e09f4d2ef48883cb4e23ca7fcef2ec865b",
+    "question": "What is the symbol of a specific unit of measure?",
+    "Class(es)": [
+      "unit of measure"
+    ],
+    "Relationship(s)": [
+      "has symbol"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "4dea5340b2fdda4ccafb8ebee5922133b0e10b065e011748debd041995a13912",
+    "question": "What is the notation of a specific concept?",
+    "Class(es)": [
+      "concept"
+    ],
+    "Relationship(s)": [
+      "has notation"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8e870c0cdcbd1e204fb01646a62d22e0e8ae4e33db99598253c5151751fb0ca2",
+    "question": "What is the relationship between two given concepts?",
+    "Class(es)": [
+      "concept"
+    ],
+    "Relationship(s)": [
+      "broader",
+      "narrower",
+      "related"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "fca54299f878698dd9f1cda42a5475f6ff9e8484e1fcde34fab5ffac1ecdfa0e",
+    "question": "What are the members of a specific collection?",
+    "Class(es)": [
+      "collection"
+    ],
+    "Relationship(s)": [
+      "has member"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "4540940085f3a534664bc68f900c8f38d193553a398f47fea5bc930410297a3e",
+    "question": "What collection does a specific concept belong to?",
+    "Class(es)": [
+      "concept",
+      "collection"
+    ],
+    "Relationship(s)": [
+      "member of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "37df406e4fa0bfac7ea76e21c3e2c700814ae4d354e66f42c08c472192de24b3",
+    "question": "What is the member list of a specific ordered collection?",
+    "Class(es)": [
+      "ordered collection"
+    ],
+    "Relationship(s)": [
+      "has member list"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "356943254ffae14acec6c6fbc2ca44c4d5db03f52bd435711250718355d811f7",
+    "question": "Is a specific concept a top concept in a given concept scheme?",
+    "Class(es)": [
+      "concept",
+      "concept scheme"
+    ],
+    "Relationship(s)": [
+      "top concept of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  }
+]

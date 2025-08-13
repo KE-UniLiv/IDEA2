@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/data#CQ_07cc7396">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are different ontologies merged?</skos:definition>
+    <skos:prefLabel>CQ: How are different ontologies merged?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8e9d11d2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are collections used to represent sets of data?</skos:definition>
+    <skos:prefLabel>CQ: How are collections used to represent sets of data...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_94b06f2d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the purpose of granularity in ontology development?</skos:definition>
+    <skos:prefLabel>CQ: What is the purpose of granularity in ontology dev...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_37df406e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the member list of a specific ordered collection?</skos:definition>
+    <skos:prefLabel>CQ: What is the member list of a specific ordered coll...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_35694325">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a specific concept a top concept in a given concept scheme?</skos:definition>
+    <skos:prefLabel>CQ: Is a specific concept a top concept in a given con...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_81955641">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are qualities quantified?</skos:definition>
+    <skos:prefLabel>CQ: How are qualities quantified?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_861ca434">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are series items quantified?</skos:definition>
+    <skos:prefLabel>CQ: How are series items quantified?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f4c5d3f3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What conditions must be met for a planned process to be considered valid?</skos:definition>
+    <skos:prefLabel>CQ: What conditions must be met for a planned process ...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_bbb6013c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the role of a specific material in a given process?</skos:definition>
+    <skos:prefLabel>CQ: What is the role of a specific material in a given...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e6749dd3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between two given processes?</skos:definition>
+    <skos:prefLabel>CQ: What is the relationship between two given process...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_08e019e2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the numerical value of a specific quantity value?</skos:definition>
+    <skos:prefLabel>CQ: What is the numerical value of a specific quantity...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_21bfd88a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the role of a material entity in a planned process?</skos:definition>
+    <skos:prefLabel>CQ: What is the role of a material entity in a planned...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_46650a48">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is a specific facet implemented?</skos:definition>
+    <skos:prefLabel>CQ: How is a specific facet implemented?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_bb7b7348">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the facets of a specific information content entity?</skos:definition>
+    <skos:prefLabel>CQ: What are the facets of a specific information cont...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e510b2ec">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the value of a specific datum?</skos:definition>
+    <skos:prefLabel>CQ: What is the value of a specific datum?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_75e36472">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What processes realize a given function?</skos:definition>
+    <skos:prefLabel>CQ: What processes realize a given function?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8775d53e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the outputs of a given process?</skos:definition>
+    <skos:prefLabel>CQ: What are the outputs of a given process?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_14904ad9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What processes does a specific material participate in?</skos:definition>
+    <skos:prefLabel>CQ: What processes does a specific material participat...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e0af62ff">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between a role and a contextual role?</skos:definition>
+    <skos:prefLabel>CQ: What is the difference between a role and a contex...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f016ec76">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the significance of defined classes and universal classes in an ontology?</skos:definition>
+    <skos:prefLabel>CQ: What is the significance of defined classes and un...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1d148066">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the purpose of the has class annotation?</skos:definition>
+    <skos:prefLabel>CQ: What is the purpose of the has class annotation?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_14737529">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What conditions are associated with a given process?</skos:definition>
+    <skos:prefLabel>CQ: What conditions are associated with a given proces...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a052ed39">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What material entities are considered artifacts?</skos:definition>
+    <skos:prefLabel>CQ: What material entities are considered artifacts?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a131c5e7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the function of a specific device?</skos:definition>
+    <skos:prefLabel>CQ: What is the function of a specific device?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_210b8fed">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between a list and a series?</skos:definition>
+    <skos:prefLabel>CQ: What is the difference between a list and a series...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_15dac032">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the symbol of a specific unit of measure?</skos:definition>
+    <skos:prefLabel>CQ: What is the symbol of a specific unit of measure?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1f14c980">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relative standard uncertainty of a specific quantity value?</skos:definition>
+    <skos:prefLabel>CQ: What is the relative standard uncertainty of a spe...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_dfe81237">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How does the has property annotation relate classes and properties?</skos:definition>
+    <skos:prefLabel>CQ: How does the has property annotation relate classe...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_4ff149ff">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the unit of measure for a specific quantity value?</skos:definition>
+    <skos:prefLabel>CQ: What is the unit of measure for a specific quantit...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_79acfffd">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What materials are used as inputs in a material process?</skos:definition>
+    <skos:prefLabel>CQ: What materials are used as inputs in a material pr...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_58926abe">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the duration of a planned process?</skos:definition>
+    <skos:prefLabel>CQ: What is the duration of a planned process?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d7acc8bd">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What materials are produced as outputs in a material process?</skos:definition>
+    <skos:prefLabel>CQ: What materials are produced as outputs in a materi...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8acfafe5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are close matches and exact matches used in ontology curation?</skos:definition>
+    <skos:prefLabel>CQ: How are close matches and exact matches used in on...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e1141962">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What qualities does a specific information content entity describe?</skos:definition>
+    <skos:prefLabel>CQ: What qualities does a specific information content...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6cdbfca2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between a disposition and a function?</skos:definition>
+    <skos:prefLabel>CQ: What is the difference between a disposition and a...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_0ac29cf6">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of ranges?</skos:definition>
+    <skos:prefLabel>CQ: What are the different types of ranges?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7d7c787e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Given a material, what is its mass?</skos:definition>
+    <skos:prefLabel>CQ: Given a material, what is its mass?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a292254d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the temperature of a specific material at a given time?</skos:definition>
+    <skos:prefLabel>CQ: What is the temperature of a specific material at ...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_45409400">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What collection does a specific concept belong to?</skos:definition>
+    <skos:prefLabel>CQ: What collection does a specific concept belong to?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d34abad4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What processed materials are also artifacts?</skos:definition>
+    <skos:prefLabel>CQ: What processed materials are also artifacts?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9632df06">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the duration of a specific process?</skos:definition>
+    <skos:prefLabel>CQ: What is the duration of a specific process?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6f5a6f81">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the quantity kind of a specific quantity value?</skos:definition>
+    <skos:prefLabel>CQ: What is the quantity kind of a specific quantity v...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_fca54299">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the members of a specific collection?</skos:definition>
+    <skos:prefLabel>CQ: What are the members of a specific collection?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_39783979">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the inputs of a given process?</skos:definition>
+    <skos:prefLabel>CQ: What are the inputs of a given process?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8e870c0c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between two given concepts?</skos:definition>
+    <skos:prefLabel>CQ: What is the relationship between two given concept...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1d1bd96b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are information content entities used in planned processes?</skos:definition>
+    <skos:prefLabel>CQ: How are information content entities used in plann...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a5f72564">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are facets implemented?</skos:definition>
+    <skos:prefLabel>CQ: How are facets implemented?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_88ddfbd1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the spatial location of a specific material at a given time?</skos:definition>
+    <skos:prefLabel>CQ: What is the spatial location of a specific materia...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_00fa9829">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the relationships between items in a list?</skos:definition>
+    <skos:prefLabel>CQ: What are the relationships between items in a list...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_4dea5340">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the notation of a specific concept?</skos:definition>
+    <skos:prefLabel>CQ: What is the notation of a specific concept?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1e74d4a7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are perspectives used in ontology development?</skos:definition>
+    <skos:prefLabel>CQ: How are perspectives used in ontology development?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_cde99da3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the facets of an information content entity?</skos:definition>
+    <skos:prefLabel>CQ: What are the facets of an information content enti...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c834b5e3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the standard uncertainty of a specific quantity value?</skos:definition>
+    <skos:prefLabel>CQ: What is the standard uncertainty of a specific qua...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9018ddfd">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What equipment is used in chromatography?</skos:definition>
+    <skos:prefLabel>CQ: What equipment is used in chromatography?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#CompetencyQuestion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9e3c2466">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are shapes used to constrain data in an ontology?</skos:definition>
+    <skos:prefLabel>CQ: How are shapes used to constrain data in an ontolo...</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_0f09476e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How are ranges used in specifications?</skos:definition>
+    <skos:prefLabel>CQ: How are ranges used in specifications?</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_26901d29">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the inputs and outputs of a planned process?</skos:definition>
+    <skos:prefLabel>CQ: What are the inputs and outputs of a planned proce...</skos:prefLabel>
+  </rdf:Description>
+</rdf:RDF>

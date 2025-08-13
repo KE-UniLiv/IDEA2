@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:cq="http://example.org/cq-vocabulary#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d1bf5477">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of joints in the skeletal system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000319"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000320"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000321"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000322"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_888184fb">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which system is the heart a part of?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000072"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000010"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_36295e71">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the heart's impulse conducting system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000094"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000095"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000096"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000097"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a97baa3a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main divisions of the brain?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000168"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000170"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000207"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000195"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000169"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_39334fc9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the uterus?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000389"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000390"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000391"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000392"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000393"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6489b413">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What structures are part of the axial skeleton?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000308"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002416"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000315"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000316"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b2a71b5b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the cochlea a part of?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000240"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000237"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8d7cd0bf">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which organs form the lower urinary tract?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002636"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000380"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000379"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_428312a2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the thymus?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000142"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000766"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000767"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000771"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000770"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_764ade60">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the adrenal gland?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000116"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000117"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000118"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000119"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_97bd60b1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main parts of the respiratory system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000327"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000414"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000415"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000441"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000281"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000432"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_aeb3a308">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What type of gland is a mammary gland?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000145"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002564"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b0f24bcb">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What kind of glands are found in the skin?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000151"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000146"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000147"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000149"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000150"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_db750687">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of an intervertebral disc?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000110"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000111"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000112"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5552c714">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What structures are part of the forebrain?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000170"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000171"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000183"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_bbe71289">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which system is the liver a part of?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000358"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000324"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_129e9a46">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main components of the eyeball?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000261"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000276"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000275"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000266"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000273"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000280"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c50513bc">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a forelimb a type of limb?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000025"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000007"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1b716e1a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which anatomical structures form the hand?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000037"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000040"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000042"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000041"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_926cd63c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between the ovary and the gonad?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000384"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002420"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ad4eaca0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main parts of a kidney?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000368"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000372"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000373"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000374"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a4698948">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which structures are part of the brain meninges?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000813"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001114"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000815"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000816"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_fce06a7a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of a nephron?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000375"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000376"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000377"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e8ca5f4c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which structures are part of the oral region?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000341"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000342"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000343"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000347"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000348"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000346"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002476"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_092b455a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main chambers of the heart?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000072"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000073"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000091"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b5962f48">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the male urethra?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002640"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002643"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002646"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002641"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b551b0b9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main parts of the peripheral nervous system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000218"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000219"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000228"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000230"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d7516ba0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which part of the skull contains the brain?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000316"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000317"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000168"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a49f72e8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main sections of the hindlimb?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000026"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000047"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000044"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000046"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000045"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000043"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_80ea9555">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What kind of tissue is the dura mater?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001115"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001113"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ec7931e8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between the aorta and an arterial blood vessel?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000062"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000061"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_cb3619dd">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between bone marrow and the hematopoietic system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000134"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002434"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a878ea35">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the lobes of the right lung?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000426"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000427"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000428"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000429"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000430"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_98a93f2a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What bones are in the middle ear?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000253"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000254"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_18c9379e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What types of valves are in the heart?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000072"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000086"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e5f384d5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which anatomical structures are part of the trunk?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000004"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000020"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000021"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000022"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_93c16abb">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the cerebellum part of?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000198"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000197"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c3e2a8f4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which system does the thymus belong to?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000142"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002435"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002711"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_73b412cc">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is the trunk an anatomic region?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000004"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002433"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3fce447c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What kind of organ is the pancreas?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000120"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000522"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_cbf04bcf">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the zones of the adrenal gland cortex?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000118"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001890"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001891"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001892"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_2b924bba">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What types of vertebrae form the vertebral column?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002416"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000310"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000311"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000312"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000313"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000314"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_aca34ff3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is the sinoatrial node part of the impulse conducting system of the heart?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000097"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000094"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_979b8620">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is skeletal muscle a type of striated muscle tissue?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000165"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002438"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_4e341eef">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the renal corpuscle?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000376"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001657"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001660"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_52bd4a77">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which organs are part of the female reproductive system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000381"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000384"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000385"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000389"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000394"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000382"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5c2c0449">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between the alveolus and the alveolar system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000420"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000416"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_52f9fb94">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the two main divisions of the skeleton?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000018"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000290"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000308"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d1795f73">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is the aortic valve a type of heart valve?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000087"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000086"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_45785c3f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between skin and the integumental system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000151"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000014"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e024c426">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is the cardiovascular system a type of organ system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000010"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000003"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9f96aae8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What kind of muscle tissue is myocardium?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000164"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002438"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1f349968">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main types of limb bone?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000688"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000298"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000295"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000301"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000304"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b04d63d7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the divisions of the ear?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000236"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000237"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000253"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000258"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ed7b99a2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the central nervous system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000167"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000168"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000216"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_de243938">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of organ systems in a mouse?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000003"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000010"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000012"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000016"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002418"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d9ad7e5e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the spleen pulp?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002487"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000756"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000762"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1bc406b4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of a hair follicle?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000154"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000161"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000162"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e22a29b3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the small intestine?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000337"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000338"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000339"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000340"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7e2120f6">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the structural relationship between the stomach and the foregut?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000353"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001526"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_643ef8e0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between dermis and skin?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000152"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000151"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_632f05f2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which part of the trunk contains the chest?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000004"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000022"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000031"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7800c584">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What structures are part of the larynx?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000414"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001758"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001768"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001766"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_cde56686">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What bones are part of the pelvic girdle?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000293"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001336"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001337"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001338"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_632a70e4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the leg?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000047"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000051"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000052"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_95d30073">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between spinal cord grey matter and the spinal cord?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000002"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000216"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3389e466">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the bones of the viscerocranium?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001482"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001487"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001491"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001483"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001484"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001494"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_57b9e074">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What type of bone is a phalanx?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000304"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000688"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_58ac0c5c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between the renal corpuscle and the nephron?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000376"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000375"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_2b54caff">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the pituitary gland a part of?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000176"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000171"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_52c49f93">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the two types of pancreatic tissue based on function?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000120"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001582"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002415"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_41a39573">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which glands are part of the male reproductive system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000396"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000404"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000401"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000405"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5e927681">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which structures are part of the spleen?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000141"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002487"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000753"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000758"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_23c29337">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the cardiovascular system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000010"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000072"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000059"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000060"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a743f321">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What type of tissue is adipose tissue?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000009"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000011"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_49ec5a8d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which system does the spleen belong to?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000141"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002434"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002435"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002711"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b2ad48e2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the bones of the lower arm?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000034"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001357"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001358"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6f36342c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main parts of the telencephalon?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000183"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000184"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000189"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000133"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_28047094">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the large intestine?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000333"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000334"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000335"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000336"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5dbff6a1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the layers of the epidermis?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000153"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000803"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000804"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000805"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000807"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_28eeb745">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between the foot and the autopod?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000044"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002714"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1fbfc3d5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main tissue types in the integumental system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000014"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000151"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000154"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000155"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000144"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5e82c756">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the eyeball's uvea?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002480"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000263"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000264"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000273"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_46b5165e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is the spleen part of the hematopoietic system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000141"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002434"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7ecf563a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is heart myocardium a type of myocardium?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000080"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000164"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_40f73cd7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the outer ear?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000258"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000259"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000260"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_65881720">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a dorsal root ganglion a type of spinal ganglion?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000232"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000231"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_70262b53">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main sections of the forelimb?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000025"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000033"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000036"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000037"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000038"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000039"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_874cd0b1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the arm?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000033"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000034"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000035"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ef625faa">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is the autonomic nervous system part of the peripheral nervous system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000219"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000218"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_0d7ece7a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between the arm and the forelimb?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000033"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000025"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_29a75d43">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is the epididymis part of the male reproductive system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000397"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000396"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_92b16f9d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What types of teeth are found in a mouse?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000348"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000349"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000350"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ad21a4a8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which structures are part of the axial skeleton?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000308"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002416"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000315"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000316"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8e469fb4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the two main sections of the intestine?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000328"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000333"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000337"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_40e377d8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of blood vessels?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000060"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000061"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000066"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000065"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f2dd0d74">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the renal/urinary system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000325"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000368"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000378"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000380"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000379"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_93d54e54">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the components of the juxtaglomerular complex?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002546"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002602"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0002603"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_914bfa40">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the divisions of the gastrointestinal system?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000323"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000328"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000341"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000352"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000353"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7bef9791">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What bones make up the pectoral girdle?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000292"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001329"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001330"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001331"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_235edf2d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between the nasopharynx and the pharynx?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000443"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000432"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_abcf432f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the truncus arteriosus a part of?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000103"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000100"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a71dd202">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What types of hair are found on a mouse?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000155"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001897"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001895"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000163"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_is_a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_93e1cd13">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parts of the adrenal gland cortex?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000118"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0001887"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#CompetencyQuestion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c24a3d52">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What structures form the lower respiratory tract?</skos:definition>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000435"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000436"/>
+    <cq:involvesClass rdf:resource="http://mouse.owl#MA_0000441"/>
+    <cq:involvesProperty rdf:resource="http://mouse.owl#UNDEFINED_part_of"/>
+  </rdf:Description>
+</rdf:RDF>

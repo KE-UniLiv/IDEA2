@@ -1,0 +1,545 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "85d647a61b7045c3442917d8af6da8ff18658df928920ee0ad5b2b243b1f7d04",
+    "question": "What are the parts of the NCI_C12220 (Lip)?",
+    "Class(es)": [
+      "NCI_C12220",
+      "NCI_C12223",
+      "NCI_C12221",
+      "NCI_C12222",
+      "NCI_C12291"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f77fd0d6d833d2f25a88ae0332adf9b7d76fda40965b47cb3f4e5848b95bf3ff",
+    "question": "What is the role of NCI_C12223 (External_Lip) in the head and neck?",
+    "Class(es)": [
+      "NCI_C12223",
+      "NCI_C12419",
+      "NCI_C12220"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "21b185297bf8eb5f46ea7a2d725caf2eac7c193b0f675a63d40094e327fd357d",
+    "question": "What body substances are associated with NCI_C12468 (Lung)?",
+    "Class(es)": [
+      "NCI_C12468",
+      "NCI_C13273",
+      "NCI_C13465"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2f910c8fe34d5f1b15b8b766deae9aa1b8fa0c74c1a95b6becdd3d2c56b2ca19",
+    "question": "What is the relationship between NCI_C12226 (Mucosa_of_the_Lip) and NCI_C12220 (Lip)?",
+    "Class(es)": [
+      "NCI_C12226",
+      "NCI_C12220"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "acfc6eaf0c71a576bc50f873a41acf9d39b19138ed1044d28b3e81753d46fae0",
+    "question": "Which body systems contain NCI_C12229 (Palate)?",
+    "Class(es)": [
+      "NCI_C12229",
+      "NCI_C12421",
+      "NCI_C12419"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "56790b5bef94eb6bee5bcccad668df00517cd8c3adc4d573eb6d1289d67c6916",
+    "question": "Is NCI_C12233 (Submandibular_Gland) part of any major organ system?",
+    "Class(es)": [
+      "NCI_C12233",
+      "NCI_C12999"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "fb8013f8c4d8c866206ff560500c7e42343a23f6d6923ee7957ec5e35eba5091",
+    "question": "What are the types of NCI_C12426 (Salivary_Gland)?",
+    "Class(es)": [
+      "NCI_C12426",
+      "NCI_C12427",
+      "NCI_C12233",
+      "NCI_C12234",
+      "NCI_C33141",
+      "NCI_C33539",
+      "NCI_C12999",
+      "NCI_C32237",
+      "NCI_C32904",
+      "NCI_C32987",
+      "NCI_C33249",
+      "NCI_C33537",
+      "NCI_C12418",
+      "NCI_C32045",
+      "NCI_C32486",
+      "NCI_C32820",
+      "NCI_C33635",
+      "NCI_C33649",
+      "NCI_C33277",
+      "NCI_C33713",
+      "NCI_C40411",
+      "NCI_C49244",
+      "NCI_C49266",
+      "NCI_C13275",
+      "NCI_C52901"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0ed09d3bde4015771329f01b1cebc9aa7286357a558662531db4cf3ad426645f",
+    "question": "What is the relationship between NCI_C12802 (Tonsil) and the immune system?",
+    "Class(es)": [
+      "NCI_C12802",
+      "NCI_C12735",
+      "NCI_C12421"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "af9a6dcf8cf003dd0dc6f793cad8a56a23a63afb2299fde787dee827524009f1",
+    "question": "What body structure does the NCI_C12401 (Eye) belong to?",
+    "Class(es)": [
+      "NCI_C12401",
+      "NCI_C12347"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2b2bcb85dc8549a65a190fe3e53563299d8b328eece371274555bf6084ae13fb",
+    "question": "Which reproductive structures are part of NCI_C12841 (Reproductive_System)?",
+    "Class(es)": [
+      "NCI_C12841",
+      "NCI_C12402",
+      "NCI_C12722",
+      "NCI_C12403",
+      "NCI_C12404",
+      "NCI_C12405",
+      "NCI_C12407",
+      "NCI_C12408",
+      "NCI_C12409",
+      "NCI_C12410",
+      "NCI_C12412",
+      "NCI_C12787",
+      "NCI_C12813",
+      "NCI_C12328",
+      "NCI_C12329"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "eb354358be765763dda9b8c5c39facbf4053fec73314642abb92dd32ff80bc93",
+    "question": "What specific types of NCI_C12508 (Cell) are found in the NCI_C12708 (Epidermis)?",
+    "Class(es)": [
+      "NCI_C12508",
+      "NCI_C12589",
+      "NCI_C12591",
+      "NCI_C12592",
+      "NCI_C32271",
+      "NCI_C12475",
+      "NCI_C12584"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "02efc6f8bda6836c00662dd8806b24631b52644f738ff2cbab4bd0efbc699215",
+    "question": "Is NCI_C12597 (Germ_Cell) related to any specific reproductive organs?",
+    "Class(es)": [
+      "NCI_C12597",
+      "NCI_C12598",
+      "NCI_C12602",
+      "NCI_C12603",
+      "NCI_C12604",
+      "NCI_C12605",
+      "NCI_C12606",
+      "NCI_C33244",
+      "NCI_C13277",
+      "NCI_C12600",
+      "NCI_C33582",
+      "NCI_C12508"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0ceb683e24425cdd19f02469bb70157744e1a13d99889132333f5eb34cd4e032",
+    "question": "What type of NCI_C12801 (Tissue) is NCI_C13051 (Hematopoietic_Tissue)?",
+    "Class(es)": [
+      "NCI_C12801",
+      "NCI_C13051",
+      "NCI_C12909"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d5b7582c90800b37a4159e5c0c44b34983dfb0b1eed2a459c96c363deefb2dc7",
+    "question": "What are the different types of NCI_C12623 (Neuron)?",
+    "Class(es)": [
+      "NCI_C12623",
+      "NCI_C12628",
+      "NCI_C12629",
+      "NCI_C12630",
+      "NCI_C12631",
+      "NCI_C12632",
+      "NCI_C12633",
+      "NCI_C12634",
+      "NCI_C12637",
+      "NCI_C12638",
+      "NCI_C12640",
+      "NCI_C12644",
+      "NCI_C12645",
+      "NCI_C12646",
+      "NCI_C12647",
+      "NCI_C12651",
+      "NCI_C12652",
+      "NCI_C13154",
+      "NCI_C13176",
+      "NCI_C33877",
+      "NCI_C33878",
+      "NCI_C26454",
+      "NCI_C49140",
+      "NCI_C33871",
+      "NCI_C32473",
+      "NCI_C13052",
+      "NCI_C41405",
+      "NCI_C12624",
+      "NCI_C12625",
+      "NCI_C12627",
+      "NCI_C12719",
+      "NCI_C33143",
+      "NCI_C33533",
+      "NCI_C12792",
+      "NCI_C12648",
+      "NCI_C12795",
+      "NCI_C12649",
+      "NCI_C12650",
+      "NCI_C33063",
+      "NCI_C32177",
+      "NCI_C13819",
+      "NCI_C13821",
+      "NCI_C13822",
+      "NCI_C13823",
+      "NCI_C32695",
+      "NCI_C12720",
+      "NCI_C32196",
+      "NCI_C33544",
+      "NCI_C33170",
+      "NCI_C33201",
+      "NCI_C13145",
+      "NCI_C49328",
+      "NCI_C32477",
+      "NCI_C33223",
+      "NCI_C12701",
+      "NCI_C41409",
+      "NCI_C33625",
+      "NCI_C12642",
+      "NCI_C13155",
+      "NCI_C41406",
+      "NCI_C41407",
+      "NCI_C41439",
+      "NCI_C41443",
+      "NCI_C33094",
+      "NCI_C41416",
+      "NCI_C49136",
+      "NCI_C32652"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "061461df4901214ead007e776c674a6778ded89481c6c2d810a19d5c20e39480",
+    "question": "What are the main components of NCI_C33969 (Spinal_Cord_Part)?",
+    "Class(es)": [
+      "NCI_C33969",
+      "NCI_C32473",
+      "NCI_C12641",
+      "NCI_C33859",
+      "NCI_C12464",
+      "NCI_C12628",
+      "NCI_C12640",
+      "NCI_C12892",
+      "NCI_C12893",
+      "NCI_C12894",
+      "NCI_C12895",
+      "NCI_C12896",
+      "NCI_C12924",
+      "NCI_C12925",
+      "NCI_C12926",
+      "NCI_C12973",
+      "NCI_C32118",
+      "NCI_C32406",
+      "NCI_C32465",
+      "NCI_C32475",
+      "NCI_C33389",
+      "NCI_C33590",
+      "NCI_C33591",
+      "NCI_C33800",
+      "NCI_C12891",
+      "NCI_C41624",
+      "NCI_C32349",
+      "NCI_C32694",
+      "NCI_C33890",
+      "NCI_C49798",
+      "NCI_C49799",
+      "NCI_C49800",
+      "NCI_C33893",
+      "NCI_C12791",
+      "NCI_C13052",
+      "NCI_C32695",
+      "NCI_C32696",
+      "NCI_C12995",
+      "NCI_C41450",
+      "NCI_C12967",
+      "NCI_C12969",
+      "NCI_C32832",
+      "NCI_C32892",
+      "NCI_C33113",
+      "NCI_C33417",
+      "NCI_C33436",
+      "NCI_C33456",
+      "NCI_C33594",
+      "NCI_C33817",
+      "NCI_C33879",
+      "NCI_C32138",
+      "NCI_C32477",
+      "NCI_C32686",
+      "NCI_C32225",
+      "NCI_C32344",
+      "NCI_C32418",
+      "NCI_C32456",
+      "NCI_C32623",
+      "NCI_C32684",
+      "NCI_C33006",
+      "NCI_C33271",
+      "NCI_C33299",
+      "NCI_C33467",
+      "NCI_C33588",
+      "NCI_C33632",
+      "NCI_C33860",
+      "NCI_C49138",
+      "NCI_C49139",
+      "NCI_C49140",
+      "NCI_C32894",
+      "NCI_C33819",
+      "NCI_C32218",
+      "NCI_C33172",
+      "NCI_C32722",
+      "NCI_C32452",
+      "NCI_C32474",
+      "NCI_C32460",
+      "NCI_C32472",
+      "NCI_C32217",
+      "NCI_C32141",
+      "NCI_C32628",
+      "NCI_C32466",
+      "NCI_C49479",
+      "NCI_C32982",
+      "NCI_C49141",
+      "NCI_C32720",
+      "NCI_C33930",
+      "NCI_C53038",
+      "NCI_C33287",
+      "NCI_C49347",
+      "NCI_C33914",
+      "NCI_C53149",
+      "NCI_C33915",
+      "NCI_C48689",
+      "NCI_C12834",
+      "NCI_C49137",
+      "NCI_C32974",
+      "NCI_C49276",
+      "NCI_C49301",
+      "NCI_C13082",
+      "NCI_C49330",
+      "NCI_C49329",
+      "NCI_C49331",
+      "NCI_C49333",
+      "NCI_C49335",
+      "NCI_C41449"
+    ],
+    "Relationship(s)": [
+      "UNDEFINED_part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-1.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  }
+]

@@ -1,0 +1,2357 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e5f384d5833a1c909cd84c4391443527f2f513f57f06c987f625aa8d98141885",
+    "question": "Which anatomical structures are part of the trunk?",
+    "Class(es)": [
+      "trunk",
+      "back",
+      "abdomen/pelvis/perineum",
+      "thorax"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "73b412ccde62267e2ea756cc5170b76b9a0ff978240967decf7c2583daeafc38",
+    "question": "Is the trunk an anatomic region?",
+    "Class(es)": [
+      "trunk",
+      "anatomic region"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "70262b53cf366441a89b801b149bb03dc3622f67a7243d067cf2efeae14cb8a4",
+    "question": "What are the main sections of the forelimb?",
+    "Class(es)": [
+      "forelimb",
+      "arm",
+      "elbow",
+      "hand",
+      "shoulder",
+      "wrist"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c50513bc338e8184b024dd67d8cc2e50fae7c4b995cc0ca186110d664434bc9f",
+    "question": "Is a forelimb a type of limb?",
+    "Class(es)": [
+      "forelimb",
+      "limb"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a49f72e81c0e38aa569e2d7fe068643f2ebef86109447b8f002a6895c7d55107",
+    "question": "What are the main sections of the hindlimb?",
+    "Class(es)": [
+      "hindlimb",
+      "leg",
+      "foot",
+      "knee",
+      "hip",
+      "ankle"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a743f32129b1d594af2916d0d87d36524211be7f56bf785f69be82b72f5a0387",
+    "question": "What type of tissue is adipose tissue?",
+    "Class(es)": [
+      "adipose tissue",
+      "connective tissue"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "23c29337597b5e06e868997636801c46944b2787f60b86c2cdbb88123331ade7",
+    "question": "What are the components of the cardiovascular system?",
+    "Class(es)": [
+      "cardiovascular system",
+      "heart",
+      "blood",
+      "blood vessel"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e024c426a1b2118a7dd338cdca9413efca787fea0253c0f8c84c7d22d7049d28",
+    "question": "Is the cardiovascular system a type of organ system?",
+    "Class(es)": [
+      "cardiovascular system",
+      "organ system"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "888184fb59f71b325e93bc5aea92812cee90ff3f0fbe9c4832de554303ae5b19",
+    "question": "Which system is the heart a part of?",
+    "Class(es)": [
+      "heart",
+      "cardiovascular system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "092b455ad86f97250917e235ac4b8a2014011dc9679726f04e0adad6c3e0f135",
+    "question": "What are the main chambers of the heart?",
+    "Class(es)": [
+      "heart",
+      "heart atrium",
+      "heart ventricle"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "18c9379e2dfda7189e810ebc9855ed397e7d0eb9314dddf1067d46c7fdba2566",
+    "question": "What types of valves are in the heart?",
+    "Class(es)": [
+      "heart",
+      "heart valve"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "40e377d866d1b92db6263378c25d3ea88c26da42a22228d64bb431dbdf61cc61",
+    "question": "What are the different types of blood vessels?",
+    "Class(es)": [
+      "blood vessel",
+      "arterial blood vessel",
+      "venous blood vessel",
+      "capillary"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ec7931e834806c09d3f6bf6873d32a4d3d0bb94a73be81d737936b3505b171b4",
+    "question": "What is the relationship between the aorta and an arterial blood vessel?",
+    "Class(es)": [
+      "aorta",
+      "arterial blood vessel"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "36295e71001d995e28ff62752353f66dc0f9d1f4dc775b5b974feb3d59e9d1c9",
+    "question": "What are the components of the heart's impulse conducting system?",
+    "Class(es)": [
+      "impulse conducting system",
+      "atrioventricular node",
+      "purkinje fiber",
+      "sinoatrial node"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "764ade60479e9bd4ee5123e0f55abfab2156decb0b32be28269d7a8f3176fa9c",
+    "question": "What are the parts of the adrenal gland?",
+    "Class(es)": [
+      "adrenal gland",
+      "adrenal gland capsule",
+      "adrenal gland cortex",
+      "adrenal gland medulla"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a97baa3a9ab869f41fd5f3e08d51309ae8b59f841f6253e357d57df47016940b",
+    "question": "What are the main divisions of the brain?",
+    "Class(es)": [
+      "brain",
+      "forebrain",
+      "midbrain",
+      "hindbrain",
+      "brainstem"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5552c7148fc7f2ead4b146429cde02e582f44847511eafed4eadb417722793f9",
+    "question": "What structures are part of the forebrain?",
+    "Class(es)": [
+      "forebrain",
+      "diencephalon",
+      "telencephalon"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2b54caff6e77f4531e9ecbbf6f25bec7c8169c88bb1c52d0218dfd9da1fd4430",
+    "question": "What is the pituitary gland a part of?",
+    "Class(es)": [
+      "pituitary gland",
+      "diencephalon"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "6f36342cac972ff0e6fa86467d05313c0a23d9b9f1416e22b80e4af104665648",
+    "question": "What are the main parts of the telencephalon?",
+    "Class(es)": [
+      "telencephalon",
+      "basal ganglia",
+      "hippocampal formation",
+      "cerebral hemisphere"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "93c16abb577503cf4de8a9e30ec3d59cb7880262f347feeed7e5bb121eb721e6",
+    "question": "What is the cerebellum part of?",
+    "Class(es)": [
+      "cerebellum",
+      "metencephalon"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ed7b99a2b6923fbd80be9d429a7fe1538d9cb48cfcda06eeec36bbb6464869c5",
+    "question": "What are the components of the central nervous system?",
+    "Class(es)": [
+      "central nervous system",
+      "brain",
+      "spinal cord"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ef625faab5d8f66a862b10de06c6bf9063b9aea5b09b6d331e74d0c9e24444fe",
+    "question": "Is the autonomic nervous system part of the peripheral nervous system?",
+    "Class(es)": [
+      "autonomic nervous system",
+      "peripheral nervous system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b04d63d775a839dd7fd2ead6162b505b6f0188cc6e72be0d8d506e70984d5375",
+    "question": "What are the divisions of the ear?",
+    "Class(es)": [
+      "ear",
+      "inner ear",
+      "middle ear",
+      "outer ear"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "98a93f2aaca9d95eb94aa99d5a5be3351b384e9080ab9c5ee69d6c2e26993c3e",
+    "question": "What bones are in the middle ear?",
+    "Class(es)": [
+      "middle ear",
+      "auditory bone"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b2a71b5b2e59ef8223cc6f116bab3bf2b7f01753d95d78a80d2a8a29186081df",
+    "question": "What is the cochlea a part of?",
+    "Class(es)": [
+      "cochlea",
+      "inner ear"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "129e9a46cebc53ad99dd9da7c323013d5071c6e065400d130a6329eed866933f",
+    "question": "What are the main components of the eyeball?",
+    "Class(es)": [
+      "eye",
+      "retina",
+      "lens",
+      "cornea",
+      "iris",
+      "sclera"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "52f9fb948b92e0ad21e994746e96237514798417021773f42d7ec21b8b84c0b9",
+    "question": "What are the two main divisions of the skeleton?",
+    "Class(es)": [
+      "skeletal system",
+      "appendicular skeleton",
+      "axial skeleton"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7bef979182b30b98a5f74522395b4a11dd72d24f8d5464381620146c18871279",
+    "question": "What bones make up the pectoral girdle?",
+    "Class(es)": [
+      "pectoral girdle bone",
+      "clavicle",
+      "scapula",
+      "sternum"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2b924bba206aef72c2da26ce3d51068780c48ef7a75b714603a99793ce6268a4",
+    "question": "What types of vertebrae form the vertebral column?",
+    "Class(es)": [
+      "vertebral column",
+      "caudal vertebra",
+      "cervical vertebra",
+      "lumbar vertebra",
+      "sacral vertebra",
+      "thoracic vertebra"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "914bfa4094344ddab3b9f12d4e36409ad0b5f8261e3bb82925b824208ad9d680",
+    "question": "What are the divisions of the gastrointestinal system?",
+    "Class(es)": [
+      "gastrointestinal system",
+      "intestine",
+      "oral region",
+      "esophagus",
+      "stomach"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8e469fb4c6b901405ef67715d300166570f98985d42c39f82b3ecb2aaa530cc4",
+    "question": "What are the two main sections of the intestine?",
+    "Class(es)": [
+      "intestine",
+      "large intestine",
+      "small intestine"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e22a29b3d0926e0927c3e2d59798f9675683dfba0b435e6d0a56a76a8dafad3c",
+    "question": "What are the parts of the small intestine?",
+    "Class(es)": [
+      "small intestine",
+      "duodenum",
+      "ileum",
+      "jejunum"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "bbe7128955f86f3624c84d18cc87668745e9713b8d2afd69818d951c558de67e",
+    "question": "Which system is the liver a part of?",
+    "Class(es)": [
+      "liver",
+      "hepatobiliary system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f2dd0d74063a8e2ce092f1c5a9b67ca0d203606028fa4559d3e517e6a16fb334",
+    "question": "What are the components of the renal/urinary system?",
+    "Class(es)": [
+      "renal/urinary system",
+      "kidney",
+      "ureter",
+      "urinary bladder",
+      "urethra"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ad4eaca09563d254a4b11ea7e404b2509db357be8d65dfbc964031187d2d8a3a",
+    "question": "What are the main parts of a kidney?",
+    "Class(es)": [
+      "kidney",
+      "kidney cortex",
+      "kidney medulla",
+      "kidney pelvis"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "fce06a7a6621f962849f5c70081b31223e7acbccd32f4b1b8bd7488f45e4c1f0",
+    "question": "What are the components of a nephron?",
+    "Class(es)": [
+      "nephron",
+      "renal corpuscle",
+      "renal tubule"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "52bd4a77b3f91143bde5a42001ced9c1198ae41cb79f8b02637eb2abe1e6d73a",
+    "question": "Which organs are part of the female reproductive system?",
+    "Class(es)": [
+      "female reproductive system",
+      "ovary",
+      "oviduct",
+      "uterus",
+      "vagina",
+      "clitoris"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "41a39573e549bb2b4a5f62924a85728304e2b458b678ca8c2519f8f9fb690c5d",
+    "question": "Which glands are part of the male reproductive system?",
+    "Class(es)": [
+      "male reproductive system",
+      "prostate gland",
+      "bulbourethral gland",
+      "vesicular gland"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "97bd60b1e38cfe2e4413fe2c91534b81af6b4f28f6c2fc820d1e734001d89f4a",
+    "question": "What are the main parts of the respiratory system?",
+    "Class(es)": [
+      "respiratory system",
+      "larynx",
+      "lung",
+      "trachea",
+      "nose",
+      "pharynx"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c24a3d524cfb4d745a944a7af1d943c470b6a5fa927bd0d49cdd9841f6423697",
+    "question": "What structures form the lower respiratory tract?",
+    "Class(es)": [
+      "lower respiratory tract",
+      "bronchus",
+      "trachea"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "658817202b0c0a7e7dc5fce439a3d2d8f6127a91ba2edfb17f9b44dcdfb75062",
+    "question": "Is a dorsal root ganglion a type of spinal ganglion?",
+    "Class(es)": [
+      "dorsal root ganglion",
+      "spinal ganglion"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "db7506873c9222ea42472df53079f7276e883c084c9f17530e31a442a4fdae5e",
+    "question": "What are the parts of an intervertebral disc?",
+    "Class(es)": [
+      "intervertebral disc",
+      "annulus fibrosus",
+      "nucleus pulposus"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a878ea3503271fe281ac63d62a882c718cbfa041769e5d4bd64bfb976a886bb7",
+    "question": "What are the lobes of the right lung?",
+    "Class(es)": [
+      "right lung",
+      "right lung accessory lobe",
+      "right lung caudal lobe",
+      "right lung cranial lobe",
+      "right lung middle lobe"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "cbf04bcf726a837fada5ac73c379be57ae50e8c8b48f017f25da1f4bd83a7a9b",
+    "question": "What are the zones of the adrenal gland cortex?",
+    "Class(es)": [
+      "adrenal gland cortex",
+      "adrenal gland zona fasciculata",
+      "adrenal gland zona glomerulosa",
+      "adrenal gland zona reticularis"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7ecf563a1fce9222c1bc2ed3ae007c5536dce2babe4c4ccc85146181fa321825",
+    "question": "Is heart myocardium a type of myocardium?",
+    "Class(es)": [
+      "heart myocardium",
+      "myocardium"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "6489b413ee89d707e030190b87332be3b610d39b2b382a2d8356c9f32afef302",
+    "question": "What structures are part of the axial skeleton?",
+    "Class(es)": [
+      "axial skeleton",
+      "vertebral column",
+      "rib",
+      "cranium"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d1bf54773b0996a916316c6f42cc276879a2c4f30818a817f8eb25a3ab03a82e",
+    "question": "What are the different types of joints in the skeletal system?",
+    "Class(es)": [
+      "joint",
+      "cartilaginous joint",
+      "fibrous joint",
+      "synovial joint"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b2ad48e28002331ac0255e18a50502ca5151a7ceee9d5c83f6ac01879390598b",
+    "question": "What are the bones of the lower arm?",
+    "Class(es)": [
+      "lower arm",
+      "radius",
+      "ulna"
+    ],
+    "Relationship(s)": [
+      "part_of",
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b5962f481a0b74a068e4f35929574e0509f32698a561bb71c1b525ca7970a4b3",
+    "question": "What are the parts of the male urethra?",
+    "Class(es)": [
+      "male urethra",
+      "penile urethra",
+      "prostatic urethra",
+      "male membranous urethra"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d9ad7e5efc8ebf299a1000f03fd741746df6b5a0b027f9b96b6dae95c0f9c21a",
+    "question": "What are the components of the spleen pulp?",
+    "Class(es)": [
+      "spleen pulp",
+      "spleen red pulp",
+      "spleen white pulp"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c3e2a8f4bea624bc19712bc343b83274955e8eb8e892d0ef8511b6017910c7ff",
+    "question": "Which system does the thymus belong to?",
+    "Class(es)": [
+      "thymus",
+      "lymphoid system",
+      "immune system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5dbff6a1f6c76679e5e113dcc3b7b621c0a28e2cf67c7df3eb43b43dbdf01b09",
+    "question": "What are the layers of the epidermis?",
+    "Class(es)": [
+      "epidermis",
+      "epidermis stratum basale",
+      "epidermis stratum corneum",
+      "epidermis stratum granulosum",
+      "epidermis stratum spinosum"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "45785c3fc708935e0e1797abccfac06b0745fcb1616e2be25256caf68be3cced",
+    "question": "What is the relationship between skin and the integumental system?",
+    "Class(es)": [
+      "skin",
+      "integumental system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b0f24bcb78d3277b78bb8e63bbcd00cf9a5527fda7320e2cd6b066102443a093",
+    "question": "What kind of glands are found in the skin?",
+    "Class(es)": [
+      "skin",
+      "skin gland",
+      "skin apocrine gland",
+      "skin sebaceous gland",
+      "sweat gland"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3389e466d57199fe16bce7e67b28c02f26f8eecdac4e4a1b4731e856cbabebd9",
+    "question": "What are the bones of the viscerocranium?",
+    "Class(es)": [
+      "viscerocranium bone",
+      "mandible",
+      "maxilla",
+      "ethmoid bone",
+      "hyoid bone",
+      "nasal bone"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "46b5165e3cd19a4c93c62cf809940e7fd12d631a898ed612ccf88d9d23948da1",
+    "question": "Is the spleen part of the hematopoietic system?",
+    "Class(es)": [
+      "spleen",
+      "hematopoietic system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "cb3619ddcd01c4a682f7234c874e4b0365b78d802b3a46c8dbb85e36a9a6c366",
+    "question": "What is the relationship between bone marrow and the hematopoietic system?",
+    "Class(es)": [
+      "bone marrow",
+      "hematopoietic system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e8ca5f4cf96f361e23c82f78c09c81ed870aca5d66c6541c278688e3d268ae4c",
+    "question": "Which structures are part of the oral region?",
+    "Class(es)": [
+      "oral region",
+      "gingiva",
+      "lip",
+      "tongue",
+      "tooth",
+      "salivary gland",
+      "palate"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "92b16f9dc2c5f8f40143055e8b3b1f6db9eb0519a7ca6c78b02758bcbc13ebb9",
+    "question": "What types of teeth are found in a mouse?",
+    "Class(es)": [
+      "tooth",
+      "incisor",
+      "molar"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d1795f7350f063800881975f97bc8849716fda0ed3f7c9ccdd9303103894b5bd",
+    "question": "Is the aortic valve a type of heart valve?",
+    "Class(es)": [
+      "aortic valve",
+      "heart valve"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "abcf432f9c099ced86d1d3e5e97720b411d39fa9e946b4f09d1a3c4915b57471",
+    "question": "What is the truncus arteriosus a part of?",
+    "Class(es)": [
+      "truncus arteriosus",
+      "outflow tract"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "93d54e549698850729b7b594d30a6a5c2b7df403d2e7c9e714a104a4ab9c2dc6",
+    "question": "What are the components of the juxtaglomerular complex?",
+    "Class(es)": [
+      "juxtaglomerular complex",
+      "extraglomerular mesangium",
+      "macula densa"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "aca34ff3f41e7076090011a5b98758832ec19f7f27e2a54ceeae8037e5f4f176",
+    "question": "Is the sinoatrial node part of the impulse conducting system of the heart?",
+    "Class(es)": [
+      "sinoatrial node",
+      "impulse conducting system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1fbfc3d5f16fd2e7d7fae150d183cefa1cc07c16d377056fa9c33bed72cb0a77",
+    "question": "What are the main tissue types in the integumental system?",
+    "Class(es)": [
+      "integumental system",
+      "skin",
+      "hair follicle",
+      "coat hair",
+      "integumental system gland"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1b716e1a4df1d2e82196d19879c859cc417fe57116a8ce6398473eeb41ec6802",
+    "question": "Which anatomical structures form the hand?",
+    "Class(es)": [
+      "hand",
+      "carpus",
+      "metacarpus",
+      "hand digit"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "95d3007309cb008b1accb8cf55ec1be70576eeaa7d430218fb1fb5c00870008b",
+    "question": "What is the relationship between spinal cord grey matter and the spinal cord?",
+    "Class(es)": [
+      "spinal cord grey matter",
+      "spinal cord"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "de243938711d51a1ca5b8828db37f91d036373912a63f24dd59c303600226bf5",
+    "question": "What are the different types of organ systems in a mouse?",
+    "Class(es)": [
+      "organ system",
+      "cardiovascular system",
+      "endocrine system",
+      "nervous system",
+      "musculoskeletal system"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0d7ece7aa44fd992c7bd641bf40c356661cfea18e30c24e6e38219b393156572",
+    "question": "What is the relationship between the arm and the forelimb?",
+    "Class(es)": [
+      "arm",
+      "forelimb"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "874cd0b110de54a95d3b6a3ddc146ff06a303791791fbf6c7d6e1f22ac74a561",
+    "question": "What are the parts of the arm?",
+    "Class(es)": [
+      "arm",
+      "lower arm",
+      "upper arm"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "632a70e4b5f1be3d26b289e17b7f7cdf4cb8306d1d299b6deb9a141605c7bcea",
+    "question": "What are the parts of the leg?",
+    "Class(es)": [
+      "leg",
+      "lower leg",
+      "upper leg"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "632f05f206908a67d7e1d0771811d5f8b5cbf2449a0f867a16a11aa8504a6956",
+    "question": "Which part of the trunk contains the chest?",
+    "Class(es)": [
+      "trunk",
+      "thorax",
+      "chest"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9f96aae8b05b23dbb4aef7d12b7a99c1f14026b04d7d8bb1536adc715e4f575f",
+    "question": "What kind of muscle tissue is myocardium?",
+    "Class(es)": [
+      "myocardium",
+      "striated muscle tissue"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "979b86202563782e214464d304427cba8324e55995d737372a2be5e85c87784a",
+    "question": "Is skeletal muscle a type of striated muscle tissue?",
+    "Class(es)": [
+      "skeletal muscle",
+      "striated muscle tissue"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b551b0b967e367fe436e7baec5c3f68c1a0e678f38a602be2c78c32d1a58d012",
+    "question": "What are the main parts of the peripheral nervous system?",
+    "Class(es)": [
+      "peripheral nervous system",
+      "autonomic nervous system",
+      "peripheral nerve",
+      "spinal ganglion/nerve"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "40f73cd7bcd7be26bf809018b7e8a5851babe1f369a6abf1b82c7b1170c4c1d4",
+    "question": "What are the components of the outer ear?",
+    "Class(es)": [
+      "outer ear",
+      "auricle",
+      "external acoustic meatus"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "49ec5a8d84b4c960992b591346f54eea93f8c1d4b93e223174dd17e3b19c516f",
+    "question": "Which system does the spleen belong to?",
+    "Class(es)": [
+      "spleen",
+      "hematopoietic system",
+      "lymphoid system",
+      "immune system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "93e1cd13667e681054eacd4370872394864cdb72338a20ec13dfd7af9fd2c643",
+    "question": "What are the parts of the adrenal gland cortex?",
+    "Class(es)": [
+      "adrenal gland cortex",
+      "adrenal gland cortex zone"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1bc406b4852a82c76a91361225a19e3556e2bddf7188cb5c30b09fe0ed29e002",
+    "question": "What are the parts of a hair follicle?",
+    "Class(es)": [
+      "hair follicle",
+      "coat hair bulb",
+      "hair root sheath"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "643ef8e09a60f6e082597bc6e18a9070a35f06edc2407c608097695cc9757bac",
+    "question": "What is the relationship between dermis and skin?",
+    "Class(es)": [
+      "dermis",
+      "skin"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "aeb3a30818148997bc4f3d01db8d8fb57d379eeecb746743d30f5529ddf6f9f0",
+    "question": "What type of gland is a mammary gland?",
+    "Class(es)": [
+      "mammary gland",
+      "exocrine gland"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5e82c756cb6c0d3e4e79f0fee6d85926609f5cc0c693a4df43d6285708c73d2d",
+    "question": "What are the parts of the eyeball's uvea?",
+    "Class(es)": [
+      "uvea",
+      "choroid",
+      "ciliary body",
+      "iris"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ad21a4a80815ecacdcf6a2ca2d563c68a053ba847da0e034188ed68abeb215f9",
+    "question": "Which structures are part of the axial skeleton?",
+    "Class(es)": [
+      "axial skeleton",
+      "vertebral column",
+      "rib",
+      "cranium"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "cde56686803dbecbca084296609058c5627c39c5afa12e76710fbf2105c3b2c1",
+    "question": "What bones are part of the pelvic girdle?",
+    "Class(es)": [
+      "pelvic girdle bone",
+      "ilium",
+      "ischium",
+      "pubis"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "57b9e074e3779817fd145333d01dcdc43c7041498f7eee89dce009ffbb4b77f1",
+    "question": "What type of bone is a phalanx?",
+    "Class(es)": [
+      "phalanx",
+      "limb bone"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "28047094d06f7e4f4e4d501ac34139a6819fb4bad59bd3dcf0da9f26da4f8241",
+    "question": "What are the parts of the large intestine?",
+    "Class(es)": [
+      "large intestine",
+      "cecum",
+      "colon",
+      "rectum"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3fce447c9944092fccc3156d4bc9814be3a9b27ad702288c020b040f75975051",
+    "question": "What kind of organ is the pancreas?",
+    "Class(es)": [
+      "pancreas",
+      "abdomen organ"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8d7cd0bfdd9eff09ccceb44e3ed83df03d3b20e48d95c25e194d8942fef53f7c",
+    "question": "Which organs form the lower urinary tract?",
+    "Class(es)": [
+      "lower urinary tract",
+      "urinary bladder",
+      "urethra"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "926cd63cc8cd5db2e8abd7c3d2aa6ee5a1aea565a470dfae35d794b522dcca36",
+    "question": "What is the relationship between the ovary and the gonad?",
+    "Class(es)": [
+      "ovary",
+      "gonad"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "39334fc9c761dd657097080a3121ce8eeb65a3656766c8c3472afc50d3e56b40",
+    "question": "What are the parts of the uterus?",
+    "Class(es)": [
+      "uterus",
+      "endometrium",
+      "myometrium",
+      "uterine cervix",
+      "uterine horn"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "29a75d4386073052fdc1e87cf8007410940d9327259b62ffcd01dbd6b7e32724",
+    "question": "Is the epididymis part of the male reproductive system?",
+    "Class(es)": [
+      "epididymis",
+      "male reproductive system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7800c584842c5ed00cfbbdd957aba0707021a29cd5695c9c6d7a69e2cface630",
+    "question": "What structures are part of the larynx?",
+    "Class(es)": [
+      "larynx",
+      "larynx cartilage",
+      "larynx muscle",
+      "larynx mucosa"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5c2c044963b18cba88871c86c66e5c63a37f136312a2e366f4cfa40eb7795e3e",
+    "question": "What is the relationship between the alveolus and the alveolar system?",
+    "Class(es)": [
+      "alveolus",
+      "alveolar system"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a4698948c74189f9dc84c6a44ce1890a769ab4c41ec6360c97519d12edc7417a",
+    "question": "Which structures are part of the brain meninges?",
+    "Class(es)": [
+      "brain meninges",
+      "brain arachnoid mater",
+      "brain dura mater",
+      "brain pia mater"
+    ],
+    "Relationship(s)": [
+      "is_a",
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "80ea955526eb924cf065783c637c01a7ec79618fc94623d9d733c3195998ad3d",
+    "question": "What kind of tissue is the dura mater?",
+    "Class(es)": [
+      "dura mater",
+      "meninges"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "58ac0c5c43b62b9275213d7f19ffc47e57538e5500105c8f0d70a60b92b74225",
+    "question": "What is the relationship between the renal corpuscle and the nephron?",
+    "Class(es)": [
+      "renal corpuscle",
+      "nephron"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "4e341eef780d1e7db9e99e4690bfd44473c45fba1204f9a4670179859b39755e",
+    "question": "What are the parts of the renal corpuscle?",
+    "Class(es)": [
+      "renal corpuscle",
+      "glomerulus",
+      "glomerular capsule"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1f34996877838cb649ac5b61d76a1c769397bbb8c4be36b5be9613a5312a06fa",
+    "question": "What are the main types of limb bone?",
+    "Class(es)": [
+      "limb bone",
+      "limb long bone",
+      "carpal/tarsal bone",
+      "metacarpal/metatarsal bone",
+      "phalanx"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d7516ba0edd46f2d6cf1731a1e2f50175e503ee5a767792b1bd6927cf204dd3b",
+    "question": "Which part of the skull contains the brain?",
+    "Class(es)": [
+      "cranium",
+      "chondrocranium",
+      "brain"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7e2120f6f391bfc96743c0ad25cb47d0c7dabf228aded9b8c87e17bc70e9b9f3",
+    "question": "What is the structural relationship between the stomach and the foregut?",
+    "Class(es)": [
+      "stomach",
+      "foregut"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "28eeb745336432209ecc1aaafad10a566fb4fe31e99894d544867742202c9396",
+    "question": "What is the relationship between the foot and the autopod?",
+    "Class(es)": [
+      "foot",
+      "autopod"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "52c49f9363d9c140368a878ae18a0c016e899ad3080117587d2af52d88f53c4f",
+    "question": "What are the two types of pancreatic tissue based on function?",
+    "Class(es)": [
+      "pancreas",
+      "endocrine pancreas",
+      "exocrine pancreas"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5e927681ba189ac7928fbe024e307be60ed3917b8c9c9899752b09251d831136",
+    "question": "Which structures are part of the spleen?",
+    "Class(es)": [
+      "spleen",
+      "spleen pulp",
+      "spleen capsule",
+      "spleen trabeculum"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "428312a2b59a91c83be1dd457e96d148ef38a9bf8ffce9ab01efe06f9013838b",
+    "question": "What are the components of the thymus?",
+    "Class(es)": [
+      "thymus",
+      "thymus capsule",
+      "thymus cortex",
+      "thymus medulla",
+      "thymus lobule"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a71dd20227c55aba6025237d6c3f09df1adc82de3627388119ed476e8e8ab650",
+    "question": "What types of hair are found on a mouse?",
+    "Class(es)": [
+      "coat hair",
+      "pelage hair",
+      "duvet hair",
+      "vibrissa"
+    ],
+    "Relationship(s)": [
+      "is_a"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "235edf2de57ff8d97790d2dc99891a430dc76dde01556d0817836c4bba70e677",
+    "question": "What is the relationship between the nasopharynx and the pharynx?",
+    "Class(es)": [
+      "nasopharynx",
+      "pharynx"
+    ],
+    "Relationship(s)": [
+      "part_of"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  }
+]

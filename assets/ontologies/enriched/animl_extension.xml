@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:cq="http://example.org/cq-vocabulary#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/data#CQ_be5efe9f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: Which item was affected by a change, and what were...</skos:prefLabel>
+    <skos:definition>Which item was affected by a change, and what were the old and new values?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/change"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/signableItem"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/affects"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/oldValue"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/newValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_558b9cfa">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What is the name, role, and email of an agent?...</skos:prefLabel>
+    <skos:definition>What is the name, role, and email of an agent?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/agent"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/name"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/role"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/email"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d1d2ae69">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What technique was used for a specific data point?...</skos:prefLabel>
+    <skos:definition>What technique was used for a specific data point?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/individualDataPoint"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/technique"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/usesTechnique"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9663de63">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What parameters are defined for a given category?...</skos:prefLabel>
+    <skos:definition>What parameters are defined for a given category?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/category"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/parameter"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasParameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_926ca1f9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What is the data type and unit for a parameter spe...</skos:prefLabel>
+    <skos:definition>What is the data type and unit for a parameter specification?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/parameterSpecification"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/dataType"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/units"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasDataType"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasUnits"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_71304b73">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: Which experiment is denoted by a document?...</skos:prefLabel>
+    <skos:definition>Which experiment is denoted by a document?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/document"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/experiment"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/denotes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ff80ca7f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What is the barcode of a sample?...</skos:prefLabel>
+    <skos:definition>What is the barcode of a sample?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/sample"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/barcode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_36dbd53e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What are the steps involved in an experiment?...</skos:prefLabel>
+    <skos:definition>What are the steps involved in an experiment?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/experiment"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/individualDataPoint"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_17dc3924">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: Which agent was responsible for a specific method?...</skos:prefLabel>
+    <skos:definition>Which agent was responsible for a specific method?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/method"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/agent"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasAgent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6ec3847c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What tags are associated with a sample?...</skos:prefLabel>
+    <skos:definition>What tags are associated with a sample?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/sample"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/tagSet"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/tag"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasTags"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6a0e29c7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What is the timestamp and reason for a specific ve...</skos:prefLabel>
+    <skos:definition>What is the timestamp and reason for a specific version history entry?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/versionHistory"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/timeStamp"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/reason"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_fa225840">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What is the type of a container?...</skos:prefLabel>
+    <skos:definition>What is the type of a container?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/container"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/containerType"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_97dff2d8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What result was produced by an individual data poi...</skos:prefLabel>
+    <skos:definition>What result was produced by an individual data point in an experiment?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/individualDataPoint"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/result"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/producesResult"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_713fe15b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: In which container is a sample located?...</skos:prefLabel>
+    <skos:definition>In which container is a sample located?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/sample"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/sampleInContainer"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/container"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/isContained"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/isContainedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_71b037a9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What data points are members of a series?...</skos:prefLabel>
+    <skos:definition>What data points are members of a series?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/series"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/indivdualDataPoint"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/autoIncrementedDataPoint"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/encodedDataPoint"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#CompetencyQuestion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_52a4176c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:prefLabel>CQ: What is the result category for a given result?...</skos:prefLabel>
+    <skos:definition>What is the result category for a given result?</skos:definition>
+    <cq:involvesClass rdf:resource="https://www.animl.org/result"/>
+    <cq:involvesClass rdf:resource="https://www.animl.org/category"/>
+    <cq:involvesProperty rdf:resource="https://www.animl.org/hasResultCategory"/>
+  </rdf:Description>
+</rdf:RDF>

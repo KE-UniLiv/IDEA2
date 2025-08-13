@@ -129,8 +129,8 @@ def pull_rejected() -> dict:
         filtered_cqs = rejected_cqs
         print("No previous iterations to filter. Using all rejected CQs.")
     else:
-        prev_iteration = curriteration - 1
-        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == prev_iteration]
+        
+        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == curriteration]
 
         count = len(rejected_cqs) - len(filtered_cqs)
         print(f"Removed {count} CQs that were not from the previous iteration.")
@@ -286,12 +286,12 @@ def get_rejected_cqs_from_file() -> list:
 
     return cqs
 
-def get_cqs_from_file_as_strings(filepath) -> list:
+def get_cqs_from_file_as_strings(filepath, filetype) -> list:
     """
     Reads rejected competency questions from a file and returns them as a list of formatted strings.
 
     Args:
-        filepath (str): The path to the file containing rejected competency questions.
+        filepath (str): The path to the file containing CQs competency questions.
 
     Returns:
         list: A list of rejected competency questions as formatted strings.
@@ -299,9 +299,16 @@ def get_cqs_from_file_as_strings(filepath) -> list:
     Note:
         The CQs should already be cleaned and stored in 'assets/cqs/rejected_cqs.json'.
     """
+    
+    if filetype == "txt":
+        with open(filepath, 'r', encoding='latin-1') as f:
+            data = f.readlines()
+            cqs = [line.strip() for line in data if line.strip()]
+            return cqs
 
-    with open(filepath, 'r', encoding='latin-1') as f:
-        data = json.load(f)
+    if filetype == "json":
+        with open(filepath, 'r', encoding='latin-1') as f:
+            data = json.load(f)
 
     cqs = []
     for item in data:

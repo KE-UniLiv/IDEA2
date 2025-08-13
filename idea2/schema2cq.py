@@ -28,7 +28,8 @@ class PromptBuilder:
                  out_definition: str = None,
                  out_examples: str = None,
                  out_instruction: str = p.CQ_INSTRUCTION_A,
-                 limit: str = "Generate around 100 competency questions."  # Default limit for the number of competency questions
+                 limit: str = "Generate around 100 competency questions.",
+                 cqs: list[str] = None
                  ):
         """
         Initialise the prompt builder with the main components of the template.
@@ -49,6 +50,7 @@ class PromptBuilder:
         self.out_examples = out_examples
         self.out_instruction = out_instruction
         self.limit = limit
+        self.cqs = cqs
 
     def get_prompt(self, raw_data, include_role=False):
         """
@@ -70,6 +72,8 @@ class PromptBuilder:
             prompt += self.out_instruction + "\n\n"
         if self.limit is not None:
             prompt += self.limit + "\n\n"
+        if self.cqs is not None:
+            prompt += "\n".join(self.cqs) + "\n\n"
             
         prompt += raw_data
         return prompt
