@@ -60,9 +60,10 @@ def pull_accepted() -> dict:
         if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
             title = page["properties"]["CQ"]["title"][0]["text"]["content"]
             people = page["properties"]["Upvoted By"]["people"]
-            person = get_name_from_id(people[0]["id"]) if people else "Unknown"
 
-            accepted_cqs.append({"title": title})
+            for idx, person_obj in enumerate(people):
+                person_name = get_name_from_id(person_obj["id"])
+                accepted_cqs.append({"title": title, "person": f"Annotator {idx+1}: {person_name}"})
 
     return accepted_cqs
 
@@ -140,6 +141,7 @@ def pull_rejected() -> dict:
             sys.exit(0)
 
     return filtered_cqs
+
 
 def get_ids_from_rejected(rejected_cqs: list) -> list:
     """

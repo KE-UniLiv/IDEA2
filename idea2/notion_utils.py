@@ -10,6 +10,7 @@ import json
 from utils import get_key
 from notion_client import Client
 from tqdm import tqdm
+from reformulate_cq import NOTION_DATABASE_ID, get_name_from_id
 
 notiontoken = get_key("notionkey")
 llmdb = get_key("notionllmdb")
@@ -36,8 +37,76 @@ def test_relation(client, database_id):
     for page in results["results"]:
         reformulates = page["properties"].get("Reformulates")
         print(reformulates)
+        
+def get_all_cqs():
+    results = notion.databases.query(
+        **{
+            "database_id": NOTION_DATABASE_ID,
+            "filter": {
+                "property": "CQ",
+                "title": {
+                    "is_not_empty": True  # TODO: Change this to domain experts user IDs
+                }
+            }
+        }
+    )
+
+    return len(results['results'])
+
+def pull_all_comments_and_comments():
+    pass
+
+def pull_accepted() -> dict:
+    """
+    Pulls accepted competency questions from the Notion database.
+
+    Returns:
+        dict: A dict of accepted competency questions.
+    """
     
- 
+    ## -- Query the Notion database for accepted CQs
+    results = notion.databases.query(
+        **{
+            "database_id": NOTION_DATABASE_ID,
+            "filter": {
+                "property": "Upvoted By",
+                "people": {
+                    "is_not_empty": True  # TODO: Change this to domain experts user IDs
+                }
+            }
+        }
+    )
+    
+    ## -- Extract titles of accepted CQs
+    accepted_cqs = []
+
+    for page in results['results']:
+        if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
+            title = page["properties"]["CQ"]["title"][0]["text"]["content"]
+            people = page["properties"]["Upvoted By"]["people"]
+
+            for person_obj in people:
+                person_id = person_obj["id"]
+                accepted_cqs.append({"title": title, "person": person_id})
+
+    return accepted_cqs
+
+def get_cq_metrics_by_user():
+    accepted_cqs = pull_accepted()
+    number_of_cqs = get_all_cqs()
+
+    annotators = list({cq["person"] for cq in accepted_cqs})
+    for idx, annotator in enumerate(annotators):
+        number_of_accepted = sum(1 for c in accepted_cqs if c["person"] == annotator)
+        percent = (number_of_accepted / number_of_cqs * 100) if number_of_cqs > 0 else 0
+        print("\n")
+        print(f"Annotator {idx+1} has accepted {number_of_accepted} out of {number_of_cqs} CQs ({percent:.2f}%)")
+    print("==="*50)
+    print("\n")
+
+def get_comment_metrics_by_user():
+
+
 def write_row(client, database_id, string, cq, iteration, generation_config) -> None:
     """
     Write a row to the Notion database with the given user_id and competency question (cq).
@@ -145,38 +214,3 @@ def get_cqs_from_file(filepath, filetype=None) -> list:
         return [cq.strip() for cq in cq_strings if cq.strip()]
     
 
-def getn(database_id=notiondb) -> int:
-    """
-    Get the number of unique voters (participants) from the Notion database.
-
-    Args:
-        database_id (str): The ID of the Notion database to query.
-
-    Returns:
-        int: The number of unique participants who voted on any CQ.
-    """
-
-    unique_voters = set()
-    has_more = True
-    next_cursor = None
-
-    while has_more:
-        query_kwargs = {
-            "database_id": database_id,
-            "page_size": 100,
-        }
-
-        if next_cursor:
-            query_kwargs["start_cursor"] = next_cursor
-
-        results = notion.databases.query(**query_kwargs)
-        for page in results["results"]:
-            for prop in ["Upvoted By", "Downvoted By"]:
-                if prop in page["properties"]:
-                    people = page["properties"][prop].get("people", [])
-                    for person in people:
-                        unique_voters.add(person["id"])
-        has_more = results.get("has_more", False)
-        next_cursor = results.get("next_cursor", None)
-
-    return len(unique_voters)

@@ -1,4 +1,4 @@
-import notion_utils
+import notion_metrics
 """
 A collection of modular components for generating prompts for schema2cq.
 """
@@ -33,7 +33,7 @@ development process as they help to ensure that the ontology is fit for purpose
 and meets the needs of its users.
 """
 
-N = notion_utils.getn()
+N = notion_metrics.getn()
 
 CQ_EVALUATION_DEFINITION = f"""
 The CQs you generated in iteration 1 were passed to N={N} domain experts for evaluation. 
