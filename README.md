@@ -1,4 +1,7 @@
 # IDEA2 💭
+
+<img src="IDEA2LOGO.png" alt="My image" width="350"/>
+
 Expert-in-the-loop requirement elicitation and analysis for ontology engineering.
 
 IDEA2 is a framework which defines workflows for enriching Ontology Engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini` and `GPT`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which users can utilise LLMs to inform the creation and refinement of Ontologies through Competency Questions (CQs). With this framework, the user can select a model, hyperparameters and prompt configurations to extract CQs from a range of source documents, and in turn populate a Notion page with the results alongisde the associated provenance to allow for domain experts to validate these CQs, which fine-tunes the LLM's generations as iterations progress, in turn making the whole process more and more streamlined.
