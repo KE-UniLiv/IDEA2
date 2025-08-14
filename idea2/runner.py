@@ -7,6 +7,7 @@ import prompts as p
 import utils
 import sys
 import time
+import questionary
 import json
 import shutil
 
@@ -280,7 +281,22 @@ def main():
             llmrole=cq_extraction.config["role"],
             prompt=notionprompt,
         )
-    
+
+        if args.reformulate:
+            path = os.path.join(os.getcwd(), "assets", "cqs", f"{generation}_reformulated.txt")
+            with open(path, "r", encoding="utf-8") as f:
+                cqs = f.readlines()
+
+                print(f"Reformulated CQs for generation {generation}:")
+                for cq in cqs:
+                    print(f" - {cq.strip()}")
+
+            confirm = questionary.confirm("Do you want to push the reformulations to notion? ")
+
+            if not confirm:
+                print("Not pushing this set to notion")
+                sys.exit(0)
+
         ## -- Avoid API timeouts
         for cq in tqdm(competency_questions):
             for att in range(3):

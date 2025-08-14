@@ -1,0 +1,72 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "dd8ca3a53d368b8b2cf0e4021536b09263d784329f97e9c40bc1ab7f39db9a30",
+    "text": "What are the names of the result definitions specified by a technique?",
+    "identifier": "g02_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8bcc0bb5c92d76f44eb7b35049d3e84b4dad6d9eef0e1c7088e1182d8e41e39e",
+    "text": "Which organization is an author affiliated with?",
+    "identifier": "g02_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2bec8386d020bcb8e93e3cd919c2e126e69e27c3ebbe1f55237279afbe2cee02",
+    "text": "What is the ID prefix used to reference a collection of consumed experiment steps?",
+    "identifier": "g02_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "932fe1752fab18d83c63d61f3fcc2c2a4fbfa594ee2bc1f661dde931bde9c470",
+    "text": "What is the location of a sample within its container, if specified?",
+    "identifier": "g02_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1ece2076ac27bf5170f8b1c9185e01426b5b14595cfde8eea7034cad8dd54e94",
+    "text": "For a sample container that is a microtiter plate or tray, what is its specified capacity (e.g., 6, 24, 96 wells)?",
+    "identifier": "g02_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  }
+]

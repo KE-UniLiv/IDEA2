@@ -85,7 +85,7 @@ def pull_rejected() -> dict:
             "filter": { 
                 "property": "Score", 
                 "number": {
-                    "less_than": 0 
+                    "less_than_or_equal_to": 0 
                 }
             }
         }

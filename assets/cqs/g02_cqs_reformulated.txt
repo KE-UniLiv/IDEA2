@@ -1,0 +1,16 @@
+
+---
+Original rejected:
+What result blueprints are defined for a technique? was rejected with <comment> Im not sure what a result blueprint is in this instance. Again will defer to others on this one </comment><comment> Likewise unsure on the language </comment>, 4 votes and 0 score
+What is the affiliation of an author? was rejected with <comment> I think this is too vague </comment>, 4 votes and 0 score
+What is the prefix for a bulk reference to consumed experiment steps? was rejected with <comment> Im unclear on what this refers to </comment>, 4 votes and 0 score
+What are the coordinates of a sample within its container? was rejected with <comment> Do containers always have co-ordinates?  </comment>, 4 votes and 0 score
+How many wells does a sample's container have? was rejected with <comment> Do sample containers always have wells? </comment>, 4 votes and -2 score
+
+---
+Reformulated CQs:
+What are the names of the result definitions specified by a technique?
+Which organization is an author affiliated with?
+What is the ID prefix used to reference a collection of consumed experiment steps?
+What is the location of a sample within its container, if specified?
+For a sample container that is a microtiter plate or tray, what is its specified capacity (e.g., 6, 24, 96 wells)?

@@ -7,3 +7,12 @@
     "isReformulated": false
   }
 ]
+[
+  {
+    "model": "models/gemini-2.5-pro",
+    "role": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering.",
+    "temperature": 0.8,
+    "cqset": "g02_cqs",
+    "isReformulated": true
+  }
+]

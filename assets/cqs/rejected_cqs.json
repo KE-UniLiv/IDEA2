@@ -1,0 +1,57 @@
+[
+  {
+    "title": "What result blueprints are defined for a technique?",
+    "id": 92,
+    "person": "Andrew N, Harry R",
+    "creation date": "30/07/2025",
+    "score": 0,
+    "votes": 4,
+    "comment": "<comment> I’m not sure what a result blueprint is in this instance. Again will defer to others on this one </comment><comment> Likewise unsure on the language </comment>",
+    "from iteration": 1,
+    "date_pulled": "14/08/25"
+  },
+  {
+    "title": "What is the affiliation of an author?",
+    "id": 37,
+    "person": "Harry R, Ewan Johnson",
+    "creation date": "30/07/2025",
+    "score": 0,
+    "votes": 4,
+    "comment": "<comment> I think this is too vague </comment>",
+    "from iteration": 1,
+    "date_pulled": "14/08/25"
+  },
+  {
+    "title": "What is the prefix for a bulk reference to consumed experiment steps?",
+    "id": 29,
+    "person": "Andrew N, Ewan Johnson",
+    "creation date": "30/07/2025",
+    "score": 0,
+    "votes": 4,
+    "comment": "<comment> I’m unclear on what this refers to </comment>",
+    "from iteration": 1,
+    "date_pulled": "14/08/25"
+  },
+  {
+    "title": "What are the coordinates of a sample within its container?",
+    "id": 8,
+    "person": "Andrew N, Harry R",
+    "creation date": "30/07/2025",
+    "score": 0,
+    "votes": 4,
+    "comment": "<comment> Do containers always have co-ordinates?  </comment>",
+    "from iteration": 1,
+    "date_pulled": "14/08/25"
+  },
+  {
+    "title": "How many wells does a sample's container have?",
+    "id": 6,
+    "person": "Andrew N, Harry R, Ewan Johnson",
+    "creation date": "30/07/2025",
+    "score": -2,
+    "votes": 4,
+    "comment": "<comment> Do sample containers always have wells? </comment>",
+    "from iteration": 1,
+    "date_pulled": "14/08/25"
+  }
+]
