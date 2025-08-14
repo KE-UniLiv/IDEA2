@@ -1,0 +1,2053 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "66740ac7bcef7c270b8a06e7b1fbb31cfcfd66230b74cab51fccbded52d8b1f7",
+    "question": "What is the definition of a 'Trait'?",
+    "Class(es)": [
+      "Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "32c0ca158c8d9b801a0b92cbb9cd080ebbe590739d55bb02f52350c8d8221a31",
+    "question": "How is a 'Zooplankton Trait' defined?",
+    "Class(es)": [
+      "Zooplankton Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "0bcd6ed4f06b0df5c7ee5919de55c625b31473c2e9582b8b4272dffab5da356b",
+    "question": "What does 'Functional Trait' mean?",
+    "Class(es)": [
+      "Functional Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "92c31bc1a41e72934bc2633344ddee8854ea266d1ac38e4299845e2d97a1f644",
+    "question": "What is the definition of a 'Morphological Trait'?",
+    "Class(es)": [
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "eb082c8517cfc9015cc9e0d4c7b182828dcb1119d1e4dbe617b9a2d31cb81cd8",
+    "question": "What is a 'Behavioural Trait'?",
+    "Class(es)": [
+      "Behavioural Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "69cd3051465b5e99b82cb00ff3bc9e50dd21f303c1b08d1ef99f59b3f3efe3a1",
+    "question": "What is the definition of 'Bioluminescence' as a trait?",
+    "Class(es)": [
+      "Bioluminescence"
+    ],
+    "Relationship(s)": [
+      "rdfs:label"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "50895d45a8414569753d1533940ff4d5706c69338fc9847797110cd365a2e62b",
+    "question": "Define 'Transparency' in the context of this ontology.",
+    "Class(es)": [
+      "Transparency"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "940d9df0a54234cbef059f4c63fdeddd0550f0049b3e43a733b9653668db1210",
+    "question": "What does 'Body Size' refer to?",
+    "Class(es)": [
+      "Body Size"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a8dbce9b9ad7e7545abd9f3c4d151747d3d50b75e1f644da841e8890bb202ca1",
+    "question": "What is the definition of 'Body Length'?",
+    "Class(es)": [
+      "Body Length"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "99983518b27e66a078b9f38516afaab95822f9b092fd29143bd83a043df286cb",
+    "question": "How is 'Body Mass' defined?",
+    "Class(es)": [
+      "Body Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "28ff6dd94c636afe01720fd0a8d293616057e3406dd170d6c03bafba818f13bd",
+    "question": "What is the definition of 'Wet Mass'?",
+    "Class(es)": [
+      "Wet Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "facec4dc5262689075b50b54df78cfa92585aaa6335cde76d61e616f42789d25",
+    "question": "Define 'Dry Mass'.",
+    "Class(es)": [
+      "Dry Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "08ab9b5872fda3f46973ffd791ef39eab1c04949a081bce3a814f5d123a44712",
+    "question": "What is 'Ash Free Dry Mass'?",
+    "Class(es)": [
+      "Ash Free Dry Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "6e4c36679abe5a9cf4d100536f196e74938bb9389f4db6a29e242e9c47d29613",
+    "question": "What does 'Ash Content' mean?",
+    "Class(es)": [
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ebc36c6c32467f08c1062a4ea5c224140ab552ade57861c8b564faf41939f350",
+    "question": "What is 'Biovolume' and for what is it used?",
+    "Class(es)": [
+      "Biovolume"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "19b33e148eac4f5501812f6535d65de8ae27ac48fdae0cf21f8fb0c009987188",
+    "question": "How is 'Body Shape' defined as a trait?",
+    "Class(es)": [
+      "Body Shape"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "47c75b036352cf24350f89c072873e7d9705f6fcce12a938c360942564ea2190",
+    "question": "What is the 'Jelly factor' trait?",
+    "Class(es)": [
+      "Jelly factor"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "8d76021977def72cac3af4ecdb05c44645cb92097e97c1e5d03b709f55525a27",
+    "question": "What does 'Presence of Cilia' mean for an organism?",
+    "Class(es)": [
+      "Presence of Cilia"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b3780748be46607b6d29ea26ade93aaadc9eff8afe3eb4f5f70f424269216b98",
+    "question": "Define a 'Sphere' body shape.",
+    "Class(es)": [
+      "Sphere"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5cb14e0569b2d4983180c48888ce476528ef5b3c9963c9cccb5076ba5a03468e",
+    "question": "What is the definition of a 'Cylinder' body shape?",
+    "Class(es)": [
+      "Cylinder"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "2750dcec064c32baee456c10dbae9a6ca2d0cc7160035a7659bbba82197e76aa",
+    "question": "Is 'Zooplankton Trait' a subclass of 'Trait'?",
+    "Class(es)": [
+      "Zooplankton Trait",
+      "Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5909931b1defff69ad37531d5d5f8a0bb651b4f841c22c7902dd98b4f21e4eaf",
+    "question": "What are the primary categories of 'Functional Trait'?",
+    "Class(es)": [
+      "Functional Trait",
+      "Morphological Trait",
+      "Behavioural Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b6ec20d9b03a60e78aba9df719b4ba0c5dafdb1da9d4bcc91705d9faee460337",
+    "question": "List all direct subtypes of 'Morphological Trait'.",
+    "Class(es)": [
+      "Morphological Trait",
+      "Bioluminescence",
+      "Transparency",
+      "Coloniality",
+      "Body Size",
+      "Body Shape",
+      "Presence of Cilia",
+      "Presence of Flagella",
+      "Presence of Lorica",
+      "Presence of Calcitic Shell",
+      "Presence of Siliceous Exoskeletal Structures",
+      "Jelly factor",
+      "Food Particle Size Range"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7d01999fd072232215914e0550c43db0a4772adfddd4a2f1f71b11bd87f5345b",
+    "question": "Is 'Body Size' classified as a 'Functional Trait'?",
+    "Class(es)": [
+      "Body Size",
+      "Morphological Trait",
+      "Functional Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a57e537862c7c9b76ca214eb2dbcd58e6838aa2245e721e21029051677e2474f",
+    "question": "What are the different kinds of 'Body Size' traits defined?",
+    "Class(es)": [
+      "Body Size",
+      "Body Length",
+      "Body Width",
+      "Body Mass",
+      "Biovolume",
+      "Carbon Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "abeaaaef756f322c5af95df7dd2b29773051571e5508b2fbcd0b9bff3baf7534",
+    "question": "List all traits that are sub-concepts of 'Body Mass'.",
+    "Class(es)": [
+      "Body Mass",
+      "Wet Mass",
+      "Dry Mass",
+      "Ash Free Dry Mass",
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3058045567d9a3938ea94f2e9c4dec038b4ede48d58d8f2f88bac0c1082ea513",
+    "question": "Is 'Dry Mass' a type of 'Body Size'?",
+    "Class(es)": [
+      "Dry Mass",
+      "Body Mass",
+      "Body Size"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "243d2e0211dcbfbfe22517210da2ee92ed8bd509d1aae2606651661c5d0ff4fd",
+    "question": "What is the immediate parent class of 'Transparency'?",
+    "Class(es)": [
+      "Transparency",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e7e95bc12c3c929bb13ff26f14f26d6e95157f7f0b7808f171ca2160cc4d9cdb",
+    "question": "Which class is 'Behavioural Trait' a subclass of?",
+    "Class(es)": [
+      "Behavioural Trait",
+      "Functional Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "cc3aa088c8b9b5edea6c62d81c42f8ebb7e03550a44c967dc08b76b1690e414a",
+    "question": "What is the hierarchy of traits from 'Morphological Trait' up to 'Trait'?",
+    "Class(es)": [
+      "Trait",
+      "Zooplankton Trait",
+      "Functional Trait",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a1b6a3cdd124f54e89f1b02a5fcc7ba72eb4ca3b2842cedc72f36c44080288d5",
+    "question": "What are all the specific geometric shapes that are subtypes of 'Body Shape'?",
+    "Class(es)": [
+      "Body Shape",
+      "Ellipsoid",
+      "Sphere",
+      "Cone",
+      "Cylinder",
+      "Pyramid"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "77b9dc12e841b19762675b9b87a20785679d017881307ec482c7453bc8e98dd8",
+    "question": "Is 'Ellipsoid' considered a valid 'Body Shape'?",
+    "Class(es)": [
+      "Ellipsoid",
+      "Body Shape"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e5d44098c4dfddceb243e681ce2d6cd9093234fa7ba3943c32cffbbb40d783bd",
+    "question": "Is 'Carbon Content' a specific type of 'Body Size'?",
+    "Class(es)": [
+      "Carbon Content",
+      "Body Size"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "93d62781912b0e9a09e48d72d5477dab5bc67288d01e31c8344c4aa40aa66943",
+    "question": "What kind of trait is 'Jelly factor'?",
+    "Class(es)": [
+      "Jelly factor",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3a9974f8c45e8f7f3498c7e423fb7390aa5101438600b931e84e8228e7470d6f",
+    "question": "What is the superclass for 'Coloniality'?",
+    "Class(es)": [
+      "Coloniality",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d3f98654ef6c73a856aa2b67dea07f3f185ee15eff60ba10b25567c1f7382b66",
+    "question": "Which traits describe the presence of external body structures?",
+    "Class(es)": [
+      "Presence of Cilia",
+      "Presence of Flagella",
+      "Presence of Lorica",
+      "Presence of Calcitic Shell",
+      "Presence of Siliceous Exoskeletal Structures"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "Morphological Trait"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "e7f6e97b278a3579fa7852b413295e424be0869784165edd2fd1ce24a0f17614",
+    "question": "What is the parent class for the 'Spheroid' body shape?",
+    "Class(es)": [
+      "Spheroid",
+      "Body Shape"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d06e7f1f0344563b64383e63a9bd882f47fbd4f57b00f95971fe074f8a872883",
+    "question": "Is 'Ash Free Dry Mass' a direct subclass of 'Body Size'?",
+    "Class(es)": [
+      "Ash Free Dry Mass",
+      "Body Mass",
+      "Body Size"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "642c18f28df254e77f3a201b25093a82e32bb1bf9b8fcf1d51d2d478268a00aa",
+    "question": "Is 'Food Particle Size Range' a type of 'Morphological Trait'?",
+    "Class(es)": [
+      "Food Particle Size Range",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1296dac5cfac05d2cecb0270f20c26fc96fb18280e598a5e5c08d8e1d2efea60",
+    "question": "List all 'Morphological Traits' that are not related to organism size or shape.",
+    "Class(es)": [
+      "Morphological Trait",
+      "Body Size",
+      "Body Shape",
+      "Bioluminescence",
+      "Transparency",
+      "Coloniality",
+      "Presence of Cilia"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a236fde3e9cee564b564d64161bbd21918e1d56946b30b84b882e4dd354e7941",
+    "question": "Is 'Cone + Half Sphere' a recognized 'Body Shape'?",
+    "Class(es)": [
+      "Cone + Half Sphere",
+      "Body Shape"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "21cd2c1e99194ff7a1c0e4405221b309ac70c2c8e027f5bbc7ce197ec92a4ac2",
+    "question": "What are the parent classes of 'Functional Trait'?",
+    "Class(es)": [
+      "Functional Trait",
+      "Zooplankton Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "33b42f95ee8300fd318d1ae543c8567ef6980b2585051d63849e10fff2d92191",
+    "question": "What is the classification of 'Presence of Calcitic Shell'?",
+    "Class(es)": [
+      "Presence of Calcitic Shell",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "35afb56f4272d916eee0377620d5f6374ebe8b6ab6d45981d12f6442c8a4abbc",
+    "question": "Is it possible for a trait to be both morphological and functional?",
+    "Class(es)": [
+      "Morphological Trait",
+      "Functional Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a7577eae708c2d321bb03007710f4c7ad2526478885b2746d2899af67c266ced",
+    "question": "What are the related synonyms for 'Body Mass'?",
+    "Class(es)": [
+      "Body Mass"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "80fa07932c0f6065d6ccc9ce91139ae47deff83a8cc5a1906768725e79fcb40d",
+    "question": "Is 'Wet Weight' an alternative term for 'Wet Mass'?",
+    "Class(es)": [
+      "Wet Mass"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1eb6952132972d9ff1d718e5695059c52b705973b90c5fbf54be1a8c10be7d46",
+    "question": "What are the synonyms for 'Dry Mass'?",
+    "Class(es)": [
+      "Dry Mass"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "33b7a879dbc6c650ed12bdbcb33eb0f457f71c6ccc1f05257bb89a54c121298e",
+    "question": "What does the acronym 'AFDM' stand for?",
+    "Class(es)": [
+      "Ash Free Dry Mass"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5dc6ad6fb86a25eab27a2781d5c5cae671e00ca8c04660b98ebcae3fad7ccf4d",
+    "question": "List all related synonyms for 'Ash Free Dry Mass'.",
+    "Class(es)": [
+      "Ash Free Dry Mass"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9a229225f7e7b655eb9f9e8ed25432d5cc42613db426ce786d35ddae4b159903",
+    "question": "Is 'Ash weight' a synonym for 'Ash Content'?",
+    "Class(es)": [
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9a83ffb0765f3830778238022eab15507c6cb5dc4136d1987e4df367726d576d",
+    "question": "What units are used to measure 'Body Length'?",
+    "Class(es)": [
+      "Body Length"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7f4d957acdad1cb93cd68d239696ada7c26178ccc85ae9e0d7aabf4472480348",
+    "question": "In what units is 'Body Width' typically measured?",
+    "Class(es)": [
+      "Body Width"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "bb942b23fc00ba23d87fb5fbe51ba3569961314ce79c958ec96401739e97c9ca",
+    "question": "What is the standard unit for 'Body Mass'?",
+    "Class(es)": [
+      "Body Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c221ceb18476d5528b0d72e1dbb3d1235c2d7fa80f83d2cab74727666a59b241",
+    "question": "What is the measurement unit for 'Dry Mass'?",
+    "Class(es)": [
+      "Dry Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b31954ea85f0f50662e613a6d4166a0681217f49bae35d51bb86b2c0497b1b3a",
+    "question": "In what unit is 'Ash Content' expressed?",
+    "Class(es)": [
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b6640431327c4252921f108be9bafc67ac22f15c575d2333596b4733a25b4bb8",
+    "question": "What is the measurement unit for 'Biovolume'?",
+    "Class(es)": [
+      "Biovolume"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "6b59f94a48d1e577a2eefcfdccc57185ba7bd3c27b0a023f9ebca7f0b50e1df5",
+    "question": "What units are used for 'Carbon Content' measurement?",
+    "Class(es)": [
+      "Carbon Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a10433b8a82bd0d50e372c9cd0aebc8a2ff40f6e734c24850baa18261619f61f",
+    "question": "What is the described procedure for determining 'Dry Mass'?",
+    "Class(es)": [
+      "Dry Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "18ce3e029207b63c339e6f2814d570dfa3a06d983348c69a3ebb578afd39a3be",
+    "question": "How is 'Ash Free Dry Mass' calculated according to its description?",
+    "Class(es)": [
+      "Ash Free Dry Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "faaa48c55bc4a5f9e4980e2a8483d592720244aaaa0e702f5472aacd0d6b1350",
+    "question": "What is the typical combustion temperature for measuring 'Ash Content'?",
+    "Class(es)": [
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d15bb594b6877790e80c0f4564fe04f55d21aed23f00cfafd966a3d5a5e8d727",
+    "question": "How is 'Biovolume' typically calculated?",
+    "Class(es)": [
+      "Biovolume"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "28b5c0bd27a893e34391021098e3f5c5c0cf6e5ef1ac600cf726079a89d7b225",
+    "question": "What methods are used to determine 'Carbon Content'?",
+    "Class(es)": [
+      "Carbon Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "22c86917d217ac5483417353ef116bbce7b39b410b4e77d381d874bf28e093c4",
+    "question": "Why is 'Body Size' considered ecologically important?",
+    "Class(es)": [
+      "Body Size"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b973f96eaa9692a10532eeade1b07fda461fa2a119b8d1488d911cd1500b73ec",
+    "question": "How does the 'Food Particle Size Range' trait help in ecological studies?",
+    "Class(es)": [
+      "Food Particle Size Range"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5cbf79b592f9769d08f9e45a2726d85f57c500221c738d9cb0cdcaed3e579268",
+    "question": "What is the key characteristic of organisms with a high 'Jelly factor'?",
+    "Class(es)": [
+      "Jelly factor"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ec7a4f1f7929b4bea84437a896ed926b0cec19b9392ef3066242a324559f4a5d",
+    "question": "Which types of zooplankton is 'Biovolume' primarily measured for?",
+    "Class(es)": [
+      "Biovolume"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c766eb25c19f60d9559f399f04342f555f02ba520005095dc7f7a941717fbc6d",
+    "question": "What are the different ways to measure 'Body Mass' and what are their synonyms?",
+    "Class(es)": [
+      "Body Mass",
+      "Wet Mass",
+      "Dry Mass",
+      "Ash Free Dry Mass"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "02a2beb4a72f2ebfa2288b6b0df51bc4b4209a8390dfc04a2ffdcf73eb5a2476",
+    "question": "List all 'Body Shape' subtypes that are described as a combination of two geometric forms.",
+    "Class(es)": [
+      "Body Shape",
+      "Truncated cone + parabolic segment with equal heights",
+      "Cone + Half Sphere",
+      "Cylinder + Half Sphere"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "rdfs:label"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5aa409ac5a6df56808426467f3affc62d0f2c82a4fb2162036020af911644387",
+    "question": "Which traits related to 'Body Mass' have defined synonyms?",
+    "Class(es)": [
+      "Body Mass",
+      "Wet Mass",
+      "Dry Mass",
+      "Ash Free Dry Mass",
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "oboInOwl:hasRelatedSynonym"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a0a2a8129105c7a68cda5e3eed46a72e7d1fb8f8fc9a7752d36f044d0b7aea53",
+    "question": "What is the definition of the trait that has 'Dry Organic Mass' as a synonym?",
+    "Class(es)": [
+      "Ash Free Dry Mass"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "ef275451d9720ef659b0da22ead5afc14a585e386acea41d031e272cb139b05d",
+    "question": "Which traits are defined by the 'presence of' a specific structure?",
+    "Class(es)": [
+      "Presence of Cilia",
+      "Presence of Flagella",
+      "Presence of Lorica",
+      "Presence of Calcitic Shell",
+      "Presence of Siliceous Exoskeletal Structures"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "673caf51895b2256d63a012c1f279f47e2bb571a62a032e19968b94be348a390",
+    "question": "What types of 'Body Size' measurements exist and what are their units?",
+    "Class(es)": [
+      "Body Size",
+      "Body Length",
+      "Body Width",
+      "Body Mass",
+      "Biovolume",
+      "Carbon Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "393384759015ddc5bd52fee52cbd4edc752ea3435d7cd89e3da994b6bac24dec",
+    "question": "Is 'Ash weight' a synonym for a subtype of 'Body Mass'?",
+    "Class(es)": [
+      "Ash Content",
+      "Body Mass"
+    ],
+    "Relationship(s)": [
+      "oboInOwl:hasRelatedSynonym",
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b0785a342b6f406271da9337d26b2d44b8153d82f6da46df3a7494b584e648a0",
+    "question": "Which morphological trait is characterized by high water content?",
+    "Class(es)": [
+      "Jelly factor",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment",
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "eba53273b7e77a20e6c0f5f5e7ea4a48a73957ec8fea21e59d82095eadccf9ae",
+    "question": "Provide the definitions for all direct subclasses of 'Body Size'.",
+    "Class(es)": [
+      "Body Size",
+      "Body Length",
+      "Body Width",
+      "Body Mass",
+      "Biovolume",
+      "Carbon Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3ce9187d96cedbc1f11c56a3708dca1eeebcf3a50bf393ff6af8a23c81b52e51",
+    "question": "Find all traits that are types of 'Morphological Trait' and have a definition provided.",
+    "Class(es)": [
+      "Morphological Trait",
+      "Transparency",
+      "Body Size",
+      "Body Length"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a600d8b893e1392d79563dc873fe65b29f0ce27c52741ed12df1d800cd7b0352",
+    "question": "What is the hierarchical path from 'Ash Content' to 'Trait'?",
+    "Class(es)": [
+      "Ash Content",
+      "Body Mass",
+      "Body Size",
+      "Morphological Trait",
+      "Functional Trait",
+      "Zooplankton Trait",
+      "Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "c6fbfb5302b7b0d3839df78a55b2f40ed6962961ba25ede85fc9fba034b9916e",
+    "question": "For all subclasses of 'Body Shape' that involve a 'Cylinder', provide their definitions.",
+    "Class(es)": [
+      "Cylinder",
+      "Cylinder + Half Sphere",
+      "Cylinder + ellipsoid with equal heights",
+      "Cylinder + parabolic segment with equal heights"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "rdfs:comment",
+      "rdfs:label"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7010de7f1d4b17f39d598513f5a09f9102deaa4b1e295670575327e837b6987a",
+    "question": "What are the measurement units for all direct children of the 'Body Mass' class?",
+    "Class(es)": [
+      "Body Mass",
+      "Wet Mass",
+      "Dry Mass",
+      "Ash Free Dry Mass",
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "56b1186b1c3f8e411e365848aa4d0157592885e269c8100d1c4e3b9bff55d902",
+    "question": "List all traits that are 'Functional Trait's but not 'Morphological Trait's.",
+    "Class(es)": [
+      "Functional Trait",
+      "Morphological Trait",
+      "Behavioural Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "f09f5645eb000d4117de115aa3d9df49a8287fdb038cf5c8971b514cff78fa59",
+    "question": "Which body shape is described as 'approximates two truncated cones'?",
+    "Class(es)": [
+      "Truncated Cone + Truncated Cone",
+      "Body Shape"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment",
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7ec6f73368c269ff84418996c14ffddbad436dba0d244251fb1d1b79a1e32aac",
+    "question": "What is the definition of a 'Parabolic segment + hemisphere' body shape?",
+    "Class(es)": [
+      "Parabolic segment + hemisphere"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a93f7e22a3af24d26f852ce6de6c28b9d66fcb8c4b694bb571b8d4e83f48af74",
+    "question": "Is 'Truncated Pyramid' a type of 'Body Shape'?",
+    "Class(es)": [
+      "Truncated Pyramid",
+      "Body Shape"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b0bc7f78553fbdf66f03680aec9d5d2cbc38485f956e7fcd8979b978f4abfe83",
+    "question": "Which body size metrics can be measured in millimeters (mm)?",
+    "Class(es)": [
+      "Body Length",
+      "Body Width"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "4f137df4fe95f51e05e0a488ccd49062a2e47700d5b45f912163e2ce6cc8ceec",
+    "question": "What is the superclass of 'Food Particle Size Range'?",
+    "Class(es)": [
+      "Food Particle Size Range",
+      "Morphological Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a6b10213585db820053085040910abe05b854760c6ca523df14739cadf189cbf",
+    "question": "Does the ontology define a trait for 'Coloniality'?",
+    "Class(es)": [
+      "Coloniality"
+    ],
+    "Relationship(s)": [
+      "rdfs:label"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a3d02cb5a9043d94e7c6e4cf1cc824f77f28fff9ff6e19951247309da13a2fc7",
+    "question": "What is the definition of the body shape 'Truncated cone + hemisphere'?",
+    "Class(es)": [
+      "Truncated cone + hemisphere"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "a64b6f29fae8a74f3a61696dfc3031cb1edf6970898321935384d5df697577b2",
+    "question": "What trait describes the presence of a calcitic shell?",
+    "Class(es)": [
+      "Presence of Calcitic Shell"
+    ],
+    "Relationship(s)": [
+      "rdfs:label",
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "b0a08548afb0cc22bbadb24c15656a0c2819b376d63961c4185649f779bde8ab",
+    "question": "Which traits are related to the mass of an organism?",
+    "Class(es)": [
+      "Body Mass",
+      "Wet Mass",
+      "Dry Mass",
+      "Ash Free Dry Mass",
+      "Ash Content"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "3c6bf70cad8a5834e1876187a3da75d3b2f0a1831dfdd56de7927ac7850419e0",
+    "question": "What is the relationship between 'Body Width' and 'Body Size'?",
+    "Class(es)": [
+      "Body Width",
+      "Body Size"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "5278cda18aa9fe7414cc5883ab03236e9e8e56315c2e97ae1f6936cfb89ccb52",
+    "question": "List all body shapes that are a combination of a cone and another shape.",
+    "Class(es)": [
+      "Cone + truncated cone with equal heights",
+      "Cone + Half Sphere",
+      "Cone + truncated cone with unequal heights"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf",
+      "Body Shape"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "9c213f34c1f7c037be10a698b88ac39e057583f9cc3e80ee1f1065dd81f3248d",
+    "question": "What are the characteristics of a 'Functional Trait'?",
+    "Class(es)": [
+      "Functional Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7669adc92f1e0c3a7fbadf4fb607c1a8106e238994bd589c5982380e81c55e66",
+    "question": "Which zooplankton trait is related to light production?",
+    "Class(es)": [
+      "Bioluminescence"
+    ],
+    "Relationship(s)": [
+      "rdfs:label"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "7c449b81fc9ac17337de92f6bd7e221dda525d9407171bc83bce5343dae1f1bc",
+    "question": "What is the definition of 'Presence of Flagella'?",
+    "Class(es)": [
+      "Presence of Flagella"
+    ],
+    "Relationship(s)": [
+      "rdfs:comment"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "1c3ee30ef74dfe69059d66aaffcc8ff783ac71ebb3d20d199e6eab175bca69d5",
+    "question": "Which is the most general class in the ontology?",
+    "Class(es)": [
+      "Trait"
+    ],
+    "Relationship(s)": [
+      "rdfs:subClassOf"
+    ],
+    "identifier": "Enrichment CQs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology enrichment."
+    }
+  }
+]

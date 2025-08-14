@@ -16,6 +16,7 @@ SCHEMA = Namespace("http://schema.org/")
 ANIML = Namespace("https://w3id.org/animl/")
 ALLOTROPE = Namespace("http://purl.allotrope.org/ontologies/")
 MOUSE_HUMAN = Namespace("http://mouse.owl#")
+FISH_ZOOPLANKTON = Namespace("https://kos.lifewatch.eu/thesauri/fishtraits/")
 
 # Define available ontology namespaces
 ONTOLOGY_NAMESPACES = {
@@ -30,6 +31,11 @@ ONTOLOGY_NAMESPACES = {
     "mouse-human": {
         "uri": "http://mouse.owl#",
         "prefix": "mouse"
+    },
+
+    "fish-zooplankton": {
+        "uri": "https://kos.lifewatch.eu/thesauri/zooplanktontraits/",
+        "prefix": "zooplanktontraits"
     }
 }
 
@@ -74,9 +80,11 @@ def extract_ontology_elements(ontology_path: str, ontology_type: str) -> Dict[st
 
         def register(subj: URIRef, is_property=False):
             uri = str(subj)
-            if not (uri.startswith(base)):
-                return
-            local_id = uri.split('#')[-1]
+            
+            # Instead, register all properties (for is_property=True)
+            if not is_property and not uri.startswith(base):
+                return  # Only restrict classes to base URI
+            local_id = uri.split('#')[-1] if '#' in uri else uri.split('/')[-1]
             target_set = properties if is_property else classes
             target_set.add(uri)
             id_to_uri[local_id.lower()] = uri
@@ -88,28 +96,29 @@ def extract_ontology_elements(ontology_path: str, ontology_type: str) -> Dict[st
                 norm_lbl = lbl.lower()
                 label_to_uri[norm_lbl] = uri
                 uri_to_label[uri] = lbl
-                # normalized variant (remove punctuation / unify)
                 normalized_variant = _normalize_label(lbl).replace(' ','_')
                 label_to_uri[normalized_variant] = uri
-                # token indexing
                 tokens = _tokenize(lbl)
                 if tokens:
                     for t in tokens:
                         token_index[t].add(uri)
                     signature = ' '.join(sorted(tokens))
                     signature_index[signature].add(uri)
-            # also map id variants
             label_to_uri[local_id.lower()] = uri
             label_to_uri[local_id.lower().replace('_',' ')] = uri
 
-        # Classes
+    #  ==================== Registrations ===============================
+
+        # Classes (restrict to base URI)
         for subj,_,_ in g.triples((None, RDF.type, OWL.Class)):
             register(subj, is_property=False)
 
-        # Object & Datatype Properties
+        # Object & Datatype Properties (register all, not just base URI)
         for subj,_,_ in g.triples((None, RDF.type, OWL.ObjectProperty)):
             register(subj, is_property=True)
         for subj,_,_ in g.triples((None, RDF.type, OWL.DatatypeProperty)):
+            register(subj, is_property=True)
+        for subj, _, _ in g.triples((None, RDF.type, OWL.AnnotationProperty)):
             register(subj, is_property=True)
 
         # Handle UNDEFINED_* properties extra variants
@@ -120,6 +129,45 @@ def extract_ontology_elements(ontology_path: str, ontology_type: str) -> Dict[st
                 label_to_uri[trimmed] = uri
                 label_to_uri[trimmed.replace('_',' ')] = uri
 
+        
+   #   ======== Register standard properties (even if not declared in) =============
+        label_to_uri["subclassof"] = str(RDFS.subClassOf)
+        label_to_uri["rdfs:subclassof"] = str(RDFS.subClassOf)
+        properties.add(str(RDFS.subClassOf))
+
+        # Add SKOS properties from your ontology
+        label_to_uri["related"] = "http://www.w3.org/2004/02/skos/core#related"
+        label_to_uri["skos:related"] = "http://www.w3.org/2004/02/skos/core#related"
+        properties.add("http://www.w3.org/2004/02/skos/core#related")
+
+        label_to_uri["semanticrelation"] = "http://www.w3.org/2004/02/skos/core#semanticRelation"
+        label_to_uri["semantic_relation"] = "http://www.w3.org/2004/02/skos/core#semanticRelation"
+        properties.add("http://www.w3.org/2004/02/skos/core#semanticRelation")
+
+        # Add annotation properties to both label mapping AND properties set
+        label_to_uri["rdfs:comment"] = str(RDFS.comment)
+        label_to_uri["comment"] = str(RDFS.comment)
+        properties.add(str(RDFS.comment))
+
+        label_to_uri["oboInOwl:hasRelatedSynonym"] = "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
+        label_to_uri["hasRelatedSynonym"] = "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
+        label_to_uri["oboInOwl:hasrelatedsynonym"] = "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
+        properties.add("http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym")
+
+        print(f"Key annotation properties registered:")
+        for key in ["rdfs:comment", "comment", "oboInOwl:hasRelatedSynonym", "hasRelatedSynonym"]:
+            if key in label_to_uri:
+                print(f"  ✓ {key} -> {label_to_uri[key]}")
+            else:
+                print(f"  ✗ {key} NOT FOUND")
+
+        print(f"Extracted from {ontology_type.upper()} ontology:")
+        print(f"  - {len(classes)} classes")
+        print(f"  - {len(properties)} properties")
+        print(f"  - {len(label_to_uri)} total mappings")
+
+        if len(classes) == 0:
+            print(f"  ✗ No classes found in {ontology_type.upper()} ontology, please check your namespace")
         return {
             "classes": classes,
             "properties": properties,
@@ -413,7 +461,7 @@ def get_triples_from_enrichment_json(json_ld_path: str,
 
     return g
 
-def combine_ontology_with_cqs(ontology_path: str, json_ld_path: str, output_file: str = None, ontology: str = "mouse-human") -> Graph:
+def combine_ontology_with_cqs(ontology_path: str, json_ld_path: str, output_file: str = None, ontology: str = "fish-zooplankton") -> Graph:
     """
     Combine existing ontology with CQ triples while preserving original structure.
     """

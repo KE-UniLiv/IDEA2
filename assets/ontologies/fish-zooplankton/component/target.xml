@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:/C:/Users/nka/Documents/InfAI/Projects/OAEI/SKOS2OWL/target.owl#"
+     xml:base="file:/C:/Users/nka/Documents/InfAI/Projects/OAEI/SKOS2OWL/target.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#semanticRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#semanticRelation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1">
+        <rdfs:label xml:lang="en">Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2"/>
+        <rdfs:comment xml:lang="en">Any measurable or observable characteristic of an organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_10 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_10">
+        <rdfs:label xml:lang="en">Bioluminescence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11">
+        <rdfs:label xml:lang="en">Transparency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">An organism characterized by the presence of transparent tissues.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_12 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_12">
+        <rdfs:label xml:lang="en">Coloniality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13">
+        <rdfs:label xml:lang="en">Body Size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">A morphological characteristic, easy to measure, conspicuous, ecologically important, related to the overall physical magnitude of an organism, comparable across taxa and variable through time and space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15">
+        <rdfs:label xml:lang="en">Body Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+        <rdfs:comment xml:lang="en">The distance from point to point along the longest axis of the body of an organism
+ </rdfs:comment>
+        <rdfs:comment xml:lang="en">mm
+µm (microzooplankton)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16">
+        <rdfs:label xml:lang="en">Body Width</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+        <rdfs:comment xml:lang="en">The distance from side to side of the body of an organism, perpendicular to the axis along which lenght is measured</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm
+µm (microzooplankton)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17">
+        <rdfs:label xml:lang="en">Body Mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+        <rdfs:comment xml:lang="en">Any measurable characteristic related to the body mass of an organism.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Body Weight</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mg</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18">
+        <rdfs:label xml:lang="en">Wet Mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+        <rdfs:comment xml:lang="en">The weight of a whole fresh organism.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Wet Weight</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19">
+        <rdfs:label xml:lang="en">Dry Mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Dry Weight</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The weight of an organism after removal of body fluids drying at 50-70 °C (typically at 60 °C) in a drying oven for 24 hours (or until constant weight, particularly for gelatinous organisms).</rdfs:comment>
+        <rdfs:comment xml:lang="en">mg</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2">
+        <rdfs:label xml:lang="en">Zooplankton Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+        <rdfs:comment xml:lang="en">Any measurable or observable characteristic related to zooplankton species</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20">
+        <rdfs:label xml:lang="en">Ash Free Dry Mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">AFDM</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Ash Free Dry Weight</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Dry Organic Mass</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The mass of organic material of an organism obtained as difference between the dry mass and the ash weigth.
+ </rdfs:comment>
+        <rdfs:comment xml:lang="en">mg</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21">
+        <rdfs:label xml:lang="en">Ash Content</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+        <rdfs:comment xml:lang="en">%</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Ash weight</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The weight of the residual after combusting the organism at typically 500°C. Ash weight is often expressed as a percentage of dry mass</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22">
+        <rdfs:label xml:lang="en">Biovolume</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+        <rdfs:comment xml:lang="en">Total volume of a single organism. It is calculated according to the geometric equations, after association of geometric shape to the real shape of the organism and measurements of linear dimensions (length, width).
+It is mainly used for microzooplankton.
+It is used for mesozooplankton when samples are analysed with image systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">μm3</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23">
+        <rdfs:label xml:lang="en">Carbon Content</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+        <rdfs:comment xml:lang="en">Carbon content of zooplankton organism determined for microzooplankton indirectly by converting the individual organism biovolume into carbon using empirically or theoretically derived equations and for meso and macrozooplankton by direct analysis of individual organisms or bulk community at the CHN elemental analyser by using  fresh, fresh frozen and fresh dried samples.
+ </rdfs:comment>
+        <rdfs:comment xml:lang="en">µgCL-1 (microzooplankton)
+
+µgC (mesozooplankton)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24">
+        <rdfs:label xml:lang="en">Body Shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_25"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_26"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_27"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_28"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_29"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_30"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_31"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_32"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_33"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_34"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_35"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_36"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_37"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_38"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_39"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_40"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_41"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_42"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_43"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_44"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_45"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_46"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_47"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_48"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_49"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_71"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_72"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_73"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_74"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_75"/>
+        <rdfs:comment xml:lang="en">The approximate shape of an organism, described by considering the cross-section of organisms body</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_25 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_25">
+        <rdfs:label xml:lang="en">Ellipsoid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates an ellipsoid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_26 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_26">
+        <rdfs:label xml:lang="en">Parabolic segment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a parabolic segment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_27 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_27">
+        <rdfs:label xml:lang="en">Truncated cone + parabolic segment with equal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a truncated cone + parabolic segment with equal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_28 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_28">
+        <rdfs:label xml:lang="en">Truncated cone + hemisphere</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a truncated cone + hemisphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_29 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_29">
+        <rdfs:label xml:lang="en">Segment of ellipsoid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a segment of ellipsoid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3">
+        <rdfs:label xml:lang="en">Functional Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86"/>
+        <rdfs:comment xml:lang="en">Any morphological, behavioural, physiological or phenological trait, which impacts zooplankton fitness
+ 
+ </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_30 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_30">
+        <rdfs:label xml:lang="en">Truncated Cone + Truncated Cone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates two truncated cones</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_31 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_31">
+        <rdfs:label xml:lang="en">Cone + truncated cone with equal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cone + truncated cone with equal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_32 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_32">
+        <rdfs:label xml:lang="en">Elliptic parabolic segment + elliptic cone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates an elliptic parabolic segment + elliptic cone</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_33 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_33">
+        <rdfs:label xml:lang="en">Parabolic segment + ellipsoid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a parabolic segment + ellipsoid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_34 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_34">
+        <rdfs:label xml:lang="en">Cone + Half Sphere</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cone + half sphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_35 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_35">
+        <rdfs:label xml:lang="en">Parabolic segment + hemisphere</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a parabolic segment + hemisphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_36 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_36">
+        <rdfs:label xml:lang="en">Cylinder + Half Sphere</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cylinder + half sphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_37 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_37">
+        <rdfs:label xml:lang="en">Cylinder + ellipsoid with equal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cylinder + ellipsoid with equal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_38 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_38">
+        <rdfs:label xml:lang="en">Cylinder + parabolic segment with equal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cylinder + parabolic segment with equal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_39 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_39">
+        <rdfs:label xml:lang="en">Cone + truncated cone with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cone + truncated cone with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4">
+        <rdfs:label xml:lang="en">Morphological Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_10"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_12"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_6"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_7"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_76"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_9"/>
+        <rdfs:comment xml:lang="en">Any measurable phenotypic characteristic (form and structure) of an organism, which is relatively simple to measure, easily observable and with a potentially well-defined relation to physiology and ecology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_40 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_40">
+        <rdfs:label xml:lang="en">Cylinder + ellipsoid with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cylinder + ellipsoid with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_41 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_41">
+        <rdfs:label xml:lang="en">Cylinder + parabolic segment with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cylinder + parabolic segment with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_42 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_42">
+        <rdfs:label xml:lang="en">Truncated cone +  ellipsoid with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a truncated cone + ellipsoid with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_43 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_43">
+        <rdfs:label xml:lang="en">Truncated cone + parabolic segment with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a truncated cone + parabolic segment with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_44 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_44">
+        <rdfs:label xml:lang="en">Elliptic parabolic segment + elliptic ellipsoid with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates an elliptic parabolic segment + elliptic ellipsoid with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_45 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_45">
+        <rdfs:label xml:lang="en">Elliptic cone + elliptic ellipsoid with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates an elliptic cone + elliptic ellipsoid with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_46 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_46">
+        <rdfs:label xml:lang="en">Elliptic cone + elliptic parabolic segment with unequal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates an elliptic cone + elliptic parabolic segment with unequal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_47 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_47">
+        <rdfs:label xml:lang="en">Truncated cone + ellipsoid with equal heights</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a truncated cone + ellipsoid with equal heights</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_48 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_48">
+        <rdfs:label xml:lang="en">Sphere</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a sphere</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_49 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_49">
+        <rdfs:label xml:lang="en">Cone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximates a cone</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5">
+        <rdfs:label xml:lang="en">Presence of Cilia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">An organism characterized by the presence of cilia.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_6 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_6">
+        <rdfs:label xml:lang="en">Presence of Flagella</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">An organism characterized by the presence of flagella.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_7 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_7">
+        <rdfs:label xml:lang="en">Presence of Lorica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">An organism characterized by the presence of a lorica.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70">
+        <rdfs:label xml:lang="en">Jelly factor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">Gelatinous plankton characterised by a high water content, or &quot;jelly factor&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_71 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_71">
+        <rdfs:label xml:lang="en">Cylinder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximate a cylinder</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_72 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_72">
+        <rdfs:label xml:lang="en">Pyramid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximate a pyramid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_73 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_73">
+        <rdfs:label xml:lang="en">Spheroid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximate a spheroid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_74 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_74">
+        <rdfs:label xml:lang="en">Truncated Pyramid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximate a truncated pyramid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_75 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_75">
+        <rdfs:label xml:lang="en">Truncated cone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+        <rdfs:comment xml:lang="en">A body shape that approximate a truncated cone</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_76 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_76">
+        <rdfs:label xml:lang="en">Food Particle Size Range</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">The size spectra of food particles (feeding kernels) for different size zooplankton. The frequency distribution of food particles ingested, could help describe and compare diets and the effects of different groups of zooplankton on  phytoplankton.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8">
+        <rdfs:label xml:lang="en">Presence of Calcitic Shell</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">An organism characterized by the presence of a calcitic shell.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86">
+        <rdfs:label xml:lang="en">Behavioural Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+        <rdfs:comment xml:lang="en">Any behavioural characteristic evolved by species allowing them to exploit the given combination of resources represented in their niche.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_9 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_9">
+        <rdfs:label xml:lang="en">Presence of Siliceous Exoskeletal Structures</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+        <rdfs:comment xml:lang="en">An organism characterized by the presence of siliceous exoskeletal structures.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.10-SNAPSHOT) http://owlapi.sourceforge.net -->
+

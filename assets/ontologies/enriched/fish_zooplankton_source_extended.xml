@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:cq="http://example.org/cq-vocabulary#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/data#CQ_394f3176">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which behavioral trait describes the position of a fish in the water body?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5d6285cf">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of external fertilization?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_246"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_492e77ad">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main categories of Fish Traits?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_5"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e0a90a13">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the characteristics of a 'Globiform' body shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_39"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_bf4c1ead">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a Morphological Trait?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b3c47279">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the categories of Reproductive Frequency?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_207"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_181"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_182"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5f711122">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different Food Types consumed by fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_193"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_105"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_87"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3c753cc5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Can a fish be both a Predator and an Ambusher?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_215"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_172"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8a4719ea">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does it mean if a fish exhibits 'No Care' for its offspring?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_211"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5ba3c819">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does 'Bacteriophagous' mean?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_224"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c81c7074">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different measures of Body Length?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_44"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_45"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_46"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_47"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c4d26392">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is a 'Filter Feeder' defined?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_218"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3d92ccd4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a Functional Trait a type of Fish Trait?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_5"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e24922a5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is an Invertivore a type of Carnivore?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_250"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9db94999">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is Biparental Care?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_239"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b8192283">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all defined body shapes in the ontology.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d882a1e6">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of Parental Care?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_139"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_239"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_240"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_242"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_14f9777e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between an Ectoparasite and an Endoparasite?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_226"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_227"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_174"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7fb12e0d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between 'Piscivore', 'Carnivore', and 'Food Type'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_123"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3cf7d2d1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different Feeding Methods?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_172"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_173"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_174"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_218"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_225"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_29ed33f7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which feeding method involves eating parasites off other fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_225"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a45923c3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is 'Territoriality' defined as?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_138"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a83cc29f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a Potamodromous fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_131"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7687ec01">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different modes of reproduction?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_209"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_137"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_185"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_eec2936b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of Diadromous migration?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_134"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_135"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_136"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8c33b29b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the types of Sociability defined for fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_203"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_175"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_176"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_223"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_98f3aa17">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the meaning of Mouth Orientation?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_22"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_fea4bb29">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different Diel Activity Patterns?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_197"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_198"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_199"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_221"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_228"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5aaa2d7e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a Fusiform body shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_38"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_84f849f4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of an Ambush Predator?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_215"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_06453ee2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is a Gonochoristic fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_137"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_0aef3092">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of 'Gill Rakers Number'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_191"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_83dc54b7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Solitary' a type of 'Sociability'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_223"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_203"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e828ae34">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between Oviparous and Ovoviviparous?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_183"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_184"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_0caa1210">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which traits are considered Morphological Traits?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_61"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_33c5a133">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the types of Hermaphrodites?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_185"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_186"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_187"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f5717867">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a Piscivore a type of Carnivore?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_123"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3496c8ae">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different levels of Parental Care?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_210"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_211"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_139"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a7adeedf">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is an Anguilliform shape different from a Filiform shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_36"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_37"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3acf2610">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the main categories of Behavioural traits?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_171"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_234"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_203"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_197"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_df5c1cc0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does it mean for a fish to have a Cathemeral activity pattern?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_228"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3db8ea17">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of Body Weight measurements?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_49"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_50"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_51"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_52"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d05ba9ef">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is Ash Free Dry Weight determined?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_49"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_835e102c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is an Anadromous fish also a Diadromous fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_134"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_38aae011">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which traits are categorized under Body Size?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_43"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_44"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_53"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_57752667">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the reasons for Seasonal Migration?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_235"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_247"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_248"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_249"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_4c2920c9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a Protogynous fish a type of Sequential Hermaphrodite?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_188"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_187"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c8536d66">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a Demersal fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_146"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_21866a29">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is an Amphidromous fish considered Diadromous?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_136"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d1149ce9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between Protogynous and Protandrous hermaphroditism?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_188"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_189"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9b6fbbe7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of Functional Traits defined in the ontology?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_200"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f858631f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the diet of a Benthophagous fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_101"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_fa4f545d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a 'Sequential Hermaphrodite' also a 'Hermaphrodite'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_187"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_185"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b7614b45">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of Gut Length?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_18"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_700f13d0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the sub-zones of the Pelagic zone?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_140"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_141"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_142"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_148"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_144"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_76171a52">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different Water Body Positions a fish can inhabit?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_140"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_146"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_149"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_150"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_231"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_32fbe69d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the measurement unit for Head Length?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_20"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_0bb6fcdf">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is the Caudal Fin Aspect Ratio calculated?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_14"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d22b4740">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What types of Embryonic Development are described?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_208"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_183"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_184"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3b259be1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What types of Carnivores are there?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_123"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_126"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_250"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1276b667">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of Body Shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_34"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_35"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_36"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_38"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e00a1cc9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which traits are considered Life History Traits?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_207"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_208"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_209"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_210"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_244"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f1af2aeb">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between a Nocturnal and a Crepuscular fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_199"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_221"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9be00744">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is another term for 'Gill Raker Height'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_190"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ce8d8564">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the distinction between Shoaling and Schooling?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_175"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_176"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_443d36bb">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different locations for fertilization?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_244"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_245"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_246"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9b9a673b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does the Gut Length-Standard Length Ratio indicate about a fish's diet?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_58"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_72c92158">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of Predators?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_172"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_215"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_217"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_232"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_464f1d96">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does it mean for a fish to be Semelparous?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_181"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_78792cf4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the two main aspects of Feeding behavior?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_171"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_595bc267">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a Diadromous fish a type of Migratory fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ee870b45">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different types of Movement behaviors?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_234"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_138"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_15fbf705">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the highest-level trait category?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7fe4d953">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between 'Life History Trait' and 'Functional Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c06a94b3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does the abbreviation 'PFAR' stand for?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f110311c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is a Spawning Migration?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_247"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1efbacab">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is a 'Physiological Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_200"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_895efb89">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of Standard Length?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_46"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7ef8c19d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the diet of an Invertivore?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_250"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_08bfbddb">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Bacteriophagous' a type of 'Food Type'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_224"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1014d229">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the measurement unit for Caudal Fin Surface?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_55"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9b2b3ca0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Body Condition' a type of Morphological Trait?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_61"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_776985e6">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is another term for Paternal Care?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_242"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_4d7e101e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the synonyms for the term Detritivore?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_105"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_873f2bab">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>At what depth does a Mesopelagic fish live?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_142"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_06df4e02">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What kinds of fish Migration exist?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_131"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_132"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_212"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_235"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_72b90b13">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the two types of Planktivores?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_87"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_91"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_96"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e42b3eb8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between Anadromous and Catadromous fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_134"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_135"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#CompetencyQuestion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c777c252">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is a 'Taeniform' body shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_42"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b81bdc23">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the difference between an Algivore and a Phytivorous fish?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_127"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_128"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_15e655b3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'SL' an abbreviation for Standard Length?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_46"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a75cfe16">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is a 'Bottom-dwelling' fish considered a type of 'Water Body Position'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_231"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8303992c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does a Sagittiform body shape look like?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_41"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ff3225dc">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is another term for a Piscivore?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_123"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3776462b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does it mean for a fish to be 'Bottom-dwelling'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_231"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b48cba85">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is another term for 'Dry Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_51"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c1b7214b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is Eye Position measured?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_17"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a605d410">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which seasonal activity pattern has a maximum during winter?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_230"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b8fcec8e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is a synonym for Anal Fin Length?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1363c8b5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all measurable Body Parts defined in the ontology.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+</rdf:RDF>

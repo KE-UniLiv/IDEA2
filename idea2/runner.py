@@ -62,6 +62,7 @@ def main():
     parser.add_argument('--update_key', type=str, default=None, help='Update the API key in api_config.yml (input: <service>,<new key value>)')
     parser.add_argument('--ontology', type=str, default=None, help='Path to the ontology file to load for enrichment (Must have --enrich)')
     parser.add_argument('--extend_ontology', type=str, default=None, help='Extend the ontology with the enriched CQs')
+    parser.add_argument('--ontology_name', type=str, default=None, help='Name of the ontology to use')
 
     ## -- Boolean arguments 
     parser.add_argument('--save', action='store_true', help='Save CQs to file (jsonld format)')
@@ -92,8 +93,8 @@ def main():
         utils.update_key(service, newkey)
         sys.exit(0)
 
-    if args.enrich and not args.ontology:
-        print("Please provide an ontology file path with --ontology <path/to/ontology> when using --enrich.")
+    if args.enrich and (not args.ontology or not args.ontology_name):
+        print("Please provide an ontology file path with --ontology <path/to/ontology> and a name with --ontology_name <ontology_name> when using --enrich.")
         sys.exit(1)
 
 
@@ -127,8 +128,8 @@ def main():
         sys.exit(0) if not args.reformulate else print("Please run with --reformulate and --save to reformulate the rejected CQs and thus save to notion.")
 
     if args.extend_ontology is not None:
-        jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"mouse-human_t_enriched_cqs.jsonld")
-        outdirs = os.path.join(os.getcwd(), "assets", "ontologies", "enriched", f"mouse-human_t_enriched.xml")
+        jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"{args.ontology_name}_enriched_cqs.jsonld")
+        outdirs = os.path.join(os.getcwd(), "assets", "ontologies", "enriched", f"{args.ontology_name}_enriched.xml")
         combine_ontology_with_cqs(args.extend_ontology, jsonld_path, outdirs)
         sys.exit(0)
 
@@ -170,15 +171,15 @@ def main():
         )
 
         # TODO, parameterise ontology
-        jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"mouse-human_t_enriched_cqs.jsonld")
-        outdirs = os.path.join(os.getcwd(), "assets", "ontologies", "enriched", f"mouse-human_t_extension.xml")
+        jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"{args.ontology_name}_enriched_cqs.jsonld")
+        outdirs = os.path.join(os.getcwd(), "assets", "ontologies", "enriched", f"{args.ontology_name}_extended.xml")
 
         enriched_with_cqs_raw = run_cq_extraction(model, prompt, enrichment=True)
         if args.save:
             cq_to_json_ld(enriched_with_cqs_raw, jsonld_path)
             print(f"\n\nEnriched CQs saved to {jsonld_path}\n\n")
 
-        get_triples_from_enrichment_json(jsonld_path, outdirs, "mouse-human", ontology_path=args.ontology)
+        get_triples_from_enrichment_json(jsonld_path, outdirs, "fish-zooplankton", ontology_path=args.ontology)
 
 
         sys.exit(0)

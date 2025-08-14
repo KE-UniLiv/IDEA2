@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:cq="http://example.org/cq-vocabulary#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/data#CQ_cc3aa088">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the hierarchy of traits from 'Morphological Trait' up to 'Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_93d62781">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What kind of trait is 'Jelly factor'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e7e95bc1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which class is 'Behavioural Trait' a subclass of?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9a83ffb0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What units are used to measure 'Body Length'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a1b6a3cd">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are all the specific geometric shapes that are subtypes of 'Body Shape'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_25"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_48"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_49"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_71"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_72"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_32c0ca15">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is a 'Zooplankton Trait' defined?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_80fa0793">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Wet Weight' an alternative term for 'Wet Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_22c86917">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Why is 'Body Size' considered ecologically important?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b0785a34">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which morphological trait is characterized by high water content?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_abeaaaef">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all traits that are sub-concepts of 'Body Mass'.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b6640431">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the measurement unit for 'Biovolume'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_33b7a879">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does the acronym 'AFDM' stand for?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5909931b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the primary categories of 'Functional Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b973f96e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How does the 'Food Particle Size Range' trait help in ecological studies?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_76"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a93f7e22">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Truncated Pyramid' a type of 'Body Shape'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_74"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b0a08548">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which traits are related to the mass of an organism?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_2750dcec">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Zooplankton Trait' a subclass of 'Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_56b1186b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all traits that are 'Functional Trait's but not 'Morphological Trait's.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b6ec20d9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all direct subtypes of 'Morphological Trait'.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_10"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_12"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_6"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_7"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_9"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_76"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_18ce3e02">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is 'Ash Free Dry Mass' calculated according to its description?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_47c75b03">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the 'Jelly factor' trait?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e7f6e97b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the parent class for the 'Spheroid' body shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_73"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_02a2beb4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all 'Body Shape' subtypes that are described as a combination of two geometric forms.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_27"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_34"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_36"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a236fde3">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Cone + Half Sphere' a recognized 'Body Shape'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_34"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_69cd3051">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of 'Bioluminescence' as a trait?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_19b33e14">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is 'Body Shape' defined as a trait?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_e5d44098">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Carbon Content' a specific type of 'Body Size'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_faaa48c5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the typical combustion temperature for measuring 'Ash Content'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3c6bf70c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the relationship between 'Body Width' and 'Body Size'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3a9974f8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the superclass for 'Coloniality'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_12"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_92c31bc1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a 'Morphological Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a8dbce9b">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of 'Body Length'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9c213f34">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the characteristics of a 'Functional Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_28ff6dd9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of 'Wet Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_3ce9187d">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Find all traits that are types of 'Morphological Trait' and have a definition provided.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5dc6ad6f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all related synonyms for 'Ash Free Dry Mass'.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5aa409ac">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which traits related to 'Body Mass' have defined synonyms?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a10433b8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the described procedure for determining 'Dry Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ebc36c6c">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is 'Biovolume' and for what is it used?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b31954ea">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>In what unit is 'Ash Content' expressed?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a3d02cb5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of the body shape 'Truncated cone + hemisphere'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_28"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5278cda1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all body shapes that are a combination of a cone and another shape.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_31"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_34"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_39"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_21cd2c1e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the parent classes of 'Functional Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6b59f94a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What units are used for 'Carbon Content' measurement?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_940d9df0">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does 'Body Size' refer to?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a57e5378">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different kinds of 'Body Size' traits defined?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1296dac5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>List all 'Morphological Traits' that are not related to organism size or shape.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_10"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_12"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_243d2e02">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the immediate parent class of 'Transparency'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_33b42f95">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the classification of 'Presence of Calcitic Shell'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_8d760219">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does 'Presence of Cilia' mean for an organism?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d3f98654">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which traits describe the presence of external body structures?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_6"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_7"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_9"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5cbf79b5">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the key characteristic of organisms with a high 'Jelly factor'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_70"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1eb69521">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the synonyms for 'Dry Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c221ceb1">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the measurement unit for 'Dry Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#CompetencyQuestion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ef275451">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which traits are defined by the 'presence of' a specific structure?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_5"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_6"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_7"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_9"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d06e7f1f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Ash Free Dry Mass' a direct subclass of 'Body Size'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a6b10213">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Does the ontology define a trait for 'Coloniality'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_6e4c3667">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does 'Ash Content' mean?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_08ab9b58">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is 'Ash Free Dry Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c6fbfb53">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>For all subclasses of 'Body Shape' that involve a 'Cylinder', provide their definitions.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_71"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_36"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_37"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_38"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7669adc9">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which zooplankton trait is related to light production?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_642c18f2">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Food Particle Size Range' a type of 'Morphological Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_76"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_30580455">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Dry Mass' a type of 'Body Size'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_eba53273">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Provide the definitions for all direct subclasses of 'Body Size'.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b0bc7f78">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which body size metrics can be measured in millimeters (mm)?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7010de7f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the measurement units for all direct children of the 'Body Mass' class?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a64b6f29">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What trait describes the presence of a calcitic shell?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_8"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a600d8b8">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the hierarchical path from 'Ash Content' to 'Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_2"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_ec7a4f1f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which types of zooplankton is 'Biovolume' primarily measured for?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cq-vocabulary#involvesClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/about"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_c766eb25">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the different ways to measure 'Body Mass' and what are their synonyms?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_facec4dc">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Define 'Dry Mass'.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_39338475">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Ash weight' a synonym for a subtype of 'Body Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_50895d45">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Define 'Transparency' in the context of this ontology.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_11"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_4f137df4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the superclass of 'Food Particle Size Range'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_76"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_99983518">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is 'Body Mass' defined?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a0a2a812">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of the trait that has 'Dry Organic Mass' as a synonym?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_a7577eae">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What are the related synonyms for 'Body Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_bb942b23">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the standard unit for 'Body Mass'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7c449b81">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of 'Presence of Flagella'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_6"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_1c3ee30e">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which is the most general class in the ontology?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_66740ac7">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a 'Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_f09f5645">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Which body shape is described as 'approximates two truncated cones'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_30"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_673caf51">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What types of 'Body Size' measurements exist and what are their units?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7d01999f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Body Size' classified as a 'Functional Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_28b5c0bd">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What methods are used to determine 'Carbon Content'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_23"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_77b9dc12">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Ellipsoid' considered a valid 'Body Shape'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_25"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_9a229225">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is 'Ash weight' a synonym for 'Ash Content'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_d15bb594">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>How is 'Biovolume' typically calculated?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_22"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7f4d957a">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>In what units is 'Body Width' typically measured?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_35afb56f">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Is it possible for a trait to be both morphological and functional?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_7ec6f733">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a 'Parabolic segment + hemisphere' body shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_35"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_5cb14e05">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is the definition of a 'Cylinder' body shape?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_71"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_eb082c85">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What is a 'Behavioural Trait'?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_b3780748">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>Define a 'Sphere' body shape.</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_48"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/data#CQ_0bcd6ed4">
+    <rdf:type rdf:resource="http://example.org/cq-vocabulary#CompetencyQuestion"/>
+    <skos:definition>What does 'Functional Trait' mean?</skos:definition>
+    <cq:involvesClass rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+    <cq:involvesProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+</rdf:RDF>

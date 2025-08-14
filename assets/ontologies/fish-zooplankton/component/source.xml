@@ -1,0 +1,1792 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:/C:/Users/nka/Documents/InfAI/Projects/OAEI/SKOS2OWL/source.owl#"
+     xml:base="file:/C:/Users/nka/Documents/InfAI/Projects/OAEI/SKOS2OWL/source.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#semanticRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#semanticRelation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_10 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_10">
+        <rdfs:label xml:lang="en">Body Size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_43"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_44"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_53"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+        <rdfs:comment xml:lang="en">Morphological characteristic, easy to measure, conspicuous, ecologically important, related to the overall physical magnitude of an organism, comparable across taxa and extremely variable through time and space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_101 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_101">
+        <rdfs:label xml:lang="en">Benthophagous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Benthivorous</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Feeding on benthos.
+ </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_105 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_105">
+        <rdfs:label xml:lang="en">Detritivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Detritophagous</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Detritus feeders</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Detrivourous</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Feeding on dead plant or animal matter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_11 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_11">
+        <rdfs:label xml:lang="en">Anal Fin Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">AFL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Distance between the anteriormost and posteriormost edges of the anal fin base, including the shortest first ray and the point where the fin membrane meets the body behind the last ray. This length is also called the length of the anal base. </rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_12 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_12">
+        <rdfs:label xml:lang="en">Caudal Fin Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">CFD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Maximum vertical distance across the fully spread caudal fin.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_122 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_122">
+        <rdfs:label xml:lang="en">Carnivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_123"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_126"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_250"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <rdfs:comment xml:lang="en">Feeding on animal tissues.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_123 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_123">
+        <rdfs:label xml:lang="en">Piscivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+        <rdfs:comment xml:lang="en">Carnivourous fish consuming primarily fish prey.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Ichthyophagous</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Piscivourous</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_126 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_126">
+        <rdfs:label xml:lang="en">Insectivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+        <rdfs:comment xml:lang="en">Feeding only or mostly on insects and their larvae.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_127 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_127">
+        <rdfs:label xml:lang="en">Algivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <rdfs:comment xml:lang="en">Feeding on algae.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_128 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_128">
+        <rdfs:label xml:lang="en">Phytivorous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <rdfs:comment xml:lang="en">Feeding on plants or herbage.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Phytophagous</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_129 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_129">
+        <rdfs:label xml:lang="en">Migration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_131"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_132"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_212"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_234"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_235"/>
+        <rdfs:comment xml:lang="en">The displacement of the individual in space, produced by the selection and by tracking of optimal conditions through time and space, and the use of predictive information about environmental structure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_13 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_13">
+        <rdfs:label xml:lang="en">Caudal Fin Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">CFL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Maximum distance from proximal to distal margin of the caudal fin.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_131 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_131">
+        <rdfs:label xml:lang="en">Potamodromous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+        <rdfs:comment xml:lang="en">Truly migratory fishes whose migrations occur wholly within fresh water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_132 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_132">
+        <rdfs:label xml:lang="en">Oceanodromous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+        <rdfs:comment xml:lang="en">Truly migratory fishes which live and migrate wholly in the sea.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_133 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_133">
+        <rdfs:label xml:lang="en">Diadromous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_134"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_135"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_136"/>
+        <rdfs:comment xml:lang="en">Truly migratory fishes which migrate between the sea and fresh water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_134 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_134">
+        <rdfs:label xml:lang="en">Anadromous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+        <rdfs:comment xml:lang="en">Diadromous fishes which spend most of their lives in the sea and migrate to fresh water to breed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_135 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_135">
+        <rdfs:label xml:lang="en">Catadromous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+        <rdfs:comment xml:lang="en">Diadromous fishes which spend most of their lives in the fresh water and migrate to sea to breed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_136 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_136">
+        <rdfs:label xml:lang="en">Amphidromous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_133"/>
+        <rdfs:comment xml:lang="en">Diadromous fishes whose migration from fresh water to the sea, or vice-versa, is not for the purpose of breeding, but occurs regularly at some other definite stage of life-cycling.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_137 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_137">
+        <rdfs:label xml:lang="en">Gonochoristic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_209"/>
+        <rdfs:comment xml:lang="en">Having separate sexes, with no occurrence of hermaphroditism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_138 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_138">
+        <rdfs:label xml:lang="en">Territoriality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_234"/>
+        <rdfs:comment xml:lang="en">Attachment to a particular site and hostility towards conspecies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_139 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_139">
+        <rdfs:label xml:lang="en">Parental Care</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_210"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_239"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_240"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_242"/>
+        <rdfs:comment xml:lang="en">Investment into offspring after fertilization, ranges from simple burial of eggs to internal gestation and livebearing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_14 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_14">
+        <rdfs:label xml:lang="en">Caudal Fin Aspect Ratio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">CFAR</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The aspect ratio of the caudal fin is calculated as the depth of the caudal fin squared, divided by the total fin surface (CFAR = CFD2/CFS)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_140 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_140">
+        <rdfs:label xml:lang="en">Pelagic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_141"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_142"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_144"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_148"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+        <rdfs:comment xml:lang="en">Inhabiting the water column (not near the bottom or the shore) of coasts, open oceans, and lakes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_141 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_141">
+        <rdfs:label xml:lang="en">Epipelagic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_140"/>
+        <rdfs:comment xml:lang="en">Living or feeding on surface waters or at mid water to depths of 200 m.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_142 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_142">
+        <rdfs:label xml:lang="en">Mesopelagic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_140"/>
+        <rdfs:comment xml:lang="en">Living or feeding at midwater at depths between 200 m and 1,000 m. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_144 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_144">
+        <rdfs:label xml:lang="en">Abyssopelagic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_140"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Abyssal</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Living or feeding in open waters at depths between 4,000 m and 7,000 m.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_146 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_146">
+        <rdfs:label xml:lang="en">Demersal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+        <rdfs:comment xml:lang="en">Living on or near the bottom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_148 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_148">
+        <rdfs:label xml:lang="en">Bathypelagic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_140"/>
+        <rdfs:comment xml:lang="en">Living or feeding in open waters at depths between 1,000 and 4,000 m.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_149 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_149">
+        <rdfs:label xml:lang="en">Benthopelagic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+        <rdfs:comment xml:lang="en">Living and feeding near the bottom as well as in midwaters or near the surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_15 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_15">
+        <rdfs:label xml:lang="en">Dorsal Fin Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">DFL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Distance between the anteriormost and posteriormost edges of the dorsal fin base, including the shortest first ray and the point where the fin membrane meets the body behind the last ray. This length is also called the length of the dorsal base.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_150 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_150">
+        <rdfs:label xml:lang="en">Semipelagic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+        <rdfs:comment xml:lang="en">Spending part of their life on the bottom and part in the water column above.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_16 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_16">
+        <rdfs:label xml:lang="en">Eye Diameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">ED</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The greatest distance between the margins of the orbit.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_17 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_17">
+        <rdfs:label xml:lang="en">Eye Position</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Distance between the center of the eye to the bottom of the head. </rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">EP</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_171 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_171">
+        <rdfs:label xml:lang="en">Feeding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <rdfs:comment xml:lang="en">Complicated process involving a succession of separate behavioral stages or acts from the time that the individual receives information on the presence of food in its vinicity until the final decision to engulf it or reject it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Traits related to how an organism feeds, the food type and feeding method exhibited by a species.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_172 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_172">
+        <rdfs:label xml:lang="en">Predator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_215"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_217"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_232"/>
+        <rdfs:comment xml:lang="en">Actively searching and pursuing the prey, using specific behavior tactics to overcome the defense adaptation of the prey species.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Hunter</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Pavlov, D. S., &amp; Kasumyan, A. O., 2002. Feeding diversity in fishes: trophic classification of fish. Journal of Ichthyology, 42(2), S137.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_173 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_173">
+        <rdfs:label xml:lang="en">Grazer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Grazing fish</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Not pursuing or waiting for prey, main characteristic trait is the absence of precise localization and directed catching of individual food items.
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_174 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_174">
+        <rdfs:label xml:lang="en">Parasite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_226"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_227"/>
+        <rdfs:comment xml:lang="en">Living and feeding in or on another organism to the detriment of that organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_175 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_175">
+        <rdfs:label xml:lang="en">Shoaling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_203"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Social aggregation</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Social assembly: tendency for fish to remain together.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_176 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_176">
+        <rdfs:label xml:lang="en">Schooling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_203"/>
+        <rdfs:comment xml:lang="en">Aggregations of individuals with constancy in orientation, synchronization of speed and direction of movement.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Polarized school</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_18 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_18">
+        <rdfs:label xml:lang="en">Gut Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Distance between pyloric sphincter and anus. It is strongly related to fish’s diet: grazing species must have a transit longer than that carnivorous species because of the lignin content of plant material.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">GuL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_181 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_181">
+        <rdfs:label xml:lang="en">Semelparous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_207"/>
+        <rdfs:comment xml:lang="en">Breeding once per lifetime, or breeding only once then dying.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_182 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_182">
+        <rdfs:label xml:lang="en">Iteroparous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_207"/>
+        <rdfs:comment xml:lang="en">Breeding several times per lifetime.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_183 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_183">
+        <rdfs:label xml:lang="en">Oviparous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_208"/>
+        <rdfs:comment xml:lang="en">Developing embryos outside the ovary, eggs are released at spawning.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_184 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_184">
+        <rdfs:label xml:lang="en">Ovoviviparous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_208"/>
+        <rdfs:comment xml:lang="en">Developing embryos inside the ovary, embryos or larvae are released at spawning.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_185 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_185">
+        <rdfs:label xml:lang="en">Hermaphrodite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_186"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_187"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_209"/>
+        <rdfs:comment xml:lang="en">Individual producing mature gametes of both sexes during his lifetime.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_186 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_186">
+        <rdfs:label xml:lang="en">Simultaneous Hermaphrodite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_185"/>
+        <rdfs:comment xml:lang="en">Capable of functioning as both sexes at the same time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_187 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_187">
+        <rdfs:label xml:lang="en">Sequential Hermaphrodite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_185"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_188"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_189"/>
+        <rdfs:comment xml:lang="en">Hermaphrodite in which the male and female organs mature (that is produce gametes) at different times in the reproductive cycle. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_188 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_188">
+        <rdfs:label xml:lang="en">Protogynous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_187"/>
+        <rdfs:comment xml:lang="en">Hermaphrodites differentiate first as females and later become males.
+
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_189 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_189">
+        <rdfs:label xml:lang="en">Protandrous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_187"/>
+        <rdfs:comment xml:lang="en">Hermaphrodites differentiate first as males and later change to females.
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_19 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_19">
+        <rdfs:label xml:lang="en">Head Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">HD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Vertical distance from dorsum to ventrum passing trough the centre of the eye.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_190 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_190">
+        <rdfs:label xml:lang="en">Gill Raker Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Gill Raker Height</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Length from tip to base of the longest raker.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_191 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_191">
+        <rdfs:label xml:lang="en">Gill Rakers Number</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Number of gill rakers (including rudiments) of the first left branchial arch.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_193 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_193">
+        <rdfs:label xml:lang="en">Omnivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <rdfs:comment xml:lang="en">Feeding on both plant and animal material.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Omnivorous</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_196 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_196">
+        <rdfs:label xml:lang="en">Water Body Position</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_140"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_146"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_149"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_150"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_231"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+        <rdfs:comment xml:lang="en">Position of fishes into specific zones according to ecological parameters. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_197 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_197">
+        <rdfs:label xml:lang="en">Diel Activity Pattern</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_198"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_199"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_221"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_228"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+        <rdfs:comment xml:lang="en">Activity patterns of fishes related to changing light levels.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_198 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_198">
+        <rdfs:label xml:lang="en">Diurnal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_197"/>
+        <rdfs:comment xml:lang="en">Active by day, opposite of nocturnal.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Applied to organisms that are active only in daylight.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_199 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_199">
+        <rdfs:label xml:lang="en">Nocturnal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_197"/>
+        <rdfs:comment xml:lang="en">Active and performing most of its functions at night.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Applied to organisms that are active only at night.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Definition 2: A dictionary of Zoology - Michael Allaby - Oxford Press University
+https://books.google.it/books?id=GzZOCgAAQBAJ&amp;pg=PT411&amp;dq=cathemeral+fish&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwijsK7R1IjUAhXDB8AKHeJBDEEQ6AEISzAH#v=onepage&amp;q=diurnal&amp;f=false</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_20 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_20">
+        <rdfs:label xml:lang="en">Head Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Distance from tip of the snout to the furthest bony edge of the operculum.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">HL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_200 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_200">
+        <rdfs:label xml:lang="en">Physiological Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+        <rdfs:comment xml:lang="en">Any trait involving biochemical processes consistent with the normal functioning of an organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_203 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_203">
+        <rdfs:label xml:lang="en">Sociability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_175"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_176"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_223"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+        <rdfs:comment xml:lang="en">Traits that describe an organism&apos;s behavioural interactions with members of the same species.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_204 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_204">
+        <rdfs:label xml:lang="en">Feeding Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_171"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_172"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_173"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_174"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_218"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_225"/>
+        <rdfs:comment xml:lang="en">A description of how the organism gathers food.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Feeding Behaviour</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Feeding Habits</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_206 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_206">
+        <rdfs:label xml:lang="en">Life History Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_207"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_208"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_209"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_210"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_244"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+        <rdfs:comment xml:lang="en">Any trait that describe the life history characteristics of an organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_207 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_207">
+        <rdfs:label xml:lang="en">Reproductive Frequency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_181"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_182"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+        <rdfs:comment xml:lang="en">Number of breeding opportunities for the lifetime of fish.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Spawning Dynamics</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_208 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_208">
+        <rdfs:label xml:lang="en">Embryonic Development</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_183"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_184"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_209 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_209">
+        <rdfs:label xml:lang="en">Mode of Reproduction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_137"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_185"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Gender System</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The production by an organism of new individuals that contain some portion of their genetic material inherited from that organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_21 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_21">
+        <rdfs:label xml:lang="en">Mouth Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">MD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Vertical distance measured inside of fully open mouth at tallest point.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_210 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_210">
+        <rdfs:label xml:lang="en">Degree of Parental Care</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_139"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_211"/>
+        <rdfs:comment xml:lang="en">Variation in investment in young after fertilization. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_211 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_211">
+        <rdfs:label xml:lang="en">No Care</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_210"/>
+        <rdfs:comment xml:lang="en"> Adult does not provide parental care to its offspring.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_212 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_212">
+        <rdfs:label xml:lang="en">Non-migratory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Resident</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Spending most of their life and feed for a prolonged time within their own territory, not leaving it even for a short time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_215 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_215">
+        <rdfs:label xml:lang="en">Ambusher</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_172"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Ambush Predator</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Predators that wait for prey to come to them, and may or may not use a final pounce, traps or lures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_217 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_217">
+        <rdfs:label xml:lang="en">Pursuing Predator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_172"/>
+        <rdfs:comment xml:lang="en">An organism that chases after, catches and subdues mobile prey.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_218 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_218">
+        <rdfs:label xml:lang="en">Filter Feeder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+        <rdfs:comment xml:lang="en">Using filtration to simultaneous capture of multiple prey items.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_22 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_22">
+        <rdfs:label xml:lang="en">Mouth Orientation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">MO</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Mouth position is coded as 1 for superior (imaginary vertical plan tangent to both upper and lower jaws with mouth closed between 10°-80°), coded as 2 for terminal (tangent plane at about 90°), coded as 3 for inferior (tangent plane between 100° and 170°), and coded as 4 for bottom (tangent plan at about 180°).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_221 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_221">
+        <rdfs:label xml:lang="en">Crepuscular</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_197"/>
+        <rdfs:comment xml:lang="en">Active and performing most of its functions at dusk.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Applied to organisms that are active at dusk.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_222 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_222">
+        <rdfs:label xml:lang="en">Seasonal Activity Pattern</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_229"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_230"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_223 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_223">
+        <rdfs:label xml:lang="en">Solitary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_203"/>
+        <rdfs:comment xml:lang="en">Living alone, not gregarious.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_224 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_224">
+        <rdfs:label xml:lang="en">Bacteriophagous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <rdfs:comment xml:lang="en">A large proportion of  food of the fish is represented by bacteria.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_225 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_225">
+        <rdfs:label xml:lang="en">Cleaning Fish</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_204"/>
+        <rdfs:comment xml:lang="en">Feeding on exoparasites of other fish and damaged or dead tissues around wounds, mucus, and scales.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_226 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_226">
+        <rdfs:label xml:lang="en">Ectoparasite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_174"/>
+        <rdfs:comment xml:lang="en">Living on the outside of its host; opposite of endoparasite.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_227 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_227">
+        <rdfs:label xml:lang="en">Endoparasite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_174"/>
+        <rdfs:comment xml:lang="en">Living inside its host, either in its tissues or in the internal organs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_228 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_228">
+        <rdfs:label xml:lang="en">Cathemeral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_197"/>
+        <rdfs:comment xml:lang="en">Active both day and night.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Applied to an activity pattern in which an organism is irregularly active at any time of night and day, according to prevailing circustances.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_229 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_229">
+        <rdfs:label xml:lang="en">Summer Maximum of Activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_222"/>
+        <rdfs:comment xml:lang="en">The maximum of activity predominantly during the summer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_23 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_23">
+        <rdfs:label xml:lang="en">Pectoral Fin Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Maximum vertical distance across the fully spread pectoral fin.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">PFD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_230 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_230">
+        <rdfs:label xml:lang="en">Winter Maximum of Activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_222"/>
+        <rdfs:comment xml:lang="en">The maximum of activity predominantly during the winter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_231 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_231">
+        <rdfs:label xml:lang="en">Bottom-dwelling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+        <rdfs:comment xml:lang="en">Dwelling on the bottom of a body of water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_232 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_232">
+        <rdfs:label xml:lang="en">Forager</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_172"/>
+        <rdfs:comment xml:lang="en">Active foragers that seek out prey usually of lower mobility (than themselves).</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Searcher</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_234 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_234">
+        <rdfs:label xml:lang="en">Movement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_138"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+        <rdfs:comment xml:lang="en">Traits relating to the movement of the species.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_235 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_235">
+        <rdfs:label xml:lang="en">Seasonal Migration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_129"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_247"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_248"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_249"/>
+        <rdfs:comment xml:lang="en">Movements that result in an alternation between two or more separate habitats, occurring with a regular periodicity within an individual’s lifetime.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_239 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_239">
+        <rdfs:label xml:lang="en">Biparental Care</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_139"/>
+        <rdfs:comment xml:lang="en">The female and the male co-operate in care of young.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_24 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_24">
+        <rdfs:label xml:lang="en">Pectoral Fin Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">PFL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The distance from the base of the outermost or anteriormost ray to the most distant tip of the pectoral fin. 
+</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_240 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_240">
+        <rdfs:label xml:lang="en">Maternal Care</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_139"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Female-only Care</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Smith, C., &amp; Wootton, R. J., 2016.  doi: 10.1111/faf.12116</rdfs:comment>
+        <rdfs:comment xml:lang="en">The female takes care of the developing eggs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_242 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_242">
+        <rdfs:label xml:lang="en">Paternal Care</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_139"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Male-only Care</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The male cares for one o more clutches of fertilized eggs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_244 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_244">
+        <rdfs:label xml:lang="en">Place of Fertilization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_245"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_246"/>
+        <rdfs:comment xml:lang="en">Description of the location of fertilization.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Modes of fertilization</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_245 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_245">
+        <rdfs:label xml:lang="en">Internal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_244"/>
+        <rdfs:comment xml:lang="en">The male introduces the spermatozoa into gonoduct of female, using an intromittent organ.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Wourms, J.P., 1981. doi: 10.1093/icb/21.2.473</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_246 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_246">
+        <rdfs:label xml:lang="en">External</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_244"/>
+        <rdfs:comment xml:lang="en">Egg/sperm meet and fertilize externally to parental individuals, tissues or confines of their bodies, but within the fluid medium.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_247 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_247">
+        <rdfs:label xml:lang="en">Spawning Migration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_235"/>
+        <rdfs:comment xml:lang="en">Movement of individual fish from non-spawning to spawning site.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_248 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_248">
+        <rdfs:label xml:lang="en">Feeding Migration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_235"/>
+        <rdfs:comment xml:lang="en">A seasonal migration for the purpose of following food or moving to suitable feeding grounds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_249 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_249">
+        <rdfs:label xml:lang="en">Environment Migration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_235"/>
+        <rdfs:comment xml:lang="en">A seasonal migration in order to remain within suitable environmental conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_25 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_25">
+        <rdfs:label xml:lang="en">Pectoral Fin Aspect Ratio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">PFAR</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The aspect ratio of the pectoral fin is calculated as the length of the leading edge squared, divided by the total fin surface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_250 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_250">
+        <rdfs:label xml:lang="en">Invertivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+        <rdfs:comment xml:lang="en">Feeding on insects, mollusks, and crustaceans.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_26 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_26">
+        <rdfs:label xml:lang="en">Peduncle Caudal Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">CPD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The least vertical distance across the caudal peduncle.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_27 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_27">
+        <rdfs:label xml:lang="en">Peduncle Caudal Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">CPL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The distance from the end of anal fin base to the midbase of caudal fin.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_28 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_28">
+        <rdfs:label xml:lang="en">Pelvic Fin Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Maximum distance from proximal to distal of the anal fin.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">PEFL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_29 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_29">
+        <rdfs:label xml:lang="en">Preanal Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Distance from the tip of snout to the anal fin origin. </rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">PAL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_30 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_30">
+        <rdfs:label xml:lang="en">Predorsal Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Distance from the tip of snout (excluding mental lobe or chin) to the dorsal fin origin.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">PDL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_31 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_31">
+        <rdfs:label xml:lang="en">Snout Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Distance from the tip of the snout or anteriormost margin of the upper lip (with mouth closed) to the front margin of the orbit. In Clupeids this distance is measured from the tip of lower jaw when the mouth is closed.
+ </rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">SnoL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_33 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_33">
+        <rdfs:label xml:lang="en">Combination of Shapes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body presents different shapes as: coiled tail, head bent downward, &quot;armor plating&quot;, mouth is trap-doorlike (e.g. Sea Horse, Sea Moth); or depressed head, very round body, compressed tail (e.g. Bullhead).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_34 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_34">
+        <rdfs:label xml:lang="en">Compressiform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is laterally compressed (e.g. Angelfish, Filefish).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_35 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_35">
+        <rdfs:label xml:lang="en">Depressiform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is dorso-ventrally depressed and flattened.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_36 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_36">
+        <rdfs:label xml:lang="en">Anguilliform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is elongated laterally compressed with blunt heads and tapering or rounded tails (e.g. eels, loaches, gunnels).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_37 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_37">
+        <rdfs:label xml:lang="en">Filiform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is elongated and thin, thread-like (e.g. Snipe eel).
+ </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_38 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_38">
+        <rdfs:label xml:lang="en">Fusiform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is compressed at the sides and tapers more at the tail than at the head (e.g. Tuna, Salmon).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_39 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_39">
+        <rdfs:label xml:lang="en">Globiform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is almost round or globe-shaped (e.g. Lumpsuckers, Frogfish).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_4 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_4">
+        <rdfs:label xml:lang="en">Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_5"/>
+        <rdfs:comment xml:lang="en">Any measurable or observable characteristic of an organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_40 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_40">
+        <rdfs:label xml:lang="en">Leptocephalii</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is laterally compressed with slim head (e.g. larval eels).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_41 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_41">
+        <rdfs:label xml:lang="en">Sagittiform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is elongated tubular and arrow-shaped (e.g. Pikes, Gars, Needlefish).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_42 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_42">
+        <rdfs:label xml:lang="en">Taeniform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">The body is elongated, compressed and deep-bodied, ribbon-like (e.g. ribbon fishes, oarfishes).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_43 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_43">
+        <rdfs:label xml:lang="en">Body Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">BD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The greatest vertical distance along a straight line from the midline of the dorsal surface of the body to the midline of the ventral surface, excluding fins, fleshy structures, scales and scutes. </rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_44 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_44">
+        <rdfs:label xml:lang="en">Body Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_45"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_46"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_47"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">BL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Referring to the length of a fish without specifying whether it was measured as total length, standard length or fork length.
+ </rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_45 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_45">
+        <rdfs:label xml:lang="en">Fork Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_44"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">FL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Length of a fish from the tip of the snout to the end of the middle caudal fin rays.
+ </rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_46 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_46">
+        <rdfs:label xml:lang="en">Standard Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_44"/>
+        <rdfs:comment xml:lang="en">Length of a fish measured from the tip of the snout to the posterior end of the last vertebra or to the posterior end of the midlateral portion of the hypural plate. Simply put, this measurement excludes the length of the caudal fin.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">SL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_47 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_47">
+        <rdfs:label xml:lang="en">Total Length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_44"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">TL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Total length is the distance between the most anteriorly projecting part of the head (jaws closed) and the most distant tip of the caudal fin. In Europe for measurement the caudal fin has to be spread into a natural position; i.e., the two lobes of fishes with a forked tail fin are not pressed together.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_48 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_48">
+        <rdfs:label xml:lang="en">Body Weight</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_49"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_50"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_51"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_52"/>
+        <rdfs:comment xml:lang="en">Any measurable characteristic related to the body weight of an organism.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">BW</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">g</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_49 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_49">
+        <rdfs:label xml:lang="en">Ash Free Dry Weight</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">AFDW</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Ash Free Dry Mass</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The weight of fish organic material obtained as difference between the dry weight and the ash weight. Ash weight is determined after muffle furnace combustion at 450-500 °C for 6/12 hours or longer for larger quantities. Ash weight is determined by subtracting the tare weight. Ash weight is often expressed as a percentage of dry weight or wet weight.</rdfs:comment>
+        <rdfs:comment xml:lang="en">g</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_5 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_5">
+        <rdfs:label xml:lang="en">Fish Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+        <rdfs:comment xml:lang="en">A well-defined and measurable morphological, physiological, behavioral, ecological, or life-history expression of an individual organism’s adaptations to its environment that may also be regarded as a property of the taxon or population to which the individual belongs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_50 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_50">
+        <rdfs:label xml:lang="en">Ash Weight</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+        <rdfs:comment xml:lang="en">%</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Ash Content</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The weight of fish inorganic material obtained after muffle furnace combustion at 450-500 °C for 6/12 hours or longer for larger quantities. Ash weight is determined by subtracting the tare weight. Ash weight is often expressed as a percentage of dry weight or wet weight. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_51 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_51">
+        <rdfs:label xml:lang="en">Dry Weight</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">DW</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Dry Mass</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The weight of a whole fish without internal water after drying in an oven at 60 °C for 12/24 hours.</rdfs:comment>
+        <rdfs:comment xml:lang="en">g</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_52 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_52">
+        <rdfs:label xml:lang="en">Wet Weight</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+        <rdfs:comment xml:lang="en">The weight of a whole fresh fish.
+ </rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">WW</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Wet Mass</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">g</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_53 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_53">
+        <rdfs:label xml:lang="en">Body Width</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+        <rdfs:comment xml:lang="en">The maximum horizontal distance from side to side of the body, perpendicular to the axis along which depth is measured.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_54 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_54">
+        <rdfs:label xml:lang="en">Anal Fin Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">AFD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Maximum distance from proximal to distal margin of the anal fin.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_55 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_55">
+        <rdfs:label xml:lang="en">Caudal Fin Surface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">CFS</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Total surface area of caudal fin determined by image analysis system.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_56 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_56">
+        <rdfs:label xml:lang="en">Dorsal Fin Depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">DFD</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Maximum distance from proximalto distal margin of the dorsal fin (excluding filaments).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_57 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_57">
+        <rdfs:label xml:lang="en">Mouth Width</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:comment xml:lang="en">Horizontal distance measured inside of fully open mouth at widest point.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_58 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_58">
+        <rdfs:label xml:lang="en">Gut Length-Standard Length Ratio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">GuL:SL</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Ratio between gut length and standard length of the organism. It ranges between 0.7 and 1.0 for carnivorous fishes, while it is higher than 1.0 for herbivorous fishes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_59 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_59">
+        <rdfs:label xml:lang="en">Pectoral Fin Surface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">PFS</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">Total surface area of pectoral fin determined by image analysis system.</rdfs:comment>
+        <rdfs:comment xml:lang="en">mm2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_6 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_6">
+        <rdfs:label xml:lang="en">Functional Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_200"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_206"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_5"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+        <rdfs:comment xml:lang="en">Any morphological, physiological, behavioral trait, which impacts fish fitness.
+ </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_61 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_61">
+        <rdfs:label xml:lang="en">Body Condition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Fish condition</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">The overall physiological status or health of an individual.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_7 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_7">
+        <rdfs:label xml:lang="en">Morphological Trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_61"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_8"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+        <rdfs:comment xml:lang="en">Any measurable morphological characteristic of individual organisms, which is relatively simple to measure, easily observable and with a potentially well-defined relation to physiology and ecology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_8 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_8">
+        <rdfs:label xml:lang="en">Body Part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_11"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_12"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_13"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_14"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_15"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_16"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_17"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_18"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_19"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_190"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_191"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_20"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_21"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_22"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_23"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_24"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_25"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_26"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_27"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_28"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_29"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_30"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_31"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_54"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_55"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_56"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_57"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_58"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_59"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+        <rdfs:comment xml:lang="en">Any measurable characteristic related to the external and internal structures of an organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_82 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_82">
+        <rdfs:label xml:lang="en">Behavioural trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_171"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_196"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_197"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_203"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_222"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_234"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+        <rdfs:comment xml:lang="en">Any behavioural characteristic evolved by species allowing them to exploit the given combination of resources represented in their niche.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Legendre et al., 1997.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_83 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_83">
+        <rdfs:label xml:lang="en">Food Type</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_101"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_105"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_122"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_127"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_128"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_171"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_193"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_224"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_87"/>
+        <rdfs:comment xml:lang="en">Food regularly provided and consumed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_87 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_87">
+        <rdfs:label xml:lang="en">Planktivore</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_83"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_91"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_96"/>
+        <rdfs:comment xml:lang="en">Feeding at least in part on materials captured from the plankton.</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Planktivorous</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Planktophagous</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">Planktotrophic</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_9 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_9">
+        <rdfs:label xml:lang="en">Body Shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_33"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_34"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_35"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_36"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_37"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_38"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_39"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_40"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_41"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_42"/>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+        <rdfs:comment xml:lang="en">The approximate shape of an organism, described by considering the cross-section of fishes body.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_91 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_91">
+        <rdfs:label xml:lang="en">Phytoplanktophagous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_87"/>
+        <rdfs:comment xml:lang="en">Eating and digesting blue-green algae.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://kos.lifewatch.eu/thesauri/fishtraits/c_96 -->
+
+    <owl:Class rdf:about="https://kos.lifewatch.eu/thesauri/fishtraits/c_96">
+        <rdfs:label xml:lang="en">Zooplanktophagous</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_87"/>
+        <rdfs:comment xml:lang="en">Feeding on zooplankton.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.10-SNAPSHOT) http://owlapi.sourceforge.net -->
+

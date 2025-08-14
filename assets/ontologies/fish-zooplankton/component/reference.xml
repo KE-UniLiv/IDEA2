@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment'
+	 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+	 xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+
+<Alignment>
+	<xml>yes</xml>
+	<level>0</level>
+	<type>11</type>
+	<onto1>https://kos.lifewatch.eu/thesauri/fishtraits</onto1>
+	<onto2>https://kos.lifewatch.eu/thesauri/zooplanktontraits</onto2>
+	<uri1>https://kos.lifewatch.eu/thesauri/fishtraits</uri1>
+	<uri2>https://kos.lifewatch.eu/thesauri/zooplanktontraits</uri2>
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_6"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_3"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_7"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_4"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_82"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_86"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_9"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_24"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_4"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_1"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_53"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_16"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_10"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_13"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_52"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_18"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_50"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_21"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_51"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_19"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_44"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_15"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+	
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_39"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_48"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+	
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_39"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_73"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_48"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_17"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+	<map>
+		<Cell>
+			<entity1 rdf:resource="https://kos.lifewatch.eu/thesauri/fishtraits/c_49"/>
+			<entity2 rdf:resource="https://kos.lifewatch.eu/thesauri/zooplanktontraits/c_20"/>
+			<measure rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</measure>
+			<relation>=</relation>
+		</Cell>
+	</map>
+
+</Alignment>
+</rdf:RDF>
