@@ -20,27 +20,55 @@ notiondb = get_key("notiondb")
 
 notion = Client(auth=notiontoken)
 
-# BIG TODO: GET THE UUID OR ID OR WHATEVER IT IS FROM THE TEST CQ AND SEE IF LINKING IS FEASIBLE
 
-def test_relation(client, database_id):
+def get_current_iteration_from_dashboard() -> int:
+    """
+    
+    Get the current iteration number from the Notion database (more robust than from the file generation number).
 
-    results = notion.databases.query(
-        **{
-            "database_id": notiondb,
-            "filter": { 
-                "property": "ID", 
-                "number": {
-                    "equals": 1618
-                }
+    Returns:
+        int: The current iteration number.
+    
+    """
+    all_results = set()
+    has_more = True
+    next_cursor = None
+
+    while has_more:
+        response = notion.databases.query(
+            **{
+                "database_id": NOTION_DATABASE_ID,
+                "filter": {
+                    "property": "Iteration",
+                    "number": {
+                        "is_not_empty": True
+                    }
+                },
+                "start_cursor": next_cursor
             }
-        }
-    )
+        )
+        all_results.extend(response["results"])
+        has_more = response.get("has_more", False)
+        next_cursor = response.get("next_cursor")
+    
+    for page in all_results:
+        if 'Iteration' in page['properties'] and page['properties']['Iteration']['number'] is not None:
+            iteration_number = page['properties']['Iteration']['number']
+            all_results.add(iteration_number)
 
-    for page in results["results"]:
-        reformulates = page["properties"].get("Reformulates")
-        print(reformulates)
-        
-def get_all_cqs():
+    iteration_number = max(all_results) if all_results else 1
+    print(f"Current iteration number is: {iteration_number}")
+    return iteration_number
+
+
+def get_all_cqs() -> list:
+    """
+    Get all competency questions (CQs) from the Notion database.
+
+    Returns:
+        list: A list of all CQs.
+
+    """
     all_results = []
     has_more = True
     next_cursor = None
@@ -64,24 +92,28 @@ def get_all_cqs():
 
     return len(all_results)
 
-def pull_all_comments_and_comments():
-    pass
 
+def get_metrics_by_iteration(iteration: int = 1) -> str:
+    """
+    
+    Get metrics for a specific iteration from the Notion database.
 
-def get_metrics_by_iteration(iteration:int = 1) -> str:
+    Args:
+        iteration (int): The iteration number to get metrics for.
 
+    Returns:
+        str: A summary report of the metrics for the specified iteration.
+    
+    """
     print("Loading Iteration Metrics...")
-    accepted_cqs = pull_accepted()
-
-    unique = set(c["title"] for c in accepted_cqs if c["iteration"] == iteration)
-    number_of_accepted = len(unique)
-
+    
+    ## -- Get all CQs in this iteration
     all_results = []
     has_more = True
     next_cursor = None
 
+    ## -- Paginate through all results
     while has_more:
-
         response = notion.databases.query(
             **{
                 "database_id": NOTION_DATABASE_ID,
@@ -98,20 +130,80 @@ def get_metrics_by_iteration(iteration:int = 1) -> str:
         has_more = response.get("has_more", False)
         next_cursor = response.get("next_cursor")
 
-
-
     total_cqs_in_iter = len(all_results)
-    percent = (number_of_accepted / total_cqs_in_iter * 100) if total_cqs_in_iter > 0 else 0
+    
+    ## -- Count based on Score property instead of manual vote counting
+    accepted_titles = set()
+    rejected_titles = set()
+    unvoted_titles = set()
+    
+    ## -- Iterate through all results and categorize based on Score
+    for page in all_results:
+        if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
+            title = page["properties"]["CQ"]["title"][0]["text"]["content"]
+            
+            ## -- Get the score (handles both formula and number types)
+            score_prop = page["properties"].get("Score")
+            if score_prop:
+                if score_prop.get("formula"):
+                    score = score_prop["formula"]["number"]
+                elif score_prop.get("number") is not None:
+                    score = score_prop["number"]
+                else:
+                    score = None
+            else:
+                score = None
+            
+            ## -- Categorize based on score
+            if score is None:
+                unvoted_titles.add(title)
+            elif score > 0:
+                accepted_titles.add(title)
+            elif score <= 0:
+                rejected_titles.add(title)
+            else:
+                unvoted_titles.add(title)
+
+    ## -- Calculate metrics
+    number_of_accepted = len(accepted_titles)
+    number_of_rejected = len(rejected_titles)
+    number_of_unvoted = len(unvoted_titles)
+    
+
+    percent_accepted = (number_of_accepted / total_cqs_in_iter * 100) if total_cqs_in_iter > 0 else 0
 
     os.system("CLS")
-    report = f"Iteration {iteration}: {number_of_accepted} CQs had at least 1 or more acceptance in total ({percent:.2f}%)"
-
+    report = f"Iteration {iteration}: {number_of_accepted} CQs accepted out of {total_cqs_in_iter} total ({percent_accepted:.2f}%)"
+    
     print(report)
-    sleep(2)
-    print(f"\nThere was a total of {total_cqs_in_iter} CQs")
-    sleep(2)
-    print(f"This leaves {total_cqs_in_iter - number_of_accepted} CQs that were unanimously rejected by all participants")
+    print(f"Breakdown:")
+    print(f"  - Accepted (Score > 0): {number_of_accepted}")
+    print(f"  - Rejected (Score <= 0): {number_of_rejected}")
+    print(f"  - Unvoted (No Score): {number_of_unvoted}")
+    print(f"  - Total: {total_cqs_in_iter}")
 
+    ## -- Debug: Show some sample scores
+    print(f"\nSample scores:")
+    for i, page in enumerate(all_results[:5]):  # Show first 5
+        if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
+            title = page["properties"]["CQ"]["title"][0]["text"]["content"][:50] + "..."
+            score_prop = page["properties"].get("Score")
+            if score_prop:
+                if score_prop.get("formula"):
+                    score = score_prop["formula"]["number"]
+                elif score_prop.get("number") is not None:
+                    score = score_prop["number"]
+                else:
+                    score = "No score value"
+            else:
+                score = "No Score property"
+            print(f"  {i+1}. {title} -> Score: {score}")
+    
+    ## -- Verify: accepted + rejected + unvoted should equal total
+    if number_of_accepted + number_of_rejected + number_of_unvoted != total_cqs_in_iter:
+        print(f"WARNING: Count mismatch! {number_of_accepted} + {number_of_rejected} + {number_of_unvoted} ≠ {total_cqs_in_iter}")
+    
+    sleep(2)
     return report
 
 
@@ -130,7 +222,7 @@ def pull_accepted() -> dict:
             "filter": {
                 "property": "Upvoted By",
                 "people": {
-                    "is_not_empty": True  # TODO: Change this to domain experts user IDs
+                    "is_not_empty": True  # Optional TODO: Change this to domain experts user IDs
                 }
             }
         }
@@ -178,14 +270,15 @@ def pull_comments():
         )
         
         for page in response["results"]:
-            # Extract CQ title
+
+            ##-- Extract CQ title
             title = None
             if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
                 title = page["properties"]["CQ"]["title"][0]["text"]["content"]
                 comment_text = get_discussion_comments(page["id"])
                 people = page["properties"]["Downvoted By"]["people"]
-                
-                # Add one comment entry per person who downvoted
+
+                ##-- Add one comment entry per person who downvoted
                 for person in people:
                     person_name = get_name_from_id(person["id"])
                     comments.append({
@@ -198,7 +291,7 @@ def pull_comments():
         has_more = response.get("has_more", False)
         next_cursor = response.get("next_cursor")
 
-    # Count comments per unique person
+    ## -- Count comments per unique person
     comment_counts = {}
     for comment in comments:
         author = comment["author"]
@@ -226,6 +319,16 @@ def pull_comments():
     return comments, comment_counts
 
 def get_negative_cq_metrics(iteration: int = 1):
+    """
+    
+    Get metrics for rejected competency questions (CQs) in a specific iteration from the Notion database.
+
+    Args:
+        iteration (int): The iteration number to get metrics for.
+    
+    Returns:
+        list: A list of rejected CQs with their titles and scores.
+    """
     all_results = []
     has_more = True
     next_cursor = None
@@ -249,35 +352,38 @@ def get_negative_cq_metrics(iteration: int = 1):
         next_cursor = response.get("next_cursor")
 
     for page in all_results:
-        # Extract CQ title
+        ## -- Extract CQ title
         if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
-            # Check if page has iteration property and matches the target iteration
+            ## -- Check if page has iteration property and matches the target iteration
             if (page['properties'].get('Iteration') and 
                 page['properties']['Iteration'].get('number') == iteration):
                 
                 title = page["properties"]["CQ"]["title"][0]["text"]["content"]
                 
-                # Handle both formula and direct number types
+                ## -- Handle both formula and direct number types
                 score_prop = page["properties"]["Score"]
                 if score_prop.get("formula"):
                     score = score_prop["formula"]["number"]
                 else:
                     score = score_prop.get("number", 0)
                 
-                # Append to list instead of updating dict
+                ## -- Append to list instead of updating dict
                 reject_list.append({"CQ": title, "Score": score})
 
     total_rejected_in_iter = len(reject_list)
 
     print(f"Total rejected CQs in iteration {iteration}: {total_rejected_in_iter}")
-    
-    # Pretty print the rejected CQs
+
+    ## -- Pretty print the rejected CQs
     print("Rejected CQs:")
     pprint.pprint(reject_list, indent=2, width=100)
     
     return reject_list
 
 def get_cq_metrics_by_user():
+    """
+    Get metrics for competency questions (CQs) by user from the Notion database.
+    """
     print("Loading CQ Metrics by User...")
     accepted_cqs = pull_accepted()
     number_of_cqs = get_all_cqs()
@@ -293,6 +399,11 @@ def get_cq_metrics_by_user():
     print("\n")
 
 def get_comment_metrics_by_user():
+    """
+    
+    Get metrics for comments by user from the Notion database.
+    
+    """
     print("Loading CQ Metrics by User...")
     accepted_cqs = pull_accepted()
     number_of_cqs = get_all_cqs()
@@ -376,6 +487,7 @@ def llm_setup_to_notion(generation, modelname, temperature, usage, prompt, llmro
     )
     return page["id"]
 
+# TODO, to populate the "Reformulates" relation property in Notion
 def link_reformulations():
     pass
 

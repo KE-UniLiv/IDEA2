@@ -130,11 +130,11 @@ def pull_rejected() -> dict:
         filtered_cqs = rejected_cqs
         print("No previous iterations to filter. Using all rejected CQs.")
     else:
-        prev_iteration = curriteration - 1
+        prev_iteration = curriteration
         filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == prev_iteration]
 
         count = len(rejected_cqs) - len(filtered_cqs)
-        print(f"Removed {count} CQs that were not from the previous iteration.")
+        print(f"Removed {count} CQs that were not from the previous iteration; but still technically rejected.")
 
         if len(filtered_cqs) == 0:
             print("No new rejected CQs found, exiting to avoid overwriting!")

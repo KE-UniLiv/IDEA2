@@ -1,0 +1,30 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "d2dc6de77b0148c69b32596455d3ba9f8c1d850ccebdf7456492aed7b1e20614",
+    "text": "What is the defined format of a sample container, such as the number of wells in a microtiter plate?",
+    "identifier": "g03_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@ID": "",
+    "@URI": "72f192d0457b3be9ef46d4f127142f4ccc21be1149e901dff4f37261caea9012",
+    "text": "If an experiment step consumes data from multiple previous steps, what is the identifier prefix used to refer to them as a group?",
+    "identifier": "g03_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  }
+]

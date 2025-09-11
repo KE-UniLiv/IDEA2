@@ -1,57 +1,24 @@
 [
   {
-    "title": "What result blueprints are defined for a technique?",
-    "id": 92,
-    "person": "Andrew N, Harry R",
-    "creation date": "30/07/2025",
+    "title": "For a sample container that is a microtiter plate or tray, what is its specified capacity (e.g., 6, 24, 96 wells)?",
+    "id": 109,
+    "person": "Harry R, Andrew N",
+    "creation date": "14/08/2025",
     "score": 0,
     "votes": 4,
-    "comment": "<comment> I’m not sure what a result blueprint is in this instance. Again will defer to others on this one </comment><comment> Likewise unsure on the language </comment>",
-    "from iteration": 1,
-    "date_pulled": "14/08/25"
+    "comment": "<comment> I don’t have any direct experience with AnIML and HT assays, but I don’t think you would store a sample in one of these (unless I am misunderstanding the q) </comment><comment> Not sure if this can be wording can be improved slightly? I think I understand what it means but if you are storing the sample in a tray then capacity makes sense whilst if it’s stored in a microtitre plate for a HT experiment, the format would be 96 wells with each well having potential capacity in millilitres? </comment>",
+    "from iteration": 2,
+    "date_pulled": "29/08/25"
   },
   {
-    "title": "What is the affiliation of an author?",
-    "id": 37,
-    "person": "Harry R, Ewan Johnson",
-    "creation date": "30/07/2025",
+    "title": "What is the ID prefix used to reference a collection of consumed experiment steps?",
+    "id": 107,
+    "person": "Harry R, Andrew N",
+    "creation date": "14/08/2025",
     "score": 0,
     "votes": 4,
-    "comment": "<comment> I think this is too vague </comment>",
-    "from iteration": 1,
-    "date_pulled": "14/08/25"
-  },
-  {
-    "title": "What is the prefix for a bulk reference to consumed experiment steps?",
-    "id": 29,
-    "person": "Andrew N, Ewan Johnson",
-    "creation date": "30/07/2025",
-    "score": 0,
-    "votes": 4,
-    "comment": "<comment> I’m unclear on what this refers to </comment>",
-    "from iteration": 1,
-    "date_pulled": "14/08/25"
-  },
-  {
-    "title": "What are the coordinates of a sample within its container?",
-    "id": 8,
-    "person": "Andrew N, Harry R",
-    "creation date": "30/07/2025",
-    "score": 0,
-    "votes": 4,
-    "comment": "<comment> Do containers always have co-ordinates?  </comment>",
-    "from iteration": 1,
-    "date_pulled": "14/08/25"
-  },
-  {
-    "title": "How many wells does a sample's container have?",
-    "id": 6,
-    "person": "Andrew N, Harry R, Ewan Johnson",
-    "creation date": "30/07/2025",
-    "score": -2,
-    "votes": 4,
-    "comment": "<comment> Do sample containers always have wells? </comment>",
-    "from iteration": 1,
-    "date_pulled": "14/08/25"
+    "comment": "<comment> What is this specifically referring to in the AnIML file? </comment><comment> Similar to Harry - not sure what prefix would be used to help group a collection of experiment steps </comment>",
+    "from iteration": 2,
+    "date_pulled": "29/08/25"
   }
 ]

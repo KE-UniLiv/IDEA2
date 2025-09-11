@@ -438,5 +438,17 @@
   {
     "role": "assistant",
     "content": "For a sample container that is a microtiter plate or tray, what is its specified capacity (e.g., 6, 24, 96 wells)?"
+  },
+  {
+    "role": "user",
+    "content": "\nThe reformulated CQs you generated in iteration 2 were passed to N=4 domain experts for evaluation. \nThe score of a CQ is based on a simple majority vote, with any CQ that has a score of less than 0 needing reformulation. \nFor example, if a CQ has a score of -3 and has been voted by 3 experts (out of N=4), then all the active participants downvoted that CQ.\n\n\nYou can assume that all the CQs from the previous iteration that are not included below successfully passed the validation stage \n(they were accepted by majority). \nConsider these as good CQs.\n\n\nYou will now receive the set of rejected CQs with their votes, (negative) score, and any commented feedback, when available. \nYour task is to reformulate these CQs by using the feedback from the validators and the schema definitions you were originally given. \nDo not mark a reformulated competency question as \"Reformulated\" or \"Reformulated CQ\", only provide the reformulated competency question. \nOnly reformulate the rejected competency questions, do not extract new competency questions.\n[\n  {\n    \"title\": \"For a sample container that is a microtiter plate or tray, what is its specified capacity (e.g., 6, 24, 96 wells)?\",\n    \"id\": 109,\n    \"person\": \"Harry R, Andrew N\",\n    \"creation date\": \"14/08/2025\",\n    \"score\": 0,\n    \"votes\": 4,\n    \"comment\": \"<comment> I don\u2019t have any direct experience with AnIML and HT assays, but I don\u2019t think you would store a sample in one of these (unless I am misunderstanding the q) </comment><comment> Not sure if this can be wording can be improved slightly? I think I understand what it means but if you are storing the sample in a tray then capacity makes sense whilst if it\u2019s stored in a microtitre plate for a HT experiment, the format would be 96 wells with each well having potential capacity in millilitres? </comment>\",\n    \"from iteration\": 2,\n    \"date_pulled\": \"29/08/25\"\n  },\n  {\n    \"title\": \"What is the ID prefix used to reference a collection of consumed experiment steps?\",\n    \"id\": 107,\n    \"person\": \"Harry R, Andrew N\",\n    \"creation date\": \"14/08/2025\",\n    \"score\": 0,\n    \"votes\": 4,\n    \"comment\": \"<comment> What is this specifically referring to in the AnIML file? </comment><comment> Similar to Harry - not sure what prefix would be used to help group a collection of experiment steps </comment>\",\n    \"from iteration\": 2,\n    \"date_pulled\": \"29/08/25\"\n  }\n]"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the defined format of a sample container, such as the number of wells in a microtiter plate?"
+  },
+  {
+    "role": "assistant",
+    "content": "If an experiment step consumes data from multiple previous steps, what is the identifier prefix used to refer to them as a group?"
   }
 ]
