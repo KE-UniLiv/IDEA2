@@ -1,18 +1,17 @@
 import argparse
 import os
 import cq_extraction
-import notion_utils
-import cq_measures
 import prompts as p
-import utils
 import sys
 import time
 import questionary
 import json
-import shutil
 
 from tqdm import tqdm
+from notion_utils import get_cqs_from_file, llm_setup_to_notion, write_row
+from utils import *
 from cq_json_ld import cq_to_json_ld
+from cq_measures import run_simple_similarty_analysis
 from reformulate_cq import store_handled, get_cqs_from_file_as_strings, reformulate_cqs, get_rejected_cqs_from_file, store_pulled, validate_reformulated, pull_accepted, pull_rejected
 from cq_extraction import get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt, clean_llm_output, configure_prompt, update_config
 from generation_utils import get_generation_number
@@ -48,8 +47,7 @@ def main():
     # -- TODO: 
     # (1) Use a source type to resolve new schemas ie --update_schema_to [path/to/schema1, path/to/schema2] then saves as current schema(s)
     # -  Then use --use_source [schema / ontology / user stories]
-    # -
-    # (2) Make it faster
+    # --
 
 
     parser.add_argument('--model', type=str, default="models/gemini-2.5-flash", help='Model name\n (Options: models/gemini-2.5-flash, models/gemini-2.5-pro, models/gemini-1.5-flash-latest, models/openai-gpt-4)')
@@ -74,7 +72,7 @@ def main():
     args = parser.parse_args()
 
     if args.show_services:
-        utils.show_services()
+        show_services()
         sys.exit(0)
 
     if len(sys.argv) == 1:
@@ -82,26 +80,12 @@ def main():
         sys.exit(0)
 
     if args.update_key:
-        service, newkey = utils.parse_two(args.update_key)
-        utils.update_key(service, newkey)
+        service, newkey = parse_two(args.update_key)
+        update_key(service, newkey)
         sys.exit(0)
 
-    cqs = ""
-    reformulated = False
-
-    ## -- Default to a gemini model if none are specified through the arguments
-    modelname = args.model if args.model else cq_extraction.config["gemini_model"]
-    print(f"Using model: {modelname}")
-
-    core, technique = utils.getSchemas()
-    combined = core + "\n" + technique
-
-    ## -- Check if the schema has already been given in the chat history, and avoid redefining it again if so
-    history = utils.load_history_from_file(modelname)
-    schema_in_history = any(combined in h["content"] for h in history)
-
     if args.usage_help:
-        utils.show_customhelp()
+        show_customhelp()
         sys.exit(0)
 
     if args.find_accepted:
@@ -115,6 +99,19 @@ def main():
         store_pulled(rejected_cqs, typeof="rejected")
         sys.exit(0) if not args.reformulate else print("Please run with --reformulate and --save to reformulate the rejected CQs and thus save to notion.")
 
+    cqs = ""
+    reformulated = False
+
+    ## -- Default to a gemini model if none are specified through the arguments
+    modelname = args.model if args.model else cq_extraction.config["gemini_model"]
+    print(f"Using model: {modelname}")
+
+    core, technique = getSchemas()
+    combined = core + "\n" + technique
+
+    ## -- Check if the schema has already been given in the chat history, and avoid redefining it again if so
+    history = load_history_from_file(modelname)
+    schema_in_history = any(combined in h["content"] for h in history)
 
     ## -- Update config (retain original values if new ones are not provided)
     update_config(
@@ -175,7 +172,7 @@ def main():
         for q in cleaned_cqs:
             history.append({"role": "assistant", "content": q})
 
-        utils.save_history_to_file(history, modelname)
+        save_history_to_file(history, modelname)
 
     if args.reformulate:
 
@@ -227,11 +224,11 @@ def main():
     for q in cleaned_cqs:
         history.append({"role": "assistant", "content": q})
         
-    utils.save_history_to_file(history, modelname)
+    save_history_to_file(history, modelname)
 
     if not args.reformulate:
         
-        cleaned_cqs = cq_measures.run_simple_similarty_analysis(
+        cleaned_cqs = run_simple_similarty_analysis(
             cleaned_cqs)
 
     ## -- Save to file if requested
@@ -266,14 +263,14 @@ def main():
     ## -- Upload to Notion if requested
     if args.notion:
         jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"{generation}.jsonld") if not args.reformulate else os.path.join(os.getcwd(), "assets", "cqs", f"{generation}_reformulated.jsonld")
-        competency_questions = notion_utils.get_cqs_from_file(jsonld_path)
+        competency_questions = get_cqs_from_file(jsonld_path)
 
         notionprompt ="\n".join([
             cq_extraction.config['out_examples'],
             cq_extraction.config['out_instruction'], 
         ])
 
-        generation_config_UUID = notion_utils.llm_setup_to_notion(
+        generation_config_UUID = llm_setup_to_notion(
             generation=generation,
             modelname=cq_extraction.config["gemini_model"],
             temperature=cq_extraction.config["temperature"],
@@ -301,7 +298,7 @@ def main():
         for cq in tqdm(competency_questions):
             for att in range(3):
                 try:
-                    notion_utils.write_row(
+                    write_row(
                         cq_extraction.notion,
                         cq_extraction.NOTION_DATABASE_ID,
                         "CQ",

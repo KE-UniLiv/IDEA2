@@ -207,6 +207,7 @@ def show_customhelp():
         "(Remember to use --save if you want anything to be saved)\n",
         "--find_rejected and --reformulate can be used together with --notion",
         "You can use --help to see available options for each argument.\n",
+        "Also, remember to set your API keys in the api_config.yml file. You may also use --update_key <service>,<new_key> for this purpose.\n",
         "1. Run the script with the desired arguments.",
         "2. The script will extract competency questions using the specified model and prompt.",
     ]
