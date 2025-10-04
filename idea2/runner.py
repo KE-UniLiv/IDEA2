@@ -25,18 +25,18 @@ CLI interface for running the competency question extraction and storing results
 Usage:
 
     Pre-requisites:
-        Ensure that all keys are filled in api_config.yml
-        Ensure that the TODO requirements are installed (see requirements.txt)
+        Ensure that all keys are filled in api_config.yml (you may update this with --update_key <service>,<new_key>)
+        Ensure that the requirements are installed (see requirements.txt)
 
     
-    (1): CD into the XAnIML directory:
-        cd x:\...\XAnIML
+    (1): CD into the repo's directory:
+        cd x:\IDEA2\idea2
 
     (2): Run the script with desired arguments:
-        python xaniml/runner.py [--model MODEL_NAME] [--temperature TEMPERATURE] [--role ROLE] [--save] [--notion] [--generation GENERATION_LABEL]
+        python idea2/runner.py [--model MODEL_NAME] [--temperature TEMPERATURE] [--role ROLE] [--save] [--notion] [--generation GENERATION_LABEL]
 
     note:
-        All of these arguments are optional, and the script will use default values if not provilded.
+        All of these arguments are optional, and the script will use default values if not provided.
 
 """
 
