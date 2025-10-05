@@ -1,0 +1,10 @@
+
+---
+Original rejected:
+Retrieve a sample by its unique sample ID. was rejected with <comment>No comment given. Check this CQ with the schema and generalise to the requirement.</comment>, 1 votes and -1 score
+What is the end index for a set of values in a series? was rejected with <comment>No comment given. Check this CQ with the schema and generalise to the requirement.</comment>, 1 votes and -1 score
+
+---
+Reformulated CQs:
+How is a specific sample uniquely identified?
+How is the upper boundary of a value set within a series defined?

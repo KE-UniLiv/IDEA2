@@ -1,0 +1,32 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g02_cqs",
+    "@URI": "2ae61b0ea595813a83c204301523c7fd2ff4de48932626dff75a0840196c6ce4",
+    "@Reformulates": "None",
+    "text": "How is a specific sample uniquely identified?",
+    "identifier": "g02_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-flash",
+      "temperature": 0.2,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g02_cqs",
+    "@URI": "d3cc739749e47cbc37396100e197bd6141a9da6b68fead774401673d1e55b887",
+    "@Reformulates": "None",
+    "text": "How is the upper boundary of a value set within a series defined?",
+    "identifier": "g02_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-flash",
+      "temperature": 0.2,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  }
+]

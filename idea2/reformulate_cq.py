@@ -7,18 +7,17 @@ This script pulls accepted and rejected competency questions (CQs) from a Notion
 
 
 import logging
-import time
 import os
 import json
 import datetime
 import prompts as p
-import cq_measures
 import sys
 
 from notion_client import Client
 from utils import get_key
 from tqdm import tqdm 
 from generation_utils import get_generation_number
+from utils import hash_from_string
 
 geminikey = get_key("gemini")
 openai_key = get_key("openai")
@@ -116,6 +115,7 @@ def pull_rejected() -> dict:
             rejected_cqs.append({
                 "title": title,
                 "id": idx,
+                "hash": hash_from_string(title),
                 "person": person,
                 "creation date": readabledate,
                 "score": score,

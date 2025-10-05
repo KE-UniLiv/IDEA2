@@ -1,0 +1,818 @@
+[
+  {
+    "role": "user",
+    "content": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering.\n\nA competency question (CQ) is a question that can be answered using the\nknowledge represented in an ontology. Competency questions are used in\nrequirement engineering to determine the scope and coverage of an ontology and\nto evaluate its effectiveness. Competency questions are typically formulated in\nnatural language and are used to test the ontology's ability to provide answers\nto specific queries. Competency questions are an important part of the ontology\ndevelopment process as they help to ensure that the ontology is fit for purpose\nand meets the needs of its users.\n\n\nExamples of competency questions for an ontology about music metadata include:\nWhich is the composer of a musical piece?\nIs the composer of a musical piece known?\nWhich are the members of a music ensemble?\nWhich role a music artist played within a music ensemble?\nIn which time interval has a music artist been a member of a music ensemble?\nWhere was a music ensemble formed?\nWhich award was a music artist nominated for?\nWhich award was received by a music artist?\nWhich music artists has a music artist been influenced by?\nWhich music artist has a music artist collaborated with?\nWhich is the start date of the activity of a music artist?\nWhich is the end date of the activity of a music artist?\nWhich is the name of a music artist?\nWhich is the alias of a music artist?\nWhich is the language of the name/alias of a music artist?\nWhich music dataset has a music algorithm been trained on?\nWhich is the process that led to the creation of a musical piece?\nIn which time interval did the creation process took place?\nWhere did the creation process took place?\nWhich are the creative actions composing the creation process of a musical piece?\nWhich task was executed by a creative action?\nWhich are the parts of a musical piece?\nWhich collection is a musical piece member of?\nWhere was a musical piece performed?\nWhen was a musical piece performed?\nWhich music artists took part to a musical performance?\nWhich is the recording process that recorded a musical performance?\nWhich is the recording produced by a recording process?\n\n\nGiven the schema definition, extract all the related competency questions. \nFor each competency question, make sure it expresses a requirement that is supported or addressed by the schema.\nDo not repeat any competency questions that have already been generated in previous responses or are present in the chat history.\n\nGenerate around 100 competency questions.\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Burkhard Schaefer (BSSN Software) -->\n<xsd:schema targetNamespace=\"urn:org:astm:animl:schema:core:draft:0.90\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" xmlns=\"urn:org:astm:animl:schema:core:draft:0.90\" elementFormDefault=\"qualified\" attributeFormDefault=\"unqualified\" version=\"0.90\">\n\t<!-- $Id$ -->\n\t<xsd:import namespace=\"http://www.w3.org/2000/09/xmldsig#\" schemaLocation=\"http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd\"/>\n\t<!--Root-Node of every AnIML document-->\n\t<xsd:element name=\"AnIML\" type=\"AnIMLType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Root Element for AnIML documents.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:key name=\"sampleID\">\n\t\t\t<xsd:selector xpath=\"SampleSet/Sample\"/>\n\t\t\t<xsd:field xpath=\"@sampleID\"/>\n\t\t</xsd:key>\n\t\t<xsd:keyref name=\"sampleIDUsage\" refer=\"sampleID\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>An ExperimentStep may only reference samples which are actually declared in the SampleSet section of the document.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t\t<xsd:selector xpath=\".//ExperimentStep/SampleReferenceSet/SampleReference\"/>\n\t\t\t<xsd:field xpath=\"@sampleID\"/>\n\t\t</xsd:keyref>\n\t\t<xsd:unique name=\"experimentStepID\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>If an ExperimentStep carries an experimentStepID attribute, its value must be unique across the entire document.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t\t<xsd:selector xpath=\".//ExperimentStep\"/>\n\t\t\t<xsd:field xpath=\"@experimentStepID\"/>\n\t\t</xsd:unique>\n\t\t<xsd:keyref name=\"experimentStepIDUsage\" refer=\"experimentStepID\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>An ExperimentDataReference may only reference ExperimentSteps that carry a valid experimentStepID.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t\t<xsd:selector xpath=\".//ExperimentStep/ExperimentDataReferenceSet/ExperimentDataReference\"/>\n\t\t\t<xsd:field xpath=\"@experimentStepID\"/>\n\t\t</xsd:keyref>\n\t</xsd:element>\n\t<xsd:complexType name=\"AnIMLType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>ComplexType for the root element of an AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"SampleSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"ExperimentStepSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"AuditTrailEntrySet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"SignatureSet\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"version\" type=\"ShortStringType\" use=\"required\" fixed=\"0.90\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Version number of the AnIML Core Schema used in this document. Must be \"0.90\".</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<!-- -->\n\t<!--Top-Level document elements-->\n\t<xsd:element name=\"SampleSet\" type=\"SampleSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for Samples used in this AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SampleSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for Samples used in this AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Sample\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"ExperimentStepSet\" type=\"ExperimentStepSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for multiple ExperimentSteps that describe the process and results.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:key name=\"seriesID\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Every Series ID must be unique within a SeriesSet.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t\t<xsd:selector xpath=\".//Series\"/>\n\t\t\t<xsd:field xpath=\"@seriesID\"/>\n\t\t</xsd:key>\n\t\t<xsd:keyref name=\"seriesIDRef\" refer=\"seriesID\">\n\t\t\t<xsd:selector xpath=\".//ExperimentStep/ParentDataPointReference\"/>\n\t\t\t<xsd:field xpath=\"@seriesID\"/>\n\t\t</xsd:keyref>\n\t\t<xsd:key name=\"templateID\">\n\t\t\t<xsd:selector xpath=\"./Template\"/>\n\t\t\t<xsd:field xpath=\"@templateID\"/>\n\t\t</xsd:key>\n\t\t<xsd:keyref name=\"templateUsedRef\" refer=\"templateID\">\n\t\t\t<xsd:selector xpath=\"./ExperimentStep\"/>\n\t\t\t<xsd:field xpath=\"@templateUsed\"/>\n\t\t</xsd:keyref>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExperimentStepSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for multiple ExperimentSteps that describe the process and results.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Template\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"ExperimentStep\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"AuditTrailEntrySet\" type=\"AuditTrailEntrySetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for audit trail entries describing changes to this document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"AuditTrailEntrySetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for audit trail entries describing changes to this document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"AuditTrailEntry\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"SignatureSet\" type=\"SignatureSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for digital signatures covering parts of this AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SignatureSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for digital signatures covering parts of this AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Signature\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<!-- -->\n\t<!--SampleSet information-->\n\t<xsd:element name=\"Sample\" type=\"SampleType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual Sample, referenced from other parts of this AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SampleType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual Sample, referenced from other parts of this AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"TagSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Category\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t\t<xsd:attribute name=\"sampleID\" type=\"ShortTokenType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"barcode\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Value of barcode label that is attached to sample container.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"comment\" type=\"ShortStringType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Unstructured text comment to further describe the Sample.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"derived\" type=\"xsd:boolean\" use=\"optional\" default=\"false\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Indicates whether this is a derived Sample. A derived Sample is a Sample that has been created by applying a Technique. (Sub-Sampling, Processing, ...)</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"containerType\" type=\"ContainerTypeType\" use=\"optional\" default=\"simple\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Whether this sample is also a container for other samples. Set to \"simple\" if not.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"containerID\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Sample ID of container in which this sample is located.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"locationInContainer\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Coordinates of this sample within the enclosing container. In case of microplates or trays, the row is identified by letters and the column is identified by numbers (1-based) while in landscape orientation. Examples: A10 = 1st row, 10th column, Z1 = 26th row, 1st column, AB2 = 28th row, 2nd column.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attributeGroup ref=\"SourceDataLocation\"/>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"ContainerTypeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Describes what kind of container the current sample is.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"simple\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>This container holds exactly one sample (e.g. well, vial, tube).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"determinate\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Positions within this container are precisely defined and known in advance (e.g. racks, ...)</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"indeterminate\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Positions within this container are not precisely defined or known in advance (e.g. gels, surfaces)</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"rectangular tray\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Rectangular tray with unknown (or other) number of positions.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"6 wells\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Microtiter plate or tray with 6 positions.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"24 wells\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Microtiter plate or tray with 24 positions.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"96 wells\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Microtiter plate or tray with 96 positions.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"384 wells\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Microtiter plate or tray with 384 positions.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"1536 wells\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Microtiter plate or tray with 1536 positions.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<!-- -->\n\t<!--Elements representing process information and data-->\n\t<xsd:element name=\"ExperimentStep\" type=\"ExperimentStepType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container that documents a step in an experiment. Use one ExperimentStep per application of a Technique.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExperimentStepType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container that documents a step in an experiment. Use one ExperimentStep per application of a Technique.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"TagSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Technique\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Infrastructure\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Method\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Result\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t\t<xsd:attribute name=\"experimentStepID\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Unique identifier for this ExperimentStep. Used to point to this step from an ExperimentDataReference.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"templateUsed\" type=\"ShortTokenType\" use=\"optional\"/>\n\t\t<xsd:attribute name=\"comment\" type=\"ShortStringType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Unstructured text comment to further describe the ExperimentStep.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attributeGroup ref=\"SourceDataLocation\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"Template\" type=\"TemplateType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Represents a template for an ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"TemplateType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Represents a template for an ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"TagSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Technique\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Infrastructure\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Method\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Result\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t\t<xsd:attribute name=\"templateID\" type=\"ShortTokenType\" use=\"required\"/>\n\t\t<xsd:attributeGroup ref=\"SourceDataLocation\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"Timestamp\" type=\"TimestampType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Date and time of modification.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"TimestampType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Date and time of modification.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:dateTime\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Method\" type=\"MethodType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Describes how this Experiment was performed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"MethodType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Describes how this Experiment was performed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Author\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Device\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Software\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Category\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Optional method name, as defined in the instrument software.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"Infrastructure\" type=\"InfrastructureType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Contains references to the context of this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"InfrastructureType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Contains references to the context of this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"SampleReferenceSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"ParentDataPointReferenceSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"ExperimentDataReferenceSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Timestamp\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"SampleReferenceSet\" type=\"SampleReferenceSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of Samples used in this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SampleReferenceSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of Samples used in this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"SampleReference\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"SampleInheritance\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t</xsd:complexType>\n\t<!-- -->\n\t<!--Technique related information-->\n\t<xsd:element name=\"Technique\" type=\"TechniqueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to Technique Definition used in this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"TechniqueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to Technique Definition used in this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Extension\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<!--\t\t\t<xsd:element name=\"Extension\" type=\"ExtensionType\" minOccurs=\"0\" maxOccurs=\"unbounded\"/> -->\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t\t<xsd:attribute name=\"uri\" type=\"xsd:anyURI\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>URI where Technique Definition file can be fetched.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"sha256\" type=\"xsd:token\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>SHA256 checksum of the referenced Technique Definition. Hex encoded, lower cased. Similar to the output of the sha256 unix command.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"Extension\" type=\"ExtensionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to an Extension to amend the active Technique Definition.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExtensionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to an Extension to amend the active Technique Definition.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"uri\" type=\"xsd:anyURI\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>URI where Extension file can be fetched.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Name of Extension to be used. Must match Name given in Extension Definition file.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"sha256\" type=\"xsd:token\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>SHA256 checksum of the referenced Extension. Hex encoded, lower cased. Similar to the output of the sha256 unix command.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<!---->\n\t<!--ParentDataPointReferenceSet related information-->\n\t<xsd:element name=\"ParentDataPointReferenceSet\" type=\"ParentDataPointReferenceSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Contains references to the parent Result.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ParentDataPointReferenceSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Contains references to the parent Result.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"ParentDataPointReference\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"ParentDataPointReference\" type=\"ParentDataPointReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to a data point or value range in an independent Series in the parent Result.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ParentDataPointReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to a data point or value range in an independent Series in the parent Result.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"StartValue\"/>\n\t\t\t<xsd:element ref=\"EndValue\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t\t<xsd:attribute name=\"seriesID\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Contains the ID of the Series referenced.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<!---->\n\t<!--SampleReferenceSet and ExperimentDataReferenceSet-->\n\t<xsd:simpleType name=\"PurposeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specifies the referenced entity is consumed or produced in an experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"produced\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies whether a sample is produced in an experiment.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"consumed\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies whether a sample is consumed in an experiment.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"SampleReference\" type=\"SampleReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to a Sample used in this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SampleReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to a Sample used in this Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t\t<xsd:attribute name=\"sampleID\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>SampleID of the Sample used in the current ExperimentStep. Refers to the sampleID within the SampleSet section of the document.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attributeGroup ref=\"SampleAttributes\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"SampleInheritance\" type=\"SampleInheritanceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Indicates that a Sample was inherited from the parent ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SampleInheritanceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Indicates that a Sample was inherited from the parent ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t\t<xsd:attributeGroup ref=\"SampleAttributes\"/>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"SamplePurposeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specifies whether a sample is consumed or produced in an experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"PurposeType\"/>\n\t</xsd:simpleType>\n\t<xsd:attributeGroup name=\"SampleAttributes\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Common attributes for sample references.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"role\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Role this sample plays within the current ExperimentStep.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"samplePurpose\" type=\"SamplePurposeType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Specifies whether the referenced sample is produced or consumed by the current ExperimentStep.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:attributeGroup>\n\t<xsd:element name=\"ExperimentDataReferenceSet\" type=\"ExperimentDataReferenceSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of Experiment Steps consumed by this Experiment Step.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExperimentDataReferenceSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of Experiment Steps consumed by this Experiment Step.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"ExperimentDataReference\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"ExperimentDataBulkReference\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"ExperimentDataReference\" type=\"ExperimentDataReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to an Experiment Step whose data are consumed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExperimentDataReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to an Experiment Step whose data is consumed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t\t<xsd:attributeGroup ref=\"ExperimentDataAttributes\"/>\n\t\t<xsd:attribute name=\"experimentStepID\" type=\"ShortTokenType\" use=\"required\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"ExperimentDataBulkReference\" type=\"ExperimentDataBulkReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Prefix-based reference to a set of Experiment Steps whose data are consumed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExperimentDataBulkReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Prefix-based reference to a set of Experiment Steps whose data are consumed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t\t<xsd:attributeGroup ref=\"ExperimentDataAttributes\"/>\n\t\t<xsd:attribute name=\"experimentStepIDPrefix\" type=\"ShortTokenType\" use=\"required\"/>\n\t</xsd:complexType>\n\t<xsd:attributeGroup name=\"ExperimentDataAttributes\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Common attributes for experiment data references</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"role\" type=\"ShortTokenType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"dataPurpose\" type=\"ExperimentDataPurposeType\" use=\"required\"/>\n\t</xsd:attributeGroup>\n\t<xsd:simpleType name=\"ExperimentDataPurposeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specifies whether the referenced ExperimentStep data is consumed or produced in an experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"PurposeType\"/>\n\t</xsd:simpleType>\n\t<!-- -->\n\t<!--Result related information-->\n\t<xsd:element name=\"Result\" type=\"ResultType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for Data derived from Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ResultType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for Data derived from Experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"SeriesSet\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Category\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"ExperimentStepSet\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"SeriesSet\" type=\"SeriesSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for n-dimensional Data.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SeriesSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for n-dimensional Data.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Series\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t\t<xsd:attribute name=\"length\" type=\"NonNegativeIntType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Number of data points each Series contains.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"Series\" type=\"SeriesType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for multiple Values.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SeriesType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Container for multiple Values.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:choice minOccurs=\"0\">\n\t\t\t\t<xsd:element ref=\"IndividualValueSet\" maxOccurs=\"unbounded\"/>\n\t\t\t\t<xsd:element ref=\"EncodedValueSet\" maxOccurs=\"unbounded\"/>\n\t\t\t\t<xsd:element ref=\"AutoIncrementedValueSet\" maxOccurs=\"unbounded\"/>\n\t\t\t</xsd:choice>\n\t\t\t<xsd:element ref=\"Unit\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t\t<xsd:attribute name=\"dependency\" type=\"DependencyType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Specified whether the Series is independent or dependent.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"seriesID\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Identifies the Series. Used in References from subordinate ExperimentSteps. Unique per SeriesSet.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"visible\" type=\"VisibleType\" use=\"optional\" default=\"true\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Specifies whether data in this Series is to be displayed to the user by default.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"plotScale\" type=\"PlotScaleType\" use=\"optional\" default=\"linear\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Specifies whether the data in this Series is typically plotted on a linear or logarithmic scale.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"seriesType\" type=\"SeriesTypeType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Data type used by all values in this Series.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"IndividualValueSet\" type=\"IndividualValueSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Multiple Values explicitly specified.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"IndividualValueSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Multiple Values explicitly specified.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"UnboundedValueType\">\n\t\t\t\t<xsd:attributeGroup ref=\"ValueSet\"/>\n\t\t\t</xsd:extension>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"EncodedValueSet\" type=\"EncodedValueSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Multiple numeric values encoded as a base64 binary string. Uses little-endian byte order.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"EncodedValueSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Multiple numeric values encoded as a base64 binary string. Uses little-endian byte order.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:simpleContent>\n\t\t\t<xsd:extension base=\"xsd:base64Binary\">\n\t\t\t\t<xsd:attributeGroup ref=\"ValueSet\"/>\n\t\t\t</xsd:extension>\n\t\t</xsd:simpleContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"StartValue\" type=\"StartValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Lower boundary of an interval or ValueSet.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"StartValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Lower boundary of an interval or ValueSet.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"NumericValueType\"/>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"EndValue\" type=\"EndValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Upper boundary of an interval.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"EndValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Upper boundary of an interval.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"NumericValueType\"/>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"Increment\" type=\"IncrementType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Increment value</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"IncrementType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Increment value</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"NumericValueType\"/>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"AutoIncrementedValueSet\" type=\"AutoIncrementedValueSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Multiple values given in form of a start value and an increment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"AutoIncrementedValueSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Multiple values given in form of a start value and an increment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"StartValue\"/>\n\t\t\t<xsd:element ref=\"Increment\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"ValueSet\"/>\n\t</xsd:complexType>\n\t<!---->\n\t<!--Units-->\n\t<xsd:element name=\"Unit\" type=\"UnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of a Scientific Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"UnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of a Scientific Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"SIUnit\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"label\" type=\"LabelType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Defines the visual representation of a particular Unit.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"quantity\" type=\"QuantityType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Quantity the unit can be applied to</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"LabelType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>String representation of a particular Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:minLength value=\"1\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"QuantityType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Quantity a Unit is applicable to.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:minLength value=\"1\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"SIUnit\" type=\"SIUnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Combination of SI Units used to represent Scientific Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SIUnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Combination of SI Units used to represent Scientific unit</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:simpleContent>\n\t\t\t<xsd:extension base=\"SIUnitNameList\">\n\t\t\t\t<xsd:attribute name=\"factor\" type=\"xsd:double\" use=\"optional\" default=\"1\"/>\n\t\t\t\t<xsd:attribute name=\"exponent\" type=\"xsd:double\" use=\"optional\" default=\"1\"/>\n\t\t\t\t<xsd:attribute name=\"offset\" type=\"xsd:double\" use=\"optional\" default=\"0\"/>\n\t\t\t</xsd:extension>\n\t\t</xsd:simpleContent>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"SIUnitNameList\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Names of all SI Units</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"1\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents a dimensionless unit.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"m\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"meter\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"kg\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"kilogram\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"s\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"second\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"A\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"ampere\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"K\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"kelvin\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"mol\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"mol\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"cd\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"candela\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<!---->\n\t<!--AuditTrailEntry related information-->\n\t<xsd:element name=\"AuditTrailEntry\" type=\"AuditTrailEntryType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Describes a set of changes made to the particular AnIML document by one user at a given time.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"AuditTrailEntryType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Describes a set of changes made to the particular AnIML document by one user at a given time.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Timestamp\"/>\n\t\t\t<xsd:element ref=\"Author\"/>\n\t\t\t<xsd:element ref=\"Software\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Action\"/>\n\t\t\t<xsd:element ref=\"Reason\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Comment\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Diff\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"Reference\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"Action\" type=\"ActionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Type of change made (created, modified, ...)</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"ActionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Type of change made (created, modified, ...)</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"created\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>The given user has created the references item(s).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"modified\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Item already existed and has been modified. Modifications are explained in the Description element.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"converted\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Item has been converted into AnIML format.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"read\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>The given user has exercised read access on the referenced item(s).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"signed\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>The given user has attached a digital signature.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"deleted\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>The referenced items were deleted. No reference is specified. Description explains what was deleted.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Reason\" type=\"ReasonType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Explanation why changes were made.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"ReasonType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Explanation why changes were made.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Comment\" type=\"CommentType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Human-readable comment further explaining the changes.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"CommentType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Human-readable comment further explaining the changes.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Diff\" type=\"DiffType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Machine-readable description of changes made.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"DiffType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Machine-readable description of changes made.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"OldValue\"/>\n\t\t\t<xsd:element ref=\"NewValue\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"scope\" type=\"ScopeType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Scope of diff. May be \"element\" or \"attribute\".</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"changedItem\" type=\"xsd:IDREF\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>ID of the SignableItem that was changed</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"ScopeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Scope of diff. May be \"element\" or \"attribute\".</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"element\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>This diff describes the whole element before and after the change.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"attributes\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>This diff only describes a change in attributes. The child elements remain unchanged (and are not reflected in the diff to save space).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"OldValue\" type=\"xsd:string\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value before the change.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:element name=\"NewValue\" type=\"xsd:string\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value after the change.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:element name=\"Reference\" type=\"ReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>ID of the SignableItem that was affected. If none is specified, entire document is covered.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"ReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>ID of the SignableItem that was affected. If none is specified, entire document is covered.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:IDREF\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Signature\" type=\"ds:SignatureType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Digital Signature that has been applied to a part of this AnIML document. Uses the W3C XML-DSIG specification.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<!-- -->\n\t<!--Parameter related information-->\n\t<xsd:element name=\"Category\" type=\"CategoryType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Defines a category of Parameters and SeriesSets. Used to model hierarchies.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"CategoryType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Defines a category of Parameters and SeriesSets. Used to model hierarchies.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Parameter\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"SeriesSet\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"Category\" minOccurs=\"0\" maxOccurs=\"unbounded\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Contains multiple subcategories of Category.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:element>\n\t\t</xsd:sequence>\n\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"Parameter\" type=\"ParameterType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Name/Value Pair.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ParameterType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Name/Value Pair.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"SingleValueType\">\n\t\t\t\t<xsd:sequence>\n\t\t\t\t\t<xsd:element ref=\"Unit\" minOccurs=\"0\"/>\n\t\t\t\t</xsd:sequence>\n\t\t\t\t<xsd:attributeGroup ref=\"SignableItemWithName\"/>\n\t\t\t\t<xsd:attribute name=\"parameterType\" type=\"ParameterTypeType\" use=\"required\">\n\t\t\t\t\t<xsd:annotation>\n\t\t\t\t\t\t<xsd:documentation>Data type of this parameter</xsd:documentation>\n\t\t\t\t\t</xsd:annotation>\n\t\t\t\t</xsd:attribute>\n\t\t\t</xsd:extension>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<!-- -->\n\t<!--SimpleTypes for Series definitions-->\n\t<xsd:simpleType name=\"DependencyType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specified whether the Series is independent or dependent.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"independent\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specified that the Series is independent.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"dependent\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specified that the Series is dependent.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"PlotScaleType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specifies how the data in this Series is typically plotted.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"linear\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that this Series is typically plotted on a linear scale.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"log\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that this Series is typically plotted on a common logarithmic scale (base 10).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"ln\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that this Series is typically plotted on a natural logarithmic scale (base e).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"none\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that this Series is not plottable.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"VisibleType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specifes whether a Series should be displayed by default.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:boolean\"/>\n\t</xsd:simpleType>\n\t<!-- -->\n\t<!--Complex Types for Parameter and Series values, Simple Types for Data Type names-->\n\t<xsd:complexType name=\"UnboundedValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Base type for all value elements for use in Series and parameters. To be restricted.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:choice maxOccurs=\"unbounded\">\n\t\t\t\t<xsd:element ref=\"I\"/>\n\t\t\t\t<xsd:element ref=\"L\"/>\n\t\t\t\t<xsd:element ref=\"F\"/>\n\t\t\t\t<xsd:element ref=\"D\"/>\n\t\t\t\t<xsd:element ref=\"S\"/>\n\t\t\t\t<xsd:element ref=\"Boolean\"/>\n\t\t\t\t<xsd:element ref=\"DateTime\"/>\n\t\t\t\t<xsd:element ref=\"PNG\"/>\n\t\t\t\t<xsd:element ref=\"EmbeddedXML\"/>\n\t\t\t\t<xsd:element ref=\"SVG\"/>\n\t\t\t</xsd:choice>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"I\" type=\"Int32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual integer value (32 bits, signed).</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Int32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual integer value (32 bits, signed).</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:int\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"L\" type=\"Int64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual long integer value (64 bits, signed).</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Int64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual long integer value (64 bits, signed).</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:long\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"F\" type=\"Float32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual 32-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Float32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual 32-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:float\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"D\" type=\"Float64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual 64-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Float64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual 64-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:double\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"S\" type=\"StringType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual string value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"StringType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual string value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Boolean\" type=\"BooleanType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual boolean value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"BooleanType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual boolean value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:boolean\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"DateTime\" type=\"DateTimeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual ISO date/time value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"DateTimeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual ISO date/time value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:dateTime\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"PNG\" type=\"PNGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Base 64 encoded PNG image.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"PNGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Base 64 encoded PNG image.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:base64Binary\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"EmbeddedXML\" type=\"EmbeddedXMLType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by a different XML Schema.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"EmbeddedXMLType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by a different XML Schema.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"SVG\" type=\"SVGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by the SVG DTD. Used to represent vector graphic images.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"SVGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by the SVG DTD. Used to represent vector graphic images.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction>\n\t\t\t<xsd:simpleType>\n\t\t\t\t<xsd:restriction base=\"EmbeddedXMLType\"/>\n\t\t\t</xsd:simpleType>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:complexType name=\"SingleValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Elements for IndividualValueSets in Series.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:restriction base=\"UnboundedValueType\">\n\t\t\t\t<xsd:sequence>\n\t\t\t\t\t<xsd:choice>\n\t\t\t\t\t\t<xsd:element ref=\"I\"/>\n\t\t\t\t\t\t<xsd:element ref=\"L\"/>\n\t\t\t\t\t\t<xsd:element ref=\"F\"/>\n\t\t\t\t\t\t<xsd:element ref=\"D\"/>\n\t\t\t\t\t\t<xsd:element ref=\"S\"/>\n\t\t\t\t\t\t<xsd:element ref=\"Boolean\"/>\n\t\t\t\t\t\t<xsd:element ref=\"DateTime\"/>\n\t\t\t\t\t\t<xsd:element ref=\"PNG\"/>\n\t\t\t\t\t\t<xsd:element ref=\"EmbeddedXML\"/>\n\t\t\t\t\t\t<xsd:element ref=\"SVG\"/>\n\t\t\t\t\t</xsd:choice>\n\t\t\t\t</xsd:sequence>\n\t\t\t</xsd:restriction>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:complexType name=\"NumericValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Elements for numeric Series values.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:restriction base=\"UnboundedValueType\">\n\t\t\t\t<xsd:sequence>\n\t\t\t\t\t<xsd:choice>\n\t\t\t\t\t\t<xsd:element ref=\"I\"/>\n\t\t\t\t\t\t<xsd:element ref=\"L\"/>\n\t\t\t\t\t\t<xsd:element ref=\"F\"/>\n\t\t\t\t\t\t<xsd:element ref=\"D\"/>\n\t\t\t\t\t</xsd:choice>\n\t\t\t\t</xsd:sequence>\n\t\t\t</xsd:restriction>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"ParameterTypeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Names of Data Types for Parameters</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"Int32\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents an individual integer value (32 bits, signed).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"Int64\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents an individual long integer value (64 bits, signed).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"Float32\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents an individual 32-bit floating point value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"Float64\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents an individual 64-bit floating point value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"String\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents an individual string value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"Boolean\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents an individual Boolean value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"DateTime\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents an individual ISO date/time value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"EmbeddedXML\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents a Value governed by a different XML Schema..</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"PNG\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Base 64 encoded PNG image</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"SVG\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Value governed by the SVG DTD. Used to represent vector graphic images.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"SeriesTypeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Names of Data Types for Series.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ParameterTypeType\"/>\n\t</xsd:simpleType>\n\t<!-- -->\n\t<!--AttributeGroup for sparse data-->\n\t<xsd:attributeGroup name=\"ValueSet\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Start and End Index for this Set of Values (zero-based).</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"startIndex\" type=\"NonNegativeIntType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Zero-based index of the first entry in this Value Set. The specification is inclusive.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"endIndex\" type=\"NonNegativeIntType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Zero-based index of the last entry in this Value Set. The specification is inclusive.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:attributeGroup>\n\t<!---->\n\t<!--Stuff for digital signatures and audit trail-->\n\t<xsd:attributeGroup name=\"SignableItem\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>ID for Signable Items.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"id\" type=\"xsd:ID\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Anchor point for digital signature. This identifier is referred to from the \"Reference\" element in a Signature. Unique per document.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:attributeGroup>\n\t<xsd:attributeGroup name=\"SignableItemWithName\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>ID and Name attribute for Signable Items.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attributeGroup ref=\"SignableItem\"/>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Plain-text name of this item.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:attributeGroup>\n\t<!---->\n\t<!--Things used for multiple purposes-->\n\t<xsd:simpleType name=\"UserTypeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specifies whether a user is a real person, a device, or a software program.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"human\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the user is a real person.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"device\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the user is a device.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"software\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the user is a software system.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:attributeGroup name=\"SourceDataLocation\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Attribute group which points to the original data source.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"sourceDataLocation\" type=\"ShortStringType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Points to the original data source. May be a file name, uri, database ID, etc.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:attributeGroup>\n\t<!-- -->\n\t<!--Tag Elements and Types-->\n\t<xsd:element name=\"TagSet\" type=\"TagSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of Tag elements.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"TagSetType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of Tag elements.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Tag\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"Tag\" type=\"TagType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Tag to mark related data items. When a value is given, it may also serve as a reference to an external data system.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"TagType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Tag to mark related data items. When a value is given, it may also serve as a reference to an external data system.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"value\" type=\"ShortStringType\" use=\"optional\"/>\n\t</xsd:complexType>\n\t<!-- -->\n\t<!--Humans, Device and Software involved in recording the data-->\n\t<xsd:element name=\"Author\" type=\"AuthorType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Information about a person, a device or a piece of software authoring AnIML files.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"AuthorType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Information about a person, a device or a piece of software authoring AnIML files.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Name\"/>\n\t\t\t<xsd:element ref=\"Affiliation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Role\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Email\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Phone\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Location\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"userType\" type=\"UserTypeType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Type of user (human, device, software)</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"Name\" type=\"NameType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Common name.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"NameType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Common name.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortStringType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Affiliation\" type=\"AffiliationType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Organization the Author is affiliated with.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"AffiliationType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Organization the Author is affiliated with.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortStringType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Role\" type=\"RoleType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Role the Author plays within the organization.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"RoleType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Role the Author plays within the organization.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortStringType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Email\" type=\"EmailType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>RFC822-compliant email address.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"EmailType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>RFC822-compliant email address.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortStringType\">\n\t\t\t<xsd:pattern value=\".*@.*\\..*\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Phone\" type=\"PhoneType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Phone number.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"PhoneType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Phone number.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortStringType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Location\" type=\"LocationType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Location or physical address.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"LocationType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Location or physical address.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortStringType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Device\" type=\"DeviceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Device used to perform experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"DeviceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Device used to perform experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"DeviceIdentifier\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Manufacturer\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Name\"/>\n\t\t\t<xsd:element ref=\"FirmwareVersion\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"SerialNumber\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"DeviceIdentifier\" type=\"DeviceIdentifierType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Unique name or identifier of the device.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"DeviceIdentifierType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Unique name or identifier of the device.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Manufacturer\" type=\"ManufacturerType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Company name.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"ManufacturerType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Company name.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"FirmwareVersion\" type=\"FirmwareVersionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Version identifier of firmware release.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"FirmwareVersionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Version identifier of firmware release.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"SerialNumber\" type=\"SerialNumberType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Unique serial number of device.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"SerialNumberType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Unique serial number of device.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Software\" type=\"SoftwareType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Software used to author this.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SoftwareType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Software used to author this.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Manufacturer\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Name\"/>\n\t\t\t<xsd:element ref=\"Version\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"OperatingSystem\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"OperatingSystem\" type=\"OperatingSystemType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Operating system the software was running on.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"OperatingSystemType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Operating system the software was running on.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Version\" type=\"VersionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Version identifier of software release.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"VersionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Version identifier of software release.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\"/>\n\t</xsd:simpleType>\n\t<!---->\n\t<!--General purpose data types-->\n\t<xsd:simpleType name=\"ShortStringType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>String with up to 1024 characters</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\">\n\t\t\t<xsd:maxLength value=\"1024\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"ShortTokenType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Token with up to 1024 characters</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:token\">\n\t\t\t<xsd:maxLength value=\"1024\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"NonNegativeIntType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Individual non-negative Integer Value (32 bits, signed)</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:int\">\n\t\t\t<xsd:minInclusive value=\"0\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n</xsd:schema>\n\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Burkhard Schaefer (BSSN Software) -->\n<xsd:schema targetNamespace=\"urn:org:astm:animl:schema:technique:draft:0.90\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns=\"urn:org:astm:animl:schema:technique:draft:0.90\" elementFormDefault=\"qualified\" attributeFormDefault=\"unqualified\">\n\t<!--XML Schema for AnIML Technique Definition files. -->\n\t<!-- -->\n\t<!-- * Top-Level document elements * -->\n\t<!-- ================== -->\n\t<xsd:element name=\"Technique\" type=\"TechniqueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>The root element of an AnIML Technique Definition document.  Techniques are typically categorized as either sample alteration, detection, or data post-processing.  Each document defines and constrains how ExperimentSteps and Sample definitions are to be filled for its respective technique in an AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:unique name=\"sampleRoleName\">\n\t\t\t<xsd:selector xpath=\"SampleRole\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t\t<xsd:unique name=\"resultBlueprintName\">\n\t\t\t<xsd:selector xpath=\"ResultBlueprint\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t\t<xsd:unique name=\"literatureReferenceID\">\n\t\t\t<xsd:selector xpath=\"Bibliography/LiteratureReference\"/>\n\t\t\t<xsd:field xpath=\"@literatureReferenceID\"/>\n\t\t</xsd:unique>\n\t\t<xsd:keyref name=\"literatureReferenceIDUsage\" refer=\"literatureReferenceID\">\n\t\t\t<xsd:selector xpath=\".//Documentation\"/>\n\t\t\t<xsd:field xpath=\"@literatureReferenceID\"/>\n\t\t</xsd:keyref>\n\t</xsd:element>\n\t<xsd:complexType name=\"TechniqueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>The root element of an AnIML Technique Definition document.  Techniques are typically categorized as either sample alteration, detection, or data post-processing.  Each document defines and constrains how ExperimentSteps and Sample definitions are to be filled for its respective technique in an AnIML document.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"ExtensionScope\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"SampleRoleBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"ExperimentDataRoleBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"MethodBlueprint\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"ResultBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"Bibliography\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"version\" type=\"xsd:string\" use=\"required\" fixed=\"0.90\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Version number of the AnIML Technique Schema used in this document. Must be \"0.90\".</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Technique Definition name (human-readable).</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"extension\" type=\"xsd:boolean\" use=\"optional\" default=\"false\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Is this document an extension?  If false, it is a Technique Definition. If true, it is a Technique Extension.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"abstract\" type=\"xsd:boolean\" use=\"optional\" default=\"false\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Whether this Technique Definition or Extension needs to be used with an Extension to be valid. If true, at least one non-abstract extension is required in the ExperimentStep.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<!---->\n\t<!--Extension scope related information-->\n\t<xsd:element name=\"ExtensionScope\" type=\"ExtensionScopeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>For Extensions only. Specifies which Technique Definitions or Extensions can be extended using this Extension.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExtensionScopeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>For Extensions only. Specifies which Technique Definitions or Extensions can be extended using this Extension.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"ExtendedTechnique\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"ExtendedExtension\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"ExtendedTechnique\" type=\"ExtendedTechniqueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to a Technique Definition which can be extended using this Extension.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExtendedTechniqueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to a Technique Definition which can be extended using this Extension.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Name of Extension to be used. Must match Name given in Extension Definition file.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"uri\" type=\"xsd:anyURI\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>URI where Technique Definition file can be fetched.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"sha256\" type=\"xsd:token\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>SHA256 checksum of the referenced Technique Definition. Hex encoded, lower cased. Similar to the output of the sha256 unix command.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"ExtendedExtension\" type=\"ExtendedExtensionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to an Extension which can be extended using this Extension.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExtendedExtensionType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Reference to an Extension which can be extended using this Extension.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Name of Extension to be used. Must match Name given in Extension Definition file.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"uri\" type=\"xsd:anyURI\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>URI where Extension file can be fetched.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"sha256\" type=\"xsd:token\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>SHA256 checksum of the referenced Extension. Hex encoded, lower cased. Similar to the output of the sha256 unix command.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<!---->\n\t<!--Basic Layout of an Experiment Step-->\n\t<xsd:element name=\"SampleRoleBlueprint\" type=\"SampleRoleBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of characteristics and role that the referenced Sample plays in the ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SampleRoleBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of characteristics and role that the referenced Sample plays in the ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"CategoryBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>SampleRole name used in the SampleReference element's role attribute.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"samplePurpose\" type=\"PurposeType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Is the sample in this role produced or consumed by the Technique? (see SamplePurposeType).</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Is a sample in this role required?</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"maxOccurs\" type=\"MaxOccursType\" use=\"optional\" default=\"1\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Specifies how many samples with this role may exist. In an AnIML file, the Role name must then be suffixed with a number, starting with 1.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"inheritable\" type=\"xsd:boolean\" use=\"optional\" default=\"true\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Is the role required when this ExperimentStep is nested under a Result?  If true, the sample is inherited from the superordinate ExperimentStep.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"ExperimentDataRoleBlueprint\" type=\"ExperimentDataRoleBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of characteristics and role that the referenced ExperimentStep plays in the ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"ExperimentDataRoleBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of characteristics and role that the referenced ExperimentStep plays in the ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"ShortStringType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Role name used in the ExperimentData(Bulk)Reference element's role attribute.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"experimentStepPurpose\" type=\"PurposeType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Are ExperimentData(Bulk)References with this role required?</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"maxOccurs\" type=\"MaxOccursType\" use=\"optional\" default=\"1\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Specifies how many ExperimentData(Bulk)References with this role may exist.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"MethodBlueprint\" type=\"MethodBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Description of the experimental method used.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:unique name=\"methodCategoryName\">\n\t\t\t<xsd:selector xpath=\"CategoryBlueprint\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t</xsd:element>\n\t<xsd:complexType name=\"MethodBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Description of the experimental method used.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"CategoryBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"ResultBlueprint\" type=\"ResultBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of a Result generated by the ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:unique name=\"resultCategoryName\">\n\t\t\t<xsd:selector xpath=\"CategoryBlueprint\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t</xsd:element>\n\t<xsd:complexType name=\"ResultBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of a Result generated by the ExperimentStep.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"SeriesSetBlueprint\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"CategoryBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Required name of the Result.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Is the Result optional or required?</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"maxOccurs\" type=\"MaxOccursType\" use=\"optional\" default=\"1\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Maximum number of occurences of the Result. If set to > 1, the index attribute (1+) must be used in the AnIML document.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<!---->\n\t<!--Series Sets and Series Definitions-->\n\t<xsd:element name=\"SeriesSetBlueprint\" type=\"SeriesSetBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of SeriesSet that needs to be attached at this point.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:unique name=\"seriesName\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>SeriesBlueprint names must be unique per SeriesSetBlueprint.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t\t<xsd:selector xpath=\".//SeriesBlueprint\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t</xsd:element>\n\t<xsd:complexType name=\"SeriesSetBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of SeriesSet that needs to be attached at this point.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:choice maxOccurs=\"unbounded\">\n\t\t\t\t<xsd:element ref=\"SeriesBlueprint\"/>\n\t\t\t\t<xsd:element ref=\"SeriesBlueprintChoice\"/>\n\t\t\t</xsd:choice>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"SeriesBlueprintChoice\" type=\"SeriesBlueprintChoiceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of alternative Series which need to be attached to this SeriesSet.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SeriesBlueprintChoiceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of alternative Series which need to be attached to this SeriesSet.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"SeriesBlueprint\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"SeriesBlueprint\" type=\"SeriesBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of Series that needs to be attached to this SeriesSet.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:unique name=\"quantityNameUniquePerSeriesBlueprint\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>A Quantity must be unique per SeriesBlueprint.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t\t<xsd:selector xpath=\"Quantity\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t</xsd:element>\n\t<xsd:complexType name=\"SeriesBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of Series that needs to be attached to this SeriesSet.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Quantity\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"AllowedValue\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Name the Series shall have.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"seriesType\" type=\"SeriesTypeType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Data type this Series shall have.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Is the Series optional or required?</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t\t<xsd:attribute name=\"plotScale\" type=\"PlotScaleType\" use=\"optional\" default=\"linear\"/>\n\t\t<xsd:attribute name=\"dependency\" type=\"DependencyType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"maxOccurs\" type=\"MaxOccursType\" use=\"optional\" default=\"1\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Maximum number of occurences of the Series. If > 1, the index attribute must be used in the AnIML document.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"DependencyType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Does the Series represent an independent or dependent variable?</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:token\">\n\t\t\t<xsd:enumeration value=\"independent\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the Series represents an independent variable.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"dependent\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the Series represents a dependent variable..</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"PlotScaleType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Specifies how the data in this Series is typically plotted.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"linear\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the Series data is typically plotted on a linear scale.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"log\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the Series data is typically plotted on a common logarithmic scale (base 10).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"ln\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the Series data is typically plotted on a natural logarithmic scale (base e).</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"none\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the Series data is typically not plotted.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<!-- -->\n\t<!--Parameters and Categories-->\n\t<xsd:element name=\"CategoryBlueprint\" type=\"CategoryBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Collection of Parameters to be used on this hierarchy level.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:unique name=\"parameterBlueprintName\">\n\t\t\t<xsd:selector xpath=\"ParameterBlueprint\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t\t<xsd:unique name=\"subCategoryBlueprintName\">\n\t\t\t<xsd:selector xpath=\"CategoryBlueprint\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t</xsd:element>\n\t<xsd:complexType name=\"CategoryBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Collection of Parameters to be used on this hierarchy level.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"SeriesSetBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"ParameterBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"CategoryBlueprint\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\"/>\n\t\t<xsd:attribute name=\"maxOccurs\" type=\"MaxOccursType\" use=\"optional\" default=\"1\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"ParameterBlueprint\" type=\"ParameterBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Name-value pair to be stored in current Category.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:unique name=\"quantityNameUniquePerParameterBlueprint\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>A Quantity may not be listed multiple times per ParameterBlueprint.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t\t<xsd:selector xpath=\"Quantity\"/>\n\t\t\t<xsd:field xpath=\"@name\"/>\n\t\t</xsd:unique>\n\t</xsd:element>\n\t<xsd:complexType name=\"ParameterBlueprintType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Name-value pair to be stored in current Category.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:choice minOccurs=\"0\">\n\t\t\t\t<xsd:element ref=\"Quantity\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t\t<xsd:element ref=\"AllowedValue\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t</xsd:choice>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"ShortTokenType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"parameterType\" type=\"ParameterTypeType\" use=\"required\"/>\n\t\t<xsd:attribute name=\"modality\" type=\"ModalityType\" use=\"optional\" default=\"required\"/>\n\t\t<xsd:attribute name=\"maxOccurs\" type=\"MaxOccursType\" use=\"optional\" default=\"1\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Maximum number of occurences of the Series. If multiple occurrence is uses, an index (1+) must be appended to the Series' name in the AnIML document.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<!-- -->\n\t<!--Type definitions for sample attributes-->\n\t<xsd:simpleType name=\"PurposeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Data type which indicates whether a sample or ExperimentStep is consumed or produced in an experiment.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"produced\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Indicates that a sample is produced in an experiment.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"consumed\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Indicates that a sample is consumed in an experiment.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<!---->\n\t<!--Type definitions for Series attributes-->\n\t<!--Miscellaneous-->\n\t<xsd:simpleType name=\"SeriesTypeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Names of Data types usable for Series.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"AllTypeNameList\"/>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"ParameterTypeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Names of Data types usable for Parameters.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"AllTypeNameList\"/>\n\t</xsd:simpleType>\n\t<xsd:complexType name=\"ParameterValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Elements for allowed values in Parameters.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:choice>\n\t\t\t\t<xsd:element ref=\"I\"/>\n\t\t\t\t<xsd:element ref=\"L\"/>\n\t\t\t\t<xsd:element ref=\"F\"/>\n\t\t\t\t<xsd:element ref=\"D\"/>\n\t\t\t\t<xsd:element ref=\"S\"/>\n\t\t\t\t<xsd:element ref=\"Boolean\"/>\n\t\t\t\t<xsd:element ref=\"DateTime\"/>\n\t\t\t\t<xsd:element ref=\"PNG\"/>\n\t\t\t\t<xsd:element ref=\"EmbeddedXML\"/>\n\t\t\t\t<xsd:element ref=\"SVG\"/>\n\t\t\t</xsd:choice>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:complexType name=\"NumericValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Elements for allowed numeric values in Parameters.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:restriction base=\"ParameterValueType\">\n\t\t\t\t<xsd:sequence>\n\t\t\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t\t\t<xsd:choice>\n\t\t\t\t\t\t<xsd:element ref=\"I\"/>\n\t\t\t\t\t\t<xsd:element ref=\"L\"/>\n\t\t\t\t\t\t<xsd:element ref=\"F\"/>\n\t\t\t\t\t\t<xsd:element ref=\"D\"/>\n\t\t\t\t\t</xsd:choice>\n\t\t\t\t</xsd:sequence>\n\t\t\t</xsd:restriction>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"ModalityType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>String with two allowed values: \"required\" and \"optional\".</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"required\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the corresponding entity is required.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"optional\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Specifies that the corresponding entity is optional.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"UnboundedType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Represents the list value \"unbounded\".</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"unbounded\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"MaxOccursType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>A positive Integer or \"unbounded\" (see UnboundedType)</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:union memberTypes=\"PositiveIntType UnboundedType\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Documentation\" type=\"DocumentationType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Description of the enclosing element.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"DocumentationType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Description of the enclosing element.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:simpleContent>\n\t\t\t<xsd:extension base=\"xsd:string\">\n\t\t\t\t<xsd:attribute name=\"literatureReferenceID\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t\t\t<xsd:annotation>\n\t\t\t\t\t\t<xsd:documentation>Indicates which literature source is being cited for this definition. Refers to the LiteratureReference element. Should be a descriptive name, e.g. \"ASTM E 131\".</xsd:documentation>\n\t\t\t\t\t</xsd:annotation>\n\t\t\t\t</xsd:attribute>\n\t\t\t\t<xsd:attribute name=\"literatureAccession\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t\t\t<xsd:annotation>\n\t\t\t\t\t\t<xsd:documentation>Accession number, relative to the given literature reference.</xsd:documentation>\n\t\t\t\t\t</xsd:annotation>\n\t\t\t\t</xsd:attribute>\n\t\t\t</xsd:extension>\n\t\t</xsd:simpleContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"Bibliography\" type=\"BibliographyType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of literature references used in the documentation of this technique definition.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"BibliographyType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Set of literature references used in the documentation of this technique definition.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"LiteratureReference\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t</xsd:complexType>\n\t<xsd:element name=\"LiteratureReference\" type=\"LiteratureReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Literature reference cited from within the Documentation element.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"LiteratureReferenceType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Literature reference cited from within the Documentation element.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:simpleContent>\n\t\t\t<xsd:extension base=\"xsd:string\">\n\t\t\t\t<xsd:attribute name=\"literatureReferenceID\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t\t\t<xsd:annotation>\n\t\t\t\t\t\t<xsd:documentation>Indicates which literature source is being cited for this definition. Refers to the Citation element.</xsd:documentation>\n\t\t\t\t\t</xsd:annotation>\n\t\t\t\t</xsd:attribute>\n\t\t\t\t<xsd:attribute name=\"uri\" type=\"xsd:anyURI\" use=\"optional\">\n\t\t\t\t\t<xsd:annotation>\n\t\t\t\t\t\t<xsd:documentation>URI location of the cited resource</xsd:documentation>\n\t\t\t\t\t</xsd:annotation>\n\t\t\t\t</xsd:attribute>\n\t\t\t</xsd:extension>\n\t\t</xsd:simpleContent>\n\t</xsd:complexType>\n\t<!-- -->\n\t<!--Type definitions for basic data types-->\n\t<!---->\n\t<!--Quantities and Units-->\n\t<xsd:element name=\"Quantity\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of an allowable Quantity and its associated Units.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexType>\n\t\t\t<xsd:complexContent>\n\t\t\t\t<xsd:extension base=\"QuantityType\"/>\n\t\t\t</xsd:complexContent>\n\t\t</xsd:complexType>\n\t\t<xsd:unique name=\"unitLabelUniquePerQuantity\">\n\t\t\t<xsd:selector xpath=\"Unit\"/>\n\t\t\t<xsd:field xpath=\"@label\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>A Quantity may not have multiple Units with the same label.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:field>\n\t\t</xsd:unique>\n\t\t<xsd:keyref name=\"allowedRangeUnitLabelKeyRef\" refer=\"unitLabelUniquePerQuantity\">\n\t\t\t<xsd:selector xpath=\"AllowedRange\"/>\n\t\t\t<xsd:field xpath=\"@unit\"/>\n\t\t</xsd:keyref>\n\t</xsd:element>\n\t<xsd:complexType name=\"QuantityType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of an allowable Quantity and its associated Units.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Unit\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t\t<xsd:element ref=\"AllowedRange\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"name\" type=\"QuantityNameType\" use=\"required\"/>\n\t</xsd:complexType>\n\t<xsd:element name=\"Unit\" type=\"UnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of a supported Scientific Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"UnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Definition of a supported Scientific Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"SIUnit\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"label\" type=\"LabelType\" use=\"required\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Defines the visual representation of a particular Unit.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"LabelType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>String representation of a particular Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:minLength value=\"1\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"QuantityNameType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Human-readable name of a Quantity.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:minLength value=\"1\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"SIUnit\" type=\"SIUnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Combination of SI Units used to represent Scientific Unit.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"SIUnitType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Combination of SI Units used to represent Scientific unit</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:simpleContent>\n\t\t\t<xsd:extension base=\"SIUnitNameList\">\n\t\t\t\t<xsd:attribute name=\"factor\" type=\"xsd:double\" use=\"optional\" default=\"1\"/>\n\t\t\t\t<xsd:attribute name=\"exponent\" type=\"xsd:double\" use=\"optional\" default=\"1\"/>\n\t\t\t\t<xsd:attribute name=\"offset\" type=\"xsd:double\" use=\"optional\" default=\"0\"/>\n\t\t\t</xsd:extension>\n\t\t</xsd:simpleContent>\n\t</xsd:complexType>\n\t<xsd:simpleType name=\"SIUnitNameList\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Names of all SI Units</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"ShortTokenType\">\n\t\t\t<xsd:enumeration value=\"1\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents a dimensionless unit.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"m\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"meter\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"kg\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"kilogram\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"s\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"second\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"A\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"ampere\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"K\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"kelvin\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"mol\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"mol\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"cd\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Represents the SI unit \"candela\".</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<!---->\n\t<!--Lists of permitted values and ranges-->\n\t<xsd:element name=\"AllowedValue\" type=\"AllowedValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Permitted Values for Parameter. If not specified, the full range of the data type is allowed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"AllowedValueType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Permitted Values for Parameter. If not specified, the full range of the data type is allowed.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"ParameterValueType\"/>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"AllowedRange\" type=\"AllowedRangeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Allowed value range for a Parameter or Series.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"AllowedRangeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Allowed value range for a Parameter or Series.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:sequence>\n\t\t\t<xsd:element ref=\"Documentation\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Min\" minOccurs=\"0\"/>\n\t\t\t<xsd:element ref=\"Max\" minOccurs=\"0\"/>\n\t\t</xsd:sequence>\n\t\t<xsd:attribute name=\"unit\" type=\"ShortTokenType\" use=\"optional\">\n\t\t\t<xsd:annotation>\n\t\t\t\t<xsd:documentation>Label of Unit that applies to this allowed range of values.</xsd:documentation>\n\t\t\t</xsd:annotation>\n\t\t</xsd:attribute>\n\t</xsd:complexType>\n\t<xsd:element name=\"Min\" type=\"MinType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Lower range boundary; may be marked as inclusive or exclusive.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"MinType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Lower range boundary; may be marked as inclusive or exclusive.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"NumericValueType\">\n\t\t\t\t<xsd:attribute name=\"included\" type=\"xsd:boolean\" use=\"optional\" default=\"true\">\n\t\t\t\t\t<xsd:annotation>\n\t\t\t\t\t\t<xsd:documentation>Specifies whether the given value is part of the interval.</xsd:documentation>\n\t\t\t\t\t</xsd:annotation>\n\t\t\t\t</xsd:attribute>\n\t\t\t</xsd:extension>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<xsd:element name=\"Max\" type=\"MaxType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Upper range boundary; may be marked as inclusive or exclusive.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:complexType name=\"MaxType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Upper range boundary; may be marked as inclusive or exclusive.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:complexContent>\n\t\t\t<xsd:extension base=\"NumericValueType\">\n\t\t\t\t<xsd:attribute name=\"included\" type=\"xsd:boolean\" use=\"optional\" default=\"true\">\n\t\t\t\t\t<xsd:annotation>\n\t\t\t\t\t\t<xsd:documentation>Specifies whether the given value is part of the interval.</xsd:documentation>\n\t\t\t\t\t</xsd:annotation>\n\t\t\t\t</xsd:attribute>\n\t\t\t</xsd:extension>\n\t\t</xsd:complexContent>\n\t</xsd:complexType>\n\t<!---->\n\t<!--Atomic data types-->\n\t<xsd:simpleType name=\"AllTypeNameList\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Enumeration of data types used in AnIML.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:token\">\n\t\t\t<xsd:enumeration value=\"Int\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single 32-bit or 64-bit signed integer value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"Float\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single 32-bit or 64-bit floating point value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"Numeric\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single 32-bit or 64-bit integer or floating point value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"String\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single string value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"Boolean\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single Boolean value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"DateTime\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single ISO date and time Value.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"EmbeddedXML\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single XML value governed by a non-AnIML XML schema.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"PNG\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Single Base64 binary encoded PNG image.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t\t<xsd:enumeration value=\"SVG\">\n\t\t\t\t<xsd:annotation>\n\t\t\t\t\t<xsd:documentation>Value governed by the SVG DTD. Used to represent vector graphic images.</xsd:documentation>\n\t\t\t\t</xsd:annotation>\n\t\t\t</xsd:enumeration>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"I\" type=\"Int32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 32-bit signed integer value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Int32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 32-bit signed integer value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:int\"/>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"PositiveIntType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 32-bit positive integer value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:int\">\n\t\t\t<xsd:minInclusive value=\"1\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:element name=\"L\" type=\"Int64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 64-bit signed integer value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Int64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 64-bit signed integer value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:long\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"F\" type=\"Float32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 32-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Float32Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 32-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:float\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"D\" type=\"Float64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 64-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"Float64Type\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single 64-bit floating point value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:double\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"S\" type=\"StringType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single string value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"StringType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single string value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"Boolean\" type=\"BooleanType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single Boolean value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"BooleanType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single Boolean value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:boolean\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"DateTime\" type=\"DateTimeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single ISO date and time value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"DateTimeType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Single ISO date and time value.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:dateTime\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"PNG\" type=\"PNGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Base64 binary encoded PNG image.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"PNGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Base64 binary encoded PNG image.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:base64Binary\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"EmbeddedXML\" type=\"EmbeddedXMLType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by a non-AnIML XML Schema.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"EmbeddedXMLType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by a non-AnIML XML Schema.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\"/>\n\t</xsd:simpleType>\n\t<xsd:element name=\"SVG\" type=\"SVGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by the SVG DTD. Used to represent vector graphic images.</xsd:documentation>\n\t\t</xsd:annotation>\n\t</xsd:element>\n\t<xsd:simpleType name=\"SVGType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Value governed by the SVG DTD. Used to represent vector graphic images.</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\"/>\n\t</xsd:simpleType>\n\t<!---->\n\t<!--General purpose data types-->\n\t<xsd:simpleType name=\"ShortStringType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>String with up to 1024 characters</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:string\">\n\t\t\t<xsd:maxLength value=\"1024\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n\t<xsd:simpleType name=\"ShortTokenType\">\n\t\t<xsd:annotation>\n\t\t\t<xsd:documentation>Token with up to 1024 characters</xsd:documentation>\n\t\t</xsd:annotation>\n\t\t<xsd:restriction base=\"xsd:token\">\n\t\t\t<xsd:maxLength value=\"1024\"/>\n\t\t</xsd:restriction>\n\t</xsd:simpleType>\n</xsd:schema>\n"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the version of the AnIML document?"
+  },
+  {
+    "role": "assistant",
+    "content": "List all samples defined in the document."
+  },
+  {
+    "role": "assistant",
+    "content": "What is the unique ID of a given sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the barcode associated with a sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a sample a derived sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the container type for a sample, such as '96 wells' or 'vial'?"
+  },
+  {
+    "role": "assistant",
+    "content": "In which container is a specific sample located?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the coordinates of a sample within its container?"
+  },
+  {
+    "role": "assistant",
+    "content": "What tags are associated with a sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "Find all experiment steps in a document."
+  },
+  {
+    "role": "assistant",
+    "content": "What is the unique ID for a given experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Did an experiment step use a template, and if so, which one?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the URI for the technique definition used in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Were any extensions applied to the technique in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the timestamp of an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which samples were used in a specific experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What role did a sample play in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Was a sample consumed or produced in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which other experiment steps provided data consumed by the current step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the role of the data consumed from a referenced experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What method was used to perform an experiment?"
+  },
+  {
+    "role": "assistant",
+    "content": "Who is the author of a method?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the user type of an author?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the name and affiliation of an author?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the contact information (email, phone) for an author?"
+  },
+  {
+    "role": "assistant",
+    "content": "What device was used to perform an experiment?"
+  },
+  {
+    "role": "assistant",
+    "content": "Who is the manufacturer of a device?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the serial number of a device?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the firmware version of a device?"
+  },
+  {
+    "role": "assistant",
+    "content": "What software was used in an experiment?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the version of the software used?"
+  },
+  {
+    "role": "assistant",
+    "content": "On what operating system was the software running?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the results of a specific experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Does a result contain a set of data series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Are there nested experiment steps within a result?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the name of a data series set?"
+  },
+  {
+    "role": "assistant",
+    "content": "How many data points are in a series set?"
+  },
+  {
+    "role": "assistant",
+    "content": "List all data series within a series set."
+  },
+  {
+    "role": "assistant",
+    "content": "What is the unique ID of a data series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a data series dependent or independent?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the data type of the values in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the recommended plot scale for a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the scientific units for the data in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the label for a scientific unit (e.g., 'nm')?"
+  },
+  {
+    "role": "assistant",
+    "content": "What physical quantity does a unit represent?"
+  },
+  {
+    "role": "assistant",
+    "content": "How is a unit defined in terms of SI units?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the value of a specific parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the data type of a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the units associated with a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "How are the values in a series stored (individually, encoded, or auto-incremented)?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the start value for an auto-incremented value set?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the increment value for an auto-incremented value set?"
+  },
+  {
+    "role": "assistant",
+    "content": "List all entries in the document's audit trail."
+  },
+  {
+    "role": "assistant",
+    "content": "Who made a specific change recorded in the audit trail?"
+  },
+  {
+    "role": "assistant",
+    "content": "When was a change in the audit trail made?"
+  },
+  {
+    "role": "assistant",
+    "content": "What type of action is recorded in an audit trail entry?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the stated reason for a change?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the old value of an item before a modification?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the new value of an item after a modification?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which specific item in the document does an audit trail entry refer to?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is the document or any part of it digitally signed?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which parts of the document are covered by a given digital signature?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the name of the technique defined in a technique definition file?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a technique definition abstract?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a file a technique definition or a technique extension?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the textual documentation for a technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which literature sources are referenced in a technique definition?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the full citation for a literature reference?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the URI for a cited literature reference?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which techniques can be extended by a given technique extension?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the valid roles a sample can have for a technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "For a specific sample role, is the sample expected to be produced or consumed?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a sample in a specific role required or optional?"
+  },
+  {
+    "role": "assistant",
+    "content": "How many samples with a given role are permitted?"
+  },
+  {
+    "role": "assistant",
+    "content": "Can a sample role be inherited from a parent experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the defined roles for experiment data consumed by this technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "Are the results of a technique required or optional?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the maximum number of times a specific result can occur?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required name for a result according to its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What series sets are expected within a result according to its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required name for a series set?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which series are expected within a given series set blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required name for a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required data type for a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a series defined as independent or dependent in its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What physical quantities are defined for a parameter or series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What units are allowed for a specific physical quantity?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the allowed range of values for a quantity?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the minimum allowed value for a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is the minimum boundary of an allowed range inclusive?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the maximum allowed value for a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is the maximum boundary of an allowed range inclusive?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the specific enumerated values allowed for a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "What parameters are defined for the method of a technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a specific parameter required or optional according to its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the maximum number of times a parameter can occur?"
+  },
+  {
+    "role": "assistant",
+    "content": "Does an experiment step reference parent data points?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the start index for a set of values in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the end index for a set of values in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Retrieve a sample by its unique sample ID."
+  },
+  {
+    "role": "assistant",
+    "content": "What is the version of the AnIML document?"
+  },
+  {
+    "role": "assistant",
+    "content": "List all samples defined in the document."
+  },
+  {
+    "role": "assistant",
+    "content": "What is the unique ID of a given sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the barcode associated with a sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a sample a derived sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the container type for a sample, such as '96 wells' or 'vial'?"
+  },
+  {
+    "role": "assistant",
+    "content": "In which container is a specific sample located?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the coordinates of a sample within its container?"
+  },
+  {
+    "role": "assistant",
+    "content": "What tags are associated with a sample?"
+  },
+  {
+    "role": "assistant",
+    "content": "Find all experiment steps in a document."
+  },
+  {
+    "role": "assistant",
+    "content": "What is the unique ID for a given experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Did an experiment step use a template, and if so, which one?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the URI for the technique definition used in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Were any extensions applied to the technique in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the timestamp of an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which samples were used in a specific experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What role did a sample play in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Was a sample consumed or produced in an experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which other experiment steps provided data consumed by the current step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the role of the data consumed from a referenced experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What method was used to perform an experiment?"
+  },
+  {
+    "role": "assistant",
+    "content": "Who is the author of a method?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the user type of an author?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the name and affiliation of an author?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the contact information (email, phone) for an author?"
+  },
+  {
+    "role": "assistant",
+    "content": "What device was used to perform an experiment?"
+  },
+  {
+    "role": "assistant",
+    "content": "Who is the manufacturer of a device?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the serial number of a device?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the firmware version of a device?"
+  },
+  {
+    "role": "assistant",
+    "content": "What software was used in an experiment?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the version of the software used?"
+  },
+  {
+    "role": "assistant",
+    "content": "On what operating system was the software running?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the results of a specific experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "Does a result contain a set of data series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Are there nested experiment steps within a result?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the name of a data series set?"
+  },
+  {
+    "role": "assistant",
+    "content": "How many data points are in a series set?"
+  },
+  {
+    "role": "assistant",
+    "content": "List all data series within a series set."
+  },
+  {
+    "role": "assistant",
+    "content": "What is the unique ID of a data series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a data series dependent or independent?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the data type of the values in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the recommended plot scale for a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the scientific units for the data in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the label for a scientific unit (e.g., 'nm')?"
+  },
+  {
+    "role": "assistant",
+    "content": "What physical quantity does a unit represent?"
+  },
+  {
+    "role": "assistant",
+    "content": "How is a unit defined in terms of SI units?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the value of a specific parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the data type of a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the units associated with a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "How are the values in a series stored (individually, encoded, or auto-incremented)?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the start value for an auto-incremented value set?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the increment value for an auto-incremented value set?"
+  },
+  {
+    "role": "assistant",
+    "content": "List all entries in the document's audit trail."
+  },
+  {
+    "role": "assistant",
+    "content": "Who made a specific change recorded in the audit trail?"
+  },
+  {
+    "role": "assistant",
+    "content": "When was a change in the audit trail made?"
+  },
+  {
+    "role": "assistant",
+    "content": "What type of action is recorded in an audit trail entry?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the stated reason for a change?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the old value of an item before a modification?"
+  },
+  {
+    "role": "assistant",
+    "content": "What was the new value of an item after a modification?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which specific item in the document does an audit trail entry refer to?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is the document or any part of it digitally signed?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which parts of the document are covered by a given digital signature?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the name of the technique defined in a technique definition file?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a technique definition abstract?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a file a technique definition or a technique extension?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the textual documentation for a technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which literature sources are referenced in a technique definition?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the full citation for a literature reference?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the URI for a cited literature reference?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which techniques can be extended by a given technique extension?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the valid roles a sample can have for a technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "For a specific sample role, is the sample expected to be produced or consumed?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a sample in a specific role required or optional?"
+  },
+  {
+    "role": "assistant",
+    "content": "How many samples with a given role are permitted?"
+  },
+  {
+    "role": "assistant",
+    "content": "Can a sample role be inherited from a parent experiment step?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the defined roles for experiment data consumed by this technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "Are the results of a technique required or optional?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the maximum number of times a specific result can occur?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required name for a result according to its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What series sets are expected within a result according to its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required name for a series set?"
+  },
+  {
+    "role": "assistant",
+    "content": "Which series are expected within a given series set blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required name for a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the required data type for a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a series defined as independent or dependent in its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What physical quantities are defined for a parameter or series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What units are allowed for a specific physical quantity?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the allowed range of values for a quantity?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the minimum allowed value for a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is the minimum boundary of an allowed range inclusive?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the maximum allowed value for a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is the maximum boundary of an allowed range inclusive?"
+  },
+  {
+    "role": "assistant",
+    "content": "What are the specific enumerated values allowed for a parameter?"
+  },
+  {
+    "role": "assistant",
+    "content": "What parameters are defined for the method of a technique?"
+  },
+  {
+    "role": "assistant",
+    "content": "Is a specific parameter required or optional according to its blueprint?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the maximum number of times a parameter can occur?"
+  },
+  {
+    "role": "assistant",
+    "content": "Does an experiment step reference parent data points?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the start index for a set of values in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "What is the end index for a set of values in a series?"
+  },
+  {
+    "role": "assistant",
+    "content": "Retrieve a sample by its unique sample ID."
+  },
+  {
+    "role": "user",
+    "content": "\nThe CQs you generated in iteration 1 were passed to N=1 domain experts for evaluation. \nThe score of a CQ is based on a simple majority vote, with any CQ that has a score of less than 0 needing reformulation. \nFor example, if a CQ has a score of -3 and has been voted by 3 experts (out of N=4), then all the active participants downvoted that CQ.\n\n\nYou can assume that all the CQs from the previous iteration that are not included below successfully passed the validation stage \n(they were accepted by majority). \nConsider these as good CQs.\n\n\nYou will now receive the set of rejected CQs with their votes, (negative) score, and any commented feedback, when available. \nYour task is to reformulate these CQs by using the feedback from the validators and the schema definitions you were originally given. \nDo not mark a reformulated competency question as \"Reformulated\" or \"Reformulated CQ\", only provide the reformulated competency question. \nOnly reformulate the rejected competency questions, do not extract new competency questions.\n[\n  {\n    \"title\": \"Retrieve a sample by its unique sample ID.\",\n    \"id\": 199,\n    \"hash\": \"6a19a757267ce531835143d305cf7b2b41ebe8bf6de0c02f82d5522da24790a9\",\n    \"person\": \"Elliott \",\n    \"creation date\": \"05/10/2025\",\n    \"score\": -1,\n    \"votes\": 1,\n    \"comment\": \"<comment>No comment given. Check this CQ with the schema and generalise to the requirement.</comment>\",\n    \"from iteration\": 1,\n    \"date_pulled\": \"05/10/25\"\n  },\n  {\n    \"title\": \"What is the end index for a set of values in a series?\",\n    \"id\": 198,\n    \"hash\": \"645e95dd2922ad5c1b20867ee02040a3a2399731755ff44ca7063ca711ffa869\",\n    \"person\": \"Elliott \",\n    \"creation date\": \"05/10/2025\",\n    \"score\": -1,\n    \"votes\": 1,\n    \"comment\": \"<comment>No comment given. Check this CQ with the schema and generalise to the requirement.</comment>\",\n    \"from iteration\": 1,\n    \"date_pulled\": \"05/10/25\"\n  }\n]"
+  },
+  {
+    "role": "assistant",
+    "content": "How is a specific sample uniquely identified?"
+  },
+  {
+    "role": "assistant",
+    "content": "How is the upper boundary of a value set within a series defined?"
+  }
+]

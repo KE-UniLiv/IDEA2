@@ -10,6 +10,7 @@ import json
 from utils import get_key
 from notion_client import Client
 from tqdm import tqdm
+from reformulate_cq import NOTION_DATABASE_ID
 
 notiontoken = get_key("notionkey")
 llmdb = get_key("notionllmdb")
@@ -17,25 +18,47 @@ notiondb = get_key("notiondb")
 
 notion = Client(auth=notiontoken)
 
-# BIG TODO: GET THE UUID OR ID OR WHATEVER IT IS FROM THE TEST CQ AND SEE IF LINKING IS FEASIBLE
 
-def test_relation(client, database_id):
+def get_current_iteration_from_dashboard() -> int:
+    """
+    
+    Get the current iteration number from the Notion database (more robust than from the file generation number).
 
-    results = notion.databases.query(
-        **{
-            "database_id": notiondb,
-            "filter": { 
-                "property": "ID", 
-                "number": {
-                    "equals": 1618
-                }
+    Returns:
+        int: The current iteration number.
+    
+    """
+    all_results = []
+
+    iteration_numbers = set()
+    has_more = True
+    next_cursor = None
+
+    while has_more:
+        response = notion.databases.query(
+            **{
+                "database_id": NOTION_DATABASE_ID,
+                "filter": {
+                    "property": "Iteration",
+                    "number": {
+                        "is_not_empty": True
+                    }
+                },
+                "start_cursor": next_cursor
             }
-        }
-    )
+        )
+        all_results.extend(response["results"])
+        has_more = response.get("has_more", False)
+        next_cursor = response.get("next_cursor")
+    
+    for page in all_results:
+        if 'Iteration' in page['properties'] and page['properties']['Iteration']['number'] is not None:
+            iteration_number = page['properties']['Iteration']['number']
+            iteration_numbers.add(iteration_number)
 
-    for page in results["results"]:
-        reformulates = page["properties"].get("Reformulates")
-        print(reformulates)
+    iteration_number = max(iteration_numbers) if iteration_numbers else 1
+    print(f"Current iteration number is: {iteration_number}")
+    return iteration_number
     
  
 def write_row(client, database_id, string, cq, iteration, generation_config) -> None:
@@ -105,6 +128,25 @@ def llm_setup_to_notion(generation, modelname, temperature, usage, prompt, llmro
         }
     )
     return page["id"]
+
+def archive_all_pages(database_id):
+    has_more = True
+    next_cursor = None
+    while has_more:
+        response = notion.databases.query(
+            **{
+                "database_id": database_id,
+                "page_size": 100,
+                "start_cursor": next_cursor
+            }
+        )
+        for page in tqdm(response["results"], desc="Archiving pages"):
+            page_id = page["id"]
+            notion.pages.update(page_id=page_id, archived=True)
+        has_more = response.get("has_more", False)
+        next_cursor = response.get("next_cursor", None)
+    
+    print("All pages have been archived.")
 
 def link_reformulations():
     pass
