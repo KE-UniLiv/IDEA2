@@ -80,8 +80,12 @@ def getSchemas():
 
 
     animl_core_schema, animl_technique_schema = "", ""
-    with open(animl_core_schema_path, "r") as f1, open(animl_technique_schema_path, "r") as f2:
-        animl_core_schema, animl_technique_schema = f1.read(), f2.read()
+    try:
+        with open(animl_core_schema_path, "r") as f1, open(animl_technique_schema_path, "r") as f2:
+            animl_core_schema, animl_technique_schema = f1.read(), f2.read()
+    except FileNotFoundError as e:
+        logging.error(f"Error reading schema files: {e}\n\nPlease ensure you are running from:\n\npython IDEA2/idea2 runner.py [args]")
+        return None, None
 
     logging.info("Schema loaded successfully!")
 
@@ -249,3 +253,49 @@ def hash_from_string(s: str) -> str:
     
     """
     return hashlib.sha256(s.encode()).hexdigest()
+
+def store_hash_text_combinations(s, filepath="assets/cqs/hash_text_tuples.json"):
+    """
+    Store a hash and text tuple in a JSON file.
+    Args:
+        s (str): The input string to hash and store.
+        filepath (str): The path to the JSON file where the tuple will be stored.
+    """
+    hash_value = hash_from_string(s)
+
+    # Load existing data
+    if os.path.exists(filepath):
+        with open(filepath, 'r', encoding='utf-8') as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                data = {}
+    else:
+        data = {}
+
+    # Update with new hash-text tuple
+    data[hash_value] = s
+
+    # Save back to file
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+def lookup_text_by_hash(hash_value, filepath="assets/cqs/hash_text_tuples.json"):
+    """
+    Lookup text by its hash from a JSON file.
+    Args:
+        hash_value (str): The hash value to look up.
+        filepath (str): The path to the JSON file where the tuples are stored.
+    """
+
+    if not os.path.exists(filepath):
+        print(f"File {filepath} does not exist.")
+        return None
+    with open(filepath, 'r', encoding='utf-8') as f:
+        try:
+            data = json.load(f)
+        except json.JSONDecodeError:
+            print(f"File {filepath} is not a valid JSON.")
+            return None
+
+    return data.get(hash_value)
