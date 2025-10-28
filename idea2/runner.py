@@ -67,6 +67,7 @@ def main():
     parser.add_argument('--generation', type=str, default=None, help='Generation label (auto if not set manually)')
     parser.add_argument('--update_key', type=str, default=None, help='Update the API key in api_config.yml (input: <service>,<new key value>)')
 
+    parser.add_argument('--reformulate_from_first_set', action='store_true', help='Reformulate CQs when you already have some data stored. Start from iteration 2 without prior context.')
     parser.add_argument('--save', action='store_true', help='Save CQs to file (jsonld format)')
     parser.add_argument('--notion', action='store_true', help='Upload CQs to Notion')
     parser.add_argument('--reformulate', action='store_true', help='Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected CQs first, then run with --reformulate to reformulate them)')
@@ -82,6 +83,10 @@ def main():
         show_services()
         show_services()
         sys.exit(0)
+
+    if args.reformulate_from_first_set and args.reformulate:
+        print("Error: --reformulate_from_first_set and --reformulate cannot be used together.")
+        sys.exit(1)
 
     if len(sys.argv) == 1:
         print("No arguments provided. Use --help or --usage_help for usage information.")
@@ -124,13 +129,21 @@ def main():
     history = load_history_from_file(modelname)
     schema_in_history = any(combined in h["content"] for h in history)
 
-    update_config(
-        gemini_model=args.model if args.model else config["gemini_model"],
-        temperature=args.temperature if args.temperature else config["temperature"],
-        role=args.role if args.role else config["role"],
-        out_instruction=args.instruction if args.instruction else config["out_instruction"],
-        out_examples=args.example if args.example else config["out_examples"],
-    )
+    if not args.reformulate_from_first_set:
+        update_config(
+            gemini_model=args.model if args.model else config["gemini_model"],
+            temperature=args.temperature if args.temperature else config["temperature"],
+            role=args.role if args.role else config["role"],
+            out_instruction=args.instruction if args.instruction else config["out_instruction"],
+            out_examples=args.example if args.example else config["out_examples"],
+        )
+    else:
+        update_config(
+            gemini_model=args.model if args.model else config["gemini_model"],
+            temperature=args.temperature if args.temperature else config["temperature"],
+            role=args.role if args.role else config["role"],
+            out_instruction="CQ_INSTRUCTION_REFORMULATE_INJECTION_USER_STORY",
+            out_examples="")
 
     generation, currgeneration = get_generation_number()
     currgeneration += 1
@@ -143,7 +156,7 @@ def main():
     )
 
     if not args.reformulate and not args.find_rejected:
-        prompt, combined_schemas = configure_prompt(
+        prompt, combined_schemas, source = configure_prompt(
             role=config["role"],
             out_definition=config["out_definition"],
             out_examples=config["out_examples"],
@@ -187,7 +200,7 @@ def main():
         accepted_cqs = pull_accepted()
         rejectcqs = pull_rejected()
 
-        prompt = configure_prompt(
+        prompt, _, source = configure_prompt(
             role=config["role"],
             out_definition=config["out_definition"],
             out_examples=config["out_examples"],
@@ -252,6 +265,8 @@ def main():
                         f.write(q + "\n")
         print(f"Saved {len(cleaned_cqs)} CQs to {jsonld_path} and {os.path.join(outdir, f'{generation}.txt')}")
 
+    # -- Dynamically get the source for the CQ
+    source_document = get_source_from_arr(source)
     if args.notion:
         jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"{generation}.jsonld") if not args.reformulate else os.path.join(os.getcwd(), "assets", "cqs", f"{generation}_reformulated.jsonld")
         competency_questions = get_cqs_from_file(jsonld_path)
@@ -279,7 +294,8 @@ def main():
                         "CQ",
                         cq,
                         iteration=currgeneration,
-                        generation_config=generation_config_UUID
+                        generation_config=generation_config_UUID,
+                        src_documents=source_document
                     )
                     time.sleep(0.2)
                     break

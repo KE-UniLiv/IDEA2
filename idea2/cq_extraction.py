@@ -73,15 +73,14 @@ def configure_prompt(role: str = config["role"],
 
     ## -- Get both the AnIML core schema and the AnIML technique schema 
     # --  and hence the combined schemas 
-    animl_core_schema, animl_technique_schema = utils.getSchemas()
-    combined_schemas = animl_core_schema + "\n" + animl_technique_schema
+    combined_source_document_for_extraction, _, file_names = utils.getSchemas()
 
     prompt = prompt_builder.get_prompt(
-        raw_data=combined_schemas if not ignore_schemas else "",
+        raw_data=combined_source_document_for_extraction if not ignore_schemas else "",
         include_role=False,
     )
 
-    return prompt, combined_schemas
+    return prompt, combined_source_document_for_extraction, file_names
 
 
 def run_cq_extraction(model: object, prompt) -> list:

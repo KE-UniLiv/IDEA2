@@ -11,6 +11,7 @@ import os
 import json
 import datetime
 import prompts as p
+import pandas as pd
 import sys
 
 from notion_client import Client
@@ -316,6 +317,39 @@ def get_cqs_from_file_as_strings(filepath) -> list:
         cqs.append(f"{title} was rejected with {comment}, {votes} votes and {score} score")
 
     return cqs
+
+def cqs_from_csv(filepath: str, ignore_set: int = 3) -> list:
+    """
+    Reads competency questions from a CSV file and returns them as a list.
+
+    Args:
+        filepath (str): The path to the CSV file containing competency questions.
+    
+    Returns:
+        list: JSON list of competency questions with votes, score and comments.
+
+    """
+
+    df = pd.read_csv(filepath)
+    cqs = []
+    for _, row in df.iterrows():
+        ## -- Skip pattern CQs
+        if row["set"] == ignore_set:
+            continue
+        cq_entry = {
+            "title": row["cq"].lower(),
+            "id": row["ID"] if "ID" in row else "",
+            "comment": row["comment"] if "comment" in row else "No comment provided, check this CQ with the schema and generalise to the requirements.",
+            "score": row["score"] if "score" in row else 0,
+            "votes": row["votes"] if "votes" in row else 0,
+            "from iteration": row["iteration"] if "iteration" in row else 1,
+        }
+        cqs.append(cq_entry)
+    return cqs
+
+
+
+
 
 def reformulate_cqs(model: object, prompt: str, cqs: list) -> list:
     """

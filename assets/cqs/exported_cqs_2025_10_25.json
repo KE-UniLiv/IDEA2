@@ -1,0 +1,858 @@
+[
+  {
+    "text": "What is the version of the AnIML document?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "80479532f5433f8c314d8eb2567498ea6b5221377f255cf9c97e72785e4c2c4b",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "List all samples defined in the document.",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "74575d611726ab87425b6997d34613a33e9d21272cf67e04ecf9dfb159862a3d",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the unique ID of a given sample?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "0c0f36019e88a957011a003b04cf92e4b29e0f952c1e08711832e3b5d043d8cc",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the barcode associated with a sample?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "2cebab1beaf429ac0b6057640dfd04b9bef7ac79fba2ef53408de45cadd43211",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is a sample a derived sample?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "88012efd9567bd2d985587736dea18e315f4dbd7e385f9276aafc8d900848a74",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the container type for a sample, such as '96 wells' or 'vial'?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "5593b60828b93039e3a586fa5aaecb0c097c1c25f149a215f0c5498c7058ea42",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "In which container is a specific sample located?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "c9ea046385e44f83d0c49e867606d43341c0645433ec14d9b1346184a794dfd7",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the coordinates of a sample within its container?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "298ff2845a03d5ccf199bcb47f173b5feeb88d746480a7e136a95809305a8b59",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What tags are associated with a sample?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "6ec3847cde8efea870c1097b22fb652a16b2fd94a271745f03014cb756acb9a2",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Find all experiment steps in a document.",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "663783a368e1b7ff307d4b34a7d74f38b2afdc8c1aa6cf0b8a04b3de41f7502c",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the unique ID for a given experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "ceaaaad080e92392f29cfac27f529f651caffa99ba57dae44ca2f60483da7e85",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Did an experiment step use a template, and if so, which one?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b89dd3be50cfaf9778521986aaa5dcd3cb99dfb62c711836b10d9715e611eca6",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the URI for the technique definition used in an experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "00eb96c6da8b02edc4aa24bdc7519cd07857857ec90388f20a938a3fc2afc31b",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Were any extensions applied to the technique in an experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "0eb7fe278ce40884e8b5d2c261f179c5dbb59fde5c09bd21bf01ae253a624d0e",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the timestamp of an experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d95c99163bbf6e53ef008e2146a74b5b44d81b26f5d03131003a0df3de15854e",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which samples were used in a specific experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "1092718d8405ed5a3364f0d3d306cc9a65a260630914fc218a45599a378a71d5",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What role did a sample play in an experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "271f384d6d83b8805df74f70407372383af8d026ae2937d6c7c7522fe0f2fc7e",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Was a sample consumed or produced in an experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "f2f6bf02295aa16d8f2713b4b8d505ed2d1c3bc8a6046e8d49e4d787f381a7c8",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which other experiment steps provided data consumed by the current step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "be997287765ad287030adbf23e5114ab86e4450fba3f0e7904e75dd10efcd2cc",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What was the role of the data consumed from a referenced experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "4cbc1494a59d5f511e25bcfd8370fb4dbe6b11641175e1accd649c2f05cca3fe",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What method was used to perform an experiment?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "5840149e5e3b330edb1c5c13a216f0f252d9c268b5eb7e882d7e2082380eff00",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Who is the author of a method?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b3b9aae9871941e4f198dbbfded272078283ccfb5d1ebda07687400e957aeb60",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the user type of an author?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "5f7c4ea4bc0c995ee511bb93e6c216877fd9fed3dc03baf8eea1ff03b38eb140",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the name and affiliation of an author?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "11c63f0ad59f9d9e0aba92d5f4bb283b997e4c71d57a90d5226b042f0c47b235",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the contact information (email, phone) for an author?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "3e6c383292203e41b4ff0d99b2c29277a8058148444fa8af4cc4f7384885cd4e",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What device was used to perform an experiment?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "38bdafc4ed72a5558169472f560a1078922b2c5b3f7a10d6b8ae51de93b14445",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Who is the manufacturer of a device?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "6df845c840edcf50e4e4698bf943bda2343f3ac37da34472a57bd63899e196e0",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the serial number of a device?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "21c30595345a6fae8f336c39f5476e4928118ac1e4a8a6540a14377fcd4176b4",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the firmware version of a device?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "87296bdd4ea07588518179cea7ff9066308b6fffb99724b64e8e52fc68126fd5",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What software was used in an experiment?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "f649512979f661cd480d97a34d3f7b1527a89f91c80d6c73594efac55f037825",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the version of the software used?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "a58684ba85b249070e426ccd9a99a8946387f6ed7b6b6a1b19758e57f7b183f1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "On what operating system was the software running?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "82d4bd610101df64a099fa8a55b9f32f155723c1d0a1fea63a4dcb8e66cbec5e",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the results of a specific experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "5cd2f202f02402ece4520f71aab1decab0592ba2b932efa8d35d757424227c60",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Does a result contain a set of data series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "7e14061d313d72b40f0b47677e6b2d060ecd64da49b0488c31ac74e2adfac497",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Are there nested experiment steps within a result?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b3507e86ecf4c12b56ce8a0ee4c678aac7b2e3cf945312264095ddc15e474636",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the name of a data series set?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b8b6ae08a409aaf24ffa952c04e3310e6133ea3aa0e489d295d59a42045d19a1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "How many data points are in a series set?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "8a52f01f99d60011ac2df7c84d3ca9b2fbca5b9011d6dc807425eab49709b8c5",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "List all data series within a series set.",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "09ba01b5bd554a861a820d1330826ff541cecd9351ea20e1021da873b0af90d4",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the unique ID of a data series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "87d9cfdc9467bb8e2fabeb18d0e4bdabc581a0f64403f585906cb74844b0a6b3",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is a data series dependent or independent?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "6c0fc480851c137f3bcbb9243468bdb48f7e51beff329b9c702ad3eba7e66006",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the data type of the values in a series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "78d63bade138ba0aaad054fd350011c98e93e7357abcef463a6b08ecc7e5f5dc",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the recommended plot scale for a series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "2e901d68c4e2f038e988fead0a1015c61d31095761a788d6b1e05887e91e1dbf",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the scientific units for the data in a series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "03234fc20714fdc2618f4e1f50894b5d8f72d7ba0b343573a6d34824778d8977",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the label for a scientific unit (e.g., 'nm')?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "0ed8fbd7adf8012bdc1a7f972eb27464082e3fd4500e6df5a0f4cda0718a3365",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What physical quantity does a unit represent?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "47f293e380b29094dcb40b7c9147aef09d30d1222924c39a5dd108bbe7ef6aa3",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "How is a unit defined in terms of SI units?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "aea3d83da53b18cd7491d2908b52ad31e683fb3c4f8730b1c99d479a2a0f2524",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the value of a specific parameter?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "9eb8f110479da45960a079b2d16751c7d4598d06d5a043e43b604bb1efc38fb1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the data type of a parameter?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "f0af13f857c556af3e531e7e604ceb0207c11d5b8f56dfffb00039f32f08d381",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the units associated with a parameter?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "f88d643490a87ec054254fe4b456fdd404c60e537fa03787d736fed914714653",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "How are the values in a series stored (individually, encoded, or auto-incremented)?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "1576a819ec02eb56d442f926d3f1c5bf700dac35e5691806fe99edec45660173",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the start value for an auto-incremented value set?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "6b50d1b3978bc9f9f1b60895749096fdf59228a6ded6fbf4e0780ef2476b260f",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the increment value for an auto-incremented value set?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "1e1033305f9c4e2885a4620a42936459bde0e554df22bce827bfbbda0702c242",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "List all entries in the document's audit trail.",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "92e2504b7185122fcb32a8994e686146f208d6e9d7aae08a2ed1edeffa6781e6",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Who made a specific change recorded in the audit trail?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "9a39bdda4420eeb319ea816ca56c4eabe4ddd8e6728ea274b896d8d24896dab5",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "When was a change in the audit trail made?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "4f43b717bd26cd2ccef3adaf7bd01e05a4d1215acc2d7bf2fcf01dd612bb189d",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What type of action is recorded in an audit trail entry?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d7ce46df185c91f83025d0551ca2907606f267c562c978cdb775a65e58b870d8",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What was the stated reason for a change?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "fff8a55a696974952e8327333a9c6f54a1ec45a2cabee6c461d2fc18aac0f09d",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What was the old value of an item before a modification?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "c96f53373c203a31b8a7c78740b1efd8673f03e56db8c34124dcfe4d079e58fd",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What was the new value of an item after a modification?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d570735f10a399f083faea0ed2f5d3a91c8cafa01e31f9639c90a48482562bbe",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which specific item in the document does an audit trail entry refer to?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "cadab307bfafcccd30d675f5c2be849507ef0968ad6cfe75c88e09d32968b979",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is the document or any part of it digitally signed?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d15d6d33fc90d75b97938985c68b2a0ea9b20a4d2aa4155c02fb54ed02420063",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which parts of the document are covered by a given digital signature?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "c441c16c97ab7ab26cf7cde4827fdf32cb7ec3b6a308cbd871c2298251e70bb7",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the name of the technique defined in a technique definition file?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "254c107611d42aca0fe271bb1d2885b4183b9b59c2353b2b0877930cd3e06bf1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is a technique definition abstract?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "37ef4430b7d785de9b8cefd421bea0a4234f54b587c882e96b3aa8b914a40bdf",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is a file a technique definition or a technique extension?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "aac57c0d028f77b6ad3011834899861deb4fa171fbce79132a232e6e3d035331",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the textual documentation for a technique?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b9de827b71e77b6246385476cac19707a5257dabfae02257fa3e373a16575d8f",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which literature sources are referenced in a technique definition?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "0bb07ff4e6fddffe163d00a31a65bcb5a68c454eb0d90d0ac321c9736fd89c09",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the full citation for a literature reference?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "88b517305413f0027f09a314ac14f2eec6dd5e26085db59394b4aeaf4a84f77f",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the URI for a cited literature reference?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "ca3fc538671ad298a9046acc26d65faa9d8c3dd9a1f1fdb06838a3e17ecad3ae",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which techniques can be extended by a given technique extension?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "08a3fb3ea5877728bc45e271f2f6717a6d14bd936529aba05e2a40b534c10759",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the valid roles a sample can have for a technique?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "2efb17cb64367c472c6afe5fc94a968abf26cd1e1691961eb8b1ef8b24cc592d",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "For a specific sample role, is the sample expected to be produced or consumed?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d5c545f38ee78dc5193bc7906b13e6a27e58594cbf5c63dec4d031d45f32555e",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is a sample in a specific role required or optional?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "33de40c78049efc82b64363bd0db989ae45eae0443fb52833eb6dd8ee6e943fb",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "How many samples with a given role are permitted?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "aa5645ffba9d534736d96663bce21a50135951c04392edc6446df24c0fd4e4f7",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Can a sample role be inherited from a parent experiment step?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "90cb5606652439378df902b976de74178a2e3e21fb47693d57e81e34db923d0a",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the defined roles for experiment data consumed by this technique?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "f1582d415255a8f2876350d9d721d341dc04f044f164c5d3969197e4f68ccca2",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Are the results of a technique required or optional?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "6ed4cdbc0d0d6a02ec6af2c73fd8c1015d60656d6e4a695bf24d4ab43724999f",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the maximum number of times a specific result can occur?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "888dca9fc16156b5e85bb313b0cf774cd6f27c8c2f38a17ff784b5010babeaa6",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the required name for a result according to its blueprint?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "567a8dea2c057aa5ad8449cde1d6f4515e87da6d416dd77a397c77210f0ba89b",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What series sets are expected within a result according to its blueprint?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b11706eb274c3b3489944972e4e7207578f1eb4fb156a04b89859290dd063ed1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the required name for a series set?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d2383fd850b1234e109cd06e77ca3df0036796c2370247ce4829e48f6317d189",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which series are expected within a given series set blueprint?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "fb54d851cd78604bd8407745f5e71c844223f6f512647cc3b6d6ceea372ee497",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the required name for a series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b95db5ffd187102cbab8e2aee0998b50d5fc423c9ac109883b972cddc6295f41",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the required data type for a series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "85525246b686d03f9e7c66ef3b9af51ef33582a288262bc449bd12e2bff27ae1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is a series defined as independent or dependent in its blueprint?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "ba82c2576b3791579c7e036914a5afd3a7ad6317443cc32dfad3fbae86e3bd2f",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What physical quantities are defined for a parameter or series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "815cbe040f33f7913226f35cb4322a3e81857eb7fd3360a869c54ea788324cb2",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What units are allowed for a specific physical quantity?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "b517f321a7421026621ff4b35582229faf0e540576abe6afe0579b3ebf10fdfc",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the allowed range of values for a quantity?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "66f78cdff4c22906b6db0cb927cced4e05f6c5569e64fab337725b0a65a0f4a1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the minimum allowed value for a parameter?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "dc1e89147a1f277b9db2d49b894a9e544a876c574b0e349631929f019b7fbcc1",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is the minimum boundary of an allowed range inclusive?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "90fa953d8c2ac95146b749d96d91444e5336b48e62e8362b62deda58538b3f25",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the maximum allowed value for a parameter?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d26fc8d485e291efb06bd7f9a9651ab9f42cb4d1554a1d28ee68ceac62c41f7c",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is the maximum boundary of an allowed range inclusive?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "3071e200f4bd8b18330fdcac426639d1a1177ec4cd5e31be34188c681c7f33da",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the specific enumerated values allowed for a parameter?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "c8c95b64c488efa9e9ed5c4e840d9bf0f097be0d846d872cfd12770726ca5542",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What parameters are defined for the method of a technique?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "333dfd532f163b8335f8de1ee74f30e9a0a382ca874f6fa6e9c8c0b0abe88bfe",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Is a specific parameter required or optional according to its blueprint?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "478ab8f3e39b1513229b9609cf9cdfe9016613d2a54a6f92b445f4528c866f77",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the maximum number of times a parameter can occur?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "d15e07ab7986824acef3f859316bd8fd4d07318bdb653e99ff37c7d69ef24d2a",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Does an experiment step reference parent data points?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "0dd1a0ab23e7c09312eea6afec5589d8780a2e9f03a858b06430dc5ac702347f",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the start index for a set of values in a series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "1d34f34fa3d10dcb961aa90fd0527fc2e73ed3943286414bf33a6231ecd05cd7",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the end index for a set of values in a series?",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "645e95dd2922ad5c1b20867ee02040a3a2399731755ff44ca7063ca711ffa869",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Retrieve a sample by its unique sample ID.",
+    "source_file": "g01_cqs.jsonld",
+    "hash": "6a19a757267ce531835143d305cf7b2b41ebe8bf6de0c02f82d5522da24790a9",
+    "iteration": "g01_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What are the names of the result definitions specified by a technique?",
+    "source_file": "g02_cqs_reformulated.jsonld",
+    "hash": "dd8ca3a53d368b8b2cf0e4021536b09263d784329f97e9c40bc1ab7f39db9a30",
+    "iteration": "g02_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "Which organization is an author affiliated with?",
+    "source_file": "g02_cqs_reformulated.jsonld",
+    "hash": "8bcc0bb5c92d76f44eb7b35049d3e84b4dad6d9eef0e1c7088e1182d8e41e39e",
+    "iteration": "g02_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the ID prefix used to reference a collection of consumed experiment steps?",
+    "source_file": "g02_cqs_reformulated.jsonld",
+    "hash": "2bec8386d020bcb8e93e3cd919c2e126e69e27c3ebbe1f55237279afbe2cee02",
+    "iteration": "g02_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the location of a sample within its container, if specified?",
+    "source_file": "g02_cqs_reformulated.jsonld",
+    "hash": "932fe1752fab18d83c63d61f3fcc2c2a4fbfa594ee2bc1f661dde931bde9c470",
+    "iteration": "g02_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "For a sample container that is a microtiter plate or tray, what is its specified capacity (e.g., 6, 24, 96 wells)?",
+    "source_file": "g02_cqs_reformulated.jsonld",
+    "hash": "1ece2076ac27bf5170f8b1c9185e01426b5b14595cfde8eea7034cad8dd54e94",
+    "iteration": "g02_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "What is the defined format of a sample container, such as the number of wells in a microtiter plate?",
+    "source_file": "g03_cqs_reformulated.jsonld",
+    "hash": "d2dc6de77b0148c69b32596455d3ba9f8c1d850ccebdf7456492aed7b1e20614",
+    "iteration": "g03_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  },
+  {
+    "text": "If an experiment step consumes data from multiple previous steps, what is the identifier prefix used to refer to them as a group?",
+    "source_file": "g03_cqs_reformulated.jsonld",
+    "hash": "72f192d0457b3be9ef46d4f127142f4ccc21be1149e901dff4f37261caea9012",
+    "iteration": "g03_cqs",
+    "model": "models/gemini-2.5-pro",
+    "temperature": 0.8
+  }
+]

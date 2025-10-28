@@ -63,7 +63,7 @@ def get_current_iteration_from_dashboard() -> int:
     return iteration_number
     
  
-def write_row(client, database_id, string, cq, iteration, generation_config) -> None:
+def write_row(client, database_id, string, cq, iteration, generation_config, src_documents) -> None:
     """
     Write a row to the Notion database with the given user_id and competency question (cq).
 
@@ -73,6 +73,7 @@ def write_row(client, database_id, string, cq, iteration, generation_config) -> 
         database_id: The ID of the Notion database where the row will be written.
         user_id: The user ID to associate with the row (not used in this example).
         cq: The competency question to write to the database.
+        src_documents: The source documents associated with the CQ.
 
     
     This then creates a new row in the specified Notion database with the competency question to facilitate accept / reject.
@@ -86,7 +87,7 @@ def write_row(client, database_id, string, cq, iteration, generation_config) -> 
             },
             'properties': {
                 'CQ': {'title': [{'text': {'content': cq}}]},
-                'Source': {'multi_select': [{'name': 'AnIML (Core and Technique)'}]},
+                'Source': {'multi_select': [{'name': src_documents}]},
                 'Generation Config': {'relation': [{'id': generation_config}]},
                 'Iteration': {'number': int(iteration)},
                 # 'CQ': {'select': {'name': event}},

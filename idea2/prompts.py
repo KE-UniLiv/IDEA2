@@ -36,11 +36,18 @@ and meets the needs of its users.
 
 N = notion_metrics.getn()
 
-#FIXME to test fix iteration number and dynamically apply
 CQ_EVALUATION_DEFINITION = f"""
 The reformulated CQs you generated in iteration {notion_utils.get_current_iteration_from_dashboard()} were passed to N={N} domain experts for evaluation. 
 The score of a CQ is based on a simple majority vote, with any CQ that has a score of less than 0 needing reformulation. 
 For example, if a CQ has a score of -3 and has been voted by 3 experts (out of N=4), then all the active participants downvoted that CQ.
+"""
+
+CQ_EVALUATION_DEFINITION_BME = f"""
+The set of CQs given include both the accepted and rejected CQs from the previous iteration.
+All CQs were passed to N=3 domain experts for evaluation.
+The score of a CQ is based on a simple majority vote, with any CQ that has a score of less than or equal 0 needing reformulation.
+For example, if a CQ has a score of -2 and has been voted by 2 experts (out of N=3), then all the active participants downvoted that CQ.
+Otherwise, if a CQ has a score of 1 or more, then it has been accepted by the majority of the experts as a good CQ.
 """
 
 CQ_ACCEPTED = f"""
@@ -213,6 +220,15 @@ Do not repeat any competency questions that have already been generated in previ
 CQ_INSTRUCTION_REFORMULATE = """
 You will now receive the set of rejected CQs with their votes, (negative) score, and any commented feedback, when available. 
 Your task is to reformulate these CQs by using the feedback from the validators and the schema definitions you were originally given. 
+Do not mark a reformulated competency question as "Reformulated" or "Reformulated CQ", only provide the reformulated competency question. 
+Only reformulate the rejected competency questions, do not extract new competency questions.
+"""
+
+# Injection into iteration 2 with no prior extraction or knowledge.
+CQ_INSTRUCTION_REFORMULATE_INJECTION_USER_STORY = """
+You will now receive the entire set of CQs with their votes, score, and any commented feedback, when available.
+A CQ is considered rejected if it has a score of less than or equal to 0. All other CQs are considered accepted.
+Your task is to reformulate only the CQs that have a score of less than or equal to 0 by using the feedback from the validators and both the user story and personas you were originally given. 
 Do not mark a reformulated competency question as "Reformulated" or "Reformulated CQ", only provide the reformulated competency question. 
 Only reformulate the rejected competency questions, do not extract new competency questions.
 """

@@ -9,6 +9,7 @@ import time
 import json
 import argparse
 import hashlib
+import questionary
 
 # If running from a scirpt, use the script's directory to find the config file
 config_path = os.path.join(os.path.dirname(__file__), "api_config.yml")
@@ -62,34 +63,94 @@ def update_key(service, new_key, config_file="api_config.yml"):
 
 def getSchemas():
     """
-    
-    Gets the schemas for the ANIML core and technique from the assets/schema directory.
+    Gets schemas from either the schema or us_personas folder based on user selection.
+    Allows users to select specific files ending in .xsd, .xml, or .md.
 
     Returns:
-        tuple: A tuple containing the ANIML core schema and technique schema as strings.
-    
+        tuple: A tuple containing the combined selected schemas as strings, and a list of selected filenames.
     """
-
+    
+    ## -- Ask user which folder to look in
+    folder_choice = questionary.select(
+        "Which folder would you like to look for schemas in?",
+        choices=[
+            "assets/schema",
+            "assets/us_personas"
+        ]
+    ).ask()
+    
+    if not folder_choice:
+        print("No folder selected. Exiting.")
+        return None, None
+    
+    ## -- Build the full path
+    folder_path = os.path.join(os.getcwd(), folder_choice)
+    
+    ## -- Check if folder exists
+    if not os.path.exists(folder_path):
+        logging.error(f"Folder {folder_path} does not exist.")
+        return None, None
+    
+    ## -- Find all files with the specified extensions
+    valid_extensions = ['.xsd', '.xml', '.md']
+    available_files = []
+    
     try:
-        animl_core_schema_path = os.path.join(os.getcwd(), "assets", "schema", "animl-core.xsd")
-        animl_technique_schema_path = os.path.join(os.getcwd(), "assets", "schema", "animl-technique.xsd")
-
-    except FileNotFoundError as e:
-        logging.error(f"Schema files not found: {e}")
+        for filename in os.listdir(folder_path):
+            if any(filename.endswith(ext) for ext in valid_extensions):
+                available_files.append(filename)
+    except OSError as e:
+        logging.error(f"Error reading folder {folder_path}: {e}")
+        return None, None
+    
+    if not available_files:
+        print(f"No files with extensions {valid_extensions} found in {folder_path}")
         return None, None
 
+    ## -- Let user select multiple files
+    selected_files = questionary.checkbox(
+        "Select the files you want to use as schemas:",
+        choices=available_files
+    ).ask()
+    
+    if not selected_files:
+        print("No files selected. Exiting.")
+        return None, None
+    
+    ## -- Read and combine the selected files
+    combined_schemas = []
+    file_names = []
+    
+    for filename in selected_files:
+        file_path = os.path.join(folder_path, filename)
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                combined_schemas.append(f"{content}")
+                file_names.append(filename)
+                logging.info(f"Successfully loaded: {filename}")
+        except FileNotFoundError as e:
+            logging.error(f"File not found: {file_path}")
+            continue
+        except Exception as e:
+            logging.error(f"Error reading {file_path}: {e}")
+            continue
 
-    animl_core_schema, animl_technique_schema = "", ""
-    try:
-        with open(animl_core_schema_path, "r") as f1, open(animl_technique_schema_path, "r") as f2:
-            animl_core_schema, animl_technique_schema = f1.read(), f2.read()
-    except FileNotFoundError as e:
-        logging.error(f"Error reading schema files: {e}\n\nPlease ensure you are running from:\n\npython IDEA2/idea2 runner.py [args]")
+    if not combined_schemas:
+        logging.error("No files could be read successfully.")
         return None, None
 
-    logging.info("Schema loaded successfully!")
+    # -- Sort the schemas, this also ensures _persona comes before _us1
+    combined_schemas.sort()
 
-    return animl_core_schema, animl_technique_schema
+    ## -- Combine all schemas into a single string
+    final_schema = "\n".join(combined_schemas)
+    
+    print(f"Successfully loaded {len(selected_files)} schema files:")
+    for filename in selected_files:
+        print(f"  - {filename}")
+    
+    return final_schema, selected_files, file_names
 
 def check_model(model):
     """
@@ -112,6 +173,22 @@ def check_model(model):
 
     return filepath
 
+def get_source_from_arr(arr: list) -> str:
+    """
+    Get a combined source document string from an array of source documents.
+
+    Args:
+        arr (list): A list of source document strings.
+
+    Returns:
+        str: A combined source document string.
+    """
+    valid_types = ["persona", "user_story", "us1", "us2", "us3", "core", "technique", "schema", "xmlschema"]
+    for file in arr:
+        if any(vtype in file for vtype in valid_types):
+            result = file.split('_')[0] or file.split('-')[0]
+
+    return result
 
 def load_history_from_file(model) -> list:
     """

@@ -1,0 +1,209 @@
+﻿id,cq,set,score,comment,ambiguity,votes
+238,Are there images of the item being used or created by the artist?,1,3,"Would it be useful to make it more general, like: 'Are there images of the item?' Since the images could be created by the owner of the item or the museum itself.
+Ambiguity: it seems that the images was used or created rather than the item itself
+agreed this is ambiguous",1,3
+237,Where can an item be sent for repairs?,1,-1,,0,3
+235,Is the artefact out for repair?,1,2,,0,3
+232,How can the item be displayed? (An original recording?),1,1,"m not sure about this question. Does it refer to display restrictions for some items, such as light, temperature, etc.?
+Suggested reformulation, as this should be about the records/vinyl rather than the recording (which is intangible)",1,3
+227,Who is the original manufacturer of an item?,1,3,,0,3
+219,What is the type of association between an artefact and an artist?,1,3,I'm not sure if we have any information about the usage of the items,0,3
+205,What kind of metadata was provided for a loaned item when first acquired?,1,-1,What is meant by “kind of metadata”? ,1,3
+198,Does an item have a full history associated with it,1,-1,To be clarified on the notion of history,1,3
+197,When was the item first purchased,1,3,"It looks like this information is related to the owner of the item
+It could have been purchased by the museum or by the artist, but it is the kind of information that can be provided with the item",1,3
+195,What is the type of artefact is the item “Gibson J-160E”,1,3,Typo,0,3
+196,Does an item have a brand associated with it,1,3,,0,3
+199,What are the features of an item of type guitar,1,3,,0,3
+200,Who loaned an item,1,3,,0,3
+201,What is the insurance status of an item?,1,3,,0,3
+202,Who is the insurance company insuring an item,1,3,,0,3
+203,What is the condition of an item?,1,3,,0,3
+204,What are the preservation requirements for an item?,1,3,,0,3
+206,What are the loan conditions?,1,3,,0,3
+207,Is an item loaned or donated?,1,3,,0,3
+209,How should an item of type guitar be displayed?,1,3,,0,3
+208,Are there display requirements for an item?,1,3,,0,3
+210,How should an item of type manuscript be displayed?,1,3,,0,3
+212,Is an item on loan?,1,3,,0,3
+211,Is an item currently in the museum?,1,3,,0,3
+213,What organisation borrowed an item?,1,1,,0,3
+215,How was an item acquired?,1,3,,0,3
+214,Are there requirements for an item to be returned?,1,1,Not sure if I got this one!,1,3
+216,Is an item an original or a copy?,1,3,,0,3
+218,What artist is the item associated with?,1,3,,0,3
+217,Is an item one of many items of the same types?,1,-1,Confusing!,1,3
+220,What are the different types of display requirements?,1,3,"Does this mean, what are the different types of display requirements in the museum?  Or that are possible?",1,3
+221,Who is responsible for the acquisition of an item in the museum?,1,3,,0,3
+222,How many items of type manuscript does the museum own?,1,3,,0,3
+224,Is the item related to other artefacts in the museum?,1,3,,0,3
+223,How many items related to Queen does the museum own?,1,1,,0,3
+226,What is the insurance value of an item?,1,3,,0,3
+225,Does the item display any damage or defect?,1,3,,0,3
+229,Is an item on loan or in the museum?,1,3,,0,3
+228,When was an item acquired?,1,3,,0,3
+230,Is an item on display?,1,3,,0,3
+231,Is an item a physical object?,1,3,"Interesting, but within the context of the story, every item by definition is a physical object - although this may be questioned. Very interesting CQ",0,3
+233,What are the types of the artefacts that be displayed?,1,3,Ambiguous: What are the types of the artefacts that will be displayed? or What are the types of the artefacts that are displayed?,1,3
+234,What type of artist is Queen?,1,1,,0,3
+236,When is a loaned item expected to be returned?,1,3,,0,3
+140,What is the broad category of an item?,2,3,,0,3
+141,What is the name or title of an item?,2,3,,0,3
+142,What is the main textual description associated to an item?,2,3,,0,3
+143,What is the caption of the item that is displayed at the museum?,2,3,,0,3
+144,Is this item part of a larger set?,2,3,,0,3
+145,Are there any items in the collection related to this item?,2,3,,0,3
+146,To which music genres can this item be associated?,2,3,,0,3
+147,To which specific period or era does this item belong?,2,3,,0,3
+148,Give me all the images associated to a given item,2,3,,0,3
+149,Which is the primary image of the item if available?,2,3,I'm not sure about this question. What do you mean by the primary image of an item?,1,3
+150,Give me all the audio recordings associated to a given item,2,3,,0,3
+151,Give me all the videos associated to a given item,2,3,,0,3
+152,What is the format of each multimedia file?,2,3,"It's good to have this information, but I'm not sure whether we should have it and who should create it.",0,3
+153,What is the resolution or quality of each multimedia file?,2,3,,0,3
+154,What is the duration of each audio or video recording?,2,2,"I think this needs to be clarified, either is the duration of a video or audio recording, or the duration of the video and audio recording associated with an item",1,3
+155,Are there any copyright restrictions on the multimedia files?,2,3,,0,3
+156,Which music artists are associated to an item?,2,3,,0,3
+157,Which music works are associated to an item?,2,3,,0,3
+158,Which music performances are associated to an item?,2,3,,0,3
+159,Which events are associated to a given item?,2,3,,0,3
+160,Which music releases are associated to a given item?,2,3,,0,3
+161,Was an item used by a music artist?,2,3,,0,3
+162,Was an item produced by a music artist?,2,3,,0,3
+163,Was an item owned by a music artist?,2,3,,0,3
+164,Was an item involved in the creative process of a work?,2,1,I'm not sure if we have any information about the usage of the items,0,3
+165,Was an item used during a music performance?,2,3,I'm not sure if we have any information about the usage of the items,0,3
+166,Was the item involved in any significant historical events besides performances?,2,3,,0,3
+167,"Was this item ever featured in a significant publication (magazine, book, newspaper)?",2,3,,0,3
+168,What is the documented history of ownership of the item?,2,3,,0,3
+169,How was the item acquired by the museum?,2,3,,0,3
+170,Who is the current lender of an item?,2,3,,0,3
+171,When does the lend of the item start?,2,3,When does the loan of the item start,0,3
+172,When does the lend of the item end?,2,3,When does the loan of the item end?,0,3
+173,What is the estimated value of the item?,2,3,,0,3
+174,What is the agreed-upon value of the item for insurance purposes?,2,3,,0,3
+175,Does the item have any display requirements?,2,3,,0,3
+176,What are the specific temperature requirements for the item?,2,3,,0,3
+177,What are the specific humidity requirements for the item?,2,3,,0,3
+178,What are the specific light level requirements for the item?,2,3,,0,3
+179,In which year was the item produced?,2,3,,0,3
+180,Which colours are associate to the item?,2,-1,,0,3
+181,Which materials is the item made of?,2,3,,0,3
+182,What is the current condition of an item?,2,3,,0,3
+183,What is the size of an item?,2,3,,0,3
+184,What is the family of an instrument?,2,3,"I couldn't understand the use of the term 'family' but a quick search reveals that there are different families. Just to confirm, are you referring to these families: https://en.wikipedia.org/wiki/Family_of_musical_instruments, or do you mean something else?",0,3
+185,What is the brand of an instrument?,2,3,,0,3
+186,Which is the model of an instrument?,2,3,,0,3
+187,Which is the serial number of an instrument?,2,3,,0,3
+188,Who is the designer of a costume?,2,3,,0,3
+189,Who is the composer of a music work?,2,3,,0,3
+190,Who are the members of a a music ensemble?,2,3,Who are the members of a music ensemble?,0,3
+191,What role did a music artist play within a music ensemble?,2,3,I'm not sure how this information relates to the items or whether it is documented so we can refer to it. ,0,3
+192,What is the name of a music artist?,2,3,,0,3
+193,What is the alias of a music artist?,2,3,,0,3
+40,Which instrument was used by a music artist?,3,3,,0,3
+101, Which manuscripts was written by a music artist?,3,3,,0,3
+102, What security measures do I need to display an item?,3,-1,Which security measures are needed to display an item?,1,3
+103,Which item require no direct lighting exposure?,3,1,Which items require no direct light exposure?,0,3
+107,What is the loan start date of an item to the British Music Experience?,3,1,When was the item loaned to the museum?,1,3
+105,Find items in good condition,3,-1,,0,3
+114,Find items with a (specific) loan start date?,3,1,Find items that were loaned to the museum on a specific date,1,3
+108,Which are the display requirements of an item? ,3,3,,0,3
+109,How many costumes are in the collection?,3,3,,0,3
+110,How many items are in the collection?,3,3,,0,3
+111,Which guitar was used by John Lennon?,3,-1,Which guitar was used by a music artist?,0,3
+104,Which manuscripts require no direct lighting exposure?,3,1,,0,3
+96,Who acquired an item?,3,3,,0,3
+51,Who acquired the Ziggy Stardust Jumpsuit?,3,-3,,0,3
+115,Who acquired the Gibson J-160E?,3,-1,,0,3
+20,What is the name of an experiment step?,3,-1,,0,3
+19,Does the Rock & Roll Hall of Fame provide insurance for the handwritten lyrics?,3,-1,,0,3
+68,Does the British Music Experience provide insurance for the Gibson J-160E?,3,-3,,0,3
+45,Does an insurer provide insurance for an item?,3,-1,,0,3
+92,How many years does the loan agreement cover the Ziggy Stardust Jumpsuit?,3,-1,What is the duration of the loan of an item at the museum?,1,3
+47,How many years does the loan agreement cover an item?,3,3,,0,3
+99,Find manuscripts associated with a music artist,3,3,,0,3
+5,Find an item associated with a music artist,3,1,,0,3
+80,Find stage costumes associated with David Bowie.,3,-1,Find the costumes associated with a music artist,0,3
+34,Do the display requirements have stable values of temperature and humidity?,3,-1,Do the display requirements for an item indicate stable conditions of temperature and humidity?,0,3
+32,Do the display requirements have climate-controlled values of humidity control?,3,-1,,0,3
+8,Do the display requirements have climate-controlled values of lighting?,3,-1,,0,3
+28,Do the display requirements have specific values of lighting?,3,1,,0,3
+11,Do the display requirements have specific values of humidity control?,3,1,,0,3
+84,Which museum borrowed an item on loan?,3,3,,0,3
+116,Which museum borrowed the Gibson J-160E on loan?,3,-3,This sounds much more complicated as this could be. “Which museum borrowed a certain item?”,0,3
+117, Which are the associated events of the Ziggy Stardust Jumpsuit?,3,-3,,0,3
+87, Which are the associated events of an item?,3,1,Which music works are associated to an item?,0,3
+57,Which are the associated works of the Gibson J-160E?,3,-3,Which music works are associated with an item? ,0,3
+23,Which are the associated works of an item?,3,1,,0,3
+55,Where do I display the Ziggy Stardust Jumpsuit?,3,-3,Where is an item displayed at the museum?,0,3
+30,Where do I display an item?,3,-3,Where is an item displayed at the museum?,0,3
+76,What an item has the serial number (Unique identifier)?,3,1,“What is the serial number of the item?”,1,3
+279,What items from Sonia’s collection are currently on loan to the British Music Experience (BME)?,4,1,could be rephrased to be more general,0,3
+280,"What is the complete provenance history of a given item, including previous owners, acquisition dates, and prior loans to other institutions?",4,3,,0,3
+281,"Which items in the museum’s collection are on temporary loan, and what are their respective loan start and end dates?",4,3,Could be split into 2 questions,0,3
+282,"What is the current status of the loan agreement for a specific item (e.g., active, expired, indefinite, donated)?",4,3,,0,3
+283,"Which institutions have previously borrowed a specific item, and during which periods?",4,3,Could be split into 2 questions,0,3
+284,"What cataloguing information is available for a given item (e.g., type, brand, model, serial number, associated artists, associated works)?",4,3,,0,3
+285,"What multimedia content (images, videos, audio recordings) is associated with a specific item, and how can it be accessed?",4,3,Could be split into 2 questions,0,3
+286,"What is the historical and cultural significance of a given item, as described by the donor or curator?",4,1,this is ambiguous,1,3
+287,"What metadata fields are mandatory for each type of item (e.g., instrument, costume, manuscript), and which are optional or type-specific?",4,3,Could be split,0,3
+288,"What is the current condition of a specific item, including any documented damage or conservation treatments?",4,3,,0,3
+289,Are there annotated photographs or reports highlighting specific areas of concern or interest on an item?,4,3,,0,3
+290,"What is the conservation history of an item, including dates and types of treatments performed?",4,1,Could be split,0,3
+291,"What are the display requirements for a specific item (e.g., case type, lighting, environmental controls)?",4,3,,0,3
+292,What handling and security instructions are associated with an item while on display or in storage?,4,3,,0,3
+293,"Which items require special display equipment (e.g., custom mannequins, acid-free matting) or environmental conditions?",4,3,,0,3
+294,"What items loaned by Sonia are currently visible to her via the dashboard, and what information can she access or update?",4,-1,,0,3
+295,What is the communication history between Sonia and the museum regarding a specific item or loan agreement?,4,1,,0,3
+296,"What changes or updates have been made to the metadata or status of a loaned item, and by whom?",4,-1,,0,3
+297,"In which exhibitions or display cases has a specific item been featured, and during what time periods?",4,1,,0,3
+298,"What is the current physical location of a specific item (e.g., on display, in storage, in transit)?",4,3,,0,3
+299,"What is the audit trail of an item’s movement between museums, exhibitions, and storage locations?",4,3,,0,3
+300,"What are the terms of the loan agreement for a specific item (e.g., compensation, insurance, transport arrangements)?",4,1,Could be split,0,3
+301,"Who is responsible for insurance and transport of a loaned item, and what are the coverage details?",4,1,Could be split,0,3
+302,"What compensation or benefits (e.g., tax deduction, annual fee) are associated with a specific loan or donation?",4,3,,0,3
+303,"How does the addition of a new item from Sonia’s collection enrich the museum’s knowledge base (e.g., new artists, works, or historical periods represented)?",4,-1,,0,3
+304,What gaps or overlaps exist in the museum’s collection after integrating Sonia’s loaned items?,4,-1,,0,3
+305,"What are the different types of artifacts in the collection (e.g., Instrument, Stage Costume, Manuscript)?",5,3,,0,3
+306,"What specific attributes are relevant for an Instrument (e.g., Brand, Model, Serial Number, Type: Acoustic-electric)?",5,-1,"as a note, the fact that this model is generating examples is very confusing as the examples are not really relevant",0,3
+307,"What specific attributes are relevant for a Stage Costume (e.g., Designer, Description)?",5,-1,,0,3
+308,"What specific attributes are relevant for a Manuscript (e.g., Description, Medium: Handwritten)?",5,-1,"this is ambiguous, and so are all the similar ones",1,3
+309,"Which Artist(s) are associated with a specific artifact (e.g., Gibson J-160E -> John Lennon, George Harrison)?",5,3,,0,3
+310,"Which Work(s) (e.g., album, song) are associated with a specific artifact (e.g., Gibson J-160E -> ""Please Please Me"" album; Handwritten Lyrics -> ""Bohemian Rhapsody"")?",5,3,,0,3
+311,"Which Event(s) (e.g., tour, recording session) are associated with a specific artifact (e.g., Ziggy Stardust Jumpsuit -> Ziggy Stardust tour)?",5,3,,0,3
+312,"What is the unique identifier (e.g., catalog number, serial number if applicable) for a given artifact?",5,3,,0,3
+313,"How can we retrieve all artifacts associated with a specific Artist (e.g., David Bowie)?",5,1,,0,3
+314,"How can we retrieve all artifacts classified as a specific Type (e.g., Stage Costume)?",5,-1,,0,3
+315,Who was the original owner of a specific artifact (if known)?,5,3,,0,3
+316,"Who is the current owner of a specific artifact (e.g., Sonia)?",5,3,"This should be split and the how is not relevant, I think",0,3
+317,"How and when did the current owner (e.g., Sonia) acquire a specific artifact?",5,1,"this is ambiguous, it’s too complex and has two different answers",1,3
+318,Has a specific artifact been loaned out previously? To which institutions and during which dates?,5,-1,,0,3
+319,What is the complete ownership history (provenance trail) for a given artifact?,5,3,,0,3
+320,"What is the recorded general condition (e.g., Excellent, Fair, Good, Fragile, Delicate) of a specific artifact?",5,3,,0,3
+321,"What specific damage (e.g., scratches, fraying, fading, creasing, foxing) is noted for a particular artifact?",5,3,,0,3
+322,"What conservation treatments has a specific artifact undergone, and when?",5,3,could be phrased better,0,3
+323,How can we find all artifacts currently assessed as being in 'Fragile' or 'Delicate' condition?,5,-1,I think this could be rephrased. The “currently” is not quite right,0,3
+324,"What are the specific display case requirements for an artifact (e.g., Secure, Climate-controlled)?",5,3,,0,3
+325,"What are the lighting requirements for displaying an artifact (e.g., Low-level, UV-filtered, Indirect)?",5,3,,0,3
+326,"Are there specific handling instructions (e.g., White gloves required)?",5,1,"The CQ is phrased poorly, it is not clear what is it referring to. One can assume, but a CQ should be unambiguous ",1,3
+327,"What level of security is required for a specific artifact (e.g., 24/7 monitoring, High-level, Alarms, CCTV)?",5,3,,0,3
+328,"Does an artifact require specific environmental controls (e.g., humidity control)?",5,3,,0,3
+329,Does a costume require a custom-fit mannequin?,5,3,,0,3
+330,"Does a manuscript require specific framing (e.g., Acid-free matting, UV-filtering glass)?",5,3,,0,3
+331,"Who is the donor/lender (e.g., Sonia) for a specific loaned artifact?",5,3,,0,3
+332,"Who is the borrower (e.g., BME, V&A, Rock & Roll Hall of Fame) for a specific loan agreement?",5,3,,0,3
+333,"What is the start date and end date (or status like 'Indefinite', 'Full Donation') of a specific loan agreement?",5,3,,0,3
+334,What is the agreed compensation (if any) for a specific loan?,5,3,,0,3
+335,Who is responsible for insurance under a specific loan agreement?,5,3,,0,3
+336,Who is responsible for arranging and covering the cost of transport for a specific loan?,5,3,,0,3
+337,Is a specific artifact currently on loan? To whom?,5,-1,this is two questions,0,3
+338,Which artifacts loaned by Sonia are currently held by the BME?,5,-1,,0,3
+339,"Which loan agreements are set to expire within the next [time period, e.g., 6 months]?",5,3,,0,3
+340,Has an artifact been designated as a 'Full Donation' rather than a loan?,5,3,,0,3
+341,What are all the artifacts currently under loan agreements with the BME as the borrower?,5,-1,overly complex phrasing,0,3
+342,How can the system represent the relationship between a donor (Sonia) and the artifacts they have loaned?,5,-1,,0,3
+343,"How can the system represent the status of a loan (e.g., Proposed, Active, Expired, Donated)?a",5,-1,ambiguous and meta,1,3
+344,"What information about loaned artifacts should be visible to the donor (Sonia) via the dashboard? (e.g., Loan status, Location within museum, Current condition summary?)",5,-1,How does the LLM know about the dashboard?,0,3
+345,How does the system distinguish between artifacts owned outright by the museum and those on loan?,5,-1,ambiguous,1,3
+346,"How can Liz retrieve all information (cataloguing, provenance, condition, display, loan) associated with a single artifact added via the loan process?",5,-1,"ambiguous, is it asking about the process?",1,3
