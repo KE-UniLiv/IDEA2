@@ -337,8 +337,8 @@ def cqs_from_csv(filepath: str, ignore_set: int = 3) -> list:
         if row["set"] == ignore_set:
             continue
         cq_entry = {
-            "title": row["cq"].lower(),
-            "id": row["ID"] if "ID" in row else "",
+            "title": row["cq"],
+            "id": row["id"] if "id" in row else "",
             "comment": row["comment"] if "comment" in row else "No comment provided, check this CQ with the schema and generalise to the requirements.",
             "score": row["score"] if "score" in row else 0,
             "votes": row["votes"] if "votes" in row else 0,

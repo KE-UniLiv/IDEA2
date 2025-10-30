@@ -10,6 +10,8 @@ import json
 import argparse
 import hashlib
 import questionary
+import pandas as pd
+
 
 # If running from a scirpt, use the script's directory to find the config file
 config_path = os.path.join(os.path.dirname(__file__), "api_config.yml")
@@ -172,6 +174,34 @@ def check_model(model):
         raise ValueError(f"Unknown model: {model}. Please specify a valid model.")
 
     return filepath
+
+def number_of_rejected_from_csv(filepath, restriction):
+    df = pd.read_csv(filepath)
+
+    filter = df[(df['score'] <= 0) & (df['set'] != restriction)]
+    count = len(filter)
+
+    print(f"Number of rejected competency questions (score <= 0) excluding set '{restriction}': {count}")
+    return count
+
+def subset_cqs_from_dataset(filepath, n, restriction) -> list:
+    """
+    Get a subset of competency questions from a CSV dataset based on score.
+    Args:
+        filepath (str): The path to the CSV file containing the dataset.
+        n (int): The number of competency questions to retrieve.
+    Returns:
+        list: A list of competency questions with score >= 0.
+
+    """
+    df = pd.read_csv(filepath)
+
+    filter = df[(df['score'] >= 0) & (df['set'] != restriction)].sample(n=n, random_state=42)
+    cqs = filter['cq'].tolist()
+
+    return cqs
+
+
 
 def get_source_from_arr(arr: list) -> str:
     """
@@ -376,3 +406,6 @@ def lookup_text_by_hash(hash_value, filepath="assets/cqs/hash_text_tuples.json")
             return None
 
     return data.get(hash_value)
+
+if __name__ == "__main__":
+    score = number_of_rejected_from_csv(os.path.join(os.getcwd(), "assets", "us_personas", "askcq_dataset.csv"), 3)

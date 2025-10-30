@@ -224,11 +224,14 @@ Do not mark a reformulated competency question as "Reformulated" or "Reformulate
 Only reformulate the rejected competency questions, do not extract new competency questions.
 """
 
-# Injection into iteration 2 with no prior extraction or knowledge.
+## -- Injection into iteration 2 with no prior extraction or knowledge.
+## -- ID
 CQ_INSTRUCTION_REFORMULATE_INJECTION_USER_STORY = """
-You will now receive the entire set of CQs with their votes, score, and any commented feedback, when available.
+You will now receive the definition of the user stories, and personas in markdown format.
+After this, you will receive the entire set of CQs with their votes, score, and any commented feedback, when available.
 A CQ is considered rejected if it has a score of less than or equal to 0. All other CQs are considered accepted.
-Your task is to reformulate only the CQs that have a score of less than or equal to 0 by using the feedback from the validators and both the user story and personas you were originally given. 
+Your task is to reformulate all of the CQs that have a score of less than or equal to 0 by using the feedback from the validators and both the user story and personas you were given.
+Provide the ID of the rejected CQ from which you are reformulating, along with the reformulation itself.
 Do not mark a reformulated competency question as "Reformulated" or "Reformulated CQ", only provide the reformulated competency question. 
 Only reformulate the rejected competency questions, do not extract new competency questions.
 """

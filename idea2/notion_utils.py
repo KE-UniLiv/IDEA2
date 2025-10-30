@@ -3,12 +3,13 @@
 This script writes the competency questions (CQs) to a Notion database given that the CQs are
 already cleaned and stored in a text file. It uses the Notion API to create new entries in the specified database for each CQ.
 
+This script also facilitates multiple use cases, such as adding remote CQs from a dataset, setting up LLM configurations in Notion,
 """
 
 import os
 import pprint
 import json
-from utils import get_key
+from utils import get_key, subset_cqs_from_dataset
 from notion_client import Client
 from tqdm import tqdm
 from reformulate_cq import NOTION_DATABASE_ID, get_name_from_id, get_discussion_comments
@@ -190,3 +191,18 @@ def get_cqs_from_file(filepath, filetype=None) -> list:
         return [cq.strip() for cq in cq_strings if cq.strip()]
     
 
+def remote_add_cqs(filepath, n):
+    cqs = subset_cqs_from_dataset(filepath, n)
+    for cq in tqdm(cqs, desc="Adding remote CQs to Notion"):
+        write_row(
+            client=notion,
+            database_id=notiondb,
+            cq=cq,
+            iteration=get_current_iteration_from_dashboard(),
+            generation_config="",
+            src_documents="bme"
+        )
+
+
+if __name__ == "__main__":
+    remote_add_cqs(os.path.join(os.getcwd(), "assets", "us_personas", "askcq_dataset.csv"), 23)

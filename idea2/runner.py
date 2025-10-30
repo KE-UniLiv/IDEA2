@@ -11,7 +11,7 @@ from cq_json_ld import cq_to_json_ld
 from reformulate_cq import (
     store_handled, get_cqs_from_file_as_strings, reformulate_cqs,
     get_rejected_cqs_from_file, store_pulled, validate_reformulated,
-    pull_accepted, pull_rejected
+    pull_accepted, pull_rejected, cqs_from_csv
 )
 from cq_extraction import (
     get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt,
@@ -69,6 +69,7 @@ def main():
 
     parser.add_argument('--reformulate_from_first_set', action='store_true', help='Reformulate CQs when you already have some data stored. Start from iteration 2 without prior context.')
     parser.add_argument('--save', action='store_true', help='Save CQs to file (jsonld format)')
+    parser.add_argument('--nolimit', action='store_true', help='Remove the limit on number of CQs to extract')
     parser.add_argument('--notion', action='store_true', help='Upload CQs to Notion')
     parser.add_argument('--reformulate', action='store_true', help='Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected CQs first, then run with --reformulate to reformulate them)')
     parser.add_argument('--find_rejected', action='store_true', help='Find rejected CQs in Notion and store (Note: run as the only argument ie python runner.py --find_rejected)')
@@ -81,7 +82,6 @@ def main():
 
     if args.show_services:
         show_services()
-        show_services()
         sys.exit(0)
 
     if args.reformulate_from_first_set and args.reformulate:
@@ -90,7 +90,7 @@ def main():
 
     if len(sys.argv) == 1:
         print("No arguments provided. Use --help or --usage_help for usage information.")
-        sys.exit(0)
+        sys.exit(1)
 
     if args.update_key:
         service, newkey = parse_two(args.update_key)
@@ -98,7 +98,6 @@ def main():
         sys.exit(0)
 
     if args.usage_help:
-        show_customhelp()
         show_customhelp()
         sys.exit(0)
 
@@ -108,9 +107,12 @@ def main():
         sys.exit(0)
 
     if args.archive:
-        if questionary.confirm("Are you sure you want to archive all pages in the Notion database? This action is irreversible.").ask():
+        if questionary.confirm("Are you sure you want to archive (delete) all pages (entries) in the Notion database? This action is irreversible.").ask():
             archive_all_pages(get_key("notiondb"))
         sys.exit(0)
+
+    if args.nolimit:
+        update_config(limit="")
 
     if args.find_rejected:
         rejected_cqs = pull_rejected()
@@ -123,8 +125,7 @@ def main():
     modelname = args.model if args.model else config["gemini_model"]
     print(f"Using model: {modelname}")
 
-    core, technique = getSchemas()
-    combined = core + "\n" + technique
+    combined, _, filename = getSchemas()
 
     history = load_history_from_file(modelname)
     schema_in_history = any(combined in h["content"] for h in history)
@@ -136,32 +137,28 @@ def main():
             role=args.role if args.role else config["role"],
             out_instruction=args.instruction if args.instruction else config["out_instruction"],
             out_examples=args.example if args.example else config["out_examples"],
+            limit=""
         )
-    else:
-        update_config(
-            gemini_model=args.model if args.model else config["gemini_model"],
-            temperature=args.temperature if args.temperature else config["temperature"],
-            role=args.role if args.role else config["role"],
-            out_instruction="CQ_INSTRUCTION_REFORMULATE_INJECTION_USER_STORY",
-            out_examples="")
 
-    generation, currgeneration = get_generation_number()
-    currgeneration += 1
-
-    model = get_llm_instance(
+        model = get_llm_instance(
         config["gemini_model"],
         api_key=geminikey,
         role=config["role"],
         temperature=config["temperature"]
     )
 
-    if not args.reformulate and not args.find_rejected:
+    generation, currgeneration = get_generation_number()
+    currgeneration += 1
+
+    if not args.reformulate and not args.find_rejected and not args.reformulate_from_first_set:
         prompt, combined_schemas, source = configure_prompt(
             role=config["role"],
             out_definition=config["out_definition"],
             out_examples=config["out_examples"],
             out_instruction=config["out_instruction"],
             limit=config["limit"],
+            schema=combined,
+            schema_names=filename,
             ignore_schemas=True if schema_in_history else False
         )
 
@@ -205,6 +202,8 @@ def main():
             out_definition=config["out_definition"],
             out_examples=config["out_examples"],
             out_instruction=config["out_instruction"],
+            schema=combined,
+            schema_names=filename,
             ignore_schemas=True if schema_in_history else False
         )
 
@@ -228,13 +227,71 @@ def main():
         else:
             raise ValueError("No history found. There must be evidence of history to reformulate from.")
         
-    cleaned_cqs = clean_llm_output(cqs) if cqs else None
-    for q in cleaned_cqs:
-        history.append({"role": "assistant", "content": q})
+        cleaned_cqs = clean_llm_output(cqs) if cqs else None
+        for q in cleaned_cqs:
+            history.append({"role": "assistant", "content": q})
 
-        store_hash_text_combinations(q)
+            store_hash_text_combinations(q)
+
+    if args.reformulate_from_first_set:
+        update_config(
+            gemini_model=args.model if args.model else config["gemini_model"],  
+            temperature=args.temperature if args.temperature else config["temperature"],  
+            role=args.role if args.role else config["role"], 
+            out_instruction="CQ_INSTRUCTION_REFORMULATE_INJECTION_USER_STORY",
+            out_examples="",
+            limit=""  
+        )   
+    
+        model = get_llm_instance(
+            modelname,
+            api_key=geminikey,
+            role=config["role"],
+            temperature=config["temperature"]
+        )
+
+        reformulated = True
+        rejectcqs = cqs_from_csv(os.path.join(os.getcwd(), "assets", "us_personas", "askcq_dataset.csv"))
+
+        prompt, _, source = configure_prompt(
+            role=config["role"],
+            out_definition=config["out_definition"],
+            out_examples=config["out_examples"],
+            out_instruction=config["out_instruction"],
+            schema=combined,
+            schema_names=filename,
+            limit=config["limit"],
+            ignore_schemas=True if schema_in_history else False
+        )
+
+        formattedprompt = "\n".join([
+            config['out_definition'],
+            config['out_examples'],
+            config['out_instruction'],
+            config['limit'],
+            combined if not schema_in_history else ''
+        ])
+
+        print(f"Formatted prompt for reformulation:\n{formattedprompt}\n") if args.show_prompt else None
         
+        history.append({"role": "user", "content": (
+            formattedprompt + "\n\n Here are the competency questions with the data on their score, comments and votes: \n\n" +
+            json.dumps(rejectcqs, indent=2, ensure_ascii=False)
+        )}) 
+
+        if history:
+            prompt_str = "\n".join([h["content"] for h in history])  
+            cqs = reformulate_cqs(model, prompt=prompt_str, cqs=rejectcqs)
+        else:
+            raise ValueError("No history found. There must be evidence of history to reformulate from.")
+        
+        cleaned_cqs = clean_llm_output(cqs) if cqs else None
+        for q in cleaned_cqs:
+            history.append({"role": "assistant", "content": q})
+
+            store_hash_text_combinations(q)
     save_history_to_file(history, modelname)
+    print(formattedprompt) if args.show_prompt else None
 
     if not args.reformulate:
         
@@ -305,8 +362,8 @@ def main():
 
         if args.reformulate:
             for i, reformulated_cq in enumerate(competency_questions):
-                if i < len(rejectcqs):  # Fix: use rejectcqs, not rejected_cqs
-                    original_hash = rejectcqs[i].get("hash")  # Fix: use "hash", not "@URI"
+                if i < len(rejectcqs): 
+                    original_hash = rejectcqs[i].get("hash")
                     
                     if original_hash:
                         # Now we can get the page ID since it's been uploaded
