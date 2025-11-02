@@ -15,7 +15,8 @@ from reformulate_cq import (
 )
 from cq_extraction import (
     get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt,
-    clean_llm_output, configure_prompt, update_config, config, geminikey, notion, NOTION_DATABASE_ID
+    clean_llm_output, configure_prompt, update_config, config, geminikey, notion, NOTION_DATABASE_ID,
+    remove_local_ids_from_reformulations
 )
 from generation_utils import get_generation_number
 from notion_utils import (
@@ -275,7 +276,7 @@ def main():
         print(f"Formatted prompt for reformulation:\n{formattedprompt}\n") if args.show_prompt else None
         
         history.append({"role": "user", "content": (
-            formattedprompt + "\n\n Here are the competency questions with the data on their score, comments and votes: \n\n" +
+            formattedprompt + "\n\n Here are the original competency questions with the data on their score, IDs, comments and votes: \n\n" +
             json.dumps(rejectcqs, indent=2, ensure_ascii=False)
         )}) 
 
@@ -285,7 +286,21 @@ def main():
         else:
             raise ValueError("No history found. There must be evidence of history to reformulate from.")
         
+        ## -- With ID vs without ID
         cleaned_cqs = clean_llm_output(cqs) if cqs else None
+
+        if args.save:
+            outdir = os.path.join(os.getcwd(), "assets", "cqs")
+            jsonld_path = os.path.join(outdir, f"{generation}.jsonld") if not args.reformulate else os.path.join(outdir, f"{generation}_reformulated.jsonld")
+            naincludedcqs = cleaned_cqs.copy()
+
+            cleaned_cqs = validate_reformulated(cleaned_cqs)
+            cq_to_json_ld(cleaned_cqs, jsonld_path)
+            cq_to_txt(cleaned_cqs, os.path.join(outdir, f"{generation}_with_id_linkages.txt")) if not args.reformulate else None
+        
+        ## -- Now remvoe the ID after saving it locally
+        cleaned_cqs = remove_local_ids_from_reformulations(cleaned_cqs)
+
         for q in cleaned_cqs:
             history.append({"role": "assistant", "content": q})
 
@@ -299,14 +314,14 @@ def main():
             cleaned_cqs)
 
     ## -- Save to file if requested
-    if args.save:
+    if args.save and not args.reformulate_from_first_set:
         outdir = os.path.join(os.getcwd(), "assets", "cqs")
         jsonld_path = os.path.join(outdir, f"{generation}.jsonld") if not args.reformulate else os.path.join(outdir, f"{generation}_reformulated.jsonld")
         naincludedcqs = cleaned_cqs.copy()
 
-        cleaned_cqs = validate_reformulated(cleaned_cqs) if args.reformulate else cleaned_cqs
+        cleaned_cqs = validate_reformulated(cleaned_cqs)
         cq_to_json_ld(cleaned_cqs, jsonld_path)
- 
+
         if not args.reformulate:
             cq_to_txt(cleaned_cqs, os.path.join(outdir, f"{generation}.txt"))
         else:
@@ -327,6 +342,8 @@ def main():
     if args.notion:
         jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"{generation}.jsonld") if not args.reformulate else os.path.join(os.getcwd(), "assets", "cqs", f"{generation}_reformulated.jsonld")
         competency_questions = get_cqs_from_file(jsonld_path)
+
+        competency_questions = remove_local_ids_from_reformulations(competency_questions) if args.reformulate_from_first_set else None
 
         notionprompt = "\n".join([
             config['out_examples'],

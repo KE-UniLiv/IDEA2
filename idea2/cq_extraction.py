@@ -10,6 +10,7 @@ import utils
 import logging
 import json
 import ast
+import re
 
 from utils import get_key
 from interfaces import GeminiLLM, OpenAILLM
@@ -172,6 +173,49 @@ def save_llm_insatance(cqset: str, instance=[], isReformulated=False) -> None:
         json.dump(instance, f, indent=2, ensure_ascii=False)
 
     print(f"\nLLM instance saved to {filepath}")
+
+def remove_local_ids_from_reformulations(cqs: list) -> list:
+    """
+    Remove local IDs from reformulated competency questions (CQs).
+
+    Args:
+        cqs (list): A list of reformulated competency questions with local IDs.
+
+    Returns:
+        list: A list of reformulated competency questions without local IDs.
+    """
+    if not cqs:
+        return []
+
+    cleaned = []
+    # Remove up to two colon-separated prefixes (robust for "(ID: 237):", "ID: 42:", "237:", etc.)
+    prefix_re = re.compile(r'^(?:[^:]*:\s*){1,2}', flags=re.UNICODE)
+
+    for item in cqs:
+        # extract candidate text
+        if isinstance(item, dict):
+            # prefer common keys that may contain the reformulated text
+            text = None
+            for key in ("reformulated", "reformulation", "text", "cq", "question"):
+                if key in item and isinstance(item[key], str):
+                    text = item[key]
+                    break
+            if text is None:
+                # fallback: join values that are strings or stringify entire dict
+                vals = [str(v) for v in item.values() if isinstance(v, (str, int, float))]
+                text = " ".join(vals) if vals else json.dumps(item, ensure_ascii=False)
+        else:
+            text = str(item)
+
+        # strip up to two colon-delimited prefixes, then trim common leftover punctuation/spaces
+        cleaned_text = prefix_re.sub("", text).strip()
+        cleaned_text = cleaned_text.lstrip(" \t:)-.[]")
+
+        cleaned.append(cleaned_text)
+
+    return cleaned
+
+
 
 def clean_llm_output(cqs) -> list:
     """

@@ -230,8 +230,12 @@ CQ_INSTRUCTION_REFORMULATE_INJECTION_USER_STORY = """
 You will now receive the definition of the user stories, and personas in markdown format.
 After this, you will receive the entire set of CQs with their votes, score, and any commented feedback, when available.
 A CQ is considered rejected if it has a score of less than or equal to 0. All other CQs are considered accepted.
-Your task is to reformulate all of the CQs that have a score of less than or equal to 0 by using the feedback from the validators and both the user story and personas you were given.
-Provide the ID of the rejected CQ from which you are reformulating, along with the reformulation itself.
-Do not mark a reformulated competency question as "Reformulated" or "Reformulated CQ", only provide the reformulated competency question. 
-Only reformulate the rejected competency questions, do not extract new competency questions.
+
+Your task:
+- Only reformulate the CQs that have a score less than or equal to 0 (rejected CQs).
+- Do NOT extract, invent, combine, or add any new competency questions.
+- For each rejected CQ produce exactly one reformulated competency question that addresses the provided validator feedback and uses the user story and personas to guide the reformulation.
+- For every reformulation, you absolutely must include the original CQ's ID number exactly as provided (the ID of the CQ you are reformulating).
+- An example of how to include the ID is as follows: "(ID 42): [reformulated CQ text]" but remove the [] brackets.
+
 """
