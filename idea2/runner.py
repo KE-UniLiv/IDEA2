@@ -295,7 +295,7 @@ def main():
             naincludedcqs = cleaned_cqs.copy()
 
             cleaned_cqs = validate_reformulated(cleaned_cqs)
-            cq_to_json_ld(cleaned_cqs, jsonld_path)
+            cq_to_json_ld(cleaned_cqs, jsonld_path, filename)
             cq_to_txt(cleaned_cqs, os.path.join(outdir, f"{generation}_with_id_linkages.txt")) if not args.reformulate else None
         
         ## -- Now remvoe the ID after saving it locally
