@@ -1,0 +1,347 @@
+[
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "ec76e8a6d114118f55047f6c26a3a59f289e89e34e9278ae2ce55db015d626af",
+    "@Reformulates": "None",
+    "text": "(ID 237): What conservation treatments has an item undergone?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "55b5ebaaf47bb62c9a622a1c5fc49a629eef3087a036eb5e6f8d1a573ece536d",
+    "@Reformulates": "None",
+    "text": "(ID 205): What cataloguing information was provided for a loaned item upon its acquisition?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "8dd924a62327a38e0644d10cd726a9123072bfc834092df6b47fc04af57ac8be",
+    "@Reformulates": "None",
+    "text": "(ID 198): What is the documented provenance of an item, including its ownership history and previous loans?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "24e9562c1daf72fcefeb250e4cbb838034b0d6cbad4a562d7ff852eb43025eb8",
+    "@Reformulates": "None",
+    "text": "(ID 217): List all items in the collection that are of the same type as a given item.",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "51879c89d759c0449f2888a899e31bf3b0772fa9f190fb4d1983231675eb013e",
+    "@Reformulates": "None",
+    "text": "(ID 180): What are the primary colours described for a specific item?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "4684aab2af2d1187cbc2f96ea502eba71b666c036cc1cf7601babacfae76b8db",
+    "@Reformulates": "None",
+    "text": "(ID 294): What is the current loan status for all items provided by a specific donor?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "c024ff89dd3ee09f94d993a3d590c0fcc3577e133f38db0698cf86a1315c2bfd",
+    "@Reformulates": "None",
+    "text": "(ID 296): What is the date of the last update to an item's metadata or loan status?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "26240f37807a8dce48e9f886d6f3efe521cea67d0f99996fb2ea84fb4eef01d3",
+    "@Reformulates": "None",
+    "text": "(ID 303): Which artists associated with a newly loaned item are being represented for the first time in the museum's collection?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "f15ecac0ab38d47a16cdac9232822e8f450154768c5a74746afb74e7c0ccc8a4",
+    "@Reformulates": "None",
+    "text": "(ID 304): List all items in the collection associated with a specific artist.",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "4b6f158aa9248bf52b6b13aee69204e4c182dbc42391760c9cf79e00d14e78a3",
+    "@Reformulates": "None",
+    "text": "(ID 306): What are the brand, model, and serial number for a specific instrument?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "cefeaa0a311b1470b375b1a9494a5ab2d6fa1567f5dbd908652ac02703341e95",
+    "@Reformulates": "None",
+    "text": "(ID 307): Who is the designer of a specific stage costume?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "b1f569874d634a8ea931719311a36b1e5ade4d03c5a4dc6bd7f94ab1163ed15c",
+    "@Reformulates": "None",
+    "text": "(ID 308): What is the physical description of a specific manuscript?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "96433dca3bc8e8024fbb6f8d27c4344a002ec5739f1c77f7db99e52f14788a40",
+    "@Reformulates": "None",
+    "text": "(ID 314): List all artifacts classified as 'Stage Costume'.",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "d1249a86808594471bc0cc3a42bc9e6f96f7bbcdc7d7bafa5e982b3b38fbfde9",
+    "@Reformulates": "None",
+    "text": "(ID 318): What is the previous loan history for a specific artifact?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "9eebfcde5dbb2a646fafa7a28eb96ccc1efe2b6ebc0a674d2ec0de523175c253",
+    "@Reformulates": "None",
+    "text": "(ID 323): List all artifacts assessed as being in 'Fragile' condition.",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "2ca97e0cedf770d41a01a09eea58b47c6a0db8399e5546718342d1a98f192f8f",
+    "@Reformulates": "None",
+    "text": "(ID 337): To which institution is a specific artifact currently on loan?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "8f5c6e90449a7b43e6f1f8c97f31e7fc8d436844445b4091368984638ba09b23",
+    "@Reformulates": "None",
+    "text": "(ID 338): Which artifacts from a specific donor are currently on loan to the BME?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "6553ffa81c975cea191e0f2f158889d4776b11693725761f34ac37c16490d7f1",
+    "@Reformulates": "None",
+    "text": "(ID 341): List all artifacts currently on loan to the BME.",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "4c46521abde8fb865409a3a1860aced356a0700be889761f49f97bdea7a4f703",
+    "@Reformulates": "None",
+    "text": "(ID 342): List all artifacts loaned by a specific donor.",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "fc1d0fbcab65ea992ea08ac3bedd18ce09cb928116b99f5e93cd85204aa27367",
+    "@Reformulates": "None",
+    "text": "(ID 343): What is the current status of the loan agreement for a specific item?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "4346ffae326b02e0b74eeb1758262366f24d062dde4ef66a408bd5400ef80441",
+    "@Reformulates": "None",
+    "text": "(ID 344): What is the current location and condition summary of a specific loaned item?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "543aa6469dd54bea1b12b1fd4609cb628040192d5c171762da69caa13e78b850",
+    "@Reformulates": "None",
+    "text": "(ID 345): What is the acquisition status of an artifact (e.g., owned, on loan, donated)?",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  },
+  {
+    "@context": "https://www.animl.org/",
+    "@type": "CompetencyQuestion",
+    "@Generation": "g01_cqs",
+    "@URI": "9cbfc625c37324307e40b5c0c853967729b8b4a04f0d4906bea0180df884d6a4",
+    "@Reformulates": "None",
+    "text": "(ID 346): Retrieve all cataloguing, provenance, condition, display, and loan information for a specific artifact.",
+    "identifier": "g01_cqs",
+    "belongsToModel": {
+      "@type": "System",
+      "name": "models/gemini-2.5-pro",
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
+    }
+  }
+]
