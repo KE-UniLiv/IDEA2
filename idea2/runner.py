@@ -27,7 +27,7 @@ from utils import (
     get_key, update_key, getSchemas, 
     load_history_from_file, save_history_to_file,
     parse_two, show_customhelp, show_services,
-    store_hash_text_combinations, select_files_with_dialog, get_source_from_arr
+    store_hash_text_combinations, select_files_with_dialog, get_source_from_arr, get_info_from_first_iter
 )
 from cq_measures import run_simple_similarity_analysis
 from cq_linkage import link_reformulations, get_page_id_by_title, src_cq_uuid
@@ -135,10 +135,20 @@ def main():
     modelname = args.model if args.model else config["gemini_model"]
     print(f"Using model: {modelname}")
 
-    combined, _, filename = getSchemas()
+    combined, _, filename = getSchemas() if not args.reformulate else get_info_from_first_iter()
 
     history = load_history_from_file(modelname)
-    schema_in_history = any(combined in h["content"] for h in history)
+    schema_in_history_first = any(combined in h["content"] for h in history)
+
+    if args.reformulate:
+        changed = questionary.confirm("Have you changed schemas since the last run?").ask()
+        if changed:
+            schema_in_history = False
+            if schema_in_history_first:
+                raise ValueError("Schemas have changed since the last run, but they were already used in the history. " \
+                "Please start a new history file or verify that the schemas are already present.")
+        else:
+            schema_in_history = True
 
     if not args.reformulate_from_first_set:
         update_config(

@@ -11,6 +11,7 @@ import argparse
 import hashlib
 from pathlib import Path
 import questionary
+import glob
 import pandas as pd
 import shutil
 import tkinter as tk
@@ -275,6 +276,36 @@ def number_of_rejected_from_csv(filepath, restriction):
 
     print(f"Number of rejected competency questions (score <= 0) excluding set '{restriction}': {count}")
     return count
+
+def get_info_from_first_iter():
+    cqs_dir = os.path.join(os.getcwd(), "assets", "cqs")
+    candidates = glob.glob(os.path.join(cqs_dir, "g01*.jsonld"))
+
+    if not candidates:
+        print("No g01*.jsonld files found in assets/cqs.")
+        return None, None, None
+
+    target_file = None
+    for f in candidates:
+        if os.path.basename(f) == "g01_cqs.jsonld":
+            target_file = f
+            break
+    if not target_file:
+        target_file = candidates[0]
+
+    try:
+        with open(target_file, "r", encoding="utf-8") as jf:
+            data = json.load(jf)
+        if isinstance(data, list) and data:
+            context = data[0].get("@context")
+            print(f"Extracted @context from {os.path.basename(target_file)}: {context}")
+            return context, os.path.basename(target_file), target_file
+        else:
+            print(f"No @context field found in {os.path.basename(target_file)}")
+            return None, None, None
+    except Exception as e:
+        print(f"Error reading {target_file}: {e}")
+        return None, None, None
 
 def subset_cqs_from_dataset(filepath, n, restriction) -> list:
     """

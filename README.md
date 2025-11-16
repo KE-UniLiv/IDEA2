@@ -32,40 +32,41 @@ notionllmdb:
   key: <your notion LLM config database key>
 ```
 
-Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source documents. These can also be defined with commands in runner.py, see [`usage`](#usage) for more details.
+Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source documents.
 
-Persona and user story definitions TODO
+## Using source documents 📂
 
-Ontology sources TODO
+All source documents for extraction are kept in the [`assets folder`](assets/). You may import new files to this area either by doing so manually, or by running `idea2/runner.py --imports` which spawns two file explorer dialogs for you to select files and select the appropriate destination within [`assets`](assets/).
+
+When running IDEA2, you will be prompted to select the files you want to use in a given folder within [`assets`](/assets/) via a questionary prompt.
 
 ## Personas and User Stories 🤵
-TODO
+Personas and user stories may be passed to the LLM in `markdown` format. This works similarly to the Schemas and XML sources to generate new competency questions based on what is described within those documents.
 
 ## Schemas and XML Definitions 📜
 
 Schemas are used to inform the creation of the ontology due to the fact that the ontology should be able to answer the (verified) CQs generated from them. An example of schemas is the [`AnIML Schema (Core & Technique)`](https://www.animl.org/) which contains both a [`technique schema`](assets/schema/animl-technique.xsd) and a [`core schema`](assets/schema/animl-core.xsd). Given these two schemas as part of a prompt, the LLM will extract CQs relevant to the schema which can be used to inform the creation of an ontology or to see if a former ontology can answer certain CQs. The schema is used in tandem with the prompt to attain powerful results for Ontology Engineering.
 
-## Ontology Prompts 🔬
-TODO
 
 ## LLMs and Hyperparameters 🤖
 
-Both `Gemini` and TODO `GPT` models are supported for the extraction of CQs from [`schemas and XML definitions`](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure with **hash** fields:
+`Gemini` models are supported for the extraction of CQs from [`schemas and XML definitions`](#schemas-and-xml-definitions-). The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure with **hash** fields, an example for AnIML would be:
 
 ```
 [
   {
-    "@context": "https://www.animl.org/",
+    "@context": "animl,
     "@type": "CompetencyQuestion",
-    "@ID": "",
-    "@URI": "f81398ec50b16b3466782119094fa4e51161f2b0b1060415551961f1084a8f94",
-    "text": "What is the unique identifier for a given sample?",
+    "@Generation": "g01_cqs",
+    "@URI": "80479532f5433f8c314d8eb2567498ea6b5221377f255cf9c97e72785e4c2c4b",
+    "@Reformulates": "None",
+    "text": "What is the version of the AnIML document?",
     "identifier": "g01_cqs",
     "belongsToModel": {
       "@type": "System",
       "name": "models/gemini-2.5-pro",
-      "temperature": 0.6,
-      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on ontology creation."
+      "temperature": 0.8,
+      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
     }
   }
 ]
@@ -85,7 +86,10 @@ Prompt engineering is at the core of this workflow and [`prompts.py`](idea2/prom
 
 - Instructions for the LLM (Extract all / assume ontology exists / reformulate rejected CQs)
 
+## Reformulations ♻️
 Reformulation of a CQ takes place when any given CQ has a score of $< 0$ on the Notion database. If this occurs, **--find_rejected** will pull these and store them in [`rejected_cqs.json`](assets/cqs/rejected_cqs.json) and **--reformulate** will allow the reformulation of those rejected CQs. Should a comment be given to a rejected CQ (ie, a reason as to why it was rejected), this will be passed to the LLM as well. Through iterations of CQ generations and feedback, the LLM should become fine-tuned to the task as the **message history** is given to the LLM as context from `.json` chat history files.
+
+**IMPORTANT**: Make sure that you select *no* when prompted if you have changed schemas since last run. This is to ensure you do not use too many tokens. A check will be done to see if the gemini_history.json contains any string related to the source schema. If this returns true and you say the schema has changed, the program will not continue as there is a discrepancy.
 
 ## Notion 💾
 
@@ -102,7 +106,7 @@ All in all, the Notion integration allows for:
 | **Acceptance or rejection of CQs**          | **All CQs in CQ Pool are able to be downvoted or upvoted to contribute to the majority vote**                                                            | X          |
 | **Priority labelling**                      | **All CQs can be given a label of priority from low, medium or high**                                                                                    | X          |
 | **Commenting of CQs**                      | **Comments on rejected CQs will be given as feedback to the LLM**                                                                                        | X          |
-| **Reformulates relation**                   | **Links the reformulated CQ to the Original CQ**                                                                                                         | TODO       |
+| **Reformulates relation**                   | **Links the reformulated CQ to the Original CQ**                                                                                                         | X    |
 
 
 ### Getting a Notion Database's ID
