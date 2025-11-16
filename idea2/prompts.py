@@ -34,10 +34,12 @@ development process as they help to ensure that the ontology is fit for purpose
 and meets the needs of its users.
 """
 
-N = notion_metrics.getn()
 
-CQ_EVALUATION_DEFINITION = f"""
-The reformulated CQs you generated in iteration {notion_utils.get_current_iteration_from_dashboard()} were passed to N={N} domain experts for evaluation. 
+def get_cq_evaluation_definition():
+    N = notion_metrics.getn()
+    iteration = notion_utils.get_current_iteration_from_dashboard()
+    return f"""
+The reformulated CQs you generated in iteration {iteration} were passed to N={N} domain experts for evaluation. 
 The score of a CQ is based on a simple majority vote, with any CQ that has a score of less than 0 needing reformulation. 
 For example, if a CQ has a score of -3 and has been voted by 3 experts (out of N=4), then all the active participants downvoted that CQ.
 """

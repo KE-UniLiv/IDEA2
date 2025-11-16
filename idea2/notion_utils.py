@@ -19,7 +19,13 @@ notiontoken = get_key("notionkey")
 llmdb = get_key("notionllmdb")
 notiondb = get_key("notiondb")
 
-notion = Client(auth=notiontoken)
+notion=None
+
+def get_notion_client():
+    global notion
+    if notion is None:
+        notion = Client(auth=get_key("notionkey"))
+    return notion
 
 
 def get_current_iteration_from_dashboard() -> int:
@@ -36,6 +42,8 @@ def get_current_iteration_from_dashboard() -> int:
     iteration_numbers = set()
     has_more = True
     next_cursor = None
+
+    notion = get_notion_client()
 
     while has_more:
         response = notion.databases.query(
@@ -136,6 +144,8 @@ def llm_setup_to_notion(generation, modelname, temperature, usage, prompt, llmro
 def archive_all_pages(database_id):
     has_more = True
     next_cursor = None
+
+    notion = get_notion_client()
     while has_more:
         response = notion.databases.query(
             **{
@@ -195,7 +205,7 @@ def remote_add_cqs(filepath, n):
     cqs = subset_cqs_from_dataset(filepath, n)
     for cq in tqdm(cqs, desc="Adding remote CQs to Notion"):
         write_row(
-            client=notion,
+            client=get_notion_client(),
             database_id=notiondb,
             cq=cq,
             iteration=get_current_iteration_from_dashboard(),

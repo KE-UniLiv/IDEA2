@@ -15,7 +15,7 @@ from reformulate_cq import (
 )
 from cq_extraction import (
     get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt,
-    clean_llm_output, configure_prompt, update_config, config, geminikey, notion, NOTION_DATABASE_ID,
+    clean_llm_output, configure_prompt, update_config, config, geminikey, get_notion_client, NOTION_DATABASE_ID,
     remove_local_ids_from_reformulations
 )
 from generation_utils import get_generation_number
@@ -23,10 +23,14 @@ from notion_utils import (
     get_cqs_from_file, llm_setup_to_notion, write_row, archive_all_pages
 )
 
-from utils import *
+from utils import (
+    get_key, update_key, getSchemas, 
+    load_history_from_file, save_history_to_file,
+    parse_two, show_customhelp, show_services,
+    store_hash_text_combinations, select_files_with_dialog, get_source_from_arr
+)
 from cq_measures import run_simple_similarity_analysis
 from cq_linkage import link_reformulations, get_page_id_by_title, src_cq_uuid
-import prompts as p
 
 r"""
 
@@ -68,6 +72,7 @@ def main():
     parser.add_argument('--generation', type=str, default=None, help='Generation label (auto if not set manually)')
     parser.add_argument('--update_key', type=str, default=None, help='Update the API key in api_config.yml (input: <service>,<new key value>)')
 
+    parser.add_argument('--imports', action='store_true', help='Select files to copy using a text-based interface')
     parser.add_argument('--reformulate_from_first_set', action='store_true', help='Reformulate CQs when you already have some data stored. Start from iteration 2 without prior context.')
     parser.add_argument('--save', action='store_true', help='Save CQs to file (jsonld format)')
     parser.add_argument('--nolimit', action='store_true', help='Remove the limit on number of CQs to extract')
@@ -83,6 +88,10 @@ def main():
 
     if args.show_services:
         show_services()
+        sys.exit(0)
+
+    if args.imports:
+        select_files_with_dialog()
         sys.exit(0)
 
     if args.reformulate_from_first_set and args.reformulate:
@@ -190,7 +199,7 @@ def main():
 
     if args.reformulate:
         update_config(out_instruction="CQ_INSTRUCTION_REFORMULATE", 
-                      out_definition="CQ_EVALUATION_DEFINITION", 
+                      out_definition="get_cq_evaluation_definition", 
                       out_examples="CQ_ACCEPTED")
 
         reformulated = True
@@ -239,7 +248,7 @@ def main():
             gemini_model=args.model if args.model else config["gemini_model"],  
             temperature=args.temperature if args.temperature else config["temperature"],  
             role=args.role if args.role else config["role"], 
-            out_instruction="CQ_INSTRUCTION_REFORMULATE_INJECTION_USER_STORY",
+            out_instruction="get_cq_evaluation_definition_bme",
             out_examples="",
             limit=""  
         )   
@@ -358,6 +367,7 @@ def main():
             llmrole=config["role"],
             prompt=notionprompt,
         )
+        notion = get_notion_client()
     
         for cq in tqdm(competency_questions):
             for att in range(3):

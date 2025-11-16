@@ -9,12 +9,104 @@ import time
 import json
 import argparse
 import hashlib
+from pathlib import Path
 import questionary
 import pandas as pd
+import shutil
+import tkinter as tk
+from tkinter import filedialog
+
 
 
 # If running from a scirpt, use the script's directory to find the config file
 config_path = os.path.join(os.path.dirname(__file__), "api_config.yml")
+
+
+def select_files_with_dialog():
+    """
+    Open a native file dialog for file selection and copy to assets folder.
+    Uses tkinter.filedialog for GUI file picking.
+    """
+    # Hide the root tkinter window
+    root = tk.Tk()
+    root.withdraw()
+    root.attributes('-topmost', True)
+
+    print(os.getcwd())
+    
+    # Select multiple files using native file dialog
+    files = filedialog.askopenfilenames(
+        title="Select files to import for IDEA2",
+        filetypes=[
+            ("All files", "*.*"),
+            ("Schema files", "*.xsd *.xml"),
+            ("JSON files", "*.json *.jsonld"),
+            ("Text files", "*.txt *.md"),
+        ]
+    )
+    
+    if not files:
+        print("No files selected.")
+        root.destroy()
+        return
+    
+    # Get the assets directory - normalize the path
+    assets_dir = os.path.normpath(os.path.join(os.getcwd(), "assets"))
+    
+    # Ask user to select destination folder within assets using native dialog
+    dest_folder = filedialog.askdirectory(
+        title="Select destination folder in assets",
+        initialdir=assets_dir
+    )
+    
+    root.destroy()
+    
+    if not dest_folder:
+        print("No destination folder selected.")
+        return
+    
+    # Normalize the destination path for comparison
+    dest_folder = os.path.normpath(dest_folder)
+    
+    # Verify destination is within assets
+    # Use os.path.commonpath to check if dest_folder is under assets_dir
+    try:
+        common_path = os.path.commonpath([assets_dir, dest_folder])
+        if common_path != assets_dir:
+            print(f"Error: Destination must be within the assets folder.")
+            print(f"  Assets dir: {assets_dir}")
+            print(f"  Selected: {dest_folder}")
+            return
+    except ValueError:
+        # Paths are on different drives
+        print(f"Error: Destination must be within the assets folder.")
+        return
+    
+    # Copy files to destination
+    copied_count = 0
+    for file_path in files:
+        try:
+            filename = os.path.basename(file_path)
+            dest_path = os.path.join(dest_folder, filename)
+            
+            # Check if file already exists
+            if os.path.exists(dest_path):
+                overwrite = questionary.confirm(
+                    f"File '{filename}' already exists. Overwrite?"
+                ).ask()
+                if not overwrite:
+                    print(f"Skipped: {filename}")
+                    continue
+            
+            shutil.copy2(file_path, dest_path)
+            print(f"✓ Copied: {filename}")
+            copied_count += 1
+            
+        except Exception as e:
+            print(f"✗ Error copying {filename}: {e}")
+    
+    print(f"\nSuccessfully copied {copied_count}/{len(files)} files to:")
+    print(f"  {os.path.relpath(dest_folder, os.getcwd())}")
 
 def get_key(service, config_file="api_config.yml"):
     """

@@ -17,21 +17,27 @@ from notion_utils import get_current_iteration_from_dashboard
 
 
 def convert_cq_to_json_ld(cq: str, 
-                          generation_identifier=None, modelname=None, temperature="", roleset="", id=None, hash=None, src_cq=None) -> dict:
+                          generation_identifier=None, modelname=None, temperature="", roleset="", id=None, hash=None, src_cq=None,
+                          context="Undefined") -> dict:
     """
     Convert a competency question (CQ) to JSON-LD format.
 
     Args:
         cq (str): The competency question to convert.
-        identifier (str, optional): An identifier for the competency question. Defaults to None.
-        set (str, optional): The name of the set to which the competency question belongs.
+        generation_identifier (str): The identifier for the generation.
+        modelname (str): The name of the model used.
+        temperature (str): The temperature setting used.
+        roleset (str): The roleset used.
+        id (str): The unique identifier for the CQ (not used in this example).
+        hash (str): The hash of the CQ.
+        src_cq (str): The source CQ if this is a reformulation.
 
     Returns:
         dict: The JSON-LD representation of the competency question.
     """
     
     json_ld = {
-        "@context": "https://www.animl.org/",
+        "@context": context,
         "@type": "CompetencyQuestion",
         "@Generation": generation_identifier if generation_identifier else "",
         "@URI": hash if hash else "",
@@ -62,7 +68,7 @@ def save_json_ld_to_file(json_ld_list: dict, filepath=None) -> None:
     with open(filepath, 'w') as f:
         json.dump(json_ld_list, f, indent=2, ensure_ascii=False)
 
-def cq_to_json_ld(cqs: list, filepath=None) -> None:
+def cq_to_json_ld(cqs: list, filepath=None, source_docs="Undefined") -> None:
     """
     Convert a list of competency questions to JSON-LD format and save them to a file.
 
@@ -86,7 +92,7 @@ def cq_to_json_ld(cqs: list, filepath=None) -> None:
     else:
         raise NotImplementedError("Reformulated CQs not yet implemented in JSON-LD conversion.")
 
-    json_ld_list = [convert_cq_to_json_ld(cq, generation_identifier, modelname, temperature, roleset, hash=utils.hash_from_string(cq), src_cq=src_cq) for cq in cqs]
+    json_ld_list = [convert_cq_to_json_ld(cq, generation_identifier, modelname, temperature, roleset, hash=utils.hash_from_string(cq), src_cq=src_cq, context=source_docs) for cq in cqs]
     save_json_ld_to_file(json_ld_list, filepath)
 
     logging.info(f"Competency questions written to {filepath}")
