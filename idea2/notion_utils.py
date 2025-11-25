@@ -11,12 +11,11 @@ import json
 from utils import get_key
 from notion_client import Client
 from tqdm import tqdm
-from reformulate_cq import NOTION_DATABASE_ID, get_name_from_id, get_discussion_comments
 from time import sleep
 
 notiontoken = get_key("notionkey")
 llmdb = get_key("notionllmdb")
-notiondb = get_key("notiondb")
+NOTION_DATABASE_ID = get_key("notiondb")
 
 notion = Client(auth=notiontoken)
 
@@ -189,4 +188,102 @@ def get_cqs_from_file(filepath, filetype=None) -> list:
         print(cq_strings)
         return [cq.strip() for cq in cq_strings if cq.strip()]
     
+def pull_cqs_with_high_score(min_score: int = 0, save_to_file: bool = True) -> list:
+    """
+    Pull all CQs from the Notion database that have a score value greater than min_score.
+    
+    Args:
+        min_score (int): The minimum score threshold (default is 0, so pulls CQs with score > 0).
+        save_to_file (bool): Whether to save the CQ data to a JSON-LD file (default is True).
+    
+    Returns:
+        list: A list of dictionaries containing CQ data with keys:
+              - 'id': The Notion page ID
+              - 'cq': The competency question text
+              - 'score': The score value
+              - 'votes': The number of votes
+              - 'iteration': The iteration number (if available)
+              - 'source': The source documents (if available)
+    """
+    all_results = []
+    has_more = True
+    next_cursor = None
+    
+    print(f"Fetching CQs with score > {min_score} from Notion...")
+    
+    while has_more:
+        response = notion.databases.query(
+            **{
+                "database_id": NOTION_DATABASE_ID,
+                "filter": {
+                    "property": "Score",
+                    "number": {
+                        "greater_than": min_score
+                    }
+                },
+                "start_cursor": next_cursor,
+                "page_size": 100
+            }
+        )
+        all_results.extend(response["results"])
+        has_more = response.get("has_more", False)
+        next_cursor = response.get("next_cursor")
+    
+    cqs_data = []
+    
+    for page in tqdm(all_results, desc="Processing high-score CQs"):
+        properties = page["properties"]
+        
+        # Extract CQ text
+        cq_text = ""
+        if "CQ" in properties and properties["CQ"]["title"]:
+            cq_text = properties["CQ"]["title"][0]["text"]["content"]
+        
+        # Extract score
+        score = None
+        if "Score" in properties and properties["Score"].get("number") is not None:
+            score = properties["Score"]["number"]
+        
+        # Extract votes
+        votes = None
+        if "Votes" in properties and properties["Votes"].get("number") is not None:
+            votes = properties["Votes"]["number"]
+        
+        # Extract iteration (if available)
+        iteration = None
+        if "Iteration" in properties and properties["Iteration"].get("number") is not None:
+            iteration = properties["Iteration"]["number"]
+        
+        # Extract source (if available)
+        sources = []
+        if "Source" in properties and properties["Source"].get("multi_select"):
+            sources = [s["name"] for s in properties["Source"]["multi_select"]]
+        
+        cqs_data.append({
+            "@context": "https://www.animl.org/",
+            "@type": "CompetencyQuestion",
+            "id": page["id"],
+            "text": cq_text,
+            "score": score,
+            "votes": votes,
+            "iteration": iteration,
+            "source": sources
+        })
+    
+    print(f"Found {len(cqs_data)} CQs with score > {min_score}")
+    
+    # Save CQ data to JSON-LD file
+    if save_to_file:
+        output_path = os.path.join(os.getcwd(), "assets", "cqs", "cqs.jsonld")
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(cqs_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"Saved {len(cqs_data)} CQs to {output_path}")
+    
+    return cqs_data
 
+if __name__ == "__main__":
+    #Pull and save CQs with score > 1
+    high_score_cqs = pull_cqs_with_high_score()
