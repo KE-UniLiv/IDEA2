@@ -103,102 +103,7 @@ Schemas are used to inform the creation of the ontology due to the fact that the
 
 
 ## CQ Exports with JSON-LD 🚚💨
-All CQs (or a subset) are exportable to JSON-LD format which utilises the owlunit vocabulary for denoting the concept of "CompetencyQuestion". It also utilises the PROV-O and schema.org schemas, and the Croissant data model. The LD is contextualised at the start of each export file as follows:
-```
-{
-  "@context": {
-    "@vocab": "http://schema.org/",
-    "prov": "http://www.w3.org/ns/prov#",
-    "cr": "http://mlcommons.org/croissant/",
-    "@prefix owlunit": "<https://w3id.org/OWLunit/ontology/>",
-    "CompetencyQuestion": "owlunit:CompetencyQuestion",
-    "Dataset": "cr:Dataset",
-    "RecordSet": "cr:RecordSet",
-    "Field": "cr:Field",
-    "wasGeneratedBy": "prov:wasGeneratedBy",
-    "generatedAtTime": "prov:generatedAtTime",
-    "wasAttributedTo": "prov:wasAttributedTo",
-    "used": "prov:used",
-    "Activity": "prov:Activity"
-  },
-  "@type": "Dataset",
-  "@id": "https://w3id.org/idea2/datasets/cqs_2025_12_04",
-  "name": "Competency Questions Export 2025_12_04",
-  "description": "A dataset of competency questions extracted from JSON-LD files with provenance metadata",
-  "dateCreated": "2025-12-04T18:20:39.478806",
-  "dateModified": "2025-12-04T18:20:39.478806",
-  "version": "1.0",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "wasGeneratedBy": {
-    "@type": "Activity",
-    "@id": "https://w3id.org/idea2/activities/export_2025_12_04",
-    "name": "CQ Export Activity",
-    "description": "Export of competency questions from 2 JSON-LD files",
-    "startedAtTime": "2025-12-04T18:20:39.478806",
-    "endedAtTime": "2025-12-04T18:20:39.478806",
-    "used": [
-      {
-        "@id": "https://w3id.org/idea2/files/g01_cqs.jsonld",
-        "name": "g01_cqs.jsonld"
-      },
-      {
-        "@id": "https://w3id.org/idea2/files/g02_cqs_reformulated.jsonld",
-        "name": "g02_cqs_reformulated.jsonld"
-      }
-    ]
-  },
-  "distribution": {
-    "@type": "DataDownload",
-    "encodingFormat": "application/ld+json",
-    "contentUrl": "exported_cqs_2025_12_04.jsonld"
-  },
-  "cr:RecordSet": {
-    "@type": "RecordSet",
-    "@id": "https://w3id.org/idea2/datasets/cqs_2025_12_04/recordset",
-    "name": "Competency Questions",
-    "description": "Collection of competency questions with metadata",
-    "cr:Field": [
-      {
-        "@type": "Field",
-        "name": "text",
-        "description": "The text of the competency question",
-        "dataType": "Text"
-      },
-      {
-        "@type": "Field",
-        "name": "source_file",
-        "description": "The source JSON-LD file from which the CQ was extracted",
-        "dataType": "Text"
-      },
-      {
-        "@type": "Field",
-        "name": "hash",
-        "description": "Unique identifier/hash for the competency question",
-        "dataType": "Text"
-      },
-      {
-        "@type": "Field",
-        "name": "iteration",
-        "description": "Iteration identifier for the CQ generation process",
-        "dataType": "Text"
-      },
-      {
-        "@type": "Field",
-        "name": "model",
-        "description": "The AI model used to generate the competency question",
-        "dataType": "Text"
-      },
-      {
-        "@type": "Field",
-        "name": "temperature",
-        "description": "The temperature parameter used during generation",
-        "dataType": "Float"
-      }
-      
-    ],
-  ```
-
-  An example for the CQ *What conservation treatments has an item undergone* is given below:
+All CQs (or a subset) are exportable to JSON-LD format which utilises the owlunit vocabulary for denoting the concept of "CompetencyQuestion". It also utilises the PROV-O and schema.org schemas, and the Croissant data model. The LD is contextualised at the start of each export file. An example for the CQ *What conservation treatments has an item undergone* is given below:
   ```
       {
         "@type": "CompetencyQuestion",
@@ -220,6 +125,8 @@ All CQs (or a subset) are exportable to JSON-LD format which utilises the owluni
         "generatedAtTime": "2025-12-04T18:20:39.478806"
       }
 ```
+*A full showcase of the preamble with the definition of the concept of CompetencyQuestion is made available when running exports.py for your data*
+
 ## Requirements and environments✅
 
 Please find the requirements in [`requirements.txt`](requirements.txt). It is advised to create a virtual environment (conda or venv) to install the requirements such that it does not corrupt any of your other projects.
