@@ -83,11 +83,11 @@ def configure_prompt(role=None, out_definition=None, out_examples=None, out_inst
     """
 
 
-    role = role or get_config_value("role")
-    out_definition = out_definition or get_config_value("out_definition")
-    out_examples = out_examples or get_config_value("out_examples")
-    out_instruction = out_instruction or get_config_value("out_instruction")
-    limit = limit or get_config_value("limit")
+    role = role if role is not None else get_config_value("role")
+    out_definition = out_definition if out_definition is not None else get_config_value("out_definition")
+    out_examples = out_examples if out_examples is not None else get_config_value("out_examples")
+    out_instruction = out_instruction if out_instruction is not None else get_config_value("out_instruction")
+    limit = limit if limit is not None else get_config_value("limit")
 
     prompt_builder = PromptBuilder(
         role=role,
@@ -172,10 +172,23 @@ def save_llm_insatance(cqset: str, instance=[], isReformulated=False) -> None:
     """
     filepath = os.path.join(os.getcwd(), "assets", "cqs", "llm_instances.json")
 
+    # Resolve callables before JSON serialization
+    model = config["gemini_model"]
+    model = model() if callable(model) else model
+    model = model() if callable(model) else model
+    
+    role = config["role"]
+    role = role() if callable(role) else role
+    role = role() if callable(role) else role
+    
+    temperature = config["temperature"]
+    temperature = temperature() if callable(temperature) else temperature
+    temperature = temperature() if callable(temperature) else temperature
+
     instance.append({
-        "model": config["gemini_model"],
-        "role": config["role"],
-        "temperature": config["temperature"],
+        "model": model,
+        "role": role,
+        "temperature": temperature,
         "cqset": cqset,
         "isReformulated": isReformulated
     })

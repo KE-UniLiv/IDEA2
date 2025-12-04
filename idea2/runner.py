@@ -20,7 +20,7 @@ from cq_extraction import (
 )
 from generation_utils import get_generation_number
 from notion_utils import (
-    get_cqs_from_file, llm_setup_to_notion, write_row, archive_all_pages
+    get_cqs_from_file, llm_setup_to_notion, write_row, archive_all_pages, get_current_iteration_from_dashboard
 )
 
 from utils import (
@@ -30,7 +30,7 @@ from utils import (
     store_hash_text_combinations, select_files_with_dialog, get_source_from_arr, get_info_from_first_iter
 )
 from cq_measures import run_simple_similarity_analysis
-from cq_linkage import link_reformulations, get_page_id_by_title, src_cq_uuid
+from cq_linkage import link_reformulations, get_page_id_by_title, src_cq_uuid, find_original_cq_from_hash
 
 r"""
 
@@ -44,7 +44,7 @@ Usage:
 
     
     (1): CD into the repo's directory:
-        cd x:\IDEA2\idea2
+        cd x:\IDEA2\
 
     (2): Run the script with desired arguments:
         python idea2/runner.py [--model MODEL_NAME] [--temperature TEMPERATURE] [--role ROLE] [--save] [--notion] [--generation GENERATION_LABEL]
@@ -57,15 +57,8 @@ Usage:
 def main():
     parser = argparse.ArgumentParser(description="Extract and store CQs using LLMs and Notion.")
 
-
-    # -- TODO: 
-    # (1) Use a source type to resolve new schemas ie --update_schema_to [path/to/schema1, path/to/schema2] then saves as current schema(s)
-    # -  Then use --use_source [schema / ontology / user stories]
-    # --
-
-
     parser.add_argument('--model', type=str, default="models/gemini-2.5-flash", help='Model name\n (Options: models/gemini-2.5-flash, models/gemini-2.5-pro, models/gemini-1.5-flash-latest, models/openai-gpt-4)')
-    parser.add_argument('--temperature', type=float, default=0.2, help='LLM temperature\n (Options: 0.0 to 1.0) (Default: 0.2)')
+    parser.add_argument('--temperature', type=float, default=0.8, help='LLM temperature\n (Options: 0.0 to 1.0) (Default: 0.8)')
     parser.add_argument('--role', type=str, default="SYSTEM_ROLE_A", help='Role for the LLM\n (Options: SYSTEM_ROLE_A, SYSTEM_ROLE_B, SYSTEM_ROLE_C)')
     parser.add_argument('--instruction', type=str, default="CQ_INSTRUCTION_A", help='Instruction for the LLM\n (Options: CQ_INSTRUCTION_A, CQ_INSTRUCTION_B, CQ_INSTRUCTION_C')
     parser.add_argument('--example', type=str, default="CQ_EXAMPLE_A", help='Give examples of CQs for the LLM\n (Options: CQ_EXAMPLE_A, CQ_EXAMPLE_B, CQ_EXAMPLE_C, CQ_ACCEPTED_CQS)')
@@ -136,6 +129,10 @@ def main():
     print(f"Using model: {modelname}")
 
     combined, _, filename = getSchemas() if not args.reformulate else get_info_from_first_iter()
+    # For reformulation, filename is full path - use basename
+    if args.reformulate:
+        _, filename, _ = get_info_from_first_iter()  # Get basename instead of full path
+        filename = [filename] if isinstance(filename, str) else filename  # Ensure filename is a list
 
     history = load_history_from_file(modelname)
     schema_in_history_first = any(combined in h["content"] for h in history)
@@ -159,36 +156,55 @@ def main():
             out_examples=args.example if args.example else config["out_examples"],
             limit=""
         )
+        role = config["role"]() if callable(config["role"]) else config["role"]
+        out_definition = config["out_definition"]() if callable(config["out_definition"]) else config["out_definition"]
+        out_examples = config["out_examples"]() if callable(config["out_examples"]) else config["out_examples"]
+        out_instruction = config["out_instruction"]() if callable(config["out_instruction"]) else config["out_instruction"]
+        temperature = config["temperature"]() if callable(config["temperature"]) else config["temperature"]
+        modelname = config["gemini_model"]() if callable(config["gemini_model"]) else config["gemini_model"]
 
         model = get_llm_instance(
-        config["gemini_model"],
-        api_key=geminikey,
-        role=config["role"],
-        temperature=config["temperature"]
-    )
+            modelname,
+            api_key=geminikey,
+            role=role,
+            temperature=temperature
+        )
 
     generation, currgeneration = get_generation_number()
     currgeneration += 1
+    
+    # For reformulations, use Notion's current iteration to determine the new generation
+    if args.reformulate or args.reformulate_from_first_set:
+        notion_iteration = get_current_iteration_from_dashboard()
+        currgeneration = notion_iteration + 1
+        generation = f"g{currgeneration:02d}_cqs"
 
     if not args.reformulate and not args.find_rejected and not args.reformulate_from_first_set:
+        role = config["role"]() if callable(config["role"]) else config["role"]
+        out_definition = config["out_definition"]() if callable(config["out_definition"]) else config["out_definition"]
+        out_examples = config["out_examples"]() if callable(config["out_examples"]) else config["out_examples"]
+        out_instruction = config["out_instruction"]() if callable(config["out_instruction"]) else config["out_instruction"]
+        temperature = config["temperature"]() if callable(config["temperature"]) else config["temperature"]
+        modelname = config["gemini_model"]() if callable(config["gemini_model"]) else config["gemini_model"]
+
         prompt, combined_schemas, source = configure_prompt(
-            role=config["role"],
-            out_definition=config["out_definition"],
-            out_examples=config["out_examples"],
-            out_instruction=config["out_instruction"],
+            role=role,
+            out_definition=out_definition,
+            out_examples=out_examples,
+            out_instruction=out_instruction,
             limit=config["limit"],
             schema=combined,
             schema_names=filename,
-            ignore_schemas=True if schema_in_history else False
+            ignore_schemas=True if schema_in_history_first else False
         )
 
         formattedprompt = "\n".join([
-            config['role'],
-            config['out_definition'],
-            config['out_examples'],
-            config['out_instruction'],
+            role,
+            out_definition,
+            out_examples,
+            out_instruction,
             config['limit'],
-            combined_schemas if not schema_in_history else ''
+            combined_schemas if not schema_in_history_first else ''
         ])
         
         history.append({"role": "user", "content": formattedprompt}) 
@@ -212,25 +228,39 @@ def main():
                       out_definition="get_cq_evaluation_definition", 
                       out_examples="CQ_ACCEPTED")
 
+        # Resolve config values after update_config (may need double-call for functions)
+        role = config["role"]() if callable(config["role"]) else config["role"]
+        role = role() if callable(role) else role
+        
+        out_definition = config["out_definition"]() if callable(config["out_definition"]) else config["out_definition"]
+        out_definition = out_definition() if callable(out_definition) else out_definition
+        
+        out_examples = config["out_examples"]() if callable(config["out_examples"]) else config["out_examples"]
+        out_examples = out_examples() if callable(out_examples) else out_examples
+        
+        out_instruction = config["out_instruction"]() if callable(config["out_instruction"]) else config["out_instruction"]
+        out_instruction = out_instruction() if callable(out_instruction) else out_instruction
+
         reformulated = True
 
         accepted_cqs = pull_accepted()
         rejectcqs = pull_rejected()
 
         prompt, _, source = configure_prompt(
-            role=config["role"],
-            out_definition=config["out_definition"],
-            out_examples=config["out_examples"],
-            out_instruction=config["out_instruction"],
+            role=role,
+            out_definition=out_definition,
+            out_examples=out_examples,
+            out_instruction=out_instruction,
             schema=combined,
             schema_names=filename,
             ignore_schemas=True if schema_in_history else False
         )
 
         formattedprompt = "\n".join([
-            config['out_definition'],
-            config['out_examples'],
-            config['out_instruction'],
+            out_definition,
+            out_examples,
+            out_instruction,
+            "\n\nIMPORTANT: Ignore any previous instructions about including ID numbers. From this point forward, do NOT include any ID numbers, prefixes like \"(ID 42):\", or any other identifier in your reformulated competency questions. Only provide the reformulated question text itself."
         ])
 
         print(f"Formatted prompt for reformulation:\n{formattedprompt}\n") if args.show_prompt else None
@@ -250,7 +280,6 @@ def main():
         cleaned_cqs = clean_llm_output(cqs) if cqs else None
         for q in cleaned_cqs:
             history.append({"role": "assistant", "content": q})
-
             store_hash_text_combinations(q)
 
     if args.reformulate_from_first_set:
@@ -262,22 +291,36 @@ def main():
             out_examples="",
             limit=""  
         )   
-    
+        # Resolve config values after update_config (may need double-call for functions)
+        role = config["role"]() if callable(config["role"]) else config["role"]
+        role = role() if callable(role) else role
+        
+        out_definition = config["out_definition"]() if callable(config["out_definition"]) else config["out_definition"]
+        out_definition = out_definition() if callable(out_definition) else out_definition
+        
+        out_examples = config["out_examples"]() if callable(config["out_examples"]) else config["out_examples"]
+        
+        out_instruction = config["out_instruction"]() if callable(config["out_instruction"]) else config["out_instruction"]
+        out_instruction = out_instruction() if callable(out_instruction) else out_instruction
+        
+        temperature = config["temperature"]() if callable(config["temperature"]) else config["temperature"]
+        modelname = config["gemini_model"]() if callable(config["gemini_model"]) else config["gemini_model"]
+
         model = get_llm_instance(
             modelname,
             api_key=geminikey,
-            role=config["role"],
-            temperature=config["temperature"]
+            role=role,
+            temperature=temperature
         )
 
         reformulated = True
         rejectcqs = cqs_from_csv(os.path.join(os.getcwd(), "assets", "us_personas", "askcq_dataset.csv"))
 
         prompt, _, source = configure_prompt(
-            role=config["role"],
-            out_definition=config["out_definition"],
-            out_examples=config["out_examples"],
-            out_instruction=config["out_instruction"],
+            role=role,
+            out_definition=out_definition,
+            out_examples=out_examples,
+            out_instruction=out_instruction,
             schema=combined,
             schema_names=filename,
             limit=config["limit"],
@@ -285,9 +328,9 @@ def main():
         )
 
         formattedprompt = "\n".join([
-            config['out_definition'],
-            config['out_examples'],
-            config['out_instruction'],
+            out_definition,
+            out_examples,
+            out_instruction,
             config['limit'],
             combined if not schema_in_history else ''
         ])
@@ -314,7 +357,20 @@ def main():
             naincludedcqs = cleaned_cqs.copy()
 
             cleaned_cqs = validate_reformulated(cleaned_cqs)
-            cq_to_json_ld(cleaned_cqs, jsonld_path, filename)
+            
+            # Get original CQ texts for reformulations
+            src_cq_texts = None
+            if args.reformulate and rejectcqs:
+                src_cq_texts = []
+                for reject_cq in rejectcqs:
+                    original_hash = reject_cq.get("hash")
+                    if original_hash:
+                        original_text = find_original_cq_from_hash(original_hash)
+                        src_cq_texts.append(original_text if original_text else None)
+                    else:
+                        src_cq_texts.append(None)
+            
+            cq_to_json_ld(cleaned_cqs, jsonld_path, filename, src_cq_texts=src_cq_texts)
             cq_to_txt(cleaned_cqs, os.path.join(outdir, f"{generation}_with_id_linkages.txt")) if not args.reformulate else None
         
         ## -- Now remvoe the ID after saving it locally
@@ -339,7 +395,7 @@ def main():
         naincludedcqs = cleaned_cqs.copy()
 
         cleaned_cqs = validate_reformulated(cleaned_cqs)
-        cq_to_json_ld(cleaned_cqs, jsonld_path)
+        cq_to_json_ld(cleaned_cqs, jsonld_path, filename)
 
         if not args.reformulate:
             cq_to_txt(cleaned_cqs, os.path.join(outdir, f"{generation}.txt"))
@@ -362,19 +418,27 @@ def main():
         jsonld_path = os.path.join(os.getcwd(), "assets", "cqs", f"{generation}.jsonld") if not args.reformulate else os.path.join(os.getcwd(), "assets", "cqs", f"{generation}_reformulated.jsonld")
         competency_questions = get_cqs_from_file(jsonld_path)
 
-        competency_questions = remove_local_ids_from_reformulations(competency_questions) if args.reformulate_from_first_set else None
+        if args.reformulate_from_first_set:
+            competency_questions = remove_local_ids_from_reformulations(competency_questions)
+
+        # Resolve config values for Notion upload
+        notion_out_examples = config["out_examples"]() if callable(config["out_examples"]) else config["out_examples"]
+        notion_out_instruction = config["out_instruction"]() if callable(config["out_instruction"]) else config["out_instruction"]
+        notion_modelname = config["gemini_model"]() if callable(config["gemini_model"]) else config["gemini_model"]
+        notion_temperature = config["temperature"]() if callable(config["temperature"]) else config["temperature"]
+        notion_role = config["role"]() if callable(config["role"]) else config["role"]
 
         notionprompt = "\n".join([
-            config['out_examples'],
-            config['out_instruction'], 
+            notion_out_examples,
+            notion_out_instruction,
         ])
 
         generation_config_UUID = llm_setup_to_notion(
             generation=generation,
-            modelname=config["gemini_model"],
-            temperature=config["temperature"],
+            modelname=notion_modelname,
+            temperature=notion_temperature,
             usage="API",
-            llmrole=config["role"],
+            llmrole=notion_role,
             prompt=notionprompt,
         )
         notion = get_notion_client()
@@ -415,7 +479,8 @@ def main():
 
         print("Competency questions written to Notion database. Please refresh the page to see the changes.")
 
-    save_llm_insatance(cqset=f"{generation}", isReformulated=reformulated) if args.save else print("LLM instance not saved, as --save argument was not provided.")
+    cqset_name = f"{generation}_reformulated" if reformulated else f"{generation}"
+    save_llm_insatance(cqset=cqset_name, isReformulated=reformulated) if args.save else print("LLM instance not saved, as --save argument was not provided.")
 
 if __name__ == "__main__":
     main()

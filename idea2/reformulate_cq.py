@@ -127,12 +127,13 @@ def pull_rejected() -> dict:
                 "date_pulled": datetime.datetime.now().strftime("%d/%m/%y")
             })
 
-    if curriteration == 1:
+    print(iteration)
+
+    if iteration == 1:
         filtered_cqs = rejected_cqs
         print("No previous iterations to filter. Using all rejected CQs.")
     else:
-        prev_iteration = curriteration
-        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == prev_iteration]
+        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == iteration]
 
         count = len(rejected_cqs) - len(filtered_cqs)
         print(f"Removed {count} CQs that were not from the previous iteration; but still technically rejected.")

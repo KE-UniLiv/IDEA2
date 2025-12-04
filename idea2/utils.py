@@ -326,22 +326,40 @@ def subset_cqs_from_dataset(filepath, n, restriction) -> list:
 
 
 
-def get_source_from_arr(arr: list) -> str:
+def get_source_from_arr(arr) -> str:
     """
     Get a combined source document string from an array of source documents.
+    Extracts the prefix before the first underscore from the filename.
 
     Args:
-        arr (list): A list of source document strings.
+        arr (list or str): A list of source document strings (filenames) or a single filename string.
 
     Returns:
-        str: A combined source document string.
+        str: The source prefix (e.g., 'bme' from 'bme_persona_liz.md').
     """
-    valid_types = ["persona", "user_story", "us1", "us2", "us3", "core", "technique", "schema", "xmlschema"]
-    for file in arr:
-        if any(vtype in file for vtype in valid_types):
-            result = file.split('_')[0] or file.split('-')[0]
-
-    return result
+    if not arr:
+        return "unknown"
+    
+    # Handle string input by converting to list
+    if isinstance(arr, str):
+        arr = [arr]
+    
+    # Get the first filename
+    first_file = arr[0]
+    
+    # Split by underscore and take the first part
+    if '_' in first_file:
+        result = first_file.split('_')[0]
+        return result if result else "unknown"
+    
+    # If no underscore, try splitting by hyphen
+    if '-' in first_file:
+        result = first_file.split('-')[0]
+        return result if result else "unknown"
+    
+    # If no delimiter, return the filename without extension
+    result = os.path.splitext(first_file)[0]
+    return result if result else "unknown"
 
 def load_history_from_file(model) -> list:
     """
@@ -438,13 +456,16 @@ def show_customhelp():
     steps = [
         "This is the help for IDEA2",
         "All arguments are optional, and the script will use default values if not provided.",
-        "(Remember to use --save if you want anything to be saved)\n",
+        "(Remember to use --save if you want anything to be saved locally)\n",
         "--find_rejected and --reformulate can be used together with --notion",
         "You can use --help to see available options for each argument.\n",
         "Also, remember to set your API keys in the api_config.yml file. You may also use --update_key <service>,<new_key> for this purpose.\n"
         "You may also use --show_services to see the available services and their string names in the config file.\n",
-        "1. Run the script with the desired arguments.",
-        "2. The script will extract competency questions using the specified model and prompt.",
+        "1. Run the script with the desired arguments.\n",
+        "For extraction this will be something like: python idea2/runner.py --model <model_name> --temperature <prompt_file> --instruction <instruction from prompts.py> --role <role from prompts.py> --example <example from prompts.py> --save --notion\n",
+        "2. The script will extract competency questions using the specified model and prompt.\n",
+        "To reformulate rejected CQs, use: python idea2/runner.py --model <model_name> --temperature <value from 0 - 1> --find_rejected --reformulate --save --notion\n",
+        "Other utility functions such as archiving CQs, exporting etc are also present, please use --help to see them all."
     ]
 
     for line in steps:

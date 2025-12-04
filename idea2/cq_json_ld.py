@@ -68,31 +68,45 @@ def save_json_ld_to_file(json_ld_list: dict, filepath=None) -> None:
     with open(filepath, 'w') as f:
         json.dump(json_ld_list, f, indent=2, ensure_ascii=False)
 
-def cq_to_json_ld(cqs: list, filepath=None, source_docs="Undefined") -> None:
+def cq_to_json_ld(cqs: list, filepath=None, source_docs="Undefined", src_cq_texts: list = None) -> None:
     """
     Convert a list of competency questions to JSON-LD format and save them to a file.
 
     Args:
         cqs (list): A list of competency questions.
         filepath (str, optional): The path to the file where the JSON-LD will be saved. Defaults to None.
+        source_docs (str): The context/source documents.
+        src_cq_texts (list, optional): A list of original CQ texts for reformulations. Defaults to None.
 
     Returns:
         None: The function saves the JSON-LD representation to the specified file.
     """
 
     generation_identifier, _ = get_generation_number()
+    
+    # Resolve config values (may be callables/lambdas)
     modelname = cq_extraction.config["gemini_model"]
+    modelname = modelname() if callable(modelname) else modelname
+    
     temperature = cq_extraction.config["temperature"]
+    temperature = temperature() if callable(temperature) else temperature
+    
     roleset = cq_extraction.config["role"]
+    roleset = roleset() if callable(roleset) else roleset
+    roleset = roleset() if callable(roleset) else roleset  # Double-call for functions wrapped in lambdas
 
     curr_iteration = get_current_iteration_from_dashboard()
 
-    if curr_iteration == 1:
-        src_cq = None
+    if curr_iteration == 1 or src_cq_texts is None:
+        # First iteration - no reformulations
+        json_ld_list = [convert_cq_to_json_ld(cq, generation_identifier, modelname, temperature, roleset, hash=utils.hash_from_string(cq), src_cq=None, context=source_docs) for cq in cqs]
     else:
-        raise NotImplementedError("Reformulated CQs not yet implemented in JSON-LD conversion.")
+        # Reformulations - pair each CQ with its original text
+        json_ld_list = []
+        for i, cq in enumerate(cqs):
+            src_cq = src_cq_texts[i] if i < len(src_cq_texts) else None
+            json_ld_list.append(convert_cq_to_json_ld(cq, generation_identifier, modelname, temperature, roleset, hash=utils.hash_from_string(cq), src_cq=src_cq, context=source_docs))
 
-    json_ld_list = [convert_cq_to_json_ld(cq, generation_identifier, modelname, temperature, roleset, hash=utils.hash_from_string(cq), src_cq=src_cq, context=source_docs) for cq in cqs]
     save_json_ld_to_file(json_ld_list, filepath)
 
     logging.info(f"Competency questions written to {filepath}")

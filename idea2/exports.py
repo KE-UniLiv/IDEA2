@@ -8,11 +8,13 @@ import os
 import json
 import questionary
 from datetime import datetime
+from urllib.parse import quote
 
 def export_cqs_from_json_ld_files(cq_directory: str = os.path.join(os.getcwd(), "assets/cqs") ):
     """
     Export competency questions from JSON-LD files in the specified directory.
     Uses questionary to allow user selection of specific files or all files.
+    Exports to valid JSON-LD using PROV-O, schema.org, and Croissant data model.
 
     Parameters
     ----------
@@ -115,8 +117,119 @@ def export_cqs_from_json_ld_files(cq_directory: str = os.path.join(os.getcwd(), 
             continue
     
     date_yyyy_mm_dd = datetime.now().strftime("%Y_%m_%d")
-    with open(os.path.join(cq_directory, f"exported_cqs_{date_yyyy_mm_dd}.json"), 'w', encoding='utf-8') as outfile:
-        json.dump(cqs, outfile, indent=2, ensure_ascii=False)
+    timestamp_iso = datetime.now().isoformat()
+    
+    # Create valid JSON-LD structure with PROV-O, schema.org, Croissant, and OWLUnit
+    json_ld_output = {
+        "@context": {
+            "@vocab": "http://schema.org/",
+            "prov": "http://www.w3.org/ns/prov#",
+            "cr": "http://mlcommons.org/croissant/",
+            "@prefix owlunit": "<https://w3id.org/OWLunit/ontology/>",
+            "CompetencyQuestion": "owlunit:CompetencyQuestion",
+            "Dataset": "cr:Dataset",
+            "RecordSet": "cr:RecordSet",
+            "Field": "cr:Field",
+            "wasGeneratedBy": "prov:wasGeneratedBy",
+            "generatedAtTime": "prov:generatedAtTime",
+            "wasAttributedTo": "prov:wasAttributedTo",
+            "used": "prov:used",
+            "Activity": "prov:Activity"
+        },
+        "@type": "Dataset",
+        "@id": f"https://w3id.org/idea2/datasets/cqs_{date_yyyy_mm_dd}",
+        "name": f"Competency Questions Export {date_yyyy_mm_dd}",
+        "description": "A dataset of competency questions extracted from JSON-LD files with provenance metadata",
+        "dateCreated": timestamp_iso,
+        "dateModified": timestamp_iso,
+        "version": "1.0",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "wasGeneratedBy": {
+            "@type": "Activity",
+            "@id": f"https://w3id.org/idea2/activities/export_{date_yyyy_mm_dd}",
+            "name": "CQ Export Activity",
+            "description": f"Export of competency questions from {len(files_to_process)} JSON-LD files",
+            "startedAtTime": timestamp_iso,
+            "endedAtTime": timestamp_iso,
+            "used": [{"@id": f"https://w3id.org/idea2/files/{quote(f)}", "name": f} for f in files_to_process]
+        },
+        "distribution": {
+            "@type": "DataDownload",
+            "encodingFormat": "application/ld+json",
+            "contentUrl": f"exported_cqs_{date_yyyy_mm_dd}.jsonld"
+        },
+        "cr:RecordSet": {
+            "@type": "RecordSet",
+            "@id": f"https://w3id.org/idea2/datasets/cqs_{date_yyyy_mm_dd}/recordset",
+            "name": "Competency Questions",
+            "description": "Collection of competency questions with metadata",
+            "cr:Field": [
+                {
+                    "@type": "Field",
+                    "name": "text",
+                    "description": "The text of the competency question",
+                    "dataType": "Text"
+                },
+                {
+                    "@type": "Field",
+                    "name": "source_file",
+                    "description": "The source JSON-LD file from which the CQ was extracted",
+                    "dataType": "Text"
+                },
+                {
+                    "@type": "Field",
+                    "name": "hash",
+                    "description": "Unique identifier/hash for the competency question",
+                    "dataType": "Text"
+                },
+                {
+                    "@type": "Field",
+                    "name": "iteration",
+                    "description": "Iteration identifier for the CQ generation process",
+                    "dataType": "Text"
+                },
+                {
+                    "@type": "Field",
+                    "name": "model",
+                    "description": "The AI model used to generate the competency question",
+                    "dataType": "Text"
+                },
+                {
+                    "@type": "Field",
+                    "name": "temperature",
+                    "description": "The temperature parameter used during generation",
+                    "dataType": "Float"
+                }
+            ],
+            "data": []
+        }
+    }
+    
+    # Add CQs with provenance metadata using OWLUnit vocabulary
+    for i, cq in enumerate(cqs):
+        cq_entry = {
+            "@type": "CompetencyQuestion",
+            "@id": cq.get('hash', f"https://w3id.org/idea2/cqs/{i}"),
+            "text": cq.get('text', ''),
+            "source_file": cq.get('source_file', ''),
+            "hash": cq.get('hash', ''),
+            "iteration": cq.get('iteration', ''),
+            "model": cq.get('model', ''),
+            "temperature": cq.get('temperature', None),
+            "wasGeneratedBy": {
+                "@type": "Activity",
+                "name": "CQ Generation",
+                "wasAttributedTo": {
+                    "@type": "SoftwareAgent",
+                    "name": cq.get('model', 'Unknown Model')
+                }
+            },
+            "generatedAtTime": timestamp_iso
+        }
+        json_ld_output["cr:RecordSet"]["data"].append(cq_entry)
+    
+    with open(os.path.join(cq_directory, f"exported_cqs_{date_yyyy_mm_dd}.jsonld"), 'w', encoding='utf-8') as outfile:
+        json.dump(json_ld_output, outfile, indent=2, ensure_ascii=False)
     
     print(f"\nSuccessfully extracted {len(cqs)} competency questions from {len(files_to_process)} files.")
     return cqs

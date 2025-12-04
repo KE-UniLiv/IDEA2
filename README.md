@@ -17,11 +17,7 @@ IDEA2 remains flexible for different applications; ontology engineers may opt to
 ![Alt text](idea2_workflow.png)
 *The IDEA2 Workflow*
 
-IDEA2 was employed during the creation of the [`AnIML Ontology`](https://github.com/KE-UniLiv/animl-ontology), whereby the tool curated CQs which informed the creation of the ontology itself, and it's outputs were validated in 3 iterations by domain experts. This ensured that the resulting ontology effectively captured the relevant requirements of the [`AnIML schema`](https://www.animl.org/) which was the source documentation for the tool.
-
-IDEA2 has also been adaptable to the domain of cultural heritage, whereby it was tasked with improving a set of CQs (from human-annotators and LLMs in comparable proportions) which were derived from user stories and personas.
-
-RESULTS OF BME EXPERIMENT HERE
+IDEA2 was employed during the creation of the [`AnIML Ontology`](https://github.com/KE-UniLiv/animl-ontology), whereby the tool curated CQs which informed the creation of the ontology itself, and it's outputs were validated in 3 iterations by domain experts. This ensured that the resulting ontology effectively captured the relevant requirements of the [`AnIML schema`](https://www.animl.org/) which was the source documentation for the tool. IDEA2 has also been adaptable to the domain of cultural heritage, whereby it was tasked with improving a set of CQs (from human-annotators and LLMs in comparable proportions) which were derived from user stories and personas.
 
 ## Reformulations and iterative refinement ♻️
 Reformulation of a CQ takes place when any given CQ has a score of $<= 0$ on the Notion database. If this occurs, **--find_rejected** will pull these and store them in [`rejected_cqs.json`](assets/cqs/rejected_cqs.json) and **--reformulate** will allow the reformulation of those rejected CQs. Should a comment be given to a rejected CQ (ie, a reason as to why it was rejected), this will be passed to the LLM as well. Through iterations of CQ generations and feedback, the LLM should become fine-tuned to the task as the **message history** is given to the LLM as context from `.json` chat history files.
@@ -34,7 +30,7 @@ Prompt engineering is at the core of this workflow and [`prompts.py`](idea2/prom
 
 - A role for the LLM to take (Requirements engineer, Ontology creator, Ontology tester)
 
-- Examples of CQs for other domains ([`Music Meta`](https://github.com/polifonia-project/music-meta-ontology) etc)
+- Examples of CQs for other domains (e.g [`Music Meta`](https://github.com/polifonia-project/music-meta-ontology))
 
 - Instructions for the LLM (Extract all / assume ontology exists / reformulate rejected CQs)
 
@@ -53,7 +49,7 @@ All in all, the Notion integration allows for:
 - Reformulates relation (link reformulation to the original CQ)
 
 
-### Getting a Notion Database's ID
+### Getting a Notion Database / Page ID
 To get a database's key, hover around the title of the database in bold text, and click the 3 dots to reveal the drop down menu with the *View database* option:
 
 ![alt text](image.png)
@@ -62,7 +58,14 @@ From this, a new view of the database will be shown; again, click the three dots
 
 ![alt text](image-1.png)
 
-From this a large URL will be copied, everything between the last / and the ? of the url is the database ID, it should be 32 characters long.
+From this a large URL will be copied, everything between the last backslash (/) and the "?v=" of the url is the database ID, it should be 32 characters long.
+
+To get the page ID, follow the same process by clicking the triple dot selector at the top right of the page, and click *copy link* again. The ID is in the same two areas. Two examples for a database and a workspace page are given below:
+
+`https://www.notion.so/xxxxxxx?v=yyyyyyyy&source=copy_link` (page)
+`https://www.notion.so/xxxxxx...?source=copy_link` (database)
+
+Only copy the *xxxxx...* values to get the ID for the [`api_config.yml`](idea2/api_config.yml).
 
 ## Prepare data 📝
 
@@ -85,8 +88,6 @@ notionllmdb:
   key: <your notion LLM config database key>
 ```
 
-Schemas and XML definitions should be defined in [`assets/schema`](assets/schema) if you are using schemas as the source documents.
-
 ### Using source documents 📂
 
 All source documents for extraction are kept in the [`assets`](assets/) folder. You may import new files to this area either by doing so manually, or by running `idea2/runner.py --imports` which spawns two file explorer dialogs for you to select files and select the appropriate destination within [`assets`](assets/).
@@ -98,48 +99,136 @@ Personas and user stories are natural language formats for expressing requiremen
 
 ### Schemas and XML Definitions 📜
 
-Schemas are used to inform the creation of the ontology due to the fact that the ontology should be able to answer the (verified) CQs generated from them. An example of schemas is the [`AnIML Schema (Core & Technique)`](https://www.animl.org/) which contains both a [`technique schema`](assets/schema/animl-technique.xsd) and a [`core schema`](assets/schema/animl-core.xsd). Given these two schemas as part of a prompt, the LLM will extract CQs relevant to the schema which can be used to inform the creation of an ontology or to see if a former ontology can answer certain CQs. The schema is used in tandem with the prompt to attain powerful results for Ontology Engineering.
+Schemas are used to inform the creation of the ontology due to the fact that the ontology should be able to answer the (verified) CQs generated from them. An example of schemas is the [`AnIML Schema (Core & Technique)`](https://www.animl.org/) which contains both a [`technique schema`](assets/schema/animl-technique.xsd) and a [`core schema`](assets/schema/animl-core.xsd). Given these two schemas as part of a prompt, the LLM will extract CQs relevant to the schema which can be used to inform the creation of an ontology or to see if an existing ontology can answer certain CQs.
 
 
-## LLMs and Hyperparameters 🤖
-
-`Gemini` models are supported for the extraction of CQs from source documents. The temperature hyperparameter can be given to the model which relates to how creative the LLM is allowed to be in its response. The outputs for LLMs are given as both plain `.txt` files and `.jsonld` files, the former giving an easy way to quickly view a set of generated CQs, the latter allowing for more context and structure with **hash** fields, an example for the AnIML scenario would be:
-
+## CQ Exports with JSON-LD 🚚💨
+All CQs (or a subset) are exportable to JSON-LD format which utilises the owlunit vocabulary for denoting the concept of "CompetencyQuestion". It also utilises the PROV-O and schema.org schemas, and the Croissant data model. The LD is contextualised at the start of each export file as follows:
 ```
-[
-  {
-    "@context": "animl,
-    "@type": "CompetencyQuestion",
-    "@Generation": "g01_cqs",
-    "@URI": "80479532f5433f8c314d8eb2567498ea6b5221377f255cf9c97e72785e4c2c4b",
-    "@Reformulates": "None",
-    "text": "What is the version of the AnIML document?",
-    "identifier": "g01_cqs",
-    "belongsToModel": {
-      "@type": "System",
-      "name": "models/gemini-2.5-pro",
-      "temperature": 0.8,
-      "roleset": "\nYou are an ontology engineer working on a project to develop a new ontology\nfor a domain of interest. You have been tasked with developing the ontology\nand ensuring that it is aligned with the requirements of the domain experts. \nYou will focus on requirement engineering."
-    }
-  }
-]
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "cr": "http://mlcommons.org/croissant/",
+    "@prefix owlunit": "<https://w3id.org/OWLunit/ontology/>",
+    "CompetencyQuestion": "owlunit:CompetencyQuestion",
+    "Dataset": "cr:Dataset",
+    "RecordSet": "cr:RecordSet",
+    "Field": "cr:Field",
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "generatedAtTime": "prov:generatedAtTime",
+    "wasAttributedTo": "prov:wasAttributedTo",
+    "used": "prov:used",
+    "Activity": "prov:Activity"
+  },
+  "@type": "Dataset",
+  "@id": "https://w3id.org/idea2/datasets/cqs_2025_12_04",
+  "name": "Competency Questions Export 2025_12_04",
+  "description": "A dataset of competency questions extracted from JSON-LD files with provenance metadata",
+  "dateCreated": "2025-12-04T18:20:39.478806",
+  "dateModified": "2025-12-04T18:20:39.478806",
+  "version": "1.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "wasGeneratedBy": {
+    "@type": "Activity",
+    "@id": "https://w3id.org/idea2/activities/export_2025_12_04",
+    "name": "CQ Export Activity",
+    "description": "Export of competency questions from 2 JSON-LD files",
+    "startedAtTime": "2025-12-04T18:20:39.478806",
+    "endedAtTime": "2025-12-04T18:20:39.478806",
+    "used": [
+      {
+        "@id": "https://w3id.org/idea2/files/g01_cqs.jsonld",
+        "name": "g01_cqs.jsonld"
+      },
+      {
+        "@id": "https://w3id.org/idea2/files/g02_cqs_reformulated.jsonld",
+        "name": "g02_cqs_reformulated.jsonld"
+      }
+    ]
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/ld+json",
+    "contentUrl": "exported_cqs_2025_12_04.jsonld"
+  },
+  "cr:RecordSet": {
+    "@type": "RecordSet",
+    "@id": "https://w3id.org/idea2/datasets/cqs_2025_12_04/recordset",
+    "name": "Competency Questions",
+    "description": "Collection of competency questions with metadata",
+    "cr:Field": [
+      {
+        "@type": "Field",
+        "name": "text",
+        "description": "The text of the competency question",
+        "dataType": "Text"
+      },
+      {
+        "@type": "Field",
+        "name": "source_file",
+        "description": "The source JSON-LD file from which the CQ was extracted",
+        "dataType": "Text"
+      },
+      {
+        "@type": "Field",
+        "name": "hash",
+        "description": "Unique identifier/hash for the competency question",
+        "dataType": "Text"
+      },
+      {
+        "@type": "Field",
+        "name": "iteration",
+        "description": "Iteration identifier for the CQ generation process",
+        "dataType": "Text"
+      },
+      {
+        "@type": "Field",
+        "name": "model",
+        "description": "The AI model used to generate the competency question",
+        "dataType": "Text"
+      },
+      {
+        "@type": "Field",
+        "name": "temperature",
+        "description": "The temperature parameter used during generation",
+        "dataType": "Float"
+      }
+      
+    ],
+  ```
+
+  An example for the CQ *What conservation treatments has an item undergone* is given below:
+  ```
+      {
+        "@type": "CompetencyQuestion",
+        "@id": "ec76e8a6d114118f55047f6c26a3a59f289e89e34e9278ae2ce55db015d626af",
+        "text": "What conservation treatments has an item undergone?",
+        "source_file": "g01_cqs.jsonld",
+        "hash": "ec76e8a6d114118f55047f6c26a3a59f289e89e34e9278ae2ce55db015d626af",
+        "iteration": "g01_cqs",
+        "model": "models/gemini-2.5-pro",
+        "temperature": 0.8,
+        "wasGeneratedBy": {
+          "@type": "Activity",
+          "name": "CQ Generation",
+          "wasAttributedTo": {
+            "@type": "SoftwareAgent",
+            "name": "models/gemini-2.5-pro"
+          }
+        },
+        "generatedAtTime": "2025-12-04T18:20:39.478806"
+      }
 ```
-
-
-
-*Please ensure that you have access to the model you require through your API key(s), or you may recieve errors.*
-
-
-
 ## Requirements and environments✅
 
-Please find the requirements in [`requirements.txt`](requirements.txt). To easily install all of these requirements, run 
+Please find the requirements in [`requirements.txt`](requirements.txt). It is advised to create a virtual environment (conda or venv) to install the requirements such that it does not corrupt any of your other projects.
+
+To easily install all of these requirements into an appropriate environment, please run 
 
 ``` 
 pip install -r requirements.txt
 ```
-
-TODO, VIRTUAL ENV INSTRUCTIONS
 
 ## Usage ⚒️
 
@@ -155,36 +244,38 @@ When all the data is in place and the dependencies are installed, below is an ex
 Below are the supported arguments, please run `python idea2/runner.py --usage_help` if the default help given is not useful for you, or if things are still unclear.
 
 ```
-usage: runner.py [-h] [--model MODEL] [--temperature TEMPERATURE] [--role ROLE] [--instruction INSTRUCTION]
-                 [--example EXAMPLE] [--generation GENERATION] [--save] [--limit] [--notion] [--reformulate]
-                 [--find_rejected] [--find_accepted] [--constrain] [--usage_help] [--show_prompt]
+usage: runner.py [-h] [--model MODEL] [--temperature TEMPERATURE] [--role ROLE] [--instruction INSTRUCTION] [--example EXAMPLE] [--generation GENERATION]
+                 [--update_key UPDATE_KEY] [--imports] [--reformulate_from_first_set] [--save] [--nolimit] [--notion] [--reformulate] [--find_rejected]
+                 [--find_accepted] [--usage_help] [--show_prompt] [--show_services] [--archive]
 
 Extract and store CQs using LLMs and Notion.
 
 options:
   -h, --help            show this help message and exit
-  --model MODEL         Model name (Options: models/gemini-2.5-flash, models/gemini-2.5-pro, models/gemini-1.5-flash-
-                        latest, models/openai-gpt-4)
+  --model MODEL         Model name (Options: models/gemini-2.5-flash, models/gemini-2.5-pro, models/gemini-1.5-flash-latest, models/openai-gpt-4)
   --temperature TEMPERATURE
-                        LLM temperature (Options: 0.0 to 1.0) (Default: 0.2)
+                        LLM temperature (Options: 0.0 to 1.0) (Default: 0.8)
   --role ROLE           Role for the LLM (Options: SYSTEM_ROLE_A, SYSTEM_ROLE_B, SYSTEM_ROLE_C)
   --instruction INSTRUCTION
-                        Instruction for the LLM (Options: CQ_INSTRUCTION_A, CQ_INSTRUCTION_B, CQ_INSTRUCTION_C)
-  --example EXAMPLE     Give examples of CQs for the LLM (Options: CQ_EXAMPLE_A, CQ_EXAMPLE_B, CQ_EXAMPLE_C,
-                        CQ_ACCEPTED_CQS)
+                        Instruction for the LLM (Options: CQ_INSTRUCTION_A, CQ_INSTRUCTION_B, CQ_INSTRUCTION_C
+  --example EXAMPLE     Give examples of CQs for the LLM (Options: CQ_EXAMPLE_A, CQ_EXAMPLE_B, CQ_EXAMPLE_C, CQ_ACCEPTED_CQS)
   --generation GENERATION
                         Generation label (auto if not set manually)
+  --update_key UPDATE_KEY
+                        Update the API key in api_config.yml (input: <service>,<new key value>)
+  --imports             Select files to copy using a text-based interface
+  --reformulate_from_first_set
+                        Reformulate CQs when you already have some data stored. Start from iteration 2 without prior context.
   --save                Save CQs to file (jsonld format)
-  --limit               Limit the number of CQs extracted (default: False) (note: must be called with --instruction)
+  --nolimit             Remove the limit on number of CQs to extract
   --notion              Upload CQs to Notion
-  --reformulate         Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected
-                        CQs first, then run with --reformulate to reformulate them)
-  --find_rejected       Find rejected CQs in Notion and store (Note: run as the only argument ie python runner.py
-                        --find_rejected)
-  --find_accepted       Find accepted CQs in Notion and store/refresh (Note: Ideally run as the only argument ie
-                        python runner.py --find_accepted)
-  --constrain           Use output constraints to validate the LLM output (default: False)
+  --reformulate         Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected CQs first, then run with --reformulate to      
+                        reformulate them)
+  --find_rejected       Find rejected CQs in Notion and store (Note: run as the only argument ie python runner.py --find_rejected)
+  --find_accepted       Find accepted CQs in Notion and store/refresh (Note: Ideally run as the only argument ie python runner.py --find_accepted)
   --usage_help          Show a more comprehensive help message with usage instructions
   --show_prompt         Show the prompts used for CQ extraction and reformulation
+  --show_services       Show the available services in api_config.yml
+  --archive             Archive all pages in the Notion database (use with caution, as this action is irreversible)
 
 ```
