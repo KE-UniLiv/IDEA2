@@ -1,0 +1,115 @@
+ID: 237
+Original CQ: Where can an item be sent for repairs?
+Comment: 
+Reformulation: What conservation treatments has an item undergone?
+
+ID: 205
+Original CQ: What kind of metadata was provided for a loaned item when first acquired?
+Comment: What is meant by “kind of metadata”? 
+Reformulation: What cataloguing information was provided for a loaned item upon its acquisition?
+
+ID: 198
+Original CQ: Does an item have a full history associated with it
+Comment: To be clarified on the notion of history
+Reformulation: What is the documented provenance of an item, including its ownership history and previous loans?
+
+ID: 217
+Original CQ: Is an item one of many items of the same types?
+Comment: Confusing!
+Reformulation: List all items in the collection that are of the same type as a given item.
+
+ID: 180
+Original CQ: Which colours are associate to the item?
+Comment: 
+Reformulation: What are the primary colours described for a specific item?
+
+ID: 294
+Original CQ: What items loaned by Sonia are currently visible to her via the dashboard, and what information can she access or update?
+Comment: 
+Reformulation: What is the current loan status for all items provided by a specific donor?
+
+ID: 296
+Original CQ: What changes or updates have been made to the metadata or status of a loaned item, and by whom?
+Comment: 
+Reformulation: What is the date of the last update to an item's metadata or loan status?
+
+ID: 303
+Original CQ: How does the addition of a new item from Sonia’s collection enrich the museum’s knowledge base (e.g., new artists, works, or historical periods represented)?
+Comment: 
+Reformulation: Which artists associated with a newly loaned item are being represented for the first time in the museum's collection?
+
+ID: 304
+Original CQ: What gaps or overlaps exist in the museum’s collection after integrating Sonia’s loaned items?
+Comment: 
+Reformulation: List all items in the collection associated with a specific artist.
+
+ID: 306
+Original CQ: What specific attributes are relevant for an Instrument (e.g., Brand, Model, Serial Number, Type: Acoustic-electric)?
+Comment: as a note, the fact that this model is generating examples is very confusing as the examples are not really relevant
+Reformulation: What are the brand, model, and serial number for a specific instrument?
+
+ID: 307
+Original CQ: What specific attributes are relevant for a Stage Costume (e.g., Designer, Description)?
+Comment: 
+Reformulation: Who is the designer of a specific stage costume?
+
+ID: 308
+Original CQ: What specific attributes are relevant for a Manuscript (e.g., Description, Medium: Handwritten)?
+Comment: this is ambiguous, and so are all the similar ones
+Reformulation: What is the physical description of a specific manuscript?
+
+ID: 314
+Original CQ: How can we retrieve all artifacts classified as a specific Type (e.g., Stage Costume)?
+Comment: 
+Reformulation: List all artifacts classified as 'Stage Costume'.
+
+ID: 318
+Original CQ: Has a specific artifact been loaned out previously? To which institutions and during which dates?
+Comment: 
+Reformulation: What is the previous loan history for a specific artifact?
+
+ID: 323
+Original CQ: How can we find all artifacts currently assessed as being in 'Fragile' or 'Delicate' condition?
+Comment: I think this could be rephrased. The “currently” is not quite right
+Reformulation: List all artifacts assessed as being in 'Fragile' condition.
+
+ID: 337
+Original CQ: Is a specific artifact currently on loan? To whom?
+Comment: this is two questions
+Reformulation: To which institution is a specific artifact currently on loan?
+
+ID: 338
+Original CQ: Which artifacts loaned by Sonia are currently held by the BME?
+Comment: 
+Reformulation: Which artifacts from a specific donor are currently on loan to the BME?
+
+ID: 341
+Original CQ: What are all the artifacts currently under loan agreements with the BME as the borrower?
+Comment: overly complex phrasing
+Reformulation: List all artifacts currently on loan to the BME.
+
+ID: 342
+Original CQ: How can the system represent the relationship between a donor (Sonia) and the artifacts they have loaned?
+Comment: 
+Reformulation: List all artifacts loaned by a specific donor.
+
+ID: 343
+Original CQ: How can the system represent the status of a loan (e.g., Proposed, Active, Expired, Donated)?a
+Comment: ambiguous and meta
+Reformulation: What is the current status of the loan agreement for a specific item?
+
+ID: 344
+Original CQ: What information about loaned artifacts should be visible to the donor (Sonia) via the dashboard? (e.g., Loan status, Location within museum, Current condition summary?)
+Comment: How does the LLM know about the dashboard?
+Reformulation: What is the current location and condition summary of a specific loaned item?
+
+ID: 345
+Original CQ: How does the system distinguish between artifacts owned outright by the museum and those on loan?
+Comment: ambiguous
+Reformulation: What is the acquisition status of an artifact (e.g., owned, on loan, donated)?
+
+ID: 346
+Original CQ: How can Liz retrieve all information (cataloguing, provenance, condition, display, loan) associated with a single artifact added via the loan process?
+Comment: ambiguous, is it asking about the process?
+Reformulation: Retrieve all cataloguing, provenance, condition, display, and loan information for a specific artifact.
+

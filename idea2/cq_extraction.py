@@ -10,6 +10,7 @@ import utils
 import logging
 import json
 import ast
+import re
 
 from utils import get_key
 from interfaces import GeminiLLM, OpenAILLM
@@ -25,43 +26,68 @@ NOTION_TOKEN = get_key("notionkey") # This should be your Notion integration tok
 NOTION_PAGE_ID = get_key("notionpage")  # This should be your Notion page ID
 NOTION_DATABASE_ID = get_key("notiondb")  # This should be your Notion database ID
 
-notion = Client(auth=NOTION_TOKEN)
+notion = None
+
+## -- Lazy load
+def get_notion_client():
+    global notion
+    if notion is None:
+        notion = Client(auth=get_key("notionkey"))
+    return notion
+
 logging.basicConfig(level=logging.INFO)
 logging.getLogger("httpx").setLevel(logging.WARNING)  # Suppress httpx warnings
 
-## -- Use a global config dictionary to store the configuration parameters -- ##
+# --- LAZY PROMPTS LOADING ---
+_prompts = None
+def get_prompts():
+    global _prompts
+    if _prompts is None:
+        import prompts as p
+        _prompts = p
+    return _prompts
+
+# --- CONFIG DICTIONARY WITH LAZY PROMPTS ---
 config = {
     "temperature": 0.2,
-    "role": p.SYSTEM_ROLE_A,
+    "role": lambda: get_prompts().SYSTEM_ROLE_A,
     "gemini_model": "models/gemini-2.5-flash",
-    "out_definition": p.CQ_DEFINITION_A,
-    "out_examples": p.CQ_EXAMPLE_A,
-    "out_instruction": p.CQ_INSTRUCTION_C,
-    "limit": "Generate around 100 competency questions." # Default limit for the number of competency questions
+    "out_definition": lambda: get_prompts().CQ_DEFINITION_A,
+    "out_examples": lambda: get_prompts().CQ_EXAMPLE_A,
+    "out_instruction": lambda: get_prompts().CQ_INSTRUCTION_C,
+    "limit": "Generate around 100 competency questions."
 }
 
+def get_config_value(key):
+    value = config[key]
+    return value() if callable(value) else value
 
-def configure_prompt(role: str = config["role"],
-                     out_definition: str = config["out_definition"],
-                     out_examples: str = config["out_examples"],
-                     out_instruction: str = config["out_instruction"],
-                     limit: int = config["limit"],
-                     ignore_schemas: bool = False) -> str:
+
+
+def configure_prompt(role=None, out_definition=None, out_examples=None, out_instruction=None, limit=None,
+                    schema=None, schema_names=None, ignore_schemas=False) -> str:
     """
-    
     Configures the prompt for competency question extraction.
 
     Args:
-        role (str): The role to use for the model.
-        out_definition (str): The output definition for competency questions.
-        out_examples (str): The output examples for competency questions.
-        out_instruction (str): The output instruction for competency questions.
-        limit (int): The maximum number of competency questions to extract.
-        ignore_schemas (bool): Whether to ignore the schemas in the prompt (if its already in the chat history).
-
+        role (str): The role to use in the prompt.
+        out_definition (str): The output definition for the prompt.
+        out_examples (str): The output examples for the prompt.
+        out_instruction (str): The output instruction for the prompt.
+        limit (str): The limit for the number of competency questions to generate.
+        schema (str): The schema to use in the prompt.
+        schema_names (list): The names of the schemas to use in the prompt.
+        ignore_schemas (bool): Whether to ignore schemas in the prompt.
     Returns:
-        str: The configured prompt for competency question extraction to pass to the LLM.
+        str: The configured prompt.
     """
+
+
+    role = role if role is not None else get_config_value("role")
+    out_definition = out_definition if out_definition is not None else get_config_value("out_definition")
+    out_examples = out_examples if out_examples is not None else get_config_value("out_examples")
+    out_instruction = out_instruction if out_instruction is not None else get_config_value("out_instruction")
+    limit = limit if limit is not None else get_config_value("limit")
 
     prompt_builder = PromptBuilder(
         role=role,
@@ -71,17 +97,12 @@ def configure_prompt(role: str = config["role"],
         limit=limit
     )
 
-    ## -- Get both the AnIML core schema and the AnIML technique schema 
-    # --  and hence the combined schemas 
-    animl_core_schema, animl_technique_schema = utils.getSchemas()
-    combined_schemas = animl_core_schema + "\n" + animl_technique_schema
-
     prompt = prompt_builder.get_prompt(
-        raw_data=combined_schemas if not ignore_schemas else "",
+        raw_data=schema if not ignore_schemas else "",
         include_role=False,
     )
 
-    return prompt, combined_schemas
+    return prompt, schema, schema_names
 
 
 def run_cq_extraction(model: object, prompt) -> list:
@@ -126,23 +147,11 @@ def cq_to_txt(cqs: list, newfilepath: str) -> None:
     logging.info(f"Competency questions written to {newfilepath}")
     
 
-def get_llm_instance(model_name: str, api_key: str, 
-                     role = config["role"], temperature = config["temperature"]) -> object:
-    """
-    Returns an instance of the LLM based on the model name and API key.
-
-    Args:
-        model_name (str): The name of the model to use.
-        api_key (str): The API key for the model.
-        role (str): The role to use for the model.
-        temperature (float): The temperature to use for the model.
-
-    Returns:
-        A GeminiLLM or OpenAILLM object: An instance of the appropriate LLM class.
-    """
-
+def get_llm_instance(model_name, api_key, role=None, temperature=None) -> object:
+    role = role or get_config_value("role")
+    temperature = temperature if temperature is not None else config["temperature"]
     return GeminiLLM(model=model_name, api_key=api_key, role=role, temperature=temperature) \
-    if "gemini" in model_name.lower() else OpenAILLM(model=model_name, api_key=api_key, role=role, temperature=temperature)
+        if "gemini" in model_name.lower() else OpenAILLM(model=model_name, api_key=api_key, role=role, temperature=temperature)
 
 def save_llm_insatance(cqset: str, instance=[], isReformulated=False) -> None:
     """
@@ -163,10 +172,23 @@ def save_llm_insatance(cqset: str, instance=[], isReformulated=False) -> None:
     """
     filepath = os.path.join(os.getcwd(), "assets", "cqs", "llm_instances.json")
 
+    # Resolve callables before JSON serialization
+    model = config["gemini_model"]
+    model = model() if callable(model) else model
+    model = model() if callable(model) else model
+    
+    role = config["role"]
+    role = role() if callable(role) else role
+    role = role() if callable(role) else role
+    
+    temperature = config["temperature"]
+    temperature = temperature() if callable(temperature) else temperature
+    temperature = temperature() if callable(temperature) else temperature
+
     instance.append({
-        "model": config["gemini_model"],
-        "role": config["role"],
-        "temperature": config["temperature"],
+        "model": model,
+        "role": role,
+        "temperature": temperature,
         "cqset": cqset,
         "isReformulated": isReformulated
     })
@@ -175,6 +197,49 @@ def save_llm_insatance(cqset: str, instance=[], isReformulated=False) -> None:
         json.dump(instance, f, indent=2, ensure_ascii=False)
 
     print(f"\nLLM instance saved to {filepath}")
+
+def remove_local_ids_from_reformulations(cqs: list) -> list:
+    """
+    Remove local IDs from reformulated competency questions (CQs).
+
+    Args:
+        cqs (list): A list of reformulated competency questions with local IDs.
+
+    Returns:
+        list: A list of reformulated competency questions without local IDs.
+    """
+    if not cqs:
+        return []
+
+    cleaned = []
+    # Remove up to two colon-separated prefixes (robust for "(ID: 237):", "ID: 42:", "237:", etc.)
+    prefix_re = re.compile(r'^(?:[^:]*:\s*){1,2}', flags=re.UNICODE)
+
+    for item in cqs:
+        # extract candidate text
+        if isinstance(item, dict):
+            # prefer common keys that may contain the reformulated text
+            text = None
+            for key in ("reformulated", "reformulation", "text", "cq", "question"):
+                if key in item and isinstance(item[key], str):
+                    text = item[key]
+                    break
+            if text is None:
+                # fallback: join values that are strings or stringify entire dict
+                vals = [str(v) for v in item.values() if isinstance(v, (str, int, float))]
+                text = " ".join(vals) if vals else json.dumps(item, ensure_ascii=False)
+        else:
+            text = str(item)
+
+        # strip up to two colon-delimited prefixes, then trim common leftover punctuation/spaces
+        cleaned_text = prefix_re.sub("", text).strip()
+        cleaned_text = cleaned_text.lstrip(" \t:)-.[]")
+
+        cleaned.append(cleaned_text)
+
+    return cleaned
+
+
 
 def clean_llm_output(cqs) -> list:
     """
@@ -219,28 +284,24 @@ def getconfigurations() -> dict:
 
     return config
 
-def update_config(**kwargs) -> None:
+def update_config(**kwargs):
     """
-    
-    Update the global config dictionary with new values. Resolves the keys to their correct types and values.
-
+    Update the configuration dictionary with the provided keyword arguments.
     Args:
-        **kwargs: Key-value pairs to update the config dictionary (multi-unpacking).
-    
-    Returns:
-        None: The function updates the global config dictionary in place.
+        **kwargs: Keyword arguments to update the configuration dictionary.
     """
-
+    
+    p = get_prompts()
     for k, v in kwargs.items():
-
-        ## -- Cast known keys to their correct types
         if k == "temperature":
             config[k] = float(v)
-
         elif k in ["out_definition", "out_examples", "out_instruction", "role"]:
             if v == "":
-                config[k] = "" ## -- If the value is an empty string, set it to an empty string
+                config[k] = ""
             elif hasattr(p, v):
-                config[k] = getattr(p, v)
+                attr_value = getattr(p, v)
+                config[k] = (lambda val=attr_value: val)
+            else:
+                config[k] = v
         else:
             config[k] = v

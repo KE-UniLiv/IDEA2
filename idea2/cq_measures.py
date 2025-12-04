@@ -125,7 +125,7 @@ def remove_similar_generated(similarity_matrix, generated_questions, threshold) 
     print(f"Removing {len(to_remove)} questions that are too similar to each other (threshold: {threshold})")
     return [q for idx, q in tqdm(enumerate(generated_questions)) if idx not in to_remove]
 
-def run_simple_similarty_analysis(cqs, selfcheck=True):
+def run_simple_similarity_analysis(cqs, selfcheck=True):
    """Runs a simple similarity analysis on the generated competency questions.
 
    This function calculates embeddings for the generated questions, computes a similarity matrix,

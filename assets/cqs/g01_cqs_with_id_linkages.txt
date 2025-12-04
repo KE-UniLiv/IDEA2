@@ -1,0 +1,23 @@
+(ID 237): What conservation treatments has an item undergone?
+(ID 205): What cataloguing information was provided for a loaned item upon its acquisition?
+(ID 198): What is the documented provenance of an item, including its ownership history and previous loans?
+(ID 217): List all items in the collection that are of the same type as a given item.
+(ID 180): What are the primary colours described for a specific item?
+(ID 294): What is the current loan status for all items provided by a specific donor?
+(ID 296): What is the date of the last update to an item's metadata or loan status?
+(ID 303): Which artists associated with a newly loaned item are being represented for the first time in the museum's collection?
+(ID 304): List all items in the collection associated with a specific artist.
+(ID 306): What are the brand, model, and serial number for a specific instrument?
+(ID 307): Who is the designer of a specific stage costume?
+(ID 308): What is the physical description of a specific manuscript?
+(ID 314): List all artifacts classified as 'Stage Costume'.
+(ID 318): What is the previous loan history for a specific artifact?
+(ID 323): List all artifacts assessed as being in 'Fragile' condition.
+(ID 337): To which institution is a specific artifact currently on loan?
+(ID 338): Which artifacts from a specific donor are currently on loan to the BME?
+(ID 341): List all artifacts currently on loan to the BME.
+(ID 342): List all artifacts loaned by a specific donor.
+(ID 343): What is the current status of the loan agreement for a specific item?
+(ID 344): What is the current location and condition summary of a specific loaned item?
+(ID 345): What is the acquisition status of an artifact (e.g., owned, on loan, donated)?
+(ID 346): Retrieve all cataloguing, provenance, condition, display, and loan information for a specific artifact.

@@ -7,18 +7,18 @@ This script pulls accepted and rejected competency questions (CQs) from a Notion
 
 
 import logging
-import time
 import os
 import json
 import datetime
 import prompts as p
-import cq_measures
+import pandas as pd
 import sys
 
 from notion_client import Client
 from utils import get_key
 from tqdm import tqdm 
 from generation_utils import get_generation_number
+from utils import hash_from_string
 
 geminikey = get_key("gemini")
 openai_key = get_key("openai")
@@ -60,9 +60,10 @@ def pull_accepted() -> dict:
         if 'CQ' in page['properties'] and page['properties']['CQ']['title']:
             title = page["properties"]["CQ"]["title"][0]["text"]["content"]
             people = page["properties"]["Upvoted By"]["people"]
-            person = get_name_from_id(people[0]["id"]) if people else "Unknown"
 
-            accepted_cqs.append({"title": title})
+            for idx, person_obj in enumerate(people):
+                person_name = get_name_from_id(person_obj["id"])
+                accepted_cqs.append({"title": title, "person": f"Annotator {idx+1}: {person_name}"})
 
     return accepted_cqs
 
@@ -84,7 +85,7 @@ def pull_rejected() -> dict:
             "filter": { 
                 "property": "Score", 
                 "number": {
-                    "less_than": 0 
+                    "less_than_or_equal_to": 0 
                 }
             }
         }
@@ -116,6 +117,7 @@ def pull_rejected() -> dict:
             rejected_cqs.append({
                 "title": title,
                 "id": idx,
+                "hash": hash_from_string(title),
                 "person": person,
                 "creation date": readabledate,
                 "score": score,
@@ -125,21 +127,23 @@ def pull_rejected() -> dict:
                 "date_pulled": datetime.datetime.now().strftime("%d/%m/%y")
             })
 
-    if curriteration == 1:
+    print(iteration)
+
+    if iteration == 1:
         filtered_cqs = rejected_cqs
         print("No previous iterations to filter. Using all rejected CQs.")
     else:
-        prev_iteration = curriteration - 1
-        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == prev_iteration]
+        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == iteration]
 
         count = len(rejected_cqs) - len(filtered_cqs)
-        print(f"Removed {count} CQs that were not from the previous iteration.")
+        print(f"Removed {count} CQs that were not from the previous iteration; but still technically rejected.")
 
         if len(filtered_cqs) == 0:
             print("No new rejected CQs found, exiting to avoid overwriting!")
             sys.exit(0)
 
     return filtered_cqs
+
 
 def get_ids_from_rejected(rejected_cqs: list) -> list:
     """
@@ -314,6 +318,39 @@ def get_cqs_from_file_as_strings(filepath) -> list:
         cqs.append(f"{title} was rejected with {comment}, {votes} votes and {score} score")
 
     return cqs
+
+def cqs_from_csv(filepath: str, ignore_set: int = 3) -> list:
+    """
+    Reads competency questions from a CSV file and returns them as a list.
+
+    Args:
+        filepath (str): The path to the CSV file containing competency questions.
+    
+    Returns:
+        list: JSON list of competency questions with votes, score and comments.
+
+    """
+
+    df = pd.read_csv(filepath)
+    cqs = []
+    for _, row in df.iterrows():
+        ## -- Skip pattern CQs
+        if row["set"] == ignore_set:
+            continue
+        cq_entry = {
+            "title": row["cq"],
+            "id": row["id"] if "id" in row else "",
+            "comment": row["comment"] if "comment" in row else "No comment provided, check this CQ with the schema and generalise to the requirements.",
+            "score": row["score"] if "score" in row else 0,
+            "votes": row["votes"] if "votes" in row else 0,
+            "from iteration": row["iteration"] if "iteration" in row else 1,
+        }
+        cqs.append(cq_entry)
+    return cqs
+
+
+
+
 
 def reformulate_cqs(model: object, prompt: str, cqs: list) -> list:
     """
