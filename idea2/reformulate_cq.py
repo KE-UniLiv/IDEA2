@@ -47,7 +47,7 @@ def pull_accepted() -> dict:
             "filter": {
                 "property": "Upvoted By",
                 "people": {
-                    "is_not_empty": True  # TODO: Change this to domain experts user IDs
+                    "is_not_empty": True 
                 }
             }
         }
@@ -127,19 +127,24 @@ def pull_rejected() -> dict:
                 "date_pulled": datetime.datetime.now().strftime("%d/%m/%y")
             })
 
-    print(iteration)
-
-    if iteration == 1:
+    # Determine which iteration to filter by
+    # Use curriteration as the reference point (the current/most recent iteration)
+    print(f"Current iteration from generation number: {curriteration}")
+    print(f"Total rejected CQs found across all iterations: {len(rejected_cqs)}")
+    
+    if curriteration == 1:
         filtered_cqs = rejected_cqs
-        print("No previous iterations to filter. Using all rejected CQs.")
+        print("Iteration 1: Using all rejected CQs (no filtering).")
     else:
-        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == iteration]
+        # Filter to only include CQs from the current iteration
+        filtered_cqs = [cq for cq in rejected_cqs if cq["from iteration"] == curriteration]
 
         count = len(rejected_cqs) - len(filtered_cqs)
-        print(f"Removed {count} CQs that were not from the previous iteration; but still technically rejected.")
+        print(f"Filtering to iteration {curriteration}: Removed {count} CQs from previous iterations.")
+        print(f"Rejected CQs from iteration {curriteration}: {len(filtered_cqs)}")
 
         if len(filtered_cqs) == 0:
-            print("No new rejected CQs found, exiting to avoid overwriting!")
+            print("No new rejected CQs found in current iteration, exiting to avoid overwriting!")
             sys.exit(0)
 
     return filtered_cqs
@@ -192,6 +197,10 @@ def store_pulled(pulled_cqs, typeof="none") -> None:
     """
 
     filepath = os.path.join(os.getcwd(), "assets", "cqs", f"{typeof}_cqs.json")
+
+    if not os.path.exists(os.path.dirname(filepath)):
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+
     with open(filepath, 'w') as f:
         json.dump(pulled_cqs, f, indent=2, ensure_ascii=False)
 

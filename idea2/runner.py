@@ -20,7 +20,8 @@ from cq_extraction import (
 )
 from generation_utils import get_generation_number
 from notion_utils import (
-    get_cqs_from_file, llm_setup_to_notion, write_row, archive_all_pages, get_current_iteration_from_dashboard
+    get_cqs_from_file, llm_setup_to_notion, write_row, archive_all_pages, get_current_iteration_from_dashboard,
+    get_cqs_with_votes_for_kappa, calculate_kappa_from_csv
 )
 
 from utils import (
@@ -77,6 +78,7 @@ def main():
     parser.add_argument('--show_prompt', action='store_true', help='Show the prompts used for CQ extraction and reformulation')
     parser.add_argument('--show_services', action='store_true', help='Show the available services in api_config.yml')
     parser.add_argument('--archive', action='store_true', help='Archive all pages in the Notion database (use with caution, as this action is irreversible)')
+    parser.add_argument('--calculate_agreement', action='store_true', help='Calculate inter-rater agreement metrics (Cohen\'s Kappa and Krippendorff\'s Alpha)')
     args = parser.parse_args()
 
     if args.show_services:
@@ -112,6 +114,32 @@ def main():
     if args.archive:
         if questionary.confirm("Are you sure you want to archive (delete) all pages (entries) in the Notion database? This action is irreversible.").ask():
             archive_all_pages(get_key("notiondb"))
+        sys.exit(0)
+
+    if args.calculate_agreement:
+        print("Fetching CQs with votes from Notion...")
+        get_cqs_with_votes_for_kappa()
+        print("\nCalculating inter-rater agreement metrics...")
+        results = calculate_kappa_from_csv()
+        
+        # Save results to file
+        output_file = os.path.join(os.getcwd(), "kappa_results.txt")
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write("Inter-Rater Agreement Results\n")
+            f.write("=" * 50 + "\n\n")
+            
+            f.write("Cohen's Kappa Scores (Pairwise)\n")
+            f.write("-" * 50 + "\n")
+            for pair, score in results.get('kappa_scores', {}).items():
+                f.write(f"{pair}: {score:.4f}\n")
+            
+            f.write(f"\nAverage Kappa: {results.get('average_kappa', 0):.4f}\n")
+            f.write(f"Interpretation: {results.get('kappa_interpretation', 'N/A')}\n")
+            
+            f.write(f"\nKrippendorff's Alpha: {results.get('krippendorff_alpha', 0):.4f}\n")
+            f.write(f"Interpretation: {results.get('alpha_interpretation', 'N/A')}\n")
+        
+        print(f"\nResults saved to: {output_file}")
         sys.exit(0)
 
     if args.nolimit:

@@ -4,6 +4,7 @@ Collects utility functions for the xaniml package.
 
 import yaml
 import os
+import sys
 import logging
 import time
 import json
@@ -119,10 +120,36 @@ def get_key(service, config_file="api_config.yml"):
         # If the config file does not exist from some entry point, use a path correction
         config_file = config_path
 
+    if not os.path.exists(config_file):
+        print(f"\n❌ ERROR: Configuration file not found: {config_file}")
+        print("Please create idea2/api_config.yml with your API keys.")
+        print("You can copy from idea2/api_config.yml.template\n")
+        sys.exit(1)
+
     ## -- Read the YML file first and get the right entry
-    with open(config_file, "r") as f:
-        config = yaml.safe_load(f)
-    return config[service]["key"]
+    try:
+        with open(config_file, "r") as f:
+            config = yaml.safe_load(f)
+    except Exception as e:
+        print(f"\n❌ ERROR: Failed to read {config_file}: {e}\n")
+        sys.exit(1)
+    
+    if service not in config:
+        print(f"\n❌ ERROR: Service '{service}' not found in {config_file}")
+        print(f"Available services: {', '.join(config.keys())}\n")
+        sys.exit(1)
+    
+    key = config[service]["key"]
+    
+    # Check if key is still a placeholder
+    placeholder_patterns = ["<your", "YOUR_", "PLACEHOLDER", "REPLACE_ME"]
+    if any(pattern in key for pattern in placeholder_patterns):
+        print(f"\nWARNING: API key for '{service}' appears to be a placeholder")
+        print(f"Current value: {key}")
+        print(f"Please update idea2/api_config.yml with your actual {service} key\n")
+        sys.exit(1)
+    
+    return key
 
 def update_key(service, new_key, config_file="api_config.yml"):
     """
@@ -513,6 +540,10 @@ def store_hash_text_combinations(s, filepath="assets/cqs/hash_text_tuples.json")
         filepath (str): The path to the JSON file where the tuple will be stored.
     """
     hash_value = hash_from_string(s)
+
+    # Ensure directory exists
+    if not os.path.exists(os.path.dirname(filepath)):
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
 
     # Load existing data
     if os.path.exists(filepath):
