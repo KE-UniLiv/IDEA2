@@ -1,6 +1,6 @@
 # IDEA2 💭
 
-<img src="IDEA2LOGO.png" alt="My image" width="350"/>
+<img src="assets/img/IDEA2LOGO.png" alt="My image" width="350"/>
 
 Expert-in-the-loop requirement elicitation and analysis for ontology engineering.
 
@@ -14,7 +14,7 @@ With this framework, the user can select a specific model, hyperparameters and p
 IDEA2 remains flexible for different applications; ontology engineers may opt to use IDEA2 in order to make the requirements engineering process more efficient, to test their ontology, or to assist in engineering the ontology itself. This is done via **iterative refinement**.
 
 
-![Alt text](idea2_workflow.png)
+![Alt text](assets/img/idea2_workflow.png)
 *The IDEA2 Workflow*
 
 IDEA2 was employed during the creation of the [`AnIML Ontology`](https://github.com/KE-UniLiv/animl-ontology), whereby the tool curated CQs which informed the creation of the ontology itself, and it's outputs were validated in 3 iterations by domain experts. This ensured that the resulting ontology effectively captured the relevant requirements of the [`AnIML schema`](https://www.animl.org/) which was the source documentation for the tool. IDEA2 has also been adaptable to the domain of cultural heritage, whereby it was tasked with improving a set of CQs (from human-annotators and LLMs in comparable proportions) which were derived from user stories and personas.
@@ -52,11 +52,11 @@ All in all, the Notion integration allows for:
 ### Getting a Notion Database / Page ID
 To get a database's key, hover around the title of the database in bold text, and click the 3 dots to reveal the drop down menu with the *View database* option:
 
-![alt text](image.png)
+![alt text](assets/img/image.png)
 
 From this, a new view of the database will be shown; again, click the three dots at the **top right** and click *copy link*:
 
-![alt text](image-1.png)
+![alt text](assets/img/image-1.png)
 
 From this a large URL will be copied, everything between the last backslash (/) and the "?v=" of the url is the database ID, it should be 32 characters long.
 
