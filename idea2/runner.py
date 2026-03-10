@@ -15,7 +15,7 @@ from reformulate_cq import (
 )
 from cq_extraction import (
     get_llm_instance, save_llm_insatance, run_cq_extraction, cq_to_txt,
-    clean_llm_output, configure_prompt, update_config, config, geminikey, get_notion_client, NOTION_DATABASE_ID,
+    clean_llm_output, configure_prompt, update_config, config, get_gemini_key, get_notion_client, get_notion_db_id,
     remove_local_ids_from_reformulations
 )
 from generation_utils import get_generation_number
@@ -163,6 +163,19 @@ def main():
         filename = [filename] if isinstance(filename, str) else filename  # Ensure filename is a list
 
     history = load_history_from_file(modelname)
+    
+    # Warn if there's existing history but not reformulating
+    if history and not args.reformulate and not args.reformulate_from_first_set:
+        print("\nWARNING: Existing conversation history detected!")
+        print(f"   History file contains {len(history)} message(s)")
+        print("   This may affect the LLM's responses.")
+        print("   Consider using --reformulate if you want to reformulate existing CQs")
+        print("   or delete the history file for a fresh start.\n")
+        
+        if not questionary.confirm("Do you want to continue with existing history?").ask():
+            print("Exiting. Please review your history file or use --reformulate flag.")
+            sys.exit(0)
+    
     schema_in_history_first = any(combined in h["content"] for h in history)
 
     if args.reformulate:
@@ -193,7 +206,7 @@ def main():
 
         model = get_llm_instance(
             modelname,
-            api_key=geminikey,
+            api_key=get_gemini_key(),
             role=role,
             temperature=temperature
         )
@@ -336,7 +349,7 @@ def main():
 
         model = get_llm_instance(
             modelname,
-            api_key=geminikey,
+            api_key=get_gemini_key(),
             role=role,
             temperature=temperature
         )
@@ -476,7 +489,7 @@ def main():
                 try:
                     write_row(
                         notion,
-                        NOTION_DATABASE_ID,
+                        get_notion_db_id(),
                         "CQ",
                         cq,
                         iteration=currgeneration,

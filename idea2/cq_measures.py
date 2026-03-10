@@ -7,11 +7,19 @@ cohesion, and visualize the similarity between generated and reference questions
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sentence_transformers import SentenceTransformer, util
 from tqdm import tqdm
 
-## -- Lazy-load the model to make runner.py faster
+## -- Lazy-load both the library AND the model to make runner.py faster
 _model = None
+_sentence_transformers = None
+
+def get_sentence_transformers():
+    """Lazy-loads the sentence_transformers module to avoid loading PyTorch at import time."""
+    global _sentence_transformers
+    if _sentence_transformers is None:
+        from sentence_transformers import SentenceTransformer, util as st_util
+        _sentence_transformers = {'SentenceTransformer': SentenceTransformer, 'util': st_util}
+    return _sentence_transformers
 
 def get_model():
     """Lazy-loads the SentenceTransformer model. It is not needed only on import, but only
@@ -23,7 +31,8 @@ def get_model():
     """
     global _model
     if _model is None:
-        _model = SentenceTransformer('all-mpnet-base-v2')
+        st = get_sentence_transformers()
+        _model = st['SentenceTransformer']('all-mpnet-base-v2')
     return _model
 
 def calculate_embeddings(questions):
@@ -58,7 +67,8 @@ def calculate_similarity_matrix(generated_embeddings, reference_embeddings):
   numpy.ndarray
       A NumPy array containing the cosine similarity matrix.
   """
-  cosine_similarities = util.cos_sim(generated_embeddings, reference_embeddings)
+  st = get_sentence_transformers()
+  cosine_similarities = st['util'].cos_sim(generated_embeddings, reference_embeddings)
   return cosine_similarities.cpu().numpy()
 
 

@@ -6,10 +6,28 @@ import copy
 import logging
 
 from typing import List
-from openai import OpenAI
-import google.generativeai as genai
 
 logger = logging.getLogger(__name__)
+
+# Lazy imports for slow libraries
+_genai = None
+_OpenAI = None
+
+def _get_genai():
+    """Lazy import of google.generativeai"""
+    global _genai
+    if _genai is None:
+        import google.generativeai as genai
+        _genai = genai
+    return _genai
+
+def _get_openai():
+    """Lazy import of OpenAI"""
+    global _OpenAI
+    if _OpenAI is None:
+        from openai import OpenAI
+        _OpenAI = OpenAI
+    return _OpenAI
 
 
 class LLM:
@@ -89,6 +107,7 @@ class GeminiLLM(LLM):
         """
         if model_path is not None:
             raise ValueError("Model path is not supported for Gemini models.")
+        genai = _get_genai()
         genai.configure(api_key=api_key)
         if "generation_config" in kwargs:
             generation_config = kwargs.get("generation_config", {})
@@ -116,6 +135,7 @@ class GeminiLLM(LLM):
         """
         Get the available models for the language model.
         """
+        genai = _get_genai()
         info = lambda m : m if detailed else m.name
         for m in genai.list_models():
             if "generateContent" in m.supported_generation_methods:
@@ -126,10 +146,10 @@ class GeminiLLM(LLM):
         Build the generation config for the language model, using the input
         parameters, and setting them to the current values if not provided.
         """
-        # Get all the attributes of the GenerationConfig class to start with
+        genai = _get_genai()
         config_valid_attrs = [attr for attr in dir(genai.GenerationConfig)
                               if not attr.startswith("__")]
-        # Get the current generation config to keep the unchanged values
+        #Get the current generation config to keep the unchanged values
         new_config = copy.deepcopy(self.model._generation_config)
         for key, value in kwargs.items():
             if key not in config_valid_attrs:  # check if the param is valid
@@ -199,6 +219,7 @@ class OpenAILLM(LLM):
         """
         if model_path is not None:
             raise ValueError("Model path is not supported for OpenAI models.")
+        OpenAI = _get_openai()
         self.client = OpenAI(api_key=api_key)
         self.role = role
         self.model = model

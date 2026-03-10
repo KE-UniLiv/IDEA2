@@ -1,11 +1,22 @@
 from notion_client import Client
 from utils import get_key
 
-notiondb = get_key("notiondb")
-notiontoken = get_key("notionkey")
-notion = Client(auth=notiontoken)
+notiondb = None
+notiontoken = None
+notion = None
 
-def getn(database_id=notiondb) -> int:
+def _ensure_config():
+    """Lazy initialization of Notion configuration."""
+    global notiondb, notiontoken, notion
+    if notiondb is None:
+        notiondb = get_key("notiondb")
+        notiontoken = get_key("notionkey")
+        notion = Client(auth=notiontoken)
+
+def getn(database_id=None) -> int:
+    _ensure_config()
+    if database_id is None:
+        database_id = notiondb
     unique_voters = set()
     has_more = True
     next_cursor = None

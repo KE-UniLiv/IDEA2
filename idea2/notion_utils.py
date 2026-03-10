@@ -23,13 +23,21 @@ import krippendorff
 import csv
 from collections import defaultdict
 
-notiontoken = get_key("notionkey")
-llmdb = get_key("notionllmdb")
-notiondb = get_key("notiondb")
+notiontoken = None
+llmdb = None
+notiondb = None
+NOTION_DATABASE_ID = None
+notion = None
 
-NOTION_DATABASE_ID = get_key("notiondb")
-
-notion=None
+def _ensure_config():
+    """Lazy initialization of Notion configuration."""
+    global notiontoken, llmdb, notiondb, NOTION_DATABASE_ID, notion
+    if notiontoken is None:
+        notiontoken = get_key("notionkey")
+        llmdb = get_key("notionllmdb")
+        notiondb = get_key("notiondb")
+        NOTION_DATABASE_ID = get_key("notiondb")
+        notion = None  # Keep as None, use get_notion_client() instead
 
 
 

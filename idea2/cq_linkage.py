@@ -8,17 +8,25 @@ from notion_client import Client
 from utils import get_key, lookup_text_by_hash
 from reformulate_cq import NOTION_DATABASE_ID
 
+notiontoken = None
+llmdb = None
+notiondb = None
+notion = None
 
-notiontoken = get_key("notionkey")
-llmdb = get_key("notionllmdb")
-notiondb = get_key("notiondb")
-
-notion = Client(auth=notiontoken)
+def _ensure_config():
+    """Lazy initialization of Notion configuration."""
+    global notiontoken, llmdb, notiondb, notion
+    if notiontoken is None:
+        notiontoken = get_key("notionkey")
+        llmdb = get_key("notionllmdb")
+        notiondb = get_key("notiondb")
+        notion = Client(auth=notiontoken)
 
 def find_original_cq_from_hash(rejected_cq_hash: str) -> str:
     return lookup_text_by_hash(rejected_cq_hash, "assets/cqs/hash_text_tuples.json")
 
 def src_cq_uuid(rejected_cq_hash: str) -> str:
+    _ensure_config()
     title = lookup_text_by_hash(rejected_cq_hash, "assets/cqs/hash_text_tuples.json")
 
     if title is None:
@@ -55,7 +63,10 @@ def src_cq_uuid(rejected_cq_hash: str) -> str:
     print(f"No Notion page found with title: {title}")
     return None
 
-def get_page_id_by_title(title: str, database_id=notiondb) -> str:
+def get_page_id_by_title(title: str, database_id=None) -> str:
+    _ensure_config()
+    if database_id is None:
+        database_id = notiondb
     has_more = True
     next_cursor = None
 
@@ -92,8 +103,10 @@ def link_reformulations(page_a_id: str, page_b_id: str) -> None:
         page_b_id (str): The ID of the second page (original CQ).
 
     Returns:
-        None
+        None: This function does not return anything. It updates the Notion pages in place.
     """
+    _ensure_config()
+
     if not page_b_id:
         print(f"No Notion page found with ID: {page_b_id}")
         return

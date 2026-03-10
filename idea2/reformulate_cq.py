@@ -20,15 +20,26 @@ from tqdm import tqdm
 from generation_utils import get_generation_number
 from utils import hash_from_string
 
-geminikey = get_key("gemini")
-openai_key = get_key("openai")
+geminikey = None
+openai_key = None
+LLMDB = None
+NOTION_TOKEN = None
+NOTION_PAGE_ID = None
+NOTION_DATABASE_ID = None
+notion = None
 
-LLMDB = get_key("notionllmdb") # This should be your Notion database ID for LLM setups
-NOTION_TOKEN = get_key("notionkey") # This should be your Notion integration token
-NOTION_PAGE_ID = get_key("notionpage")  # This should be your Notion page ID
-NOTION_DATABASE_ID = get_key("notiondb")  # This should be your Notion database ID
+def _ensure_config():
+    """Lazy initialization of configuration and API keys."""
+    global geminikey, openai_key, LLMDB, NOTION_TOKEN, NOTION_PAGE_ID, NOTION_DATABASE_ID, notion
+    if geminikey is None:
+        geminikey = get_key("gemini")
+        openai_key = get_key("openai")
+        LLMDB = get_key("notionllmdb")
+        NOTION_TOKEN = get_key("notionkey")
+        NOTION_PAGE_ID = get_key("notionpage")
+        NOTION_DATABASE_ID = get_key("notiondb")
+        notion = Client(auth=NOTION_TOKEN)
 
-notion = Client(auth=NOTION_TOKEN)
 logging.basicConfig(level=logging.INFO)
 logging.getLogger("httpx").setLevel(logging.WARNING)  # Suppress httpx warnings
 
@@ -39,6 +50,7 @@ def pull_accepted() -> dict:
     Returns:
         dict: A dict of accepted competency questions.
     """
+    _ensure_config()
     
     ## -- Query the Notion database for accepted CQs
     results = notion.databases.query(
@@ -74,6 +86,7 @@ def pull_rejected() -> dict:
     Returns:
         dict: A dict of rejected competency questions, their rejector, and any comments.
     """
+    _ensure_config()
 
     logging.info("Pulling rejected competency questions from Notion database.")
     _, curriteration = get_generation_number()
@@ -175,6 +188,7 @@ def get_name_from_id(user_id: str) -> str:
         str: The name of the user, or "Unknown" if not found.
 
     """
+    _ensure_config()
     try:
         user = notion.users.retrieve(user_id)
         return user.get("name", "Unknown")
@@ -255,6 +269,7 @@ def get_discussion_comments(page_id: str) -> list:
         list: A list of comment strings.
 
     """
+    _ensure_config()
     try:
         comments = notion.comments.list(block_id=page_id)
         return [c['rich_text'][0]['text']['content'] for c in comments['results'] if c['rich_text']]

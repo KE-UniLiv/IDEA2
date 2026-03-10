@@ -18,18 +18,43 @@ from schema2cq import PromptBuilder
 from notion_client import Client
 from tqdm import tqdm
 
-geminikey = get_key("gemini") # This should be your Gemini API key
-openai_key = get_key("openai") # This should be your OpenAI API key
-
-LLMDB = get_key("notionllmdb") 
-NOTION_TOKEN = get_key("notionkey") # This should be your Notion integration token
-NOTION_PAGE_ID = get_key("notionpage")  # This should be your Notion page ID
-NOTION_DATABASE_ID = get_key("notiondb")  # This should be your Notion database ID
-
+geminikey = None
+openai_key = None
+LLMDB = None
+NOTION_TOKEN = None
+NOTION_PAGE_ID = None
+NOTION_DATABASE_ID = None
 notion = None
+
+def _ensure_config():
+    """Lazy initialization of configuration and API keys."""
+    global geminikey, openai_key, LLMDB, NOTION_TOKEN, NOTION_PAGE_ID, NOTION_DATABASE_ID
+    if geminikey is None:
+        geminikey = get_key("gemini")
+        openai_key = get_key("openai")
+        LLMDB = get_key("notionllmdb")
+        NOTION_TOKEN = get_key("notionkey")
+        NOTION_PAGE_ID = get_key("notionpage")
+        NOTION_DATABASE_ID = get_key("notiondb")
+
+def get_gemini_key():
+    """Get the Gemini API key, initializing config if needed."""
+    _ensure_config()
+    return geminikey
+
+def get_openai_key():
+    """Get the OpenAI API key, initializing config if needed."""
+    _ensure_config()
+    return openai_key
+
+def get_notion_db_id():
+    """Get the Notion database ID, initializing config if needed."""
+    _ensure_config()
+    return NOTION_DATABASE_ID
 
 ## -- Lazy load
 def get_notion_client():
+    _ensure_config()
     global notion
     if notion is None:
         notion = Client(auth=get_key("notionkey"))
