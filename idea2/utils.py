@@ -23,6 +23,9 @@ from tkinter import filedialog
 # If running from a scirpt, use the script's directory to find the config file
 config_path = os.path.join(os.path.dirname(__file__), "api_config.yml")
 
+# Track which services have already shown placeholder warnings
+_warned_services = set()
+
 
 def select_files_with_dialog():
     """
@@ -144,10 +147,11 @@ def get_key(service, config_file="api_config.yml"):
     # Check if key is still a placeholder
     placeholder_patterns = ["<your", "YOUR_", "PLACEHOLDER", "REPLACE_ME"]
     if any(pattern in key for pattern in placeholder_patterns):
-        print(f"\nWARNING: API key for '{service}' appears to be a placeholder")
-        print(f"Current value: {key}")
-        print(f"Please update idea2/api_config.yml with your actual {service} key\n")
-        sys.exit(1)
+        if service not in _warned_services:
+            print(f"\nWARNING: API key for '{service}' appears to be a placeholder")
+            print(f"Current value: {key}")
+            print(f"Please update idea2/api_config.yml with your actual {service} key if needed\n")
+            _warned_services.add(service)
     
     return key
 
@@ -231,7 +235,7 @@ def getSchemas():
 
     ## -- Let user select multiple files
     selected_files = questionary.checkbox(
-        "Select the files you want to use as schemas:",
+        "Select the files you want to use as schemas:\n <space> to select, <enter> to confirm",
         choices=available_files
     ).ask()
     
