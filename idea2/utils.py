@@ -15,6 +15,7 @@ import questionary
 import glob
 import pandas as pd
 import shutil
+from huggingface_hub import HfFolder
 import tkinter as tk
 from tkinter import filedialog
 
@@ -277,6 +278,41 @@ def getSchemas():
         print(f"  - {filename}")
     
     return final_schema, selected_files, file_names
+
+def check_huggingface_auth():
+    """
+    Check if the user is authenticated with Hugging Face.
+    
+    This function verifies that the user is logged into Hugging Face through
+    the huggingface-cli, which is required for downloading certain models like
+    'all-mpnet-base-v2' used for similarity checking.
+    
+    Returns:
+        bool: True if authenticated, False otherwise.
+    
+    Raises:
+        SystemExit: If the user is not authenticated, exits with an error message.
+    """
+
+    token = HfFolder.get_token()
+    
+    if token is None:
+        print("\nERROR: Not logged into Hugging Face")
+        print("\nThe workflow uses Hugging Face models for similarity checking.")
+        print("Please authenticate using one of these methods:")
+        print("\n  Option 1 - Use huggingface-cli (recommended):")
+        print("    huggingface-cli login")
+        print("\n  Option 2 - Set token in environment variable:")
+        print("    set HF_TOKEN=your_token_here")
+        print("\n  Option 3 - Use Python:")
+        print("    from huggingface_hub import login")
+        print("    login()")
+        print("\nYou can get your token from: https://huggingface.co/settings/tokens")
+        print("\nThis check prevents wasting LLM tokens before the process crashes.\n")
+        sys.exit(1)
+    
+    return True
+    
 
 def check_model(model):
     """

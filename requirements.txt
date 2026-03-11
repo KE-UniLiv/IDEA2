@@ -4,6 +4,7 @@ notion-client>=2.4.0
 pandas>=2.2.0
 numpy>=2.0.0
 sentence-transformers>=4.0.0
+huggingface-hub>=0.20.0
 scikit-learn>=1.6.0
 krippendorff>=0.8.0
 matplotlib>=3.10.0

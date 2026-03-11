@@ -48,6 +48,10 @@ All in all, the Notion integration allows for:
 - Commenting of CQs (comment thread to be given as feedback to the LLM)
 - Reformulates relation (link reformulation to the original CQ)
 
+### Adding a Notion integration 🤖
+The workflow requires an **Internal** Notion integration. To do this, please navigate to the [`Notion integration website`](https://www.notion.so/profile/integrations/) and create an internal integration under **Build**.
+Ensure that the integration has the relevant read and write permissions, and invite it to the page where you are using IDEA2.
+
 
 ### Getting a Notion Database / Page ID
 To get a database's key, hover around the title of the database in bold text, and click the 3 dots to reveal the drop down menu with the *View database* option:
@@ -88,11 +92,17 @@ notionllmdb:
   key: <your notion LLM config database key>
 ```
 
-### Using source documents 📂
+Please note that the huggingface model **all-mpnet-base-v2** is used for similarity checking in iteration 1 (CQ extraction). 
+This will remove CQs that are very similar to each other and hence redundant, but is optional. 
+If you would like you use this feature, please ensure you are logged into huggingface through the huggingface-cli with your token, otherwise an error may be thrown after you have used tokens. 
+A check is implemented for this purpose and may throw an exception when you run the code if you decide to use the **similarity model** without a valid token. The `--nosim` flag may be used to avoid using the model if this is not desired (shown in usage)
+
+### Source documents 📂
 
 All source documents for extraction are kept in the [`assets`](assets/) folder. You may import new files to this area either by doing so manually, or by running `idea2/runner.py --imports` which spawns two file explorer dialogs for you to select files and select the appropriate destination within [`assets`](assets/).
 
-When running IDEA2, you will be prompted to select the files you want to use in a given folder within [`assets`](/assets/) via a [`questionary`](https://pypi.org/project/questionary/) prompt.
+When running IDEA2 for the extraction phase, you will be prompted to select the files you want to use in a given folder within [`assets`](/assets/) via a [`questionary`](https://pypi.org/project/questionary/) prompt.
+Subsequent iterations will detect which source you selected and continue with that context.
 
 ### Personas and User Stories 🤵
 Personas and user stories are natural language formats for expressing requirements of a system. Personas and user stories may be passed to the LLM in `markdown` format (.md). This works similarly to the Schemas and XML sources to generate new competency questions based on what is expressed within those documents.
@@ -151,38 +161,88 @@ When all the data is in place and the dependencies are installed, below is an ex
 Below are the supported arguments, please run `python idea2/runner.py --usage_help` if the default help given is not useful for you, or if things are still unclear.
 
 ```
-usage: runner.py [-h] [--model MODEL] [--temperature TEMPERATURE] [--role ROLE] [--instruction INSTRUCTION] [--example EXAMPLE] [--generation GENERATION]
-                 [--update_key UPDATE_KEY] [--imports] [--reformulate_from_first_set] [--save] [--nolimit] [--notion] [--reformulate] [--find_rejected]
-                 [--find_accepted] [--usage_help] [--show_prompt] [--show_services] [--archive]
+usage: runner.py [-h] [--model MODEL] [--temperature TEMPERATURE] [--role ROLE] [--instruction INSTRUCTION]
+                 [--example EXAMPLE] [--generation GENERATION] [--update_key UPDATE_KEY] [--nosim] [--imports]
+                 [--reformulate_from_first_set] [--save] [--nolimit] [--nosimilarity] [--notion] [--reformulate]
+                 [--find_rejected] [--find_accepted] [--usage_help] [--show_prompt] [--show_services] [--archive]
+                 [--calculate_agreement]
 
 Extract and store CQs using LLMs and Notion.
 
 options:
   -h, --help            show this help message and exit
-  --model MODEL         Model name (Options: models/gemini-2.5-flash, models/gemini-2.5-pro, models/gemini-1.5-flash-latest, models/openai-gpt-4)
+  --model MODEL         Model name (Options: models/gemini-2.5-flash, models/gemini-2.5-pro, models/gemini-1.5-flash-
+                        latest, models/openai-gpt-4)
   --temperature TEMPERATURE
                         LLM temperature (Options: 0.0 to 1.0) (Default: 0.8)
   --role ROLE           Role for the LLM (Options: SYSTEM_ROLE_A, SYSTEM_ROLE_B, SYSTEM_ROLE_C)
   --instruction INSTRUCTION
                         Instruction for the LLM (Options: CQ_INSTRUCTION_A, CQ_INSTRUCTION_B, CQ_INSTRUCTION_C
-  --example EXAMPLE     Give examples of CQs for the LLM (Options: CQ_EXAMPLE_A, CQ_EXAMPLE_B, CQ_EXAMPLE_C, CQ_ACCEPTED_CQS)
+  --example EXAMPLE     Give examples of CQs for the LLM (Options: CQ_EXAMPLE_A, CQ_EXAMPLE_B, CQ_EXAMPLE_C,
+                        CQ_ACCEPTED_CQS)
   --generation GENERATION
                         Generation label (auto if not set manually)
   --update_key UPDATE_KEY
                         Update the API key in api_config.yml (input: <service>,<new key value>)
+  --nosim               Skip similarity analysis (no Hugging Face authentication required)
   --imports             Select files to copy using a text-based interface
   --reformulate_from_first_set
-                        Reformulate CQs when you already have some data stored. Start from iteration 2 without prior context.
+                        Reformulate CQs when you already have some data stored. Start from iteration 2 without prior
+                        context.
   --save                Save CQs to file (jsonld format)
   --nolimit             Remove the limit on number of CQs to extract
+  --nosimilarity        Skip similarity analysis (no Hugging Face authentication required)
   --notion              Upload CQs to Notion
-  --reformulate         Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected CQs first, then run with --reformulate to      
-                        reformulate them)
-  --find_rejected       Find rejected CQs in Notion and store (Note: run as the only argument ie python runner.py --find_rejected)
-  --find_accepted       Find accepted CQs in Notion and store/refresh (Note: Ideally run as the only argument ie python runner.py --find_accepted)
+  --reformulate         Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected
+                        CQs first, then run with --reformulate to reformulate them)
+  --find_rejected       Find rejected CQs in Notion and store (Note: run as the only argument ie python runner.py
+                        --find_rejected)
+  --find_accepted       Find accepted CQs in Notion and store/refresh (Note: Ideally run as the only argument ie
+                        python runner.py --find_accepted)
   --usage_help          Show a more comprehensive help message with usage instructions
   --show_prompt         Show the prompts used for CQ extraction and reformulation
   --show_services       Show the available services in api_config.yml
   --archive             Archive all pages in the Notion database (use with caution, as this action is irreversible)
+  --calculate_agreement
+                        Calculate inter-rater agreement metrics (Cohen's Kappa and Krippendorff's Alpha)
 
+```
+
+### Common Usage Examples
+
+#### Initial CQ Extraction (First Iteration)
+Extract competency questions from source documents and save to both file and Notion:
+```bash
+python idea2/runner.py --model models/gemini-2.5-pro --temperature 0.8 --save --notion
+```
+**What this does:**
+- Uses Gemini 2.5 Pro model
+- Sets temperature to 0.8 for output creativity
+- `--save`: Saves CQs to local JSON-LD files
+- `--notion`: Uploads CQs to Notion database for expert review
+
+#### CQ Reformulation (Subsequent Iterations)
+After experts have reviewed and rejected some CQs, reformulate them based on feedback:
+```bash
+# Step 1: Pull rejected CQs from Notion
+python idea2/runner.py --find_rejected
+
+# Step 2: Reformulate rejected CQs and upload back to Notion
+python idea2/runner.py --model models/gemini-2.5-pro --temperature 0.8 --reformulate --save --notion
+```
+**What this does:**
+- `--find_rejected`: Retrieves CQs with score ≤ 0 and stores them locally
+- `--reformulate`: Uses LLM to reformulate rejected CQs based on expert comments
+- `--save` & `--notion`: Saves reformulated CQs locally and uploads to Notion
+
+#### Skip Similarity Analysis (No Hugging Face Login Required)
+If you don't want to use similarity checking:
+```bash
+python idea2/runner.py --model models/gemini-2.5-pro --temperature 0.8 --nosimilarity --save --notion
+```
+
+#### Extract Without Limits
+Remove the default CQ extraction limit:
+```bash
+python idea2/runner.py --model models/gemini-2.5-pro --temperature 0.8 --nolimit --save --notion
 ```

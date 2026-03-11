@@ -66,10 +66,12 @@ def main():
     parser.add_argument('--generation', type=str, default=None, help='Generation label (auto if not set manually)')
     parser.add_argument('--update_key', type=str, default=None, help='Update the API key in api_config.yml (input: <service>,<new key value>)')
 
+    parser.add_argument('--nosim', action='store_true', help='Skip similarity analysis (no Hugging Face authentication required)')
     parser.add_argument('--imports', action='store_true', help='Select files to copy using a text-based interface')
     parser.add_argument('--reformulate_from_first_set', action='store_true', help='Reformulate CQs when you already have some data stored. Start from iteration 2 without prior context.')
     parser.add_argument('--save', action='store_true', help='Save CQs to file (jsonld format)')
     parser.add_argument('--nolimit', action='store_true', help='Remove the limit on number of CQs to extract')
+    parser.add_argument('--nosimilarity', action='store_true', help='Skip similarity analysis (no Hugging Face authentication required)')
     parser.add_argument('--notion', action='store_true', help='Upload CQs to Notion')
     parser.add_argument('--reformulate', action='store_true', help='Reformulate CQs using rejected CQs as input (Note: run with --find_rejected to find rejected CQs first, then run with --reformulate to reformulate them)')
     parser.add_argument('--find_rejected', action='store_true', help='Find rejected CQs in Notion and store (Note: run as the only argument ie python runner.py --find_rejected)')
@@ -144,6 +146,13 @@ def main():
 
     if args.nolimit:
         update_config(limit="")
+
+    """Check Hugging Face authentication before starting the main workflow
+    This prevents wasting LLM tokens if the process will crash later due to HF auth issues
+    Skip check if user explicitly disabled similarity analysis with --nosim """
+    if not args.find_rejected and not args.nosim:
+        from utils import check_huggingface_auth
+        check_huggingface_auth()
 
     if args.find_rejected:
         rejected_cqs = pull_rejected()
@@ -430,7 +439,7 @@ def main():
     if not args.reformulate:
         
         cleaned_cqs = run_simple_similarity_analysis(
-            cleaned_cqs)
+            cleaned_cqs) if not args.nosim else cleaned_cqs
 
     ## -- Save to file if requested
     if args.save and not args.reformulate_from_first_set:
