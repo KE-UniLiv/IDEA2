@@ -176,7 +176,10 @@ def main():
             print("Exiting. Please review your history file or use --reformulate flag.")
             sys.exit(0)
     
-    schema_in_history_first = any(combined in h["content"] for h in history)
+    # Check if schema is already in history (only works if combined is a string)
+    schema_in_history_first = False
+    if history and combined and isinstance(combined, str):
+        schema_in_history_first = any(combined in h.get("content", "") for h in history)
 
     if args.reformulate:
         changed = questionary.confirm("Have you changed schemas since the last run?").ask()
@@ -195,7 +198,7 @@ def main():
             role=args.role if args.role else config["role"],
             out_instruction=args.instruction if args.instruction else config["out_instruction"],
             out_examples=args.example if args.example else config["out_examples"],
-            limit=""
+            limit="" if args.nolimit else config["limit"]
         )
         role = config["role"]() if callable(config["role"]) else config["role"]
         out_definition = config["out_definition"]() if callable(config["out_definition"]) else config["out_definition"]
@@ -330,7 +333,7 @@ def main():
             role=args.role if args.role else config["role"], 
             out_instruction="get_cq_evaluation_definition_bme",
             out_examples="",
-            limit=""  
+            limit="" if args.nolimit else config["limit"]
         )   
         # Resolve config values after update_config (may need double-call for functions)
         role = config["role"]() if callable(config["role"]) else config["role"]

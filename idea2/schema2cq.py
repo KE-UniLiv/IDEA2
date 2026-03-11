@@ -68,7 +68,7 @@ class PromptBuilder:
             prompt += self.out_examples + "\n\n"
         if self.out_instruction is not None:
             prompt += self.out_instruction + "\n\n"
-        if self.limit is not None:
+        if self.limit:
             prompt += self.limit + "\n\n"
             
         prompt += raw_data

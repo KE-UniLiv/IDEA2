@@ -407,7 +407,7 @@ def load_history_from_file(model) -> list:
     filepath = check_model(model)
     
     if not os.path.exists(filepath):
-        logging.warning(f"History file {filepath} does not exist. Returning empty history.")
+        logging.info(f"History file {filepath} does not exist. Returning empty history.")
         return []
     
 
@@ -415,7 +415,7 @@ def load_history_from_file(model) -> list:
         content = f.read().strip()
 
         if not content:
-            logging.warning(f"History file {filepath} is empty. Returning empty history.")
+            logging.info(f"History file {filepath} is empty. Returning empty history.")
             return []
         
         history = json.loads(content)
