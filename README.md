@@ -1,8 +1,11 @@
 # IDEA2 💭
+Expert-in-the-loop requirement elicitation and analysis for ontology engineering.
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Version](https://img.shields.io/badge/Version-1.0-blue)](https://semver.org/)
+[![Status](https://img.shields.io/badge/Status-Released-green)]()
 
 <img src="assets/img/IDEA2LOGO.png" alt="My image" width="350"/>
-
-Expert-in-the-loop requirement elicitation and analysis for ontology engineering.
 
 IDEA2 is a framework which defines workflows for enriching Ontology Engineering by leveraging state-of-the-art Large Language Models (LLMs) such as `Gemini`, and advancements in the fields of Knowledge Engineering and Ontology Engineering. It provides a system through which a team of engineers and domain experts can utilise LLMs to inform the creation and refinement of Ontologies through Competency Question (CQ) extraction and iterative refinement, which is semi-automated with an **expert(s)-in-the-loop** approach. 
 
@@ -251,6 +254,13 @@ Remove the default CQ extraction limit:
 python idea2/runner.py --model models/gemini-2.5-pro --temperature 0.8 --nolimit --save --notion
 ```
 
+## Contributing 
+We welcome contributions from the community to improve and extend IDEA2. 
+If you identify bugs or inconsistencies, please open an Issue on this repository. 
+To propose extensions, please open a Feature Request that includes a clear use case definition. 
+You are encouraged to fork this repository and open Pull Requests (PRs) for adding new functionalities.
+The team will then review these changes!
+
 ## Citation
 
 If you use IDEA2 in your work, please cite the following paper:
@@ -265,3 +275,6 @@ If you use IDEA2 in your work, please cite the following paper:
   month={May}
 }
 ```
+
+## Acknowledgement
+This work was supported by the Royal Academy of Engineering under the Google DeepMind Research Ready Scheme.
