@@ -71,6 +71,10 @@ To get the page ID, follow the same process by clicking the triple dot selector 
 
 Only copy the *xxxxx...* values to get the ID for the [`api_config.yml`](idea2/api_config.yml).
 
+### Notion Template 🏗️
+
+We provide a [`Notion template`](https://keuniliv.notion.site/idea2-v1-template) that you can duplicate and use for your project at the following url: https://keuniliv.notion.site/idea2-v1-template. 
+
 ## Prepare data 📝
 
 To start using IDEA2, the following must be provided in the appropriate area in [`api_config.yml`](idea2/api_config.yml):
@@ -245,4 +249,19 @@ python idea2/runner.py --model models/gemini-2.5-pro --temperature 0.8 --nosimil
 Remove the default CQ extraction limit:
 ```bash
 python idea2/runner.py --model models/gemini-2.5-pro --temperature 0.8 --nolimit --save --notion
+```
+
+## Citation
+
+If you use IDEA2 in your work, please cite the following paper:
+
+```bibtex
+@inproceedings{watkissleek2026idea2,
+  title={IDEA2: Expert-in-the-loop competency question elicitation for collaborative ontology engineering},
+  author={Watkiss-Leek, Elliott and Alharbi, Reham and Rostron, Harry and Ng, Andrew and Johnson, Ewan and Mitchell, Andrew and Payne, Terry R. and Tamma, Valentina and de Berardinis, Jacopo},
+  booktitle={Proceedings of the Workshop on LLM-driven Knowledge Graph and Ontology Engineering (LLMs4KGOE 2026) co-located with the 23rd European Semantic Web Conference (ESWC 2026)},
+  year={2026},
+  address={Dubrovnik, Croatia},
+  month={May}
+}
 ```
