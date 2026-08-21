@@ -1,11 +1,11 @@
 # IDEA2 💭
 Expert-in-the-loop requirement elicitation and analysis for ontology engineering.
 
-[`Paper`](https://arxiv.org/pdf/2604.01344)
-
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Version](https://img.shields.io/badge/Version-1.0-blue)](https://semver.org/)
 [![Status](https://img.shields.io/badge/Status-Released-green)]()
+
+[`Paper`](https://arxiv.org/pdf/2604.01344)
 
 <img src="assets/img/IDEA2LOGO.png" alt="My image" width="350"/>
 
